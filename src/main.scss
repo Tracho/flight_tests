@@ -1,10 +1,31 @@
-*,
+ /* Применяем шрифт и фон только к корневым элементам html и body */
+html,
 body {
   font-family: 'Comfortaa', sans-serif;
+  background-color: #232526;
+  color: #ffffff;
+  
+  /* Гарантируем, что темный фон растянется на весь экран телефона, 
+     а svh (small viewport height) спасет от прыгающей снизу шторки Safari/Chrome */
+  min-height: 100vh;
+  min-height: 100svh; 
+  
+  /* Убираем лишние мобильные отскоки при скролле (iOS bounce effect) */
+  overscroll-behavior: none;
+}
+
+/* Опционально: если у вас будут кастомные скроллбары в темной теме */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
   background: #232526;
-  /* background: -webkit-linear-gradient(to top, #2f2f2f, #232526); */
-  /* background: linear-gradient(to top, #2f2f2f, #232526); */
-  /* background: linear-gradient(to top, #2f2f2f, #232526); */
-  color: white;
-  /* min-height: 100vh;   */
+}
+::-webkit-scrollbar-thumb {
+  background: #171717;
+  border-radius: 4px;
+}
+
+input{
+  background: #232526;
 }
