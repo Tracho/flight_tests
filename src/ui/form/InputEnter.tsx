@@ -45,7 +45,7 @@ function InputEnter({
     blue: 'border-blue-600 focus:border-blue-500 focus:shadow-lg focus:shadow-blue-600/10',
   }
 
-  const btnBase = 'px-4 py-2 text-white font-medium transition-all duration-300 border rounded-r'
+  const btnBase = 'px-4 py-2 font-medium transition-all duration-300 border rounded-r'
   
   const btnStyles: Record<ColorStyle, string> = {
     green: 'bg-green-600 border-green-600 hover:bg-green-700 peer-focus:border-green-500 peer-focus:shadow-lg peer-focus:shadow-green-500/10',
