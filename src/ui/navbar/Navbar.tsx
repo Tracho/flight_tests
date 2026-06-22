@@ -13,6 +13,12 @@ function Navbar () {
 
         <div className='flex justify-center items-center gap-3'>
           <NavLink
+            to='/TestUi'
+            className={({ isActive }) => (isActive ? LinkActiveClass : '')}
+          >
+            Test Ui
+          </NavLink>
+          <NavLink
             to='/tests'
             className={({ isActive }) => (isActive ? LinkActiveClass : '')}
           >

@@ -1,43 +1,32 @@
-import MyBtn from '../ui/button/MyBtn'
-import InputEnter from '../ui/form/InputEnter'
-import MyInput from '../ui/form/MyInput'
-import Checkbox from '../ui/input/Checkbox'
-import Radio from '../ui/input/Radio'
+import Details from '@/ui/list/Details/Details'
 
-function HomePage () {
+type props = {
+  DB: {
+    json: {
+      title: string
+      timestamp: string
+      correctAnswer: string
+      options: {
+        text: string
+        isCorrect: boolean
+      }[]
+    }[]
+    title: string
+    description: string
+  }[]
+}
+
+function HomePage ({ DB }: props) {
+  console.log(DB)
   return (
     <>
       <div className='flex justify-center'>
         <div className='container px-4 py-10'>
-          <h1>HomePage</h1>
-          <MyBtn mstyle='green'>test 1</MyBtn>
-          <MyInput />
-          <br />
-          <div className='flex flex-col py-3 gap-2'>
-            <Radio name='quiz-answer' value='a' mstyle='blue'>
-              Вариант А (Правильный)
-            </Radio>
-            <Radio name='quiz-answer' value='b' mstyle="green" isCorrect={true}>
-              Вариант Б
-            </Radio>
-            <Radio name='quiz-answer' value='c' mstyle='danger'  isCorrect={false} disabled>
-              Вариант В
-            </Radio>
+          <div className='flex flex-col gap-4'>
+            {DB.map((item, index) => (
+              <Details key={index} title={item.title} description={item.description} arr={['1', '2', '3']} />
+            ))}
           </div>
-          <div className='flex flex-col py-3 gap-2'>
-            <Checkbox value='a' mstyle='blue'>
-              Первый правильный вариант
-            </Checkbox>
-            <Checkbox value='b' mstyle='green' isCorrect={true}>
-              Второй правильный вариант
-            </Checkbox>
-            <Checkbox value='c' mstyle='danger' isCorrect={false} >
-              Неправильный вариант ответа
-            </Checkbox>
-          </div>
-
-          <br />
-          <InputEnter inpClassName='w-100'>➔</InputEnter>
         </div>
       </div>
     </>
