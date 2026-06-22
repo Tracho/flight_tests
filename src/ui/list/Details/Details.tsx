@@ -1,44 +1,61 @@
-import ArrowTop from '@/assets/icons/arrow-top.svg?react'
-import './Details.scss'
-import { useState } from 'react'
+import ArrowTop from "@/assets/icons/arrow-top.svg?react";
+import "./Details.scss";
+import { useState, type ReactNode } from "react";
 
 type props = {
-  title: string
-  description?: string
-  arr: string[]
-  symbolLi?: string
-}
+  title: string;
+  description?: string;
+  arr?: string[];
+  symbolLi?: string;
+  children?: ReactNode;
+  childrenClass?:string;
+  titleClass?:string;
+  svgClass?:string;
+};
 
-function Details ({ title, arr, description, symbolLi = '' }: props) {
-  const [active, setActive] = useState(false)
+function Details({
+  title,
+  arr = [],
+  description,
+  children,
+  symbolLi = "",
+  childrenClass ='',
+  titleClass ='text-2xl',
+  svgClass ='w-8',
+}: props) {
+  const [active, setActive] = useState(false);
 
   return (
-    <div className={`details-container ${active ? 'is-active' : ''}`}>
+    <div className={`details-container ${active ? "is-active" : ""}`}>
       <button
-        className='details-trigger gap-3'
-        type='button'
-        onClick={() => setActive(prev => !prev)}
+        className="details-trigger gap-3"
+        type="button"
+        onClick={() => setActive((prev) => !prev)}
       >
-        <div className='flex justify-between items-center w-full'>
-          <span className='details-title'>{title}</span>
-          <ArrowTop className='details-arrow' width={32} />
+        <div className="flex justify-between items-center w-full">
+          <span className={`${titleClass} details-title`}>{title}</span>
+          <ArrowTop className={`${svgClass} details-arrow`}/>
         </div>
         {description && <p>{description}</p>}
       </button>
-
-      {/* Обертка для плавной анимации высоты */}
-      <div className='details-content-wrapper'>
-        <ul className='details-list'>
-          {arr.map((item, index) => (
-            <li key={index} className='details-item'>
-              {symbolLi && <span className='details-symbol'>{symbolLi}</span>}
-              {item}
-            </li>
-          ))}
-        </ul>
+      
+      {/* Обертка для плавной анимации высоты */} 
+      <div className="details-content-wrapper"> 
+        {!children ? (
+          <ul className={`${childrenClass} details-list`}>
+            {arr.map((item, index) => (
+              <li key={index} className="details-item">
+                {symbolLi && <span className="details-symbol">{symbolLi}</span>}
+                {item}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div className={`${childrenClass} details-list`}>{children}</div>
+        )}
       </div>
     </div>
-  )
+  );
 }
 
-export default Details
+export default Details;

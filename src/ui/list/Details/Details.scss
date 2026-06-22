@@ -1,12 +1,11 @@
 .details-container {
-  @apply bg-neutral-900 p-4 rounded border border-gray-600;
-
+  @apply bg-neutral-900 p-4 rounded border border-gray-600; 
   .details-trigger {
     @apply flex flex-col justify-start text-start items-start w-full border-l-4 border-gray-300 pl-4 cursor-pointer;
   }
 
   .details-title {
-    @apply text-2xl text-white;
+    @apply text-white;
   }
 
   .details-arrow {
@@ -28,7 +27,7 @@
     background-repeat: repeat-y;
     background-position: left center;
 
-    @apply flex gap-3 opacity-0 transition-opacity duration-300;
+    @apply flex gap-3 opacity-0 transition-opacity duration-300;  
   }
 
   .details-item {
@@ -39,16 +38,20 @@
     @apply text-gray-500;
   }
 
+ 
   &.is-active {
-    .details-arrow {
+ 
+    > .details-trigger .details-arrow {
       transform: rotate(0deg);
     }
 
-    .details-content-wrapper {
+ 
+    > .details-content-wrapper {
       grid-template-rows: 1fr;
     }
 
-    .details-list {
+ 
+    > .details-content-wrapper > .details-list {
       @apply pt-4;
       @apply opacity-100;
     }
