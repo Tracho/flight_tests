@@ -1,4 +1,3 @@
-import MyBtn from "@/ui/button/MyBtn";
 import NeonBtn from "@/ui/button/NeonBtn";
 import Details from "@/ui/list/Details/Details";
 import DoubleProgressBar from "@/ui/list/progress/DoubleProgressBar";

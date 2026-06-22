@@ -26,20 +26,20 @@ export type Option = {
 };
 
 function HomePageTest() {
-  let testingDB = [
-    {
-      title: "Тест Заголовок",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perferendis, commodi voluptatum quasi fuga earum cupiditate minus eius, vitae, quas nisi quo repellat atque aspernatur officia obcaecati nam repellendus esse?",
-      json: DBtesting,
-    },
-    {
-      title: "Медицинские тесты",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perferendis, commodi voluptatum quasi fuga earum cupiditate minus eius, vitae, quas nisi quo repellat atque aspernatur officia obcaecati nam repellendus esse?",
-      json: DbMedicalTest1,
-    },
-  ];
+  // let testingDB = [
+  //   {
+  //     title: "Тест Заголовок",
+  //     description:
+  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perferendis, commodi voluptatum quasi fuga earum cupiditate minus eius, vitae, quas nisi quo repellat atque aspernatur officia obcaecati nam repellendus esse?",
+  //     json: DBtesting,
+  //   },
+  //   {
+  //     title: "Медицинские тесты",
+  //     description:
+  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perferendis, commodi voluptatum quasi fuga earum cupiditate minus eius, vitae, quas nisi quo repellat atque aspernatur officia obcaecati nam repellendus esse?",
+  //     json: DbMedicalTest1,
+  //   },
+  // ];
   let testArr = ["1", "2", "3", "4"];
 
   return (
