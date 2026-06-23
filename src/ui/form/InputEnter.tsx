@@ -1,15 +1,18 @@
 // 1. Добавляем хук useId из библиотеки react
-import { useId } from 'react'
+import { useId  } from 'react'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 
 type ColorStyle = 'green' | 'greenOutline' | 'cyan' | 'danger' | 'warning' | 'light' | 'yellow' | 'info' | 'blue'
 
-type Props = InputHTMLAttributes<HTMLInputElement> & {
+type Props = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> & {
   inpStyle?: ColorStyle
   btnStyle?: ColorStyle
   inpClassName?: string
   btnClassName?: string
-  children: ReactNode
+  children: ReactNode 
+  value:string;
+  onChange:(value:string) => void;
+  onSubmit: () => void;
 }
 
 function InputEnter({
@@ -21,7 +24,10 @@ function InputEnter({
   type = 'text',
   placeholder = 'text...',
   id, // Извлекаем id и name из пропсов, чтобы не дублировать их в ...props
-  name,
+  name, 
+  value="",
+  onChange,
+  onSubmit,
   ...props
 }: Props) {
   
@@ -61,11 +67,16 @@ function InputEnter({
 
   const computedInpClass = `${inpBase} ${inpStyles[inpStyle]} ${inpClassName}`
   const computedBtnClass = `${btnBase} ${btnStyles[btnStyle]} ${btnClassName}`
-
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // Предотвращаем отправку дефолтных HTML-форм, если они есть
+      onSubmit?.();       // Вызываем функцию поиска
+    }
+  };
+ 
   return (
     <div className='flex items-stretch gap-0'>
-      <div dir="ltr">
-        {/* 3. Явно передаем id и name в инпут */}
+      <div dir="ltr"> 
         <input
           id={generatedId}
           name={generatedName}
@@ -73,12 +84,16 @@ function InputEnter({
           type={type}
           placeholder={placeholder}
           {...props}
+          value={value}
+          onChange={(e) => onChange?.(e.target.value)} 
+          onKeyDown={handleKeyDown}
         />
       </div>
       <div className='flex' dir='rtl'>
         <button
           type='button'
-          className={computedBtnClass}
+          className={computedBtnClass} 
+          onClick={onSubmit}
         >
           {children}
         </button>
