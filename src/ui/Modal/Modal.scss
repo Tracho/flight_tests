@@ -1,0 +1,58 @@
+.modal-overlay {
+  position: fixed;
+  inset   : 0;
+  z-index : 50;
+
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+
+  background     : rgba(0, 0, 0, .65);
+  backdrop-filter: blur(6px);
+
+  opacity       : 0;
+  pointer-events: none;
+  animation     : animHidden 0.25s ease;
+}
+
+.modal-overlay.show {
+  opacity       : 1;
+  pointer-events: auto;
+}
+
+
+.modal-window {
+  width    : 100%;
+  max-width: 42rem;
+
+  transform: translateY(25px) scale(.92);
+  opacity  : 0;
+}
+
+.modal-overlay.show,
+.modal-window {
+  opacity  : 1;
+  animation: animShow 0.25s ease;
+}
+
+@keyframes animShow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animHidden {
+  0% {
+    opacity   : 1;
+    background: rgba(0, 0, 0, .65);
+  }
+
+  100% {
+    opacity   : 0;
+    background: rgba(0, 0, 0, 0);
+  }
+}

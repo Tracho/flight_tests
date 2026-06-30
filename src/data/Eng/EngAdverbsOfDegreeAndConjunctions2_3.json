@@ -1,7 +1,7 @@
 [
   {
     "title": "Переведите наречие степени: очень",
-    "correctAnswer": "very — очень — [вэри]",
+    "info":"","infoHelp":"","correctAnswer": "very — очень — [вэри]",
     "options": [
       {
         "text": "too",
@@ -24,7 +24,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: This computer is ______ (очень) fast and new.",
-    "correctAnswer": "very — очень (усиливает прилагательные) — [вэри]",
+    "info":"","infoHelp":"","correctAnswer": "very — очень (усиливает прилагательные) — [вэри]",
     "options": [
       {
         "text": "enough",
@@ -47,7 +47,7 @@
   },
   {
     "title": "Переведите наречие степени (избыток чего-то): слишком",
-    "correctAnswer": "too — слишком — [ту]",
+    "info":"","infoHelp":"","correctAnswer": "too — слишком — [ту]",
     "options": [
       {
         "text": "very",
@@ -70,7 +70,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The road is ______ (слишком) dangerous at night.",
-    "correctAnswer": "too — слишком (указывает на чрезмерность с негативным оттенком) — [ту]",
+    "info":"","infoHelp":"","correctAnswer": "too — слишком (указывает на чрезмерность с негативным оттенком) — [ту]",
     "options": [
       {
         "text": "enough",
@@ -93,7 +93,7 @@
   },
   {
     "title": "Переведите наречие степени: достаточно",
-    "correctAnswer": "enough — достаточно — [инаф]",
+    "info":"","infoHelp":"","correctAnswer": "enough — достаточно — [инаф]",
     "options": [
       {
         "text": "too",
@@ -116,7 +116,7 @@
   },
   {
     "title": "ГРАММАТИКА: Наречие enough (достаточно) всегда ставится строго ПОСЛЕ прилагательного. Вставьте его: He is smart ______ (достаточно) to understand this rule.",
-    "correctAnswer": "enough — достаточно (ставится после описываемого слова) — [инаф]",
+    "info":"","infoHelp":"","correctAnswer": "enough — достаточно (ставится после описываемого слова) — [инаф]",
     "options": [
       {
         "text": "too",
@@ -139,7 +139,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару противоположностей по смыслу: слишком И достаточно",
-    "correctAnswer": "too (слишком), enough (достаточно) — [ту, инаф]",
+    "info":"","infoHelp":"","correctAnswer": "too (слишком), enough (достаточно) — [ту, инаф]",
     "options": [
       {
         "text": "very / so",
@@ -162,7 +162,7 @@
   },
   {
     "title": "Переведите наречие степени: так, настолько",
-    "correctAnswer": "so — так, настолько — [соу]",
+    "info":"","infoHelp":"","correctAnswer": "so — так, настолько — [соу]",
     "options": [
       {
         "text": "too",
@@ -185,7 +185,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: I am ______ (так) happy to see you today!",
-    "correctAnswer": "so — так, настолько — [соу]",
+    "info":"","infoHelp":"","correctAnswer": "so — так, настолько — [соу]",
     "options": [
       {
         "text": "enough",
@@ -208,7 +208,7 @@
   },
   {
     "title": "Переведите базовый причинный союз: потому что, так как",
-    "correctAnswer": "because — потому что, так как — [бикоз]",
+    "info":"","infoHelp":"","correctAnswer": "because — потому что, так как — [бикоз]",
     "options": [
       {
         "text": "but",
@@ -231,7 +231,7 @@
   },
   {
     "title": "Вставьте союз в предложение: She stayed home ______ (потому что) she was tired and sick.",
-    "correctAnswer": "because — потому что (объясняет причину действия) — [бикоз]",
+    "info":"","infoHelp":"","correctAnswer": "because — потому что (объясняет причину действия) — [бикоз]",
     "options": [
       {
         "text": "but",
@@ -254,7 +254,7 @@
   },
   {
     "title": "Переведите союз следствия: поэтому, итак",
-    "correctAnswer": "so — поэтому, итак — [соу]",
+    "info":"","infoHelp":"","correctAnswer": "so — поэтому, итак — [соу]",
     "options": [
       {
         "text": "because",
@@ -277,7 +277,7 @@
   },
   {
     "title": "Вставьте союз в предложение: The price was high, ______ (поэтому) we didn't buy the car.",
-    "correctAnswer": "so — поэтому (вводит логическое следствие или результат) — [соу]",
+    "info":"","infoHelp":"","correctAnswer": "so — поэтому (вводит логическое следствие или результат) — [соу]",
     "options": [
       {
         "text": "because",
@@ -300,7 +300,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС НА ЛОГИКУ: Выберите пару союзов Причина И Следствие:",
-    "correctAnswer": "because (потому что), so (поэтому) — фундаментальные связки в английском языке",
+    "info":"","infoHelp":"","correctAnswer": "because (потому что), so (поэтому) — фундаментальные связки в английском языке",
     "options": [
       {
         "text": "but / or",
@@ -323,7 +323,7 @@
   },
   {
     "title": "Переведите союз противопоставления: но, кроме",
-    "correctAnswer": "but — но, кроме — [бат]",
+    "info":"","infoHelp":"","correctAnswer": "but — но, кроме — [бат]",
     "options": [
       {
         "text": "and",
@@ -346,7 +346,7 @@
   },
   {
     "title": "Вставьте союз в предложение: I know the words, ______ (но) I don't understand the rule.",
-    "correctAnswer": "but — но (связывает противоположные по смыслу факты) — [бат]",
+    "info":"","infoHelp":"","correctAnswer": "but — но (связывает противоположные по смыслу факты) — [бат]",
     "options": [
       {
         "text": "and",
@@ -369,7 +369,7 @@
   },
   {
     "title": "Переведите разделительный союз: или",
-    "correctAnswer": "or — или — [ор]",
+    "info":"","infoHelp":"","correctAnswer": "or — или — [ор]",
     "options": [
       {
         "text": "and",
@@ -392,7 +392,7 @@
   },
   {
     "title": "Вставьте союз в предложение: Do you want tea ______ (или) coffee?",
-    "correctAnswer": "or — или (предлагает выбор между альтернативами) — [ор]",
+    "info":"","infoHelp":"","correctAnswer": "or — или (предлагает выбор между альтернативами) — [ор]",
     "options": [
       {
         "text": "and",
@@ -415,7 +415,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите союзы: но И или",
-    "correctAnswer": "but (но), or (или) — [бат, ор]",
+    "info":"","infoHelp":"","correctAnswer": "but (но), or (или) — [бат, ор]",
     "options": [
       {
         "text": "and / or",
@@ -438,7 +438,7 @@
   },
   {
     "title": "Переведите союз: если",
-    "correctAnswer": "if — если — [иф]",
+    "info":"","infoHelp":"","correctAnswer": "if — если — [иф]",
     "options": [
       {
         "text": "when",
@@ -461,7 +461,7 @@
   },
   {
     "title": "Вставьте союз в предложение: ______ (если) you practice daily, you will learn quickly.",
-    "correctAnswer": "if — если (вводит условие действия) — [иф]",
+    "info":"","infoHelp":"","correctAnswer": "if — если (вводит условие действия) — [иф]",
     "options": [
       {
         "text": "Because",
@@ -484,7 +484,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ слова, которые в коде могут переводиться как слово 'SO' в зависимости от контекста:",
-    "correctAnswer": "так / настолько, поэтому — слово 'so' совмещает в себе функции наречия степени и союза",
+    "info":"","infoHelp":"","correctAnswer": "так / настолько, поэтому — слово 'so' совмещает в себе функции наречия степени и союза",
     "options": [
       {
         "text": "так, настолько",
@@ -507,7 +507,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ базовые соединительные союзы (Conjunctions):",
-    "correctAnswer": "because, but, or, if — это союзы, связывающие элементы предложения",
+    "info":"","infoHelp":"","correctAnswer": "because, but, or, if — это союзы, связывающие элементы предложения",
     "options": [
       {
         "text": "because",
@@ -530,7 +530,7 @@
   },
   {
     "title": "Переведите наречие степени: совсем, совершенно, довольно-таки",
-    "correctAnswer": "quite — совсем, совершенно, довольно-таки — [куайт]",
+    "info":"","infoHelp":"","correctAnswer": "quite — совсем, совершенно, довольно-таки — [куайт]",
     "options": [
       {
         "text": "quiet",
@@ -553,7 +553,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: This test is ______ (довольно-таки) easy, I like it.",
-    "correctAnswer": "quite — довольно-таки, вполне — [куайт]",
+    "info":"","infoHelp":"","correctAnswer": "quite — довольно-таки, вполне — [куайт]",
     "options": [
       {
         "text": "too",
@@ -576,7 +576,7 @@
   },
   {
     "title": "Переведите наречие степени: абсолютно, совершенно",
-    "correctAnswer": "absolutely — абсолютно, совершенно — [эбсэлютли]",
+    "info":"","infoHelp":"","correctAnswer": "absolutely — абсолютно, совершенно — [эбсэлютли]",
     "options": [
       {
         "text": "quite",
@@ -599,7 +599,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: You are ______ (абсолютно) correct about this rule.",
-    "correctAnswer": "absolutely — абсолютно, совершенно — [эбсэлютли]",
+    "info":"","infoHelp":"","correctAnswer": "absolutely — абсолютно, совершенно — [эбсэлютли]",
     "options": [
       {
         "text": "enough",
@@ -622,7 +622,7 @@
   },
   {
     "title": "Переведите наречие степени: почти",
-    "correctAnswer": "almost — почти — [олмоуст]",
+    "info":"","infoHelp":"","correctAnswer": "almost — почти — [олмоуст]",
     "options": [
       {
         "text": "almost",
@@ -645,7 +645,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: I am ______ (почти) ready, please wait for me.",
-    "correctAnswer": "almost — почти — [олмоуст]",
+    "info":"","infoHelp":"","correctAnswer": "almost — почти — [олмоуст]",
     "options": [
       {
         "text": "completely",
@@ -668,7 +668,7 @@
   },
   {
     "title": "Переведите наречие степени: едва ли, чуть-чуть (Исключение!)",
-    "correctAnswer": "hardly — едва ли, почти не (образуется от hard, но полностью меняет смысл) — [хардли]",
+    "info":"","infoHelp":"","correctAnswer": "hardly — едва ли, почти не (образуется от hard, но полностью меняет смысл) — [хардли]",
     "options": [
       {
         "text": "hard",
@@ -691,7 +691,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: I can ______ (едва ли, почти не) hear your voice, speak loudly.",
-    "correctAnswer": "hardly — едва ли, почти не — [хардли]",
+    "info":"","infoHelp":"","correctAnswer": "hardly — едва ли, почти не — [хардли]",
     "options": [
       {
         "text": "hard",
@@ -714,7 +714,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС НА ПРАВИЛО: Выберите пару наречий: почти И едва ли (почти не)",
-    "correctAnswer": "almost (почти), hardly (едва ли, почти не) — [олмоуст, хардли]",
+    "info":"","infoHelp":"","correctAnswer": "almost (почти), hardly (едва ли, почти не) — [олмоуст, хардли]",
     "options": [
       {
         "text": "very / too",
@@ -737,7 +737,7 @@
   },
   {
     "title": "Переведите уступительный союз: хотя, несмотря на то что",
-    "correctAnswer": "although — хотя, несмотря на то что — [олзоу]",
+    "info":"","infoHelp":"","correctAnswer": "although — хотя, несмотря на то что — [олзоу]",
     "options": [
       {
         "text": "because",
@@ -760,7 +760,7 @@
   },
   {
     "title": "Вставьте союз в предложение: ______ (хотя) it was cold, we went to the park.",
-    "correctAnswer": "although — хотя, несмотря на то что — [олзоу]",
+    "info":"","infoHelp":"","correctAnswer": "although — хотя, несмотря на то что — [олзоу]",
     "options": [
       {
         "text": "Because",
@@ -783,7 +783,7 @@
   },
   {
     "title": "Переведите временной союз: как только",
-    "correctAnswer": "as soon as — как только — [эз сун эз]",
+    "info":"","infoHelp":"","correctAnswer": "as soon as — как только — [эз сун эз]",
     "options": [
       {
         "text": "soon",
@@ -806,7 +806,7 @@
   },
   {
     "title": "Вставьте союз в предложение: I will call you ______ (как только) I receive the ticket.",
-    "correctAnswer": "as soon as — как только — [эз сун эз]",
+    "info":"","infoHelp":"","correctAnswer": "as soon as — как только — [эз сун эз]",
     "options": [
       {
         "text": "until",
@@ -829,7 +829,7 @@
   },
   {
     "title": "Переведите наречие степени: слегка, немного",
-    "correctAnswer": "slightly — слегка, немного — [слайтли]",
+    "info":"","infoHelp":"","correctAnswer": "slightly — слегка, немного — [слайтли]",
     "options": [
       {
         "text": "deeply",
@@ -852,7 +852,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The price is ______ (слегка) higher today.",
-    "correctAnswer": "slightly — слегка, немного — [слайтли]",
+    "info":"","infoHelp":"","correctAnswer": "slightly — слегка, немного — [слайтли]",
     "options": [
       {
         "text": "too",
@@ -875,7 +875,7 @@
   },
   {
     "title": "Переведите союз: кроме того, более того",
-    "correctAnswer": "furthermore — кроме того, более того — [фёрзэмор]",
+    "info":"","infoHelp":"","correctAnswer": "furthermore — кроме того, более того — [фёрзэмор]",
     "options": [
       {
         "text": "besides",
@@ -898,7 +898,7 @@
   },
   {
     "title": "Вставьте союз в предложение: This app is fast. ______ (Кроме того), it is free.",
-    "correctAnswer": "furthermore — кроме того, более того (используется для добавления информации) — [фёрзэмор]",
+    "info":"","infoHelp":"","correctAnswer": "furthermore — кроме того, более того (используется для добавления информации) — [фёрзэмор]",
     "options": [
       {
         "text": "However",
@@ -921,7 +921,7 @@
   },
   {
     "title": "Переведите союз: однако, тем не менее",
-    "correctAnswer": "however — однако, тем не менее — [хауэвэр]",
+    "info":"","infoHelp":"","correctAnswer": "however — однако, тем не менее — [хауэвэр]",
     "options": [
       {
         "text": "besides",
@@ -944,7 +944,7 @@
   },
   {
     "title": "Вставьте союз в предложение: I wanted to buy the house. ______ (Однако), it was too expensive.",
-    "correctAnswer": "however — однако (обычно отделяется запятой в начале предложения) — [хауэвэр]",
+    "info":"","infoHelp":"","correctAnswer": "however — однако (обычно отделяется запятой в начале предложения) — [хауэвэр]",
     "options": [
       {
         "text": "Furthermore",
@@ -967,7 +967,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару союзов: кроме того И однако",
-    "correctAnswer": "furthermore (кроме того), however (однако) — [фёрзэмор, хауэвэр]",
+    "info":"","infoHelp":"","correctAnswer": "furthermore (кроме того), however (однако) — [фёрзэмор, хауэвэр]",
     "options": [
       {
         "text": "because / so",
@@ -990,7 +990,7 @@
   },
   {
     "title": "Переведите союз: следовательно, поэтому",
-    "correctAnswer": "therefore — следовательно, поэтому — [зэафор]",
+    "info":"","infoHelp":"","correctAnswer": "therefore — следовательно, поэтому — [зэафор]",
     "options": [
       {
         "text": "however",
@@ -1013,7 +1013,7 @@
   },
   {
     "title": "Вставьте союз в предложение: He made a mistake; ______ (следовательно), the test was false.",
-    "correctAnswer": "therefore — следовательно, по этой причине — [зэафор]",
+    "info":"","infoHelp":"","correctAnswer": "therefore — следовательно, по этой причине — [зэафор]",
     "options": [
       {
         "text": "but",
@@ -1036,7 +1036,7 @@
   },
   {
     "title": "Переведите предложный союз: кроме, помимо",
-    "correctAnswer": "besides — кроме, помимо — [бисайдз]",
+    "info":"","infoHelp":"","correctAnswer": "besides — кроме, помимо — [бисайдз]",
     "options": [
       {
         "text": "beside",
@@ -1059,7 +1059,7 @@
   },
   {
     "title": "Вставьте союз в предложение: ______ (Кроме) English, she studies Polish.",
-    "correctAnswer": "besides — кроме, помимо (не путать с предлогом места beside — рядом) — [бисайдз]",
+    "info":"","infoHelp":"","correctAnswer": "besides — кроме, помимо (не путать с предлогом места beside — рядом) — [бисайдз]",
     "options": [
       {
         "text": "Beside",
@@ -1082,7 +1082,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ наречия и союзы, которые могут переводить логическое следствие 'поэтому / следовательно':",
-    "correctAnswer": "so, therefore — оба слова связывают причину со следствием",
+    "info":"","infoHelp":"","correctAnswer": "so, therefore — оба слова связывают причину со следствием",
     "options": [
       {
         "text": "so",
@@ -1105,7 +1105,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ наречия степени, которые уменьшают или ограничивают качество действия ('слегка / едва ли'):",
-    "correctAnswer": "slightly, hardly — уменьшают интенсивность признака или действия",
+    "info":"","infoHelp":"","correctAnswer": "slightly, hardly — уменьшают интенсивность признака или действия",
     "options": [
       {
         "text": "absolutely",
@@ -1128,7 +1128,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару союзов: хотя И как только",
-    "correctAnswer": "although (хотя), as soon as (как только) — [олзоу, эз сун эз]",
+    "info":"","infoHelp":"","correctAnswer": "although (хотя), as soon as (как только) — [олзоу, эз сун эз]",
     "options": [
       {
         "text": "because / so",
@@ -1151,7 +1151,7 @@
   },
   {
     "title": "Переведите наречие степени: в основном, главным образом",
-    "correctAnswer": "mostly — в основном, главным образом — [моустли]",
+    "info":"","infoHelp":"","correctAnswer": "mostly — в основном, главным образом — [моустли]",
     "options": [
       {
         "text": "partly",
@@ -1174,7 +1174,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: My friends are ______ (в основном) students and workers.",
-    "correctAnswer": "mostly — в основном, большей частью — [моустли]",
+    "info":"","infoHelp":"","correctAnswer": "mostly — в основном, большей частью — [моустли]",
     "options": [
       {
         "text": "almost",
@@ -1197,7 +1197,7 @@
   },
   {
     "title": "Переведите наречие степени: частично, отчасти",
-    "correctAnswer": "partly — частично, отчасти — [партли]",
+    "info":"","infoHelp":"","correctAnswer": "partly — частично, отчасти — [партли]",
     "options": [
       {
         "text": "completely",
@@ -1220,7 +1220,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: This mistake is ______ (частично) my fault.",
-    "correctAnswer": "partly — частично — [партли]",
+    "info":"","infoHelp":"","correctAnswer": "partly — частично — [партли]",
     "options": [
       {
         "text": "perfectly",
@@ -1243,7 +1243,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару противоположностей: полностью И частично",
-    "correctAnswer": "completely (полностью), partly (частично) — [кэмплитли, партли]",
+    "info":"","infoHelp":"","correctAnswer": "completely (полностью), partly (частично) — [кэмплитли, партли]",
     "options": [
       {
         "text": "mostly / slightly",
@@ -1266,7 +1266,7 @@
   },
   {
     "title": "Переведите наречие степени: чрезвычайно, крайне",
-    "correctAnswer": "extremely — чрезвычайно, крайне — [икстримли]",
+    "info":"","infoHelp":"","correctAnswer": "extremely — чрезвычайно, крайне — [икстримли]",
     "options": [
       {
         "text": "slightly",
@@ -1289,7 +1289,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: This question is ______ (чрезвычайно) important for our app test.",
-    "correctAnswer": "extremely — чрезвычайно, крайне (сильнее, чем very) — [икстримли]",
+    "info":"","infoHelp":"","correctAnswer": "extremely — чрезвычайно, крайне (сильнее, чем very) — [икстримли]",
     "options": [
       {
         "text": "enough",
@@ -1312,7 +1312,7 @@
   },
   {
     "title": "Переведите союз цели: для того чтобы, чтобы",
-    "correctAnswer": "so that — для того чтобы, чтобы — [соу зэт]",
+    "info":"","infoHelp":"","correctAnswer": "so that — для того чтобы, чтобы — [соу зэт]",
     "options": [
       {
         "text": "because",
@@ -1335,7 +1335,7 @@
   },
   {
     "title": "Вставьте союз в предложение: Practice every day ______ (для того чтобы) learn English fast.",
-    "correctAnswer": "so that — для того чтобы — [соу зэт]",
+    "info":"","infoHelp":"","correctAnswer": "so that — для того чтобы — [соу зэт]",
     "options": [
       {
         "text": "because",
@@ -1358,7 +1358,7 @@
   },
   {
     "title": "Переведите союз условия: в случае если, на случай если",
-    "correctAnswer": "in case — в случае если, на случай если — [ин кэйс]",
+    "info":"","infoHelp":"","correctAnswer": "in case — в случае если, на случай если — [ин кэйс]",
     "options": [
       {
         "text": "if",
@@ -1381,7 +1381,7 @@
   },
   {
     "title": "Вставьте союз в предложение: Take the map ______ (на случай если) you lose the road.",
-    "correctAnswer": "in case — в случае если, на случай если — [ин кэйс]",
+    "info":"","infoHelp":"","correctAnswer": "in case — в случае если, на случай если — [ин кэйс]",
     "options": [
       {
         "text": "because",
@@ -1404,7 +1404,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС НА ЛОГИКУ: Выберите пару союзов Цель И Условие:",
-    "correctAnswer": "so that (чтобы / для того чтобы), in case (на случай если)",
+    "info":"","infoHelp":"","correctAnswer": "so that (чтобы / для того чтобы), in case (на случай если)",
     "options": [
       {
         "text": "because / so",
@@ -1427,7 +1427,7 @@
   },
   {
     "title": "Переведите наречие степени: в значительной степени, очень сильно",
-    "correctAnswer": "greatly — в значительной степени, очень сильно — [грэйтли]",
+    "info":"","infoHelp":"","correctAnswer": "greatly — в значительной степени, очень сильно — [грэйтли]",
     "options": [
       {
         "text": "slightly",
@@ -1450,7 +1450,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: Our database level has ______ (в значительной степени) improved.",
-    "correctAnswer": "greatly — в значительной степени, значительно — [грэйтли]",
+    "info":"","infoHelp":"","correctAnswer": "greatly — в значительной степени, значительно — [грэйтли]",
     "options": [
       {
         "text": "hardly",
@@ -1473,7 +1473,7 @@
   },
   {
     "title": "Переведите сравнительный союз: точно так же как, так же как",
-    "correctAnswer": "just as — точно так же как, так же как — [джаст эз]",
+    "info":"","infoHelp":"","correctAnswer": "just as — точно так же как, так же как — [джаст эз]",
     "options": [
       {
         "text": "because",
@@ -1496,7 +1496,7 @@
   },
   {
     "title": "Вставьте союз в предложение: She loves books, ______ (точно так же как) her mother did.",
-    "correctAnswer": "just as — точно так же как — [джаст эз]",
+    "info":"","infoHelp":"","correctAnswer": "just as — точно так же как — [джаст эз]",
     "options": [
       {
         "text": "but",
@@ -1519,7 +1519,7 @@
   },
   {
     "title": "Переведите союз противопоставления (синоним союза but): тем не менее, однако, всё же",
-    "correctAnswer": "yet — тем не менее, однако, всё же (в качестве союза в середине предложения) — [йэт]",
+    "info":"","infoHelp":"","correctAnswer": "yet — тем не менее, однако, всё же (в качестве союза в середине предложения) — [йэт]",
     "options": [
       {
         "text": "so",
@@ -1542,7 +1542,7 @@
   },
   {
     "title": "Вставьте союз в предложение: It is a simple system, ______ (тем не менее, однако) it works perfectly.",
-    "correctAnswer": "yet — тем не менее, однако (союз противопоставления в середине предложения) — [йэт]",
+    "info":"","infoHelp":"","correctAnswer": "yet — тем не менее, однако (союз противопоставления в середине предложения) — [йэт]",
     "options": [
       {
         "text": "because",
@@ -1565,7 +1565,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару союзов противопоставления: но И тем не менее",
-    "correctAnswer": "but (но), yet (тем не менее, однако) — [бат, йэт]",
+    "info":"","infoHelp":"","correctAnswer": "but (но), yet (тем не менее, однако) — [бат, йэт]",
     "options": [
       {
         "text": "and / or",
@@ -1588,7 +1588,7 @@
   },
   {
     "title": "Переведите наречие степени: едва, только-только",
-    "correctAnswer": "barely — едва, только-только — [бэали]",
+    "info":"","infoHelp":"","correctAnswer": "barely — едва, только-только — [бэали]",
     "options": [
       {
         "text": "completely",
@@ -1611,7 +1611,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: We have ______ (едва, только-только) enough time to finish this block.",
-    "correctAnswer": "barely — едва, только-только (указывает на минимально достаточное количество) — [бэали]",
+    "info":"","infoHelp":"","correctAnswer": "barely — едва, только-только (указывает на минимально достаточное количество) — [бэали]",
     "options": [
       {
         "text": "very",
@@ -1634,7 +1634,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ наречия со значением минимальности признака или ограничения действия ('едва ли / почти не / едва'):",
-    "correctAnswer": "hardly, barely — синонимичные наречия степени с ограничительным смыслом",
+    "info":"","infoHelp":"","correctAnswer": "hardly, barely — синонимичные наречия степени с ограничительным смыслом",
     "options": [
       {
         "text": "hardly",
@@ -1657,7 +1657,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ наречия степени, которые служат для максимального усиления прилагательного ('чрезвычайно / абсолютно'):",
-    "correctAnswer": "extremely, absolutely — слова-максимализаторы степени признака",
+    "info":"","infoHelp":"","correctAnswer": "extremely, absolutely — слова-максимализаторы степени признака",
     "options": [
       {
         "text": "slightly",
@@ -1680,7 +1680,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару союзов: для того чтобы И в случае если",
-    "correctAnswer": "so that (для того чтобы), in case (в случае если) — [соу зэт, ин кэйс]",
+    "info":"","infoHelp":"","correctAnswer": "so that (для того чтобы), in case (в случае если) — [соу зэт, ин кэйс]",
     "options": [
       {
         "text": "because / so",
@@ -1703,7 +1703,7 @@
   },
   {
     "title": "СЛОВАРНАЯ ЛОГИКА: Какое наречие степени имеет схожий перевод со словом 'very', но выражает предельную, экстремальную степень?",
-    "correctAnswer": "extremely — чрезвычайно, крайне — [икстримли]",
+    "info":"","infoHelp":"","correctAnswer": "extremely — чрезвычайно, крайне — [икстримли]",
     "options": [
       {
         "text": "slightly",
@@ -1726,7 +1726,7 @@
   },
   {
     "title": "Переведите наречие степени: практически, фактически",
-    "correctAnswer": "practically — практически, фактически — [прэктикли]",
+    "info":"","infoHelp":"","correctAnswer": "practically — практически, фактически — [прэктикли]",
     "options": [
       {
         "text": "partly",
@@ -1749,7 +1749,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The test database is ______ (практически) ready for use.",
-    "correctAnswer": "practically — практически — [прэктикли]",
+    "info":"","infoHelp":"","correctAnswer": "practically — практически — [прэктикли]",
     "options": [
       {
         "text": "slightly",
@@ -1772,7 +1772,7 @@
   },
   {
     "title": "Переведите наречие степени: полностью, целиком",
-    "correctAnswer": "totally — полностью, целиком — [тоутэли]",
+    "info":"","infoHelp":"","correctAnswer": "totally — полностью, целиком — [тоутэли]",
     "options": [
       {
         "text": "partly",
@@ -1795,7 +1795,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: I ______ (полностью) agree with your application plan.",
-    "correctAnswer": "totally — полностью, целиком — [тоутэли]",
+    "info":"","infoHelp":"","correctAnswer": "totally — полностью, целиком — [тоутэли]",
     "options": [
       {
         "text": "partly",
@@ -1818,7 +1818,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ наречия со значением абсолютной стопроцентной полноты действия ('полностью / совершенно'):",
-    "correctAnswer": "completely, totally, absolutely — все эти слова выражают предельную полноту",
+    "info":"","infoHelp":"","correctAnswer": "completely, totally, absolutely — все эти слова выражают предельную полноту",
     "options": [
       {
         "text": "completely",
@@ -1841,7 +1841,7 @@
   },
   {
     "title": "Переведите причинный союз (синоним союза because): поскольку, так как",
-    "correctAnswer": "as — поскольку, так как — [эз]",
+    "info":"","infoHelp":"","correctAnswer": "as — поскольку, так как — [эз]",
     "options": [
       {
         "text": "but",
@@ -1864,7 +1864,7 @@
   },
   {
     "title": "Вставьте союз в предложение: ______ (Поскольку) the road was wet, we drove the car carefully.",
-    "correctAnswer": "as — поскольку, так как (вводит причину в начале предложения) — [эз]",
+    "info":"","infoHelp":"","correctAnswer": "as — поскольку, так как (вводит причину в начале предложения) — [эз]",
     "options": [
       {
         "text": "But",
@@ -1887,7 +1887,7 @@
   },
   {
     "title": "Переведите союз условия: при условии если, только если",
-    "correctAnswer": "provided that — при условии если, только если — [прэвайдид зэт]",
+    "info":"","infoHelp":"","correctAnswer": "provided that — при условии если, только если — [прэвайдид зэт]",
     "options": [
       {
         "text": "although",
@@ -1910,7 +1910,7 @@
   },
   {
     "title": "Вставьте союз в предложение: You will pass the test ______ (при условии если) you study hard.",
-    "correctAnswer": "provided that — при условии если — [прэвайдид зэт]",
+    "info":"","infoHelp":"","correctAnswer": "provided that — при условии если — [прэвайдид зэт]",
     "options": [
       {
         "text": "although",
@@ -1933,7 +1933,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару союзов: поскольку И при условии если",
-    "correctAnswer": "as (поскольку), provided that (при условии если)",
+    "info":"","infoHelp":"","correctAnswer": "as (поскольку), provided that (при условии если)",
     "options": [
       {
         "text": "because / so",
@@ -1956,7 +1956,7 @@
   },
   {
     "title": "Переведите наречие степени: существенно, значительно",
-    "correctAnswer": "substantially — существенно, значительно — [сабстэншэли]",
+    "info":"","infoHelp":"","correctAnswer": "substantially — существенно, значительно — [сабстэншэли]",
     "options": [
       {
         "text": "slightly",
@@ -1979,7 +1979,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The system performance improved ______ (существенно, значительно).",
-    "correctAnswer": "substantially — существенно, значительно — [сабстэншэли]",
+    "info":"","infoHelp":"","correctAnswer": "substantially — существенно, значительно — [сабстэншэли]",
     "options": [
       {
         "text": "slightly",
@@ -2002,7 +2002,7 @@
   },
   {
     "title": "Переведите пояснительный союз: то есть, а именно",
-    "correctAnswer": "that is — то есть, а именно — [зэт из]",
+    "info":"","infoHelp":"","correctAnswer": "that is — то есть, а именно — [зэт из]",
     "options": [
       {
         "text": "therefore",
@@ -2025,7 +2025,7 @@
   },
   {
     "title": "Вставьте союз в предложение: We meet on the weekend, ______ (то есть) on Saturday or Sunday.",
-    "correctAnswer": "that is — то есть — [зэт из]",
+    "info":"","infoHelp":"","correctAnswer": "that is — то есть — [зэт из]",
     "options": [
       {
         "text": "therefore",
@@ -2048,7 +2048,7 @@
   },
   {
     "title": "Переведите союз: вдобавок, к тому же",
-    "correctAnswer": "in addition — вдобавок, к тому же — [ин эдишн]",
+    "info":"","infoHelp":"","correctAnswer": "in addition — вдобавок, к тому же — [ин эдишн]",
     "options": [
       {
         "text": "however",
@@ -2071,7 +2071,7 @@
   },
   {
     "title": "Вставьте союз в предложение: The apartment is large. ______ (К тому же), the location is perfect.",
-    "correctAnswer": "in addition — вдобавок, к тому же — [ин эдишн]",
+    "info":"","infoHelp":"","correctAnswer": "in addition — вдобавок, к тому же — [ин эдишн]",
     "options": [
       {
         "text": "However",
@@ -2094,7 +2094,7 @@
   },
   {
     "title": "Переведите наречие степени: умеренно, в меру",
-    "correctAnswer": "moderately — умеренно, в меру — [модэрэтли]",
+    "info":"","infoHelp":"","correctAnswer": "moderately — умеренно, в меру — [модэрэтли]",
     "options": [
       {
         "text": "extremely",
@@ -2117,7 +2117,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: This level of difficult is ______ (умеренно) high, it is good for beginners.",
-    "correctAnswer": "moderately — умеренно, средне — [модэрэтли]",
+    "info":"","infoHelp":"","correctAnswer": "moderately — умеренно, средне — [модэрэтли]",
     "options": [
       {
         "text": "extremely",
@@ -2140,7 +2140,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару союзов добавления информации: кроме того И к тому же",
-    "correctAnswer": "furthermore (кроме того), in addition (к тому же)",
+    "info":"","infoHelp":"","correctAnswer": "furthermore (кроме того), in addition (к тому же)",
     "options": [
       {
         "text": "however / yet",
@@ -2163,7 +2163,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ слова, которые переводятся со значением 'существенно / значительно / очень сильно':",
-    "correctAnswer": "greatly, substantially — выражают высокую степень изменения или признака",
+    "info":"","infoHelp":"","correctAnswer": "greatly, substantially — выражают высокую степень изменения или признака",
     "options": [
       {
         "text": "greatly",
@@ -2186,7 +2186,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ союзы, которые вводят причину действия ('потому что / поскольку'):",
-    "correctAnswer": "because, as — оба союза используются для объяснения причины",
+    "info":"","infoHelp":"","correctAnswer": "because, as — оба союза используются для объяснения причины",
     "options": [
       {
         "text": "because",
@@ -2209,7 +2209,7 @@
   },
   {
     "title": "Переведите наречие степени: в равной степени, одинаково",
-    "correctAnswer": "equally — в равной степени, одинаково — [икуэли]",
+    "info":"","infoHelp":"","correctAnswer": "equally — в равной степени, одинаково — [икуэли]",
     "options": [
       {
         "text": "equally",
@@ -2232,7 +2232,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: Both rules are ______ (в равной степени) important for the application database.",
-    "correctAnswer": "equally — в равной степени, одинаково — [икуэли]",
+    "info":"","infoHelp":"","correctAnswer": "equally — в равной степени, одинаково — [икуэли]",
     "options": [
       {
         "text": "substantially",
@@ -2255,7 +2255,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару союзов: то есть И следовательно",
-    "correctAnswer": "that is (то есть), therefore (следовательно) — [зэт из, зэафор]",
+    "info":"","infoHelp":"","correctAnswer": "that is (то есть), therefore (следовательно) — [зэт из, зэафор]",
     "options": [
       {
         "text": "because / so",
@@ -2278,7 +2278,7 @@
   },
   {
     "title": "СЛОВАРНАЯ ЛОГИКА: Какое наречие степени означает 'почти', являясь его близким разговорным синонимом?",
-    "correctAnswer": "practically — практически — [прэктикли]",
+    "info":"","infoHelp":"","correctAnswer": "practically — практически — [прэктикли]",
     "options": [
       {
         "text": "absolutely",
@@ -2301,7 +2301,7 @@
   },
   {
     "title": "Переведите наречие степени: вполне, довольно-таки, действительно",
-    "correctAnswer": "fairly — вполне, довольно-таки — [фэали]",
+    "info":"","infoHelp":"","correctAnswer": "fairly — вполне, довольно-таки — [фэали]",
     "options": [
       {
         "text": "slightly",
@@ -2324,7 +2324,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The application speed is ______ (вполне) good for a start.",
-    "correctAnswer": "fairly — вполне, умеренно, довольно-таки — [фэали]",
+    "info":"","infoHelp":"","correctAnswer": "fairly — вполне, умеренно, довольно-таки — [фэали]",
     "options": [
       {
         "text": "extremely",
@@ -2347,7 +2347,7 @@
   },
   {
     "title": "Переведите наречие степени: относительно, сравнительно",
-    "correctAnswer": "relatively — относительно, сравнительно — [рэлэтивли]",
+    "info":"","infoHelp":"","correctAnswer": "relatively — относительно, сравнительно — [рэлэтивли]",
     "options": [
       {
         "text": "relatively",
@@ -2370,7 +2370,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: This rule is ______ (относительно) simple to remember.",
-    "correctAnswer": "relatively — относительно, сравнительно — [рэлэтивли]",
+    "info":"","infoHelp":"","correctAnswer": "relatively — относительно, сравнительно — [рэлэтивли]",
     "options": [
       {
         "text": "extremely",
@@ -2393,7 +2393,7 @@
   },
   {
     "title": "Переведите наречие степени: на удивление, удивительно",
-    "correctAnswer": "surprisingly — на удивление, удивительно — [сэрпрайзингли]",
+    "info":"","infoHelp":"","correctAnswer": "surprisingly — на удивление, удивительно — [сэрпрайзингли]",
     "options": [
       {
         "text": "normally",
@@ -2416,7 +2416,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The database is working ______ (на удивление) fast today.",
-    "correctAnswer": "surprisingly — на удивление, удивительно — [сэрпрайзингли]",
+    "info":"","infoHelp":"","correctAnswer": "surprisingly — на удивление, удивительно — [сэрпрайзингли]",
     "options": [
       {
         "text": "moderately",
@@ -2439,7 +2439,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару наречий степени: вполне И относительно",
-    "correctAnswer": "fairly (вполне), relatively (относительно) — [фэали, рэлэтивли]",
+    "info":"","infoHelp":"","correctAnswer": "fairly (вполне), relatively (относительно) — [фэали, рэлэтивли]",
     "options": [
       {
         "text": "extremely / slightly",
@@ -2462,7 +2462,7 @@
   },
   {
     "title": "Переведите союз следствия: в результате, вследствие этого",
-    "correctAnswer": "as a result — в результате, вследствие этого — [эз э ризалт]",
+    "info":"","infoHelp":"","correctAnswer": "as a result — в результате, вследствие этого — [эз э ризалт]",
     "options": [
       {
         "text": "because of",
@@ -2485,7 +2485,7 @@
   },
   {
     "title": "Вставьте союзную фразу в предложение: He missed the lesson; ______ (в результате), he made a mistake.",
-    "correctAnswer": "as a result — в результате, вследствие этого — [эз э ризалт]",
+    "info":"","infoHelp":"","correctAnswer": "as a result — в результате, вследствие этого — [эз э ризалт]",
     "options": [
       {
         "text": "because",
@@ -2508,7 +2508,7 @@
   },
   {
     "title": "Переведите союз: вместо того чтобы, вместо",
-    "correctAnswer": "instead of — вместо того чтобы, вместо — [инстэд оф]",
+    "info":"","infoHelp":"","correctAnswer": "instead of — вместо того чтобы, вместо — [инстэд оф]",
     "options": [
       {
         "text": "in addition to",
@@ -2531,7 +2531,7 @@
   },
   {
     "title": "Вставьте союз в предложение: Choose coffee ______ (вместо) tea for breakfast.",
-    "correctAnswer": "instead of — вместо — [инстэд оф]",
+    "info":"","infoHelp":"","correctAnswer": "instead of — вместо — [инстэд оф]",
     "options": [
       {
         "text": "besides",
@@ -2554,7 +2554,7 @@
   },
   {
     "title": "Переведите союз: из-за, по причине (предлог причины)",
-    "correctAnswer": "because of — из-за, по причине — [бикоз оф]",
+    "info":"","infoHelp":"","correctAnswer": "because of — из-за, по причине — [бикоз оф]",
     "options": [
       {
         "text": "because",
@@ -2577,7 +2577,7 @@
   },
   {
     "title": "ГРАММАТИКА: После союза 'because' идет целое предложение (с глаголом), а после 'because of' — только существительное или местоимение. Вставьте: We stayed home ______ (из-за) the cold weather.",
-    "correctAnswer": "because of — из-за (требует после себя существительное) — [бикоз оф]",
+    "info":"","infoHelp":"","correctAnswer": "because of — из-за (требует после себя существительное) — [бикоз оф]",
     "options": [
       {
         "text": "because",
@@ -2600,7 +2600,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС НА ЛОГИКУ И ГРАММАТИКУ: Выберите верную пару союзов: 'из-за (предлог)' И 'вместо того чтобы':",
-    "correctAnswer": "because of (из-за), instead of (вместо того чтобы) — [бикоз оф, инстэд оф]",
+    "info":"","infoHelp":"","correctAnswer": "because of (из-за), instead of (вместо того чтобы) — [бикоз оф, инстэд оф]",
     "options": [
       {
         "text": "because / instead",
@@ -2623,7 +2623,7 @@
   },
   {
     "title": "Переведите союз: в основном, главным образом",
-    "correctAnswer": "principally — в основном, главным образом — [принсипэли]",
+    "info":"","infoHelp":"","correctAnswer": "principally — в основном, главным образом — [принсипэли]",
     "options": [
       {
         "text": "partly",
@@ -2646,7 +2646,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: This application is ______ (в основном, главным образом) created for beginners.",
-    "correctAnswer": "principally — в основном, главным образом, преимущественно (синоним mostly) — [принсипэли]",
+    "info":"","infoHelp":"","correctAnswer": "principally — в основном, главным образом, преимущественно (синоним mostly) — [принсипэли]",
     "options": [
       {
         "text": "slightly",
@@ -2669,7 +2669,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ наречия степени, означающие умеренную или относительную меру признака ('вполне / относительно / умеренно'):",
-    "correctAnswer": "fairly, relatively, moderately — описывают среднюю, не экстремальную степень",
+    "info":"","infoHelp":"","correctAnswer": "fairly, relatively, moderately — описывают среднюю, не экстремальную степень",
     "options": [
       {
         "text": "fairly",
@@ -2692,7 +2692,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ сложные союзные конструкции, которые используются для связывания причинно-следственной логики или альтернатив ('в результате / из-за'):",
-    "correctAnswer": "as a result, because of — фразовые связующие элементы предложения",
+    "info":"","infoHelp":"","correctAnswer": "as a result, because of — фразовые связующие элементы предложения",
     "options": [
       {
         "text": "as a result",
@@ -2715,7 +2715,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару наречий степени: удивительно И одинаково",
-    "correctAnswer": "surprisingly (удивительно), equally (одинаково) — [сэрпрайзингли, икуэли]",
+    "info":"","infoHelp":"","correctAnswer": "surprisingly (удивительно), equally (одинаково) — [сэрпрайзингли, икуэли]",
     "options": [
       {
         "text": "fairly / relatively",
@@ -2738,7 +2738,7 @@
   },
   {
     "title": "КОНЕЦ БЛОКА: Переведите финальное наречие степени: чрезвычайно, в высшей степени",
-    "correctAnswer": "supremely — чрезвычайно, в высшей степени — [сьюпримли]",
+    "info":"","infoHelp":"","correctAnswer": "supremely — чрезвычайно, в высшей степени — [сьюпримли]",
     "options": [
       {
         "text": "slightly",

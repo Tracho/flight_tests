@@ -24,20 +24,20 @@ function NeonBtn({
   // Сетка стилей: [цвет][вариант]
   const styles: Record<ButtonColor, Record<ButtonVariant, string>> = {
     green: {
-      solid: "bg-green-700 text-white shadow-[0_0_15px_rgba(34,197,94,0.2)] hover:bg-green-600 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)]",
-      outline: "border border-green-700 text-green-600 bg-transparent hover:bg-green-700/10 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)]",
+      solid: "bg-green-700 text-white shadow-[0_0_10px_rgba(34,197,94,0.2)] hover:bg-green-600 hover:shadow-[0_0_10px_rgba(34,197,94,0.4)]",
+      outline: "border border-green-700 text-green-600 bg-transparent hover:bg-green-700/10 hover:shadow-[0_0_10px_rgba(34,197,94,0.5)]",
     },
     sky: {
-      solid: "bg-sky-700 text-white shadow-[0_0_15px_rgba(56,189,248,0.2)] hover:bg-sky-600 hover:shadow-[0_0_20px_rgba(56,189,248,0.4)]",
-      outline: "border border-sky-700 text-sky-600 bg-transparent hover:bg-sky-700/10 hover:shadow-[0_0_15px_rgba(56,189,248,0.5)]",
+      solid: "bg-sky-700 text-white shadow-[0_0_10px_rgba(56,189,248,0.2)] hover:bg-sky-600 hover:shadow-[0_0_10px_rgba(56,189,248,0.4)]",
+      outline: "border border-sky-700 text-sky-600 bg-transparent hover:bg-sky-700/10 hover:shadow-[0_0_10px_rgba(56,189,248,0.3)]",
     },
     amber: {
-      solid: "bg-amber-700 text-white shadow-[0_0_15px_rgba(245,158,11,0.2)] hover:bg-amber-600 hover:shadow-[0_0_20px_rgba(245,158,11,0.4)]",
-      outline: "border border-amber-700 text-amber-600 bg-transparent hover:bg-amber-700/10 hover:shadow-[0_0_15px_rgba(245,158,11,0.5)]",
+      solid: "bg-amber-500 text-white shadow-[0_0_10px_rgba(245,158,11,0.2)] hover:bg-amber-600 hover:shadow-[0_0_10px_rgba(245,158,11,0.4)]",
+      outline: "border border-amber-500 text-amber-500 bg-transparent hover:bg-amber-950/10 hover:shadow-[0_0_10px_rgba(245,158,11,0.5)]",
     },
     red: {
-      solid: "bg-red-700 text-white shadow-[0_0_15px_rgba(239,68,68,0.2)] hover:bg-red-600 hover:shadow-[0_0_20px_rgba(239,68,68,0.4)]",
-      outline: "border border-red-700 text-red-600 bg-transparent hover:bg-red-700/10 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)]",
+      solid: "bg-red-700 text-white shadow-[0_0_10px_rgba(239,68,68,0.2)] hover:bg-red-600 hover:shadow-[0_0_10px_rgba(239,68,68,0.4)]",
+      outline: "border border-red-500 text-red-500 bg-transparent hover:bg-red-950/10 hover:shadow-[0_0_10px_rgba(239,68,68,0.4)]",
     },
     gray: {
       solid: "bg-neutral-800 text-neutral-200 border border-neutral-700 shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:bg-neutral-700",

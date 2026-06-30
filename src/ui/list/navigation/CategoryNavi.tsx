@@ -2,14 +2,19 @@ import BgContainer from "@/ui/container/BgContainer";
 import CategoriesList from "./ChildrenCateNavi/CategoriesList";
 import SeacrchCate from "./ChildrenCateNavi/SeacrchCate";
 
-function CategoryNavi() {
-
+function CategoryNavi() { 
   return (
     <>
       <div className="max-w-xs w-xs flex flex-col">
-        <BgContainer> 
-          <SeacrchCate/>
-          <CategoriesList/>
+        <BgContainer>
+          <div className="flex flex-col gap-3">
+            <span className="text-lg text-gray-400">Поиск по категориям</span>
+            <SeacrchCate />
+          </div>
+          <div className="flex flex-col mt-5 gap-3">
+            <span className="text-lg text-gray-400">Категории:</span>
+            <CategoriesList />
+          </div>
         </BgContainer>
       </div>
     </>

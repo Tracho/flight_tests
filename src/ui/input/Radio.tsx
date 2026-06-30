@@ -34,8 +34,8 @@ if (isCorrect === true) {
 
 
   // Контейнер с увеличенной зоной клика
-  const wrapperClass = `flex items-center gap-3 cursor-pointer select-none py-1.5 px-1.5 bg-neutral-900 rounded transition-all duration-200 ${validationBorder} ${
-    disabled ? 'cursor-not-allowed' : ''
+  const wrapperClass = `flex items-center gap-3 py-1.5 px-1.5 bg-neutral-900 rounded transition-all duration-200 ${validationBorder} ${
+    disabled ? 'cursor-not-allowed' : 'cursor-pointer'
   } ${labelClassName}`
 
   const inputClass = 'sr-only peer'

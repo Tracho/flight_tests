@@ -1,22 +1,38 @@
 import Checkbox from "@/ui/input/Checkbox";
-import { useQuizStore } from "@/store/useQuizStore";
+import { quizActions, useQuizData, useSelectedCategories, useSelectedTests } from "@/store/useQuizStore";
 import { memo } from "react";
-
+import './Categories.scss';
 function CategoriesList() {
-  const data = useQuizStore((state) => state.data);
-  const checkCate = useQuizStore((state) => state.checkBoxCate);
-
+  const data = useQuizData();
+  const selectedCategories =  useSelectedCategories();
+  const selectedTests = useSelectedTests();
+ 
   return (
-    <div className="flex flex-col gap-2 mt-5">
-      {data.map((item) => (
-        <Checkbox
-          key={item.category}
-          mstyle="green"
-          checked={item.selected}
-          onChange={() => checkCate(item.category)}
-        >
-          {item.category}
-        </Checkbox>
+    <div className="flex flex-col gap-2">
+      {data.map((item) => ( 
+          <div key={item.category} className="myStyleCategoryLineH">
+            <Checkbox 
+              mstyle="green"
+              checked={selectedCategories.includes(item.category)}
+              onChange={() => quizActions.checkCategory(item.category)}
+            >
+              {item.category}
+            </Checkbox>
+
+            <div className="ml-5">
+              {item.arr.map((i) => (
+                <Checkbox
+                  key={i.title}
+                  mstyle="green"
+                  labelClassName="myStyleCategoryLineW"
+                  checked={selectedTests.includes(i.title)}
+                  onChange={() => quizActions.checkboxTest(item.category, i.title)}
+                >
+                  {i.title}
+                </Checkbox>
+              ))}
+            </div>
+          </div> 
       ))}
     </div>
   );

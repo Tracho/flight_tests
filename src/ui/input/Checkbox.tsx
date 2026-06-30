@@ -35,9 +35,9 @@ export function Checkbox({
       "border-b-2 border-red-500 shadow-[0_4px_12px_-4px_rgba(239,68,68,0.5)]";
   }
 
-  // Контейнер 1 в 1 как у Радио: темный фон, отступы, скругление и валидация
-  const wrapperClass = `flex items-center gap-3 cursor-pointer select-none py-1.5 px-1.5 bg-neutral-900 rounded transition-all duration-200 ${validationBorder} ${
-    disabled ? "cursor-not-allowed" : ""
+  // Контейнер 1 в 1 как у Радио: темный фон, отступы, скругление и валидация bg-neutral-900
+  const wrapperClass = `flex items-center gap-3 py-1.5 px-1.5 rounded transition-all duration-200 ${validationBorder} ${
+    disabled ? "cursor-not-allowed" : "cursor-pointer"
   } ${labelClassName}`;
 
   const inputClass = "sr-only peer";
@@ -70,13 +70,13 @@ export function Checkbox({
 
   return (
     <label htmlFor={generatedId} className={wrapperClass}>
-<input
-  type="checkbox"
-  id={generatedId}
-  className={inputClass}
-  disabled={disabled}
-  {...props}
-/>
+      <input
+        type="checkbox"
+        id={generatedId}
+        className={inputClass}
+        disabled={disabled}
+        {...props}
+      />
       <div className={computedBoxClass}>
         {/* SVG теперь плавно реагирует на родительский селектор [&>svg] через базовый scale-0 */}
         <svg

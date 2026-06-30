@@ -1,7 +1,7 @@
 [
   {
     "title": "Переведите наречие (как?): быстро",
-    "correctAnswer": "quickly — быстро — [куикли]",
+    "info":"","infoHelp":"","correctAnswer": "quickly — быстро — [куикли]",
     "options": [
       {
         "text": "slowly",
@@ -24,7 +24,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: He runs very ______ (быстро).",
-    "correctAnswer": "quickly — быстро (наречие образа действия) — [куикли]",
+    "info":"","infoHelp":"","correctAnswer": "quickly — быстро (наречие образа действия) — [куикли]",
     "options": [
       {
         "text": "quick",
@@ -47,7 +47,7 @@
   },
   {
     "title": "Переведите наречие (как?): медленно",
-    "correctAnswer": "slowly — медленно — [слоули]",
+    "info":"","infoHelp":"","correctAnswer": "slowly — медленно — [слоули]",
     "options": [
       {
         "text": "quickly",
@@ -70,7 +70,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: She walks ______ (медленно) in the park.",
-    "correctAnswer": "slowly — медленно — [слоули]",
+    "info":"","infoHelp":"","correctAnswer": "slowly — медленно — [слоули]",
     "options": [
       {
         "text": "slow",
@@ -93,7 +93,7 @@
   },
   {
     "title": "Переведите наречие (как?): хорошо (Исключение!)",
-    "correctAnswer": "well — хорошо (образуется от прилагательного good) — [уэл]",
+    "info":"","infoHelp":"","correctAnswer": "well — хорошо (образуется от прилагательного good) — [уэл]",
     "options": [
       {
         "text": "good",
@@ -116,7 +116,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: My friend speaks English very ______ (хорошо).",
-    "correctAnswer": "well — хорошо (исключение из правил) — [уэл]",
+    "info":"","infoHelp":"","correctAnswer": "well — хорошо (исключение из правил) — [уэл]",
     "options": [
       {
         "text": "good",
@@ -139,7 +139,7 @@
   },
   {
     "title": "Переведите наречие (как?): плохо",
-    "correctAnswer": "badly — плохо (от прилагательного bad) — [бэдли]",
+    "info":"","infoHelp":"","correctAnswer": "badly — плохо (от прилагательного bad) — [бэдли]",
     "options": [
       {
         "text": "bad",
@@ -162,7 +162,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: I sleep ______ (плохо) when it is hot.",
-    "correctAnswer": "badly — плохо — [бэдли]",
+    "info":"","infoHelp":"","correctAnswer": "badly — плохо — [бэдли]",
     "options": [
       {
         "text": "bad",
@@ -185,7 +185,7 @@
   },
   {
     "title": "Правило суффикса -ly: Какое наречие образуется от прилагательного sad (грустный)?",
-    "correctAnswer": "sadly — грустно — [сэдли]",
+    "info":"","infoHelp":"","correctAnswer": "sadly — грустно — [сэдли]",
     "options": [
       {
         "text": "sad",
@@ -208,7 +208,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: He looked at the broken car ______ (грустно).",
-    "correctAnswer": "sadly — грустно, печально — [сэдли]",
+    "info":"","infoHelp":"","correctAnswer": "sadly — грустно, печально — [сэдли]",
     "options": [
       {
         "text": "sad",
@@ -231,7 +231,7 @@
   },
   {
     "title": "Правило суффикса -ly: Какое наречие образуется от прилагательного strange (странный)?",
-    "correctAnswer": "strangely — странно — [стрэйнджли]",
+    "info":"","infoHelp":"","correctAnswer": "strangely — странно — [стрэйнджли]",
     "options": [
       {
         "text": "strange",
@@ -254,7 +254,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: It looks ______ (странно) and new.",
-    "correctAnswer": "strangely — странно — [стрэйнджли]",
+    "info":"","infoHelp":"","correctAnswer": "strangely — странно — [стрэйнджли]",
     "options": [
       {
         "text": "strange",
@@ -277,7 +277,7 @@
   },
   {
     "title": "Правило суффикса -ly: Если слово кончается на -y (happy), она меняется на -i. Как пишется 'счастливо'?",
-    "correctAnswer": "happily — счастливо, радостно — [хэпили]",
+    "info":"","infoHelp":"","correctAnswer": "happily — счастливо, радостно — [хэпили]",
     "options": [
       {
         "text": "happyly",
@@ -300,7 +300,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The children played ______ (радостно, счастливо) in the house.",
-    "correctAnswer": "happily — радостно, счастливо — [хэпили]",
+    "info":"","infoHelp":"","correctAnswer": "happily — радостно, счастливо — [хэпили]",
     "options": [
       {
         "text": "happy",
@@ -323,7 +323,7 @@
   },
   {
     "title": "Переведите наречие (как?): громко",
-    "correctAnswer": "loudly — громко — [лаудли]",
+    "info":"","infoHelp":"","correctAnswer": "loudly — громко — [лаудли]",
     "options": [
       {
         "text": "quietly",
@@ -346,7 +346,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: Do not speak so ______ (громко), the baby is sleeping.",
-    "correctAnswer": "loudly — громко — [лаудли]",
+    "info":"","infoHelp":"","correctAnswer": "loudly — громко — [лаудли]",
     "options": [
       {
         "text": "loud",
@@ -369,7 +369,7 @@
   },
   {
     "title": "Переведите наречие (как?): тихо",
-    "correctAnswer": "quietly — тихо — [куайэтли]",
+    "info":"","infoHelp":"","correctAnswer": "quietly — тихо — [куайэтли]",
     "options": [
       {
         "text": "loudly",
@@ -392,7 +392,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: She closed the door ______ (тихо).",
-    "correctAnswer": "quietly — тихо — [куайэтли]",
+    "info":"","infoHelp":"","correctAnswer": "quietly — тихо — [куайэтли]",
     "options": [
       {
         "text": "quiet",
@@ -415,7 +415,7 @@
   },
   {
     "title": "Переведите наречие (как?): легко",
-    "correctAnswer": "easily — легко (от прилагательного easy) — [изили]",
+    "info":"","infoHelp":"","correctAnswer": "easily — легко (от прилагательного easy) — [изили]",
     "options": [
       {
         "text": "easy",
@@ -438,7 +438,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: You can do this test ______ (легко).",
-    "correctAnswer": "easily — легко — [изили]",
+    "info":"","infoHelp":"","correctAnswer": "easily — легко — [изили]",
     "options": [
       {
         "text": "easy",
@@ -461,7 +461,7 @@
   },
   {
     "title": "Переведите наречие (как?): тяжело, сильно",
-    "correctAnswer": "heavily — тяжело, сильно (от heavy) — [хэвили]",
+    "info":"","infoHelp":"","correctAnswer": "heavily — тяжело, сильно (от heavy) — [хэвили]",
     "options": [
       {
         "text": "heavy",
@@ -484,7 +484,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: It is raining ______ (сильно, тяжело) outside.",
-    "correctAnswer": "heavily — сильно, тяжело (о дожде/снеге) — [хэвили]",
+    "info":"","infoHelp":"","correctAnswer": "heavily — сильно, тяжело (о дожде/снеге) — [хэвили]",
     "options": [
       {
         "text": "heavy",
@@ -507,7 +507,7 @@
   },
   {
     "title": "Переведите наречие (как?): красиво",
-    "correctAnswer": "beautifully — красиво — [бьютифли]",
+    "info":"","infoHelp":"","correctAnswer": "beautifully — красиво — [бьютифли]",
     "options": [
       {
         "text": "beautiful",
@@ -530,7 +530,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: She sings very ______ (красиво).",
-    "correctAnswer": "beautifully — красиво — [бьютифли]",
+    "info":"","infoHelp":"","correctAnswer": "beautifully — красиво — [бьютифли]",
     "options": [
       {
         "text": "beautiful",
@@ -553,7 +553,7 @@
   },
   {
     "title": "Переведите наречие (как?): ясно, четко",
-    "correctAnswer": "clearly — ясно, четко — [клиэрли]",
+    "info":"","infoHelp":"","correctAnswer": "clearly — ясно, четко — [клиэрли]",
     "options": [
       {
         "text": "clear",
@@ -576,7 +576,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: I can see the road ______ (ясно, четко) now.",
-    "correctAnswer": "clearly — ясно, четко — [клиэрли]",
+    "info":"","infoHelp":"","correctAnswer": "clearly — ясно, четко — [клиэрли]",
     "options": [
       {
         "text": "clear",
@@ -599,7 +599,7 @@
   },
   {
     "title": "Переведите наречие (как?): мягко, нежно",
-    "correctAnswer": "softly — мягко, нежно — [софтли]",
+    "info":"","infoHelp":"","correctAnswer": "softly — мягко, нежно — [софтли]",
     "options": [
       {
         "text": "soft",
@@ -622,7 +622,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The mother spoke ______ (мягко, нежно) to her baby.",
-    "correctAnswer": "softly — мягко, нежно — [софтли]",
+    "info":"","infoHelp":"","correctAnswer": "softly — мягко, нежно — [софтли]",
     "options": [
       {
         "text": "soft",
@@ -645,7 +645,7 @@
   },
   {
     "title": "Переведите наречие (как?): правильно",
-    "correctAnswer": "correctly — правильно — [кэрэктли]",
+    "info":"","infoHelp":"","correctAnswer": "correctly — правильно — [кэрэктли]",
     "options": [
       {
         "text": "correct",
@@ -668,7 +668,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: Please answer the question ______ (правильно).",
-    "correctAnswer": "correctly — правильно — [кэрэктли]",
+    "info":"","infoHelp":"","correctAnswer": "correctly — правильно — [кэрэктли]",
     "options": [
       {
         "text": "correct",
@@ -691,7 +691,7 @@
   },
   {
     "title": "Переведите наречие (как?): неправильно",
-    "correctAnswer": "wrongly — неправильно — [ронгли]",
+    "info":"","infoHelp":"","correctAnswer": "wrongly — неправильно — [ронгли]",
     "options": [
       {
         "text": "wrong",
@@ -714,7 +714,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: You spelled my name ______ (неправильно).",
-    "correctAnswer": "wrongly — неправильно — [ронгли]",
+    "info":"","infoHelp":"","correctAnswer": "wrongly — неправильно — [ронгли]",
     "options": [
       {
         "text": "wrong",
@@ -737,7 +737,7 @@
   },
   {
     "title": "Переведите наречие (как?): идеально",
-    "correctAnswer": "perfectly — идеально — [пэрфиктли]",
+    "info":"","infoHelp":"","correctAnswer": "perfectly — идеально — [пэрфиктли]",
     "options": [
       {
         "text": "perfect",
@@ -760,7 +760,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: This dress fits you ______ (идельно).",
-    "correctAnswer": "perfectly — идеально — [пэрфиктли]",
+    "info":"","infoHelp":"","correctAnswer": "perfectly — идеально — [пэрфиктли]",
     "options": [
       {
         "text": "perfect",
@@ -783,7 +783,7 @@
   },
   {
     "title": "Переведите наречие (как?): вежливо",
-    "correctAnswer": "politely — вежливо — [пэлайтли]",
+    "info":"","infoHelp":"","correctAnswer": "politely — вежливо — [пэлайтли]",
     "options": [
       {
         "text": "polite",
@@ -806,7 +806,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: He asked for help very ______ (вежливо).",
-    "correctAnswer": "politely — вежливо — [пэлайтли]",
+    "info":"","infoHelp":"","correctAnswer": "politely — вежливо — [пэлайтли]",
     "options": [
       {
         "text": "polite",
@@ -829,7 +829,7 @@
   },
   {
     "title": "Переведите наречие (как?): грубо",
-    "correctAnswer": "rudely — грубо — [рудли]",
+    "info":"","infoHelp":"","correctAnswer": "rudely — грубо — [рудли]",
     "options": [
       {
         "text": "rude",
@@ -852,7 +852,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The man answered me ______ (грубо).",
-    "correctAnswer": "rudely — грубо — [рудли]",
+    "info":"","infoHelp":"","correctAnswer": "rudely — грубо — [рудли]",
     "options": [
       {
         "text": "rude",
@@ -875,7 +875,7 @@
   },
   {
     "title": "Переведите наречие (как?): смело",
-    "correctAnswer": "bravely — смело — [брэйвли]",
+    "info":"","infoHelp":"","correctAnswer": "bravely — смело — [брэйвли]",
     "options": [
       {
         "text": "brave",
@@ -898,7 +898,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The soldier fought ______ (смело).",
-    "correctAnswer": "bravely — смело — [брэйвли]",
+    "info":"","infoHelp":"","correctAnswer": "bravely — смело — [брэйвли]",
     "options": [
       {
         "text": "brave",
@@ -921,7 +921,7 @@
   },
   {
     "title": "Переведите наречие (как?): аккуратно, осторожно",
-    "correctAnswer": "carefully — аккуратно, осторожно — [кэафли]",
+    "info":"","infoHelp":"","correctAnswer": "carefully — аккуратно, осторожно — [кэафли]",
     "options": [
       {
         "text": "careful",
@@ -944,7 +944,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: Drive ______ (осторожно), the road is wet.",
-    "correctAnswer": "carefully — осторожно, аккуратно — [кэафли]",
+    "info":"","infoHelp":"","correctAnswer": "carefully — осторожно, аккуратно — [кэафли]",
     "options": [
       {
         "text": "careful",
@@ -967,7 +967,7 @@
   },
   {
     "title": "Переведите наречие (как?): небрежно, неосторожно",
-    "correctAnswer": "carelessly — небрежно, неосторожно — [кэалисли]",
+    "info":"","infoHelp":"","correctAnswer": "carelessly — небрежно, неосторожно — [кэалисли]",
     "options": [
       {
         "text": "careless",
@@ -990,7 +990,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: He threw the papers ______ (небрежно) on the table.",
-    "correctAnswer": "carelessly — небрежно, неосторожно — [кэалисли]",
+    "info":"","infoHelp":"","correctAnswer": "carelessly — небрежно, неосторожно — [кэалисли]",
     "options": [
       {
         "text": "careless",
@@ -1013,7 +1013,7 @@
   },
   {
     "title": "Исключение из правил: Какое наречие образуется от прилагательного fast (быстрый)? Суффикс -ly НЕ нужен!",
-    "correctAnswer": "fast — быстро (форма не меняется) — [фаст]",
+    "info":"","infoHelp":"","correctAnswer": "fast — быстро (форма не меняется) — [фаст]",
     "options": [
       {
         "text": "fastly",
@@ -1036,7 +1036,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: My watch runs ______ (быстро, спешит) — это исключение!",
-    "correctAnswer": "fast — быстро (слово fast не меняет форму) — [фаст]",
+    "info":"","infoHelp":"","correctAnswer": "fast — быстро (слово fast не меняет форму) — [фаст]",
     "options": [
       {
         "text": "fastly",
@@ -1059,7 +1059,7 @@
   },
   {
     "title": "Исключение из правил: Какое наречие образуется от hard (усердный, тяжелый)? Суффикс -ly меняет смысл слова!",
-    "correctAnswer": "hard — усердно, тяжело (форма не меняется) — [хард]",
+    "info":"","infoHelp":"","correctAnswer": "hard — усердно, тяжело (форма не меняется) — [хард]",
     "options": [
       {
         "text": "hardly",
@@ -1082,7 +1082,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: You must study ______ (усердно, тяжело) to pass the test.",
-    "correctAnswer": "hard — усердно, тяжело — [хард]",
+    "info":"","infoHelp":"","correctAnswer": "hard — усердно, тяжело — [хард]",
     "options": [
       {
         "text": "hardly",
@@ -1105,7 +1105,7 @@
   },
   {
     "title": "Переведите наречие (как?): спокойно",
-    "correctAnswer": "calmly — спокойно — [камли]",
+    "info":"","infoHelp":"","correctAnswer": "calmly — спокойно — [камли]",
     "options": [
       {
         "text": "calm",
@@ -1128,7 +1128,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: He answered all the questions ______ (спокойно).",
-    "correctAnswer": "calmly — спокойно — [камли]",
+    "info":"","infoHelp":"","correctAnswer": "calmly — спокойно — [камли]",
     "options": [
       {
         "text": "calm",
@@ -1151,7 +1151,7 @@
   },
   {
     "title": "Переведите наречие (как?): безопасно",
-    "correctAnswer": "safely — безопасно — [сэйфли]",
+    "info":"","infoHelp":"","correctAnswer": "safely — безопасно — [сэйфли]",
     "options": [
       {
         "text": "safe",
@@ -1174,7 +1174,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: We arrived home ______ (безопасно, благополучно).",
-    "correctAnswer": "safely — безопасно, благополучно — [сэйфли]",
+    "info":"","infoHelp":"","correctAnswer": "safely — безопасно, благополучно — [сэйфли]",
     "options": [
       {
         "text": "safe",
@@ -1197,7 +1197,7 @@
   },
   {
     "title": "Переведите наречие (как?): опасно",
-    "correctAnswer": "dangerously — опасно — [дэйнджэрэсли]",
+    "info":"","infoHelp":"","correctAnswer": "dangerously — опасно — [дэйнджэрэсли]",
     "options": [
       {
         "text": "dangerous",
@@ -1220,7 +1220,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: He drives the car ______ (опасно).",
-    "correctAnswer": "dangerously — опасно — [дэйнджэрэсли]",
+    "info":"","infoHelp":"","correctAnswer": "dangerously — опасно — [дэйнджэрэсли]",
     "options": [
       {
         "text": "dangerous",
@@ -1243,7 +1243,7 @@
   },
   {
     "title": "Переведите наречие (как?): честно",
-    "correctAnswer": "honestly — честно — [онистли]",
+    "info":"","infoHelp":"","correctAnswer": "honestly — честно — [онистли]",
     "options": [
       {
         "text": "honest",
@@ -1266,7 +1266,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: Tell me ______ (честно), what do you think?",
-    "correctAnswer": "honestly — честно — [онистли]",
+    "info":"","infoHelp":"","correctAnswer": "honestly — честно — [онистли]",
     "options": [
       {
         "text": "honest",
@@ -1289,7 +1289,7 @@
   },
   {
     "title": "Переведите наречие (как?): шумно",
-    "correctAnswer": "noisily — шумно (от noisy, -y меняется на -i) — [нойзили]",
+    "info":"","infoHelp":"","correctAnswer": "noisily — шумно (от noisy, -y меняется на -i) — [нойзили]",
     "options": [
       {
         "text": "noisy",
@@ -1312,7 +1312,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The students talked ______ (шумно) in the room.",
-    "correctAnswer": "noisily — шумно — [нойзили]",
+    "info":"","infoHelp":"","correctAnswer": "noisily — шумно — [нойзили]",
     "options": [
       {
         "text": "noisy",
@@ -1335,7 +1335,7 @@
   },
   {
     "title": "Переведите наречие (как?): серьезно",
-    "correctAnswer": "seriously — серьезно — [сириэсли]",
+    "info":"","infoHelp":"","correctAnswer": "seriously — серьезно — [сириэсли]",
     "options": [
       {
         "text": "serious",
@@ -1358,7 +1358,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: She is ______ (серьезно) sick today.",
-    "correctAnswer": "seriously — серьезно — [сириэсли]",
+    "info":"","infoHelp":"","correctAnswer": "seriously — серьезно — [сириэсли]",
     "options": [
       {
         "text": "serious",
@@ -1381,7 +1381,7 @@
   },
   {
     "title": "Переведите наречие (как?): щедро",
-    "correctAnswer": "generously — щедро — [джэнэрэсли]",
+    "info":"","infoHelp":"","correctAnswer": "generously — щедро — [джэнэрэсли]",
     "options": [
       {
         "text": "generous",
@@ -1404,7 +1404,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: He paid for our dinner very ______ (щедро).",
-    "correctAnswer": "generously — щедро — [джэнэрэсли]",
+    "info":"","infoHelp":"","correctAnswer": "generously — щедро — [джэнэрэсли]",
     "options": [
       {
         "text": "generous",
@@ -1427,7 +1427,7 @@
   },
   {
     "title": "Переведите наречие (как?): гордо",
-    "correctAnswer": "proudly — гордо — [праудли]",
+    "info":"","infoHelp":"","correctAnswer": "proudly — гордо — [праудли]",
     "options": [
       {
         "text": "proud",
@@ -1450,7 +1450,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: She ______ (гордо) showed her new application.",
-    "correctAnswer": "proudly — гордо — [праудли]",
+    "info":"","infoHelp":"","correctAnswer": "proudly — гордо — [праудли]",
     "options": [
       {
         "text": "proud",
@@ -1473,7 +1473,7 @@
   },
   {
     "title": "Переведите наречие (как?): глупо",
-    "correctAnswer": "foolishly — глупо — [фулишли]",
+    "info":"","infoHelp":"","correctAnswer": "foolishly — глупо — [фулишли]",
     "options": [
       {
         "text": "foolish",
@@ -1496,7 +1496,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: He spent his money ______ (глупо) on candy.",
-    "correctAnswer": "foolishly — глупо — [фулишли]",
+    "info":"","infoHelp":"","correctAnswer": "foolishly — глупо — [фулишли]",
     "options": [
       {
         "text": "foolish",
@@ -1519,7 +1519,7 @@
   },
   {
     "title": "Переведите наречие (как?): таинственно, загадочно",
-    "correctAnswer": "mysteriously — таинственно, загадочно — [мистиэриэсли]",
+    "info":"","infoHelp":"","correctAnswer": "mysteriously — таинственно, загадочно — [мистиэриэсли]",
     "options": [
       {
         "text": "mysterious",
@@ -1542,7 +1542,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The box disappeared ______ (таинственно).",
-    "correctAnswer": "mysteriously — таинственно, загадочно — [мистиэриэсли]",
+    "info":"","infoHelp":"","correctAnswer": "mysteriously — таинственно, загадочно — [мистиэриэсли]",
     "options": [
       {
         "text": "mysterious",
@@ -1565,7 +1565,7 @@
   },
   {
     "title": "Переведите наречие (как?): нежно, ласково",
-    "correctAnswer": "gently — нежно, ласково (от gentle, убираем -e) — [джентли]",
+    "info":"","infoHelp":"","correctAnswer": "gently — нежно, ласково (от gentle, убираем -e) — [джентли]",
     "options": [
       {
         "text": "gentle",
@@ -1588,7 +1588,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: Hold the child's hand ______ (нежно, ласково).",
-    "correctAnswer": "gently — нежно, ласково — [джентли]",
+    "info":"","infoHelp":"","correctAnswer": "gently — нежно, ласково — [джентли]",
     "options": [
       {
         "text": "gentle",
@@ -1611,7 +1611,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ правильные наречия исключения (у которых НЕТ суффикса -ly):",
-    "correctAnswer": "well, fast, hard — это наречия-исключения, они не используют суффикс -ly",
+    "info":"","infoHelp":"","correctAnswer": "well, fast, hard — это наречия-исключения, они не используют суффикс -ly",
     "options": [
       {
         "text": "well",
@@ -1634,7 +1634,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару наречий (как?): грустно И радостно",
-    "correctAnswer": "sadly (грустно), happily (радостно) — [сэдли, хэпили]",
+    "info":"","infoHelp":"","correctAnswer": "sadly (грустно), happily (радостно) — [сэдли, хэпили]",
     "options": [
       {
         "text": "badly / well",
@@ -1657,7 +1657,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ варианты, которые переводятся как 'осторожно, аккуратно':",
-    "correctAnswer": "carefully, safely — оба слова могут означать аккуратное и безопасное действие",
+    "info":"","infoHelp":"","correctAnswer": "carefully, safely — оба слова могут означать аккуратное и безопасное действие",
     "options": [
       {
         "text": "carefully",
@@ -1680,7 +1680,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару противоположностей (как?): тихо И громко",
-    "correctAnswer": "quietly (тихо), loudly (громко) — [куайэтли, лаудли]",
+    "info":"","infoHelp":"","correctAnswer": "quietly (тихо), loudly (громко) — [куайэтли, лаудли]",
     "options": [
       {
         "text": "softly / gently",
@@ -1703,7 +1703,7 @@
   },
   {
     "title": "Переведите наречие (как?): яростно, злобно",
-    "correctAnswer": "angrily — яростно, злобно (от angry, -y меняется на -i) — [энгрили]",
+    "info":"","infoHelp":"","correctAnswer": "angrily — яростно, злобно (от angry, -y меняется на -i) — [энгрили]",
     "options": [
       {
         "text": "angry",
@@ -1726,7 +1726,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: 'Leave me alone!' he shouted ______ (злобно, яростно).",
-    "correctAnswer": "angrily — злобно, сердито — [энгрили]",
+    "info":"","infoHelp":"","correctAnswer": "angrily — злобно, сердито — [энгрили]",
     "options": [
       {
         "text": "angry",
@@ -1749,7 +1749,7 @@
   },
   {
     "title": "Переведите наречие (как?): автоматически",
-    "correctAnswer": "automatically — автоматически — [отомэтикли]",
+    "info":"","infoHelp":"","correctAnswer": "automatically — автоматически — [отомэтикли]",
     "options": [
       {
         "text": "automatic",
@@ -1772,7 +1772,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The door closes ______ (автоматически) after five seconds.",
-    "correctAnswer": "automatically — автоматически — [отомэтикли]",
+    "info":"","infoHelp":"","correctAnswer": "automatically — автоматически — [отомэтикли]",
     "options": [
       {
         "text": "automatic",
@@ -1795,7 +1795,7 @@
   },
   {
     "title": "Переведите наречие (как?): внезапно, вдруг",
-    "correctAnswer": "suddenly — внезапно, вдруг — [саднли]",
+    "info":"","infoHelp":"","correctAnswer": "suddenly — внезапно, вдруг — [саднли]",
     "options": [
       {
         "text": "sudden",
@@ -1818,7 +1818,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: ______ (внезапно), the light went out.",
-    "correctAnswer": "suddenly — внезапно, вдруг — [саднли]",
+    "info":"","infoHelp":"","correctAnswer": "suddenly — внезапно, вдруг — [саднли]",
     "options": [
       {
         "text": "sudden",
@@ -1841,7 +1841,7 @@
   },
   {
     "title": "Переведите наречие (как?): немедленно, сразу же",
-    "correctAnswer": "immediately — немедленно, сразу же — [имидиэтли]",
+    "info":"","infoHelp":"","correctAnswer": "immediately — немедленно, сразу же — [имидиэтли]",
     "options": [
       {
         "text": "immediate",
@@ -1864,7 +1864,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: Please answer my message ______ (немедленно).",
-    "correctAnswer": "immediately — немедленно, сразу же — [имидиэтли]",
+    "info":"","infoHelp":"","correctAnswer": "immediately — немедленно, сразу же — [имидиэтли]",
     "options": [
       {
         "text": "immediate",
@@ -1887,7 +1887,7 @@
   },
   {
     "title": "Переведите наречие (как?): терпеливо",
-    "correctAnswer": "patiently — терпеливо — [пэйшэнтли]",
+    "info":"","infoHelp":"","correctAnswer": "patiently — терпеливо — [пэйшэнтли]",
     "options": [
       {
         "text": "patient",
@@ -1910,7 +1910,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: We waited ______ (терпеливо) at the station for the train.",
-    "correctAnswer": "patiently — терпеливо — [пэйшэнтли]",
+    "info":"","infoHelp":"","correctAnswer": "patiently — терпеливо — [пэйшэнтли]",
     "options": [
       {
         "text": "patient",
@@ -1933,7 +1933,7 @@
   },
   {
     "title": "Переведите наречие (как?): нетерпеливо",
-    "correctAnswer": "impatiently — нетерпеливо — [импэйшэнтли]",
+    "info":"","infoHelp":"","correctAnswer": "impatiently — нетерпеливо — [импэйшэнтли]",
     "options": [
       {
         "text": "impatient",
@@ -1956,7 +1956,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: He looked at his watch ______ (нетерпеливо).",
-    "correctAnswer": "impatiently — нетерпеливо — [импэйшэнтли]",
+    "info":"","infoHelp":"","correctAnswer": "impatiently — нетерпеливо — [импэйшэнтли]",
     "options": [
       {
         "text": "impatient",
@@ -1979,7 +1979,7 @@
   },
   {
     "title": "Переведите наречие (как?): свободно (о языках)",
-    "correctAnswer": "fluently — свободно, бегло — [флуэнтли]",
+    "info":"","infoHelp":"","correctAnswer": "fluently — свободно, бегло — [флуэнтли]",
     "options": [
       {
         "text": "fluent",
@@ -2002,7 +2002,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: She can read and speak English ______ (свободно, бегло).",
-    "correctAnswer": "fluently — свободно, бегло (о владении языком) — [флуэнтли]",
+    "info":"","infoHelp":"","correctAnswer": "fluently — свободно, бегло (о владении языком) — [флуэнтли]",
     "options": [
       {
         "text": "fluent",
@@ -2025,7 +2025,7 @@
   },
   {
     "title": "Переведите наречие (как?): приятно, мило",
-    "correctAnswer": "nicely — приятно, мило — [найсли]",
+    "info":"","infoHelp":"","correctAnswer": "nicely — приятно, мило — [найсли]",
     "options": [
       {
         "text": "nice",
@@ -2048,7 +2048,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The room was ______ (приятно, мило) decorated.",
-    "correctAnswer": "nicely — приятно, мило, хорошо — [найсли]",
+    "info":"","infoHelp":"","correctAnswer": "nicely — приятно, мило, хорошо — [найсли]",
     "options": [
       {
         "text": "nice",
@@ -2071,7 +2071,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ наречия, которые переводятся со значением 'тихо / нежно':",
-    "correctAnswer": "quietly, softly, gently — все три слова описывают негромкие и мягкие действия",
+    "info":"","infoHelp":"","correctAnswer": "quietly, softly, gently — все три слова описывают негромкие и мягкие действия",
     "options": [
       {
         "text": "quietly",
@@ -2094,7 +2094,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару (как?): вежливо И грубо",
-    "correctAnswer": "politely (вежливо), rudely (грубо) — [пэлайтли, рудли]",
+    "info":"","infoHelp":"","correctAnswer": "politely (вежливо), rudely (грубо) — [пэлайтли, рудли]",
     "options": [
       {
         "text": "kindly / badly",
@@ -2117,7 +2117,7 @@
   },
   {
     "title": "Переведите наречие (как?): естественно, конечно",
-    "correctAnswer": "naturally — естественно, конечно — [нэчрэли]",
+    "info":"","infoHelp":"","correctAnswer": "naturally — естественно, конечно — [нэчрэли]",
     "options": [
       {
         "text": "natural",
@@ -2140,7 +2140,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: Act ______ (естественно) and stay calm.",
-    "correctAnswer": "naturally — естественно — [нэчрэли]",
+    "info":"","infoHelp":"","correctAnswer": "naturally — естественно — [нэчрэли]",
     "options": [
       {
         "text": "natural",
@@ -2163,7 +2163,7 @@
   },
   {
     "title": "Переведите наречие (как?): нормально, обычно",
-    "correctAnswer": "normally — нормально, обычно — [нормэли]",
+    "info":"","infoHelp":"","correctAnswer": "normally — нормально, обычно — [нормэли]",
     "options": [
       {
         "text": "normal",
@@ -2186,7 +2186,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The system is working ______ (нормально) now.",
-    "correctAnswer": "normally — нормально, в штатном режиме — [нормэли]",
+    "info":"","infoHelp":"","correctAnswer": "normally — нормально, в штатном режиме — [нормэли]",
     "options": [
       {
         "text": "normal",
@@ -2209,7 +2209,7 @@
   },
   {
     "title": "Переведите наречие (как?): странно, причудливо",
-    "correctAnswer": "oddly — странно, причудливо — [одли]",
+    "info":"","infoHelp":"","correctAnswer": "oddly — странно, причудливо — [одли]",
     "options": [
       {
         "text": "odd",
@@ -2232,7 +2232,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: He behaved very ______ (странно) at the party.",
-    "correctAnswer": "oddly — странно, эксцентрично — [одли]",
+    "info":"","infoHelp":"","correctAnswer": "oddly — странно, эксцентрично — [одли]",
     "options": [
       {
         "text": "odd",
@@ -2255,7 +2255,7 @@
   },
   {
     "title": "Переведите наречие (как?): глубоко",
-    "correctAnswer": "deeply — глубоко — [дипли]",
+    "info":"","infoHelp":"","correctAnswer": "deeply — глубоко — [дипли]",
     "options": [
       {
         "text": "deep",
@@ -2278,7 +2278,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: Breathe ______ (глубоко) and open your eyes.",
-    "correctAnswer": "deeply — глубоко — [дипли]",
+    "info":"","infoHelp":"","correctAnswer": "deeply — глубоко — [дипли]",
     "options": [
       {
         "text": "deep",
@@ -2301,7 +2301,7 @@
   },
   {
     "title": "Переведите наречие (как?): полностью, совершенно",
-    "correctAnswer": "completely — полностью, совершенно — [кэмплитли]",
+    "info":"","infoHelp":"","correctAnswer": "completely — полностью, совершенно — [кэмплитли]",
     "options": [
       {
         "text": "complete",
@@ -2324,7 +2324,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: I ______ (полностью) forgot about our test.",
-    "correctAnswer": "completely — полностью, целиком — [кэмплитли]",
+    "info":"","infoHelp":"","correctAnswer": "completely — полностью, целиком — [кэмплитли]",
     "options": [
       {
         "text": "complete",
@@ -2347,7 +2347,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ наречия со значением 'странно':",
-    "correctAnswer": "strangely, oddly — оба слова являются синонимами и переводятся как 'странно'",
+    "info":"","infoHelp":"","correctAnswer": "strangely, oddly — оба слова являются синонимами и переводятся как 'странно'",
     "options": [
       {
         "text": "strangely",
@@ -2370,7 +2370,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару наречий: аккуратно И небрежно",
-    "correctAnswer": "carefully (аккуратно), carelessly (небрежно) — [кэафли, кэалисли]",
+    "info":"","infoHelp":"","correctAnswer": "carefully (аккуратно), carelessly (небрежно) — [кэафли, кэалисли]",
     "options": [
       {
         "text": "politely / rudely",
@@ -2393,7 +2393,7 @@
   },
   {
     "title": "СЛОВО ОБРАЗОВАНИЕ: Какое наречие образуется от прилагательного automatic?",
-    "correctAnswer": "automatically — автоматически (к прилагательным на -ic добавляется суффикс -ally) — [отомэтикли]",
+    "info":"","infoHelp":"","correctAnswer": "automatically — автоматически (к прилагательным на -ic добавляется суффикс -ally) — [отомэтикли]",
     "options": [
       {
         "text": "automaticly",
@@ -2416,7 +2416,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару противоположностей (как?): правильно И неправильно",
-    "correctAnswer": "correctly (правильно), wrongly (неправильно) — [кэрэктли, ронгли]",
+    "info":"","infoHelp":"","correctAnswer": "correctly (правильно), wrongly (неправильно) — [кэрэктли, ронгли]",
     "options": [
       {
         "text": "true / false",
@@ -2439,7 +2439,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ наречия, которые переводятся со значением 'полностью, идеально':",
-    "correctAnswer": "completely, perfectly — оба слова описывают завершенность или идеальное выполнение действия",
+    "info":"","infoHelp":"","correctAnswer": "completely, perfectly — оба слова описывают завершенность или идеальное выполнение действия",
     "options": [
       {
         "text": "completely",
@@ -2462,7 +2462,7 @@
   },
   {
     "title": "Переведите наречие (как?): тайно, секретно",
-    "correctAnswer": "secretly — тайно, секретно — [сикрэтли]",
+    "info":"","infoHelp":"","correctAnswer": "secretly — тайно, секретно — [сикрэтли]",
     "options": [
       {
         "text": "secret",
@@ -2485,7 +2485,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: They met ______ (тайно) in the park at night.",
-    "correctAnswer": "secretly — тайно, секретно — [сикрэтли]",
+    "info":"","infoHelp":"","correctAnswer": "secretly — тайно, секретно — [сикрэтли]",
     "options": [
       {
         "text": "secret",
@@ -2508,7 +2508,7 @@
   },
   {
     "title": "Переведите наречие (как?): невинно, простодушно",
-    "correctAnswer": "innocently — невинно, простодушно — [инэсэнтли]",
+    "info":"","infoHelp":"","correctAnswer": "innocently — невинно, простодушно — [инэсэнтли]",
     "options": [
       {
         "text": "innocent",
@@ -2531,7 +2531,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The cat looked at me ______ (невинно) after eating the candy.",
-    "correctAnswer": "innocently — невинно — [инэсэнтли]",
+    "info":"","infoHelp":"","correctAnswer": "innocently — невинно — [инэсэнтли]",
     "options": [
       {
         "text": "innocent",
@@ -2554,7 +2554,7 @@
   },
   {
     "title": "Переведите наречие (как?): шутливо, весело",
-    "correctAnswer": "playfully — шутливо, весело — [плэйфли]",
+    "info":"","infoHelp":"","correctAnswer": "playfully — шутливо, весело — [плэйфли]",
     "options": [
       {
         "text": "playful",
@@ -2577,7 +2577,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The puppy jumped ______ (шутливо, весело) around the room.",
-    "correctAnswer": "playfully — шутливо, игриво — [плэйфли]",
+    "info":"","infoHelp":"","correctAnswer": "playfully — шутливо, игриво — [плэйфли]",
     "options": [
       {
         "text": "playful",
@@ -2600,7 +2600,7 @@
   },
   {
     "title": "Переведите наречие (как?): резко, остро",
-    "correctAnswer": "sharply — резко, остро — [шарпли]",
+    "info":"","infoHelp":"","correctAnswer": "sharply — резко, остро — [шарпли]",
     "options": [
       {
         "text": "sharp",
@@ -2623,7 +2623,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: Prices for cars went up ______ (резко) this month.",
-    "correctAnswer": "sharply — резко, круто — [шарпли]",
+    "info":"","infoHelp":"","correctAnswer": "sharply — резко, круто — [шарпли]",
     "options": [
       {
         "text": "sharp",
@@ -2646,7 +2646,7 @@
   },
   {
     "title": "Переведите наречие (как?): мягко, гладко",
-    "correctAnswer": "smoothly — мягко, гладко, без проблем — [смузли]",
+    "info":"","infoHelp":"","correctAnswer": "smoothly — мягко, гладко, без проблем — [смузли]",
     "options": [
       {
         "text": "smooth",
@@ -2669,7 +2669,7 @@
   },
   {
     "title": "Вставьте наречие в предложение: The application is running ______ (гладко, без проблем).",
-    "correctAnswer": "smoothly — гладко, ровно, без сбоев — [смузли]",
+    "info":"","infoHelp":"","correctAnswer": "smoothly — гладко, ровно, без сбоев — [смузли]",
     "options": [
       {
         "text": "smooth",
@@ -2692,7 +2692,7 @@
   },
   {
     "title": "МНОЖЕСТВЕННЫЙ ВЫБОР: Выберите ВСЕ наречия со значением 'резко' или 'внезапно':",
-    "correctAnswer": "suddenly, sharply — оба слова описывают неожиданное или резкое изменение ситуации",
+    "info":"","infoHelp":"","correctAnswer": "suddenly, sharply — оба слова описывают неожиданное или резкое изменение ситуации",
     "options": [
       {
         "text": "suddenly",
@@ -2715,7 +2715,7 @@
   },
   {
     "title": "ДВОЙНОЙ ВОПРОС: Переведите пару наречий: терпеливо И нетерпеливо",
-    "correctAnswer": "patiently (терпеливо), impatiently (нетерпеливо) — [пэйшэнтли, импэйшэнтли]",
+    "info":"","infoHelp":"","correctAnswer": "patiently (терпеливо), impatiently (нетерпеливо) — [пэйшэнтли, импэйшэнтли]",
     "options": [
       {
         "text": "calmly / angrily",
@@ -2738,7 +2738,7 @@
   },
   {
     "title": "КОНЕЦ БЛОКА: Переведите финальное наречие: успешно",
-    "correctAnswer": "successfully — успешно — [сэксэсфли]",
+    "info":"","infoHelp":"","correctAnswer": "successfully — успешно — [сэксэсфли]",
     "options": [
       {
         "text": "successful",

@@ -7,6 +7,8 @@ export interface QuizOption {
 export interface QuizQuestion {
   title: string;
   timestamp: string;
+  info?:string,
+  infoHelp?:string,
   correctAnswer: string;
   options: QuizOption[];
 }

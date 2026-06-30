@@ -1,6 +1,6 @@
 [
   {
-    "correctAnswer": "2",
+    "info":"","infoHelp":"","correctAnswer": "2",
     "options": [
       {
         "isCorrect": false,
@@ -27,34 +27,36 @@
     "title": "1+1="
   },
   {
-    "correctAnswer": "4",
+    "info":"Phantom Assassin и Juggernaut это герои вселенной Dota 2. А Aurora, Samira, Lee Sin герои вселенной Lego of Legends.",
+    "infoHelp":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore consequatur dolore architecto quaerat odit temporibus deleniti unde.",
+    "correctAnswer": "Phantom Assassin / Juggernaut",
     "options": [
       {
         "isCorrect": false,
-        "text": "0"
-      },
-      {
-        "isCorrect": false,
-        "text": "1"
-      },
-      {
-        "isCorrect": false,
-        "text": "2"
-      },
-      {
-        "isCorrect": false,
-        "text": "3"
+        "text": "Aurora"
       },
       {
         "isCorrect": true,
-        "text": "4"
+        "text": "Phantom Assassin"
+      },
+      {
+        "isCorrect": false,
+        "text": "Samira"
+      },
+      {
+        "isCorrect": false,
+        "text": "Lee Sin"
+      },
+      {
+        "isCorrect": true,
+        "text": "Juggernaut"
       }
     ],
     "timestamp": "2026-05-19T16:44:32.342Z",
-    "title": "2+2="
+    "title": "Герои Доты 2"
   },
   {
-    "correctAnswer": "6",
+    "info":"","infoHelp":"","correctAnswer": "6",
     "options": [
       {
         "isCorrect": false,
@@ -81,7 +83,7 @@
     "title": "3+3="
   },
   {
-    "correctAnswer": "5",
+    "info":"","infoHelp":"","correctAnswer": "5",
     "options": [
       {
         "isCorrect": false,

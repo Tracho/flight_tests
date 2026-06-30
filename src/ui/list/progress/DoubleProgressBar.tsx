@@ -1,3 +1,4 @@
+import { memo } from "react";
 type DoubleProgressBarProps = {
   greenProgress: number; // Зеленый слой (основной, поверх)
   redProgress: number;   // Красный слой (фоновый/дополнительный)
@@ -46,4 +47,4 @@ function DoubleProgressBar({
   );
 }
 
-export default DoubleProgressBar;
+export default memo(DoubleProgressBar);

@@ -1,7 +1,7 @@
 [
   {
     "title": "Переведите слово: hard (adj) — прилагательное",
-    "correctAnswer": "hard — жесткий, твердый — [хард]",
+    "info":"","infoHelp":"","correctAnswer": "hard — жесткий, твердый — [хард]",
     "options": [
       {
         "text": "мягкий",
@@ -24,7 +24,7 @@
   },
   {
     "title": "Переведите слово: feel (v) — глагол",
-    "correctAnswer": "feel — чувствовать — [фил]",
+    "info":"","infoHelp":"","correctAnswer": "feel — чувствовать — [фил]",
     "options": [
       {
         "text": "думать",
@@ -47,7 +47,7 @@
   },
   {
     "title": "Переведите слово: happy (adj) — прилагательное",
-    "correctAnswer": "happy — счастливый — [хэпи]",
+    "info":"","infoHelp":"","correctAnswer": "happy — счастливый — [хэпи]",
     "options": [
       {
         "text": "грустный",
@@ -70,7 +70,7 @@
   },
   {
     "title": "Переведите слово: there (adv) — наречие",
-    "correctAnswer": "there — там — [зэа]",
+    "info":"","infoHelp":"","correctAnswer": "there — там — [зэа]",
     "options": [
       {
         "text": "здесь",
@@ -93,7 +93,7 @@
   },
   {
     "title": "Переведите слово: also (adv) — наречие",
-    "correctAnswer": "also — также, тоже — [олсо]",
+    "info":"","infoHelp":"","correctAnswer": "also — также, тоже — [олсо]",
     "options": [
       {
         "text": "действительно",
@@ -116,7 +116,7 @@
   },
   {
     "title": "Переведите слово: house (n) — существительное",
-    "correctAnswer": "house — дом — [хаус]",
+    "info":"","infoHelp":"","correctAnswer": "house — дом — [хаус]",
     "options": [
       {
         "text": "дом",
@@ -139,7 +139,7 @@
   },
   {
     "title": "Переведите слово: place (n) — существительное",
-    "correctAnswer": "place — место — [плэйс]",
+    "info":"","infoHelp":"","correctAnswer": "place — место — [плэйс]",
     "options": [
       {
         "text": "комната",
@@ -162,7 +162,7 @@
   },
   {
     "title": "Переведите слово: interesting (adj) — прилагательное",
-    "correctAnswer": "interesting — интересный — [интрэстинг]",
+    "info":"","infoHelp":"","correctAnswer": "interesting — интересный — [интрэстинг]",
     "options": [
       {
         "text": "скучный",
@@ -185,7 +185,7 @@
   },
   {
     "title": "Переведите слово: look (v) — глагол",
-    "correctAnswer": "look — смотреть — [лук]",
+    "info":"","infoHelp":"","correctAnswer": "look — смотреть — [лук]",
     "options": [
       {
         "text": "видеть",
@@ -208,7 +208,7 @@
   },
   {
     "title": "Переведите слово: it looks (v) — глагол (форма He/She/It)",
-    "correctAnswer": "it looks — выглядит — [лукс]",
+    "info":"","infoHelp":"","correctAnswer": "it looks — выглядит — [лукс]",
     "options": [
       {
         "text": "выглядит",
@@ -231,7 +231,7 @@
   },
   {
     "title": "Переведите слово: seem (v) — глагол",
-    "correctAnswer": "seem — казаться — [сим]",
+    "info":"","infoHelp":"","correctAnswer": "seem — казаться — [сим]",
     "options": [
       {
         "text": "думать",
@@ -254,7 +254,7 @@
   },
   {
     "title": "Переведите слово: seems (v) — глагол (форма He/She/It)",
-    "correctAnswer": "seems — кажется — [симз]",
+    "info":"","infoHelp":"","correctAnswer": "seems — кажется — [симз]",
     "options": [
       {
         "text": "знает",
@@ -277,7 +277,7 @@
   },
   {
     "title": "Переведите слово: read (v) — глагол",
-    "correctAnswer": "read — читать — [рид]",
+    "info":"","infoHelp":"","correctAnswer": "read — читать — [рид]",
     "options": [
       {
         "text": "писать",
@@ -300,7 +300,7 @@
   },
   {
     "title": "Переведите слово: reads (v) — глагол (форма He/She/It)",
-    "correctAnswer": "reads — читает — [ридз]",
+    "info":"","infoHelp":"","correctAnswer": "reads — читает — [ридз]",
     "options": [
       {
         "text": "читает",
@@ -323,7 +323,7 @@
   },
   {
     "title": "Переведите слово: candy (n) — существительное",
-    "correctAnswer": "candy — конфеты — [кэнди]",
+    "info":"","infoHelp":"","correctAnswer": "candy — конфеты — [кэнди]",
     "options": [
       {
         "text": "яблоко",
@@ -346,7 +346,7 @@
   },
   {
     "title": "Переведите слово: strange (adj) — прилагательное",
-    "correctAnswer": "strange — странный — [стрэйндж]",
+    "info":"","infoHelp":"","correctAnswer": "strange — странный — [стрэйндж]",
     "options": [
       {
         "text": "новый",
@@ -369,7 +369,7 @@
   },
   {
     "title": "Переведите слово: mistake (n) — существительное",
-    "correctAnswer": "mistake — ошибка — [мистэйк]",
+    "info":"","infoHelp":"","correctAnswer": "mistake — ошибка — [мистэйк]",
     "options": [
       {
         "text": "правило",
@@ -392,7 +392,7 @@
   },
   {
     "title": "Переведите слово: happen (v) — глагол",
-    "correctAnswer": "happen — происходить, случаться — [хэпэн]",
+    "info":"","infoHelp":"","correctAnswer": "happen — происходить, случаться — [хэпэн]",
     "options": [
       {
         "text": "делать",
@@ -415,7 +415,7 @@
   },
   {
     "title": "Переведите слово: more (adv) — наречие",
-    "correctAnswer": "more — больше — [мор]",
+    "info":"","infoHelp":"","correctAnswer": "more — больше — [мор]",
     "options": [
       {
         "text": "меньше",
@@ -438,7 +438,7 @@
   },
   {
     "title": "Переведите слово: really (adv) — наречие",
-    "correctAnswer": "really — действительно — [риэли]",
+    "info":"","infoHelp":"","correctAnswer": "really — действительно — [риэли]",
     "options": [
       {
         "text": "быстро",
@@ -461,7 +461,7 @@
   },
   {
     "title": "Переведите слово: practice (v) — глагол",
-    "correctAnswer": "practice — практиковать — [прэктис]",
+    "info":"","infoHelp":"","correctAnswer": "practice — практиковать — [прэктис]",
     "options": [
       {
         "text": "играть",
@@ -484,7 +484,7 @@
   },
   {
     "title": "Переведите слово: sunshine (n) — существительное",
-    "correctAnswer": "sunshine — солнечный свет, радость, счастье — [саншайн]",
+    "info":"","infoHelp":"","correctAnswer": "sunshine — солнечный свет, радость, счастье — [саншайн]",
     "options": [
       {
         "text": "дождь",
@@ -507,7 +507,7 @@
   },
   {
     "title": "Переведите слово: weak (adj) — прилагательное",
-    "correctAnswer": "weak — слабый — [уик]",
+    "info":"","infoHelp":"","correctAnswer": "weak — слабый — [уик]",
     "options": [
       {
         "text": "сильный",
@@ -530,7 +530,7 @@
   },
   {
     "title": "Переведите слово: strong (adj) — прилагательное",
-    "correctAnswer": "strong — сильный — [стронг]",
+    "info":"","infoHelp":"","correctAnswer": "strong — сильный — [стронг]",
     "options": [
       {
         "text": "слабый",
@@ -553,7 +553,7 @@
   },
   {
     "title": "Переведите слово: simple (adj) — прилагательное",
-    "correctAnswer": "simple — простой — [симпл]",
+    "info":"","infoHelp":"","correctAnswer": "simple — простой — [симпл]",
     "options": [
       {
         "text": "сложный",
@@ -576,7 +576,7 @@
   },
   {
     "title": "Переведите слово: eyes (n) — существительное",
-    "correctAnswer": "eyes — глаза — [айз]",
+    "info":"","infoHelp":"","correctAnswer": "eyes — глаза — [айз]",
     "options": [
       {
         "text": "уши",
@@ -599,7 +599,7 @@
   },
   {
     "title": "Переведите слово: train (n) — существительное",
-    "correctAnswer": "train — поезд — [трэйн]",
+    "info":"","infoHelp":"","correctAnswer": "train — поезд — [трэйн]",
     "options": [
       {
         "text": "машина",
@@ -622,7 +622,7 @@
   },
   {
     "title": "Переведите слово: rain (n) — существительное",
-    "correctAnswer": "rain — дождь — [рэйн]",
+    "info":"","infoHelp":"","correctAnswer": "rain — дождь — [рэйн]",
     "options": [
       {
         "text": "снег",
@@ -645,7 +645,7 @@
   },
   {
     "title": "Переведите слово: hip (n) — существительное",
-    "correctAnswer": "hip — бедро — [хип]",
+    "info":"","infoHelp":"","correctAnswer": "hip — бедро — [хип]",
     "options": [
       {
         "text": "плечо",
@@ -668,7 +668,7 @@
   },
   {
     "title": "Переведите слово: road (n) — существительное",
-    "correctAnswer": "road — дорога — [роуд]",
+    "info":"","infoHelp":"","correctAnswer": "road — дорога — [роуд]",
     "options": [
       {
         "text": "улица",
@@ -691,7 +691,7 @@
   },
   {
     "title": "Переведите слово: here (adv) — наречие",
-    "correctAnswer": "here — здесь — [хир]",
+    "info":"","infoHelp":"","correctAnswer": "here — здесь — [хир]",
     "options": [
       {
         "text": "там",
@@ -714,7 +714,7 @@
   },
   {
     "title": "Переведите слово: study (v) — глагол",
-    "correctAnswer": "study — учиться — [стади]",
+    "info":"","infoHelp":"","correctAnswer": "study — учиться — [стади]",
     "options": [
       {
         "text": "работать",
@@ -737,7 +737,7 @@
   }, 
   {
     "title": "Переведите слово: leave (v) — глагол",
-    "correctAnswer": "leave — покинуть — [лив]",
+    "info":"","infoHelp":"","correctAnswer": "leave — покинуть — [лив]",
     "options": [
       {
         "text": "приходить",
@@ -760,7 +760,7 @@
   },
   {
     "title": "Переведите слово: know (v) — глагол",
-    "correctAnswer": "know — знать — [ноу]",
+    "info":"","infoHelp":"","correctAnswer": "know — знать — [ноу]",
     "options": [
       {
         "text": "думать",
@@ -783,7 +783,7 @@
   },
   {
     "title": "Переведите слово: very well (adv) — наречие",
-    "correctAnswer": "very well — очень хорошо — [вэри уэл]",
+    "info":"","infoHelp":"","correctAnswer": "very well — очень хорошо — [вэри уэл]",
     "options": [
       {
         "text": "плохо",
@@ -806,7 +806,7 @@
   },
   {
     "title": "Переведите слово: idea (n) — существительное",
-    "correctAnswer": "idea — идея — [айдИа]",
+    "info":"","infoHelp":"","correctAnswer": "idea — идея — [айдИа]",
     "options": [
       {
         "text": "мысль",
@@ -829,7 +829,7 @@
   },
   {
     "title": "Переведите слово: think (v) — глагол",
-    "correctAnswer": "think — думать — [синк]",
+    "info":"","infoHelp":"","correctAnswer": "think — думать — [синк]",
     "options": [
       {
         "text": "знать",
@@ -852,7 +852,7 @@
   },
   {
     "title": "Переведите слово: want (v) — глагол",
-    "correctAnswer": "want — хотеть — [уонт]",
+    "info":"","infoHelp":"","correctAnswer": "want — хотеть — [уонт]",
     "options": [
       {
         "text": "иметь",
@@ -875,7 +875,7 @@
   },
   {
     "title": "Переведите слово: see (v) — глагол",
-    "correctAnswer": "see — видеть — [си]",
+    "info":"","infoHelp":"","correctAnswer": "see — видеть — [си]",
     "options": [
       {
         "text": "слышать",
@@ -898,7 +898,7 @@
   },
   {
     "title": "Переведите слово: have (v) — глагол",
-    "correctAnswer": "have — есть, иметь — [хэв]",
+    "info":"","infoHelp":"","correctAnswer": "have — есть, иметь — [хэв]",
     "options": [
       {
         "text": "брать",
@@ -921,7 +921,7 @@
   },
   {
     "title": "Переведите слово: I (pronoun) — местоимение",
-    "correctAnswer": "I — я — [ай]",
+    "info":"","infoHelp":"","correctAnswer": "I — я — [ай]",
     "options": [
       {
         "text": "ты",
@@ -944,7 +944,7 @@
   },
   {
     "title": "Переведите слово: you (pronoun) — местоимение",
-    "correctAnswer": "you — ты, вы — [ю]",
+    "info":"","infoHelp":"","correctAnswer": "you — ты, вы — [ю]",
     "options": [
       {
         "text": "они",
@@ -967,7 +967,7 @@
   },
   {
     "title": "Переведите слово: he (pronoun) — местоимение",
-    "correctAnswer": "he — он — [хи]",
+    "info":"","infoHelp":"","correctAnswer": "he — он — [хи]",
     "options": [
       {
         "text": "он",
@@ -990,7 +990,7 @@
   },
   {
     "title": "Переведите слово: she (pronoun) — местоиние",
-    "correctAnswer": "she — она — [ши]",
+    "info":"","infoHelp":"","correctAnswer": "she — она — [ши]",
     "options": [
       {
         "text": "они",
@@ -1013,7 +1013,7 @@
   },
   {
     "title": "Переведите слово: it (pronoun) — местоимение",
-    "correctAnswer": "it — оно, это — [ит]",
+    "info":"","infoHelp":"","correctAnswer": "it — оно, это — [ит]",
     "options": [
       {
         "text": "тот",
@@ -1036,7 +1036,7 @@
   },
   {
     "title": "Переведите слово: we (pronoun) — местоимение",
-    "correctAnswer": "we — мы — [уи]",
+    "info":"","infoHelp":"","correctAnswer": "we — мы — [уи]",
     "options": [
       {
         "text": "они",
@@ -1059,7 +1059,7 @@
   },
   {
     "title": "Переведите слово: they (pronoun) — местоимение",
-    "correctAnswer": "they — они — [зэй]",
+    "info":"","infoHelp":"","correctAnswer": "they — они — [зэй]",
     "options": [
       {
         "text": "все",
@@ -1082,7 +1082,7 @@
   },
   {
     "title": "Переведите слово: what (pronoun) — местоимение",
-    "correctAnswer": "what — что, какой — [уот]",
+    "info":"","infoHelp":"","correctAnswer": "what — что, какой — [уот]",
     "options": [
       {
         "text": "кто",
@@ -1105,7 +1105,7 @@
   },
   {
     "title": "Переведите слово: who (pronoun) — местоимение",
-    "correctAnswer": "who — кто — [ху]",
+    "info":"","infoHelp":"","correctAnswer": "who — кто — [ху]",
     "options": [
       {
         "text": "чей",
@@ -1128,7 +1128,7 @@
   },
   {
     "title": "Переведите слово: where (adv) — наречие",
-    "correctAnswer": "where — где, куда — [уэа]",
+    "info":"","infoHelp":"","correctAnswer": "where — где, куда — [уэа]",
     "options": [
       {
         "text": "откуда",
@@ -1151,7 +1151,7 @@
   },
   {
     "title": "Переведите слово: when (adv) — наречие",
-    "correctAnswer": "when — когда — [уэн]",
+    "info":"","infoHelp":"","correctAnswer": "when — когда — [уэн]",
     "options": [
       {
         "text": "тогда",
@@ -1174,7 +1174,7 @@
   },
   {
     "title": "Переведите слово: why (adv) — наречие",
-    "correctAnswer": "why — почему, зачем — [уай]",
+    "info":"","infoHelp":"","correctAnswer": "why — почему, зачем — [уай]",
     "options": [
       {
         "text": "потому что",
@@ -1197,7 +1197,7 @@
   },
   {
     "title": "Переведите слово: how (adv) — наречие",
-    "correctAnswer": "how — как — [хау]",
+    "info":"","infoHelp":"","correctAnswer": "how — как — [хау]",
     "options": [
       {
         "text": "что",
@@ -1220,7 +1220,7 @@
   },
   {
     "title": "Переведите слово: work (v) — глагол",
-    "correctAnswer": "work — работать — [уорк]",
+    "info":"","infoHelp":"","correctAnswer": "work — работать — [уорк]",
     "options": [
       {
         "text": "работать",
@@ -1243,7 +1243,7 @@
   },
   {
     "title": "Переведите слово: go (v) — глагол",
-    "correctAnswer": "go — идти, ехать — [гоу]",
+    "info":"","infoHelp":"","correctAnswer": "go — идти, ехать — [гоу]",
     "options": [
       {
         "text": "стоять",
@@ -1266,7 +1266,7 @@
   },
   {
     "title": "Переведите слово: come (v) — глагол",
-    "correctAnswer": "come — приходить — [кам]",
+    "info":"","infoHelp":"","correctAnswer": "come — приходить — [кам]",
     "options": [
       {
         "text": "уходить",
@@ -1289,7 +1289,7 @@
   },
   {
     "title": "Переведите слово: do (v) — глагол",
-    "correctAnswer": "do — делать — [ду]",
+    "info":"","infoHelp":"","correctAnswer": "do — делать — [ду]",
     "options": [
       {
         "text": "слышать",
@@ -1312,7 +1312,7 @@
   },
   {
     "title": "Переведите слово: make (v) — глагол",
-    "correctAnswer": "make — создавать, делать — [мэйк]",
+    "info":"","infoHelp":"","correctAnswer": "make — создавать, делать — [мэйк]",
     "options": [
       {
         "text": "создавать, делать",
@@ -1335,7 +1335,7 @@
   },
   {
     "title": "Переведите слово: speak (v) — глагол",
-    "correctAnswer": "speak — говорить, разговаривать — [спик]",
+    "info":"","infoHelp":"","correctAnswer": "speak — говорить, разговаривать — [спик]",
     "options": [
       {
         "text": "думать",
@@ -1358,7 +1358,7 @@
   },
   {
     "title": "Переведите слово: listen (v) — глагол",
-    "correctAnswer": "listen — слушать — [лисн]",
+    "info":"","infoHelp":"","correctAnswer": "listen — слушать — [лисн]",
     "options": [
       {
         "text": "слушать",
@@ -1381,7 +1381,7 @@
   },
   {
     "title": "Переведите слово: write (v) — глагол",
-    "correctAnswer": "write — писать — [райт]",
+    "info":"","infoHelp":"","correctAnswer": "write — писать — [райт]",
     "options": [
       {
         "text": "читать",
@@ -1404,7 +1404,7 @@
   },
   {
     "title": "Переведите слово: buy (v) — глагол",
-    "correctAnswer": "buy — покупать — [бай]",
+    "info":"","infoHelp":"","correctAnswer": "buy — покупать — [бай]",
     "options": [
       {
         "text": "продавать",
@@ -1427,7 +1427,7 @@
   },
   {
     "title": "Переведите слово: sell (v) — глагол",
-    "correctAnswer": "sell — продавать — [сэл]",
+    "info":"","infoHelp":"","correctAnswer": "sell — продавать — [сэл]",
     "options": [
       {
         "text": "покупать",
@@ -1450,7 +1450,7 @@
   },
   {
     "title": "Переведите слово: help (v) — глагол",
-    "correctAnswer": "help — помогать — [хэлп]",
+    "info":"","infoHelp":"","correctAnswer": "help — помогать — [хэлп]",
     "options": [
       {
         "text": "помогать",
@@ -1473,7 +1473,7 @@
   },
   {
     "title": "Переведите слово: time (n) — существительное",
-    "correctAnswer": "time — время — [тайм]",
+    "info":"","infoHelp":"","correctAnswer": "time — время — [тайм]",
     "options": [
       {
         "text": "час",
@@ -1496,7 +1496,7 @@
   },
   {
     "title": "Переведите слово: day (n) — существительное",
-    "correctAnswer": "day — день — [дэй]",
+    "info":"","infoHelp":"","correctAnswer": "day — день — [дэй]",
     "options": [
       {
         "text": "ночь",
@@ -1519,7 +1519,7 @@
   },
   {
     "title": "Переведите слово: night (n) — существительное",
-    "correctAnswer": "night — ночь — [найт]",
+    "info":"","infoHelp":"","correctAnswer": "night — ночь — [найт]",
     "options": [
       {
         "text": "ночь",
@@ -1542,7 +1542,7 @@
   },
   {
     "title": "Переведите слово: week (n) — существительное",
-    "correctAnswer": "week — неделя — [уик]",
+    "info":"","infoHelp":"","correctAnswer": "week — неделя — [уик]",
     "options": [
       {
         "text": "месяц",
@@ -1565,7 +1565,7 @@
   },
   {
     "title": "Переведите слово: month (n) — существительное",
-    "correctAnswer": "month — месяц — [манс]",
+    "info":"","infoHelp":"","correctAnswer": "month — месяц — [манс]",
     "options": [
       {
         "text": "неделя",
@@ -1588,7 +1588,7 @@
   },
   {
     "title": "Переведите слово: year (n) — существительное",
-    "correctAnswer": "year — год — [йиэр]",
+    "info":"","infoHelp":"","correctAnswer": "year — год — [йиэр]",
     "options": [
       {
         "text": "год",
@@ -1611,7 +1611,7 @@
   },
   {
     "title": "Переведите слово: man (n) — существительное",
-    "correctAnswer": "man — мужчина — [мэн]",
+    "info":"","infoHelp":"","correctAnswer": "man — мужчина — [мэн]",
     "options": [
       {
         "text": "друг",
@@ -1634,7 +1634,7 @@
   },
   {
     "title": "Переведите слово: woman (n) — существительное",
-    "correctAnswer": "woman — женщина — [вумэн]",
+    "info":"","infoHelp":"","correctAnswer": "woman — женщина — [вумэн]",
     "options": [
       {
         "text": "девочка",
@@ -1657,7 +1657,7 @@
   },
   {
     "title": "Переведите слово: child (n) — существительное",
-    "correctAnswer": "child — ребенок — [чайлд]",
+    "info":"","infoHelp":"","correctAnswer": "child — ребенок — [чайлд]",
     "options": [
       {
         "text": "сын",
@@ -1680,7 +1680,7 @@
   },
   {
     "title": "Переведите слово: friend (n) — существительное",
-    "correctAnswer": "friend — друг — [фрэнд]",
+    "info":"","infoHelp":"","correctAnswer": "friend — друг — [фрэнд]",
     "options": [
       {
         "text": "враг",
@@ -1703,7 +1703,7 @@
   },
   {
     "title": "Переведите слово: family (n) — существительное",
-    "correctAnswer": "family — семья — [фэмили]",
+    "info":"","infoHelp":"","correctAnswer": "family — семья — [фэмили]",
     "options": [
       {
         "text": "друзья",
@@ -1726,7 +1726,7 @@
   },
   {
     "title": "Переведите слово: home (n) — существительное",
-    "correctAnswer": "home — дом (очаг) — [хоум]",
+    "info":"","infoHelp":"","correctAnswer": "home — дом (очаг) — [хоум]",
     "options": [
       {
         "text": "здание",
@@ -1749,7 +1749,7 @@
   },
   {
     "title": "Переведите слово: life (n) — существительное",
-    "correctAnswer": "life — жизнь — [лайф]",
+    "info":"","infoHelp":"","correctAnswer": "life — жизнь — [лайф]",
     "options": [
       {
         "text": "смерть",
@@ -1772,7 +1772,7 @@
   },
   {
     "title": "Переведите слово: good (adj) — прилагательное",
-    "correctAnswer": "good — хороший — [гуд]",
+    "info":"","infoHelp":"","correctAnswer": "good — хороший — [гуд]",
     "options": [
       {
         "text": "плохой",
@@ -1795,7 +1795,7 @@
   },
   {
     "title": "Переведите слово: bad (adj) — прилагательное",
-    "correctAnswer": "bad — плохой — [бэд]",
+    "info":"","infoHelp":"","correctAnswer": "bad — плохой — [бэд]",
     "options": [
       {
         "text": "злой",
@@ -1818,7 +1818,7 @@
   },
   {
     "title": "Переведите слово: new (adj) — прилагательное",
-    "correctAnswer": "new — новый — [нью]",
+    "info":"","infoHelp":"","correctAnswer": "new — новый — [нью]",
     "options": [
       {
         "text": "молодой",
@@ -1841,7 +1841,7 @@
   },
   {
     "title": "Переведите слово: old (adj) — прилагательное",
-    "correctAnswer": "old — старый — [оулд]",
+    "info":"","infoHelp":"","correctAnswer": "old — старый — [оулд]",
     "options": [
       {
         "text": "бывший",
@@ -1864,7 +1864,7 @@
   },
   {
     "title": "Переведите слово: little (adj) — прилагательное",
-    "correctAnswer": "little — маленький — [литл]",
+    "info":"","infoHelp":"","correctAnswer": "little — маленький — [литл]",
     "options": [
       {
         "text": "большой",
@@ -1887,7 +1887,7 @@
   },
   {
     "title": "Переведите слово: big (adj) — прилагательное",
-    "correctAnswer": "big — большой — [биг]",
+    "info":"","infoHelp":"","correctAnswer": "big — большой — [биг]",
     "options": [
       {
         "text": "большой",
@@ -1910,7 +1910,7 @@
   },
   {
     "title": "Переведите слово: beautiful (adj) — прилагательное",
-    "correctAnswer": "beautiful — красивый — [бьютифул]",
+    "info":"","infoHelp":"","correctAnswer": "beautiful — красивый — [бьютифул]",
     "options": [
       {
         "text": "красивый",
@@ -1933,7 +1933,7 @@
   },
   {
     "title": "Переведите слово: small (adj) — прилагательное",
-    "correctAnswer": "small — маленький — [смол]",
+    "info":"","infoHelp":"","correctAnswer": "small — маленький — [смол]",
     "options": [
       {
         "text": "высокий",
@@ -1956,7 +1956,7 @@
   },
   {
     "title": "Переведите слово: large (adj) — прилагательное",
-    "correctAnswer": "large — крупный, большой — [лардж]",
+    "info":"","infoHelp":"","correctAnswer": "large — крупный, большой — [лардж]",
     "options": [
       {
         "text": "крупный, большой",
@@ -1979,7 +1979,7 @@
   },
   {
     "title": "Переведите слово: young (adj) — прилагательное",
-    "correctAnswer": "young — молодой — [янг]",
+    "info":"","infoHelp":"","correctAnswer": "young — молодой — [янг]",
     "options": [
       {
         "text": "старый",
@@ -2002,7 +2002,7 @@
   },
   {
     "title": "Переведите слово: long (adj) — прилагательное",
-    "correctAnswer": "long — длинный — [лонг]",
+    "info":"","infoHelp":"","correctAnswer": "long — длинный — [лонг]",
     "options": [
       {
         "text": "короткий",
@@ -2025,7 +2025,7 @@
   },
   {
     "title": "Переведите слово: short (adj) — прилагательное",
-    "correctAnswer": "short — короткий — [шорт]",
+    "info":"","infoHelp":"","correctAnswer": "short — короткий — [шорт]",
     "options": [
       {
         "text": "длинный",
@@ -2048,7 +2048,7 @@
   },
   {
     "title": "Переведите слово: red (adj) — прилагательное",
-    "correctAnswer": "red — красный — [рэд]",
+    "info":"","infoHelp":"","correctAnswer": "red — красный — [рэд]",
     "options": [
       {
         "text": "синий",
@@ -2071,7 +2071,7 @@
   },
   {
     "title": "Переведите слово: blue (adj) — прилагательное",
-    "correctAnswer": "blue — синий, голубой — [блу]",
+    "info":"","infoHelp":"","correctAnswer": "blue — синий, голубой — [блу]",
     "options": [
       {
         "text": "желтый",
@@ -2094,7 +2094,7 @@
   },
   {
     "title": "Переведите слово: green (adj) — прилагательное",
-    "correctAnswer": "green — зеленый — [грин]",
+    "info":"","infoHelp":"","correctAnswer": "green — зеленый — [грин]",
     "options": [
       {
         "text": "зеленый",
@@ -2117,7 +2117,7 @@
   },
   {
     "title": "Переведите слово: yellow (adj) — прилагательное",
-    "correctAnswer": "yellow — желтый — [йэлоу]",
+    "info":"","infoHelp":"","correctAnswer": "yellow — желтый — [йэлоу]",
     "options": [
       {
         "text": "оранжевый",
@@ -2140,7 +2140,7 @@
   },
   {
     "title": "Переведите слово: black (adj) — прилагательное",
-    "correctAnswer": "black — черный — [блэк]",
+    "info":"","infoHelp":"","correctAnswer": "black — черный — [блэк]",
     "options": [
       {
         "text": "серый",
@@ -2163,7 +2163,7 @@
   },
   {
     "title": "Переведите слово: white (adj) — прилагательное",
-    "correctAnswer": "white — белый — [уайт]",
+    "info":"","infoHelp":"","correctAnswer": "white — белый — [уайт]",
     "options": [
       {
         "text": "белый",
@@ -2186,7 +2186,7 @@
   },
   {
     "title": "Переведите слово: one (noun) — числительное",
-    "correctAnswer": "one — один — [уан]",
+    "info":"","infoHelp":"","correctAnswer": "one — один — [уан]",
     "options": [
       {
         "text": "два",
@@ -2209,7 +2209,7 @@
   },
   {
     "title": "Переведите слово: two (noun) — числительное",
-    "correctAnswer": "two — два — [ту]",
+    "info":"","infoHelp":"","correctAnswer": "two — два — [ту]",
     "options": [
       {
         "text": "четыре",
@@ -2232,7 +2232,7 @@
   },
   {
     "title": "Переведите слово: three (noun) — числительное",
-    "correctAnswer": "three — три — [сри]",
+    "info":"","infoHelp":"","correctAnswer": "three — три — [сри]",
     "options": [
       {
         "text": "три",
@@ -2255,7 +2255,7 @@
   },
   {
     "title": "Переведите слово: four (noun) — числительное",
-    "correctAnswer": "four — четыре — [фор]",
+    "info":"","infoHelp":"","correctAnswer": "four — четыре — [фор]",
     "options": [
       {
         "text": "пять",
@@ -2278,7 +2278,7 @@
   },
   {
     "title": "Переведите слово: five (noun) — числительное",
-    "correctAnswer": "five — пять — [файв]",
+    "info":"","infoHelp":"","correctAnswer": "five — пять — [файв]",
     "options": [
       {
         "text": "четыре",
@@ -2301,7 +2301,7 @@
   },
   {
     "title": "Переведите слово: six (noun) — числительное",
-    "correctAnswer": "six — шесть — [сикс]",
+    "info":"","infoHelp":"","correctAnswer": "six — шесть — [сикс]",
     "options": [
       {
         "text": "шесть",
@@ -2324,7 +2324,7 @@
   },
   {
     "title": "Переведите слово: seven (noun) — числительное",
-    "correctAnswer": "seven — семь — [сэвэн]",
+    "info":"","infoHelp":"","correctAnswer": "seven — семь — [сэвэн]",
     "options": [
       {
         "text": "восемь",
@@ -2347,7 +2347,7 @@
   },
   {
     "title": "Переведите слово: eight (noun) — числительное",
-    "correctAnswer": "eight — восемь — [эйт]",
+    "info":"","infoHelp":"","correctAnswer": "eight — восемь — [эйт]",
     "options": [
       {
         "text": "девять",
@@ -2370,7 +2370,7 @@
   },
   {
     "title": "Переведите слово: nine (noun) — числительное",
-    "correctAnswer": "nine — девять — [найн]",
+    "info":"","infoHelp":"","correctAnswer": "nine — девять — [найн]",
     "options": [
       {
         "text": "десять",
@@ -2393,7 +2393,7 @@
   },
   {
     "title": "Переведите слово: ten (noun) — числительное",
-    "correctAnswer": "ten — десять — [тэн]",
+    "info":"","infoHelp":"","correctAnswer": "ten — десять — [тэн]",
     "options": [
       {
         "text": "двадцать",
@@ -2416,7 +2416,7 @@
   },
   {
     "title": "Переведите слово: book (n) — существительное",
-    "correctAnswer": "book — книга — [бук]",
+    "info":"","infoHelp":"","correctAnswer": "book — книга — [бук]",
     "options": [
       {
         "text": "тетрадь",
@@ -2439,7 +2439,7 @@
   },
   {
     "title": "Переведите слово: pen (n) — существительное",
-    "correctAnswer": "pen — ручка — [пэн]",
+    "info":"","infoHelp":"","correctAnswer": "pen — ручка — [пэн]",
     "options": [
       {
         "text": "карандаш",
@@ -2462,7 +2462,7 @@
   },
   {
     "title": "Переведите слово: paper (n) — существительное",
-    "correctAnswer": "paper — бумага — [пэйпэр]",
+    "info":"","infoHelp":"","correctAnswer": "paper — бумага — [пэйпэр]",
     "options": [
       {
         "text": "бумага",
@@ -2485,7 +2485,7 @@
   },
   {
     "title": "Переведите слово: school (n) — существительное",
-    "correctAnswer": "school — школа — [скул]",
+    "info":"","infoHelp":"","correctAnswer": "school — школа — [скул]",
     "options": [
       {
         "text": "работа",
@@ -2508,7 +2508,7 @@
   },
   {
     "title": "Переведите слово: student (n) — существительное",
-    "correctAnswer": "student — студент, ученик — [стьюдэнт]",
+    "info":"","infoHelp":"","correctAnswer": "student — студент, ученик — [стьюдэнт]",
     "options": [
       {
         "text": "учитель",
@@ -2531,7 +2531,7 @@
   },
   {
     "title": "Переведите слово: teacher (n) — существительное",
-    "correctAnswer": "teacher — учитель — [тичэр]",
+    "info":"","infoHelp":"","correctAnswer": "teacher — учитель — [тичэр]",
     "options": [
       {
         "text": "учитель",
@@ -2554,7 +2554,7 @@
   },
   {
     "title": "Переведите слово: city (n) — существительное",
-    "correctAnswer": "city — город — [сити]",
+    "info":"","infoHelp":"","correctAnswer": "city — город — [сити]",
     "options": [
       {
         "text": "деревня",
@@ -2577,7 +2577,7 @@
   },
   {
     "title": "Переведите слово: country (n) — существительное",
-    "correctAnswer": "country — страна, деревня — [кантри]",
+    "info":"","infoHelp":"","correctAnswer": "country — страна, деревня — [кантри]",
     "options": [
       {
         "text": "страна, деревня",
@@ -2600,7 +2600,7 @@
   },
   {
     "title": "Переведите слово: world (n) — существительное",
-    "correctAnswer": "world — мир, земля — [уорлд]",
+    "info":"","infoHelp":"","correctAnswer": "world — мир, земля — [уорлд]",
     "options": [
       {
         "text": "небо",
@@ -2623,7 +2623,7 @@
   },
   {
     "title": "Переведите слово: food (n) — существительное",
-    "correctAnswer": "food — еда — [фуд]",
+    "info":"","infoHelp":"","correctAnswer": "food — еда — [фуд]",
     "options": [
       {
         "text": "напиток",
@@ -2646,7 +2646,7 @@
   },
   {
     "title": "Переведите слово: water (n) — существительное",
-    "correctAnswer": "water — вода — [уотэр]",
+    "info":"","infoHelp":"","correctAnswer": "water — вода — [уотэр]",
     "options": [
       {
         "text": "сок",
@@ -2669,7 +2669,7 @@
   },
   {
     "title": "Переведите слово: bread (n) — существительное",
-    "correctAnswer": "bread — хлеб — [брэд]",
+    "info":"","infoHelp":"","correctAnswer": "bread — хлеб — [брэд]",
     "options": [
       {
         "text": "масло",
@@ -2692,7 +2692,7 @@
   },
   {
     "title": "Переведите слово: milk (n) — существительное",
-    "correctAnswer": "milk — молоко — [милк]",
+    "info":"","infoHelp":"","correctAnswer": "milk — молоко — [милк]",
     "options": [
       {
         "text": "молоко",
@@ -2715,7 +2715,7 @@
   },
   {
     "title": "Переведите слово: tea (n) — существительное",
-    "correctAnswer": "tea — чай — [ти]",
+    "info":"","infoHelp":"","correctAnswer": "tea — чай — [ти]",
     "options": [
       {
         "text": "кофе",
@@ -2738,7 +2738,7 @@
   },
   {
     "title": "Переведите слово: coffee (n) — существительное",
-    "correctAnswer": "coffee — кофе — [кофи]",
+    "info":"","infoHelp":"","correctAnswer": "coffee — кофе — [кофи]",
     "options": [
       {
         "text": "чай",
@@ -2761,7 +2761,7 @@
   },
   {
     "title": "Переведите слово: juice (n) — существительное",
-    "correctAnswer": "juice — сок — [джус]",
+    "info":"","infoHelp":"","correctAnswer": "juice — сок — [джус]",
     "options": [
       {
         "text": "сок",
@@ -2784,7 +2784,7 @@
   },
   {
     "title": "Переведите слово: apple (n) — существительное",
-    "correctAnswer": "apple — яблоко — [эпл]",
+    "info":"","infoHelp":"","correctAnswer": "apple — яблоко — [эпл]",
     "options": [
       {
         "text": "груша",
@@ -2807,7 +2807,7 @@
   },
   {
     "title": "Переведите слово: banana (n) — существительное",
-    "correctAnswer": "banana — банан — [бэнэнэ]",
+    "info":"","infoHelp":"","correctAnswer": "banana — банан — [бэнэнэ]",
     "options": [
       {
         "text": "лимон",
@@ -2830,7 +2830,7 @@
   },
   {
     "title": "Переведите слово: cheese (n) — существительное",
-    "correctAnswer": "cheese — сыр — [чиз]",
+    "info":"","infoHelp":"","correctAnswer": "cheese — сыр — [чиз]",
     "options": [
       {
         "text": "колбаса",
@@ -2853,7 +2853,7 @@
   },
   {
     "title": "Переведите слово: meat (n) — существительное",
-    "correctAnswer": "meat — мясо — [мит]",
+    "info":"","infoHelp":"","correctAnswer": "meat — мясо — [мит]",
     "options": [
       {
         "text": "мясо",
@@ -2876,7 +2876,7 @@
   },
   {
     "title": "Переведите слово: fish (n) — существительное",
-    "correctAnswer": "fish — рыба — [фиш]",
+    "info":"","infoHelp":"","correctAnswer": "fish — рыба — [фиш]",
     "options": [
       {
         "text": "мясо",
@@ -2899,7 +2899,7 @@
   },
   {
     "title": "Переведите слово: egg (n) — существительное",
-    "correctAnswer": "egg — яйцо — [эг]",
+    "info":"","infoHelp":"","correctAnswer": "egg — яйцо — [эг]",
     "options": [
       {
         "text": "омлет",
@@ -2922,7 +2922,7 @@
   },
   {
     "title": "Переведите слово: sugar (n) — существительное",
-    "correctAnswer": "sugar — сахар — [шугэр]",
+    "info":"","infoHelp":"","correctAnswer": "sugar — сахар — [шугэр]",
     "options": [
       {
         "text": "соль",
@@ -2945,7 +2945,7 @@
   },
   {
     "title": "Переведите слово: salt (n) — существительное",
-    "correctAnswer": "salt — соль — [солт]",
+    "info":"","infoHelp":"","correctAnswer": "salt — соль — [солт]",
     "options": [
       {
         "text": "соль",
@@ -2968,7 +2968,7 @@
   },
   {
     "title": "Переведите слово: soup (n) — существительное",
-    "correctAnswer": "soup — суп — [суп]",
+    "info":"","infoHelp":"","correctAnswer": "soup — суп — [суп]",
     "options": [
       {
         "text": "салат",
@@ -2991,7 +2991,7 @@
   },
   {
     "title": "Переведите слово: plate (n) — существительное",
-    "correctAnswer": "plate — тарелка — [плэйт]",
+    "info":"","infoHelp":"","correctAnswer": "plate — тарелка — [плэйт]",
     "options": [
       {
         "text": "чашка",
@@ -3014,7 +3014,7 @@
   },
   {
     "title": "Переведите слово: cup (n) — существительное",
-    "correctAnswer": "cup — чашка — [кап]",
+    "info":"","infoHelp":"","correctAnswer": "cup — чашка — [кап]",
     "options": [
       {
         "text": "чашка",
@@ -3037,7 +3037,7 @@
   },
   {
     "title": "Переведите слово: glass (n) — существительное",
-    "correctAnswer": "glass — стакан, стекло — [глэс]",
+    "info":"","infoHelp":"","correctAnswer": "glass — стакан, стекло — [глэс]",
     "options": [
       {
         "text": "зеркало",
@@ -3060,7 +3060,7 @@
   },
   {
     "title": "Переведите слово: spoon (n) — существительное",
-    "correctAnswer": "spoon — ложка — [спун]",
+    "info":"","infoHelp":"","correctAnswer": "spoon — ложка — [спун]",
     "options": [
       {
         "text": "вилка",
@@ -3083,7 +3083,7 @@
   },
   {
     "title": "Переведите слово: fork (n) — существительное",
-    "correctAnswer": "fork — вилка — [форк]",
+    "info":"","infoHelp":"","correctAnswer": "fork — вилка — [форк]",
     "options": [
       {
         "text": "ложка",
@@ -3106,7 +3106,7 @@
   },
   {
     "title": "Переведите слово: knife (n) — существительное",
-    "correctAnswer": "knife — нож — [найф]",
+    "info":"","infoHelp":"","correctAnswer": "knife — нож — [найф]",
     "options": [
       {
         "text": "нож",
@@ -3129,7 +3129,7 @@
   },
   {
     "title": "Переведите слово: breakfast (n) — существительное",
-    "correctAnswer": "breakfast — завтрак — [брэкфэст]",
+    "info":"","infoHelp":"","correctAnswer": "breakfast — завтрак — [брэкфэст]",
     "options": [
       {
         "text": "обед",
@@ -3152,7 +3152,7 @@
   },
   {
     "title": "Переведите слово: lunch (n) — существительное",
-    "correctAnswer": "lunch — обед — [ланч]",
+    "info":"","infoHelp":"","correctAnswer": "lunch — обед — [ланч]",
     "options": [
       {
         "text": "завтрак",
@@ -3175,7 +3175,7 @@
   },
   {
     "title": "Переведите слово: dinner (n) — существительное",
-    "correctAnswer": "dinner — ужин — [динэр]",
+    "info":"","infoHelp":"","correctAnswer": "dinner — ужин — [динэр]",
     "options": [
       {
         "text": "завтрак",
@@ -3198,7 +3198,7 @@
   },
   {
     "title": "Переведите слово: clothes (n) — существительное",
-    "correctAnswer": "clothes — одежда — [клоуз]",
+    "info":"","infoHelp":"","correctAnswer": "clothes — одежда — [клоуз]",
     "options": [
       {
         "text": "обувь",
@@ -3221,7 +3221,7 @@
   },
   {
     "title": "Переведите слово: shirt (n) — существительное",
-    "correctAnswer": "shirt — рубашка — [шёрт]",
+    "info":"","infoHelp":"","correctAnswer": "shirt — рубашка — [шёрт]",
     "options": [
       {
         "text": "юбка",
@@ -3244,7 +3244,7 @@
   },
   {
     "title": "Переведите слово: T-shirt (n) — существительное",
-    "correctAnswer": "T-shirt — футболка — [ти-шёрт]",
+    "info":"","infoHelp":"","correctAnswer": "T-shirt — футболка — [ти-шёрт]",
     "options": [
       {
         "text": "футболка",
@@ -3267,7 +3267,7 @@
   },
   {
     "title": "Переведите слово: pants (n) — существительное",
-    "correctAnswer": "pants — брюки, штаны — [пэнтс]",
+    "info":"","infoHelp":"","correctAnswer": "pants — брюки, штаны — [пэнтс]",
     "options": [
       {
         "text": "шорты",
@@ -3290,7 +3290,7 @@
   },
   {
     "title": "Переведите слово: jeans (n) — существительное",
-    "correctAnswer": "jeans — джинсы — [джинз]",
+    "info":"","infoHelp":"","correctAnswer": "jeans — джинсы — [джинз]",
     "options": [
       {
         "text": "брюки",
@@ -3313,7 +3313,7 @@
   },
   {
     "title": "Переведите слово: dress (n) — существительное",
-    "correctAnswer": "dress — платье — [дрэс]",
+    "info":"","infoHelp":"","correctAnswer": "dress — платье — [дрэс]",
     "options": [
       {
         "text": "юбка",
@@ -3336,7 +3336,7 @@
   },
   {
     "title": "Переведите слово: skirt (n) — существительное",
-    "correctAnswer": "skirt — юбка — [скёрт]",
+    "info":"","infoHelp":"","correctAnswer": "skirt — юбка — [скёрт]",
     "options": [
       {
         "text": "юбка",
@@ -3359,7 +3359,7 @@
   },
   {
     "title": "Переведите слово: jacket (n) — существительное",
-    "correctAnswer": "jacket — куртка, пиджак — [джэкит]",
+    "info":"","infoHelp":"","correctAnswer": "jacket — куртка, пиджак — [джэкит]",
     "options": [
       {
         "text": "пальто",
@@ -3382,7 +3382,7 @@
   },
   {
     "title": "Переведите слово: coat (n) — существительное",
-    "correctAnswer": "coat — пальто — [коут]",
+    "info":"","infoHelp":"","correctAnswer": "coat — пальто — [коут]",
     "options": [
       {
         "text": "пальто",
@@ -3405,7 +3405,7 @@
   },
   {
     "title": "Переведите слово: sweater (n) — существительное",
-    "correctAnswer": "sweater — свитер, джемпер — [суэтэр]",
+    "info":"","infoHelp":"","correctAnswer": "sweater — свитер, джемпер — [суэтэр]",
     "options": [
       {
         "text": "рубашка",
@@ -3428,7 +3428,7 @@
   },
   {
     "title": "Переведите слово: shoes (n) — существительное",
-    "correctAnswer": "shoes — обувь, туфли — [шуз]",
+    "info":"","infoHelp":"","correctAnswer": "shoes — обувь, туфли — [шуз]",
     "options": [
       {
         "text": "носки",
@@ -3451,7 +3451,7 @@
   },
   {
     "title": "Переведите слово: boots (n) — существительное",
-    "correctAnswer": "boots — ботинки, сапоги — [бутс]",
+    "info":"","infoHelp":"","correctAnswer": "boots — ботинки, сапоги — [бутс]",
     "options": [
       {
         "text": "ботинки, сапоги",
@@ -3474,7 +3474,7 @@
   },
   {
     "title": "Переведите слово: socks (n) — существительное",
-    "correctAnswer": "socks — носки — [сокс]",
+    "info":"","infoHelp":"","correctAnswer": "socks — носки — [сокс]",
     "options": [
       {
         "text": "штаны",
@@ -3497,7 +3497,7 @@
   },
   {
     "title": "Переведите слово: hat (n) — существительное",
-    "correctAnswer": "hat — шапка, шляпа — [хэт]",
+    "info":"","infoHelp":"","correctAnswer": "hat — шапка, шляпа — [хэт]",
     "options": [
       {
         "text": "шапка, шляпа",
@@ -3520,7 +3520,7 @@
   },
   {
     "title": "Переведите слово: scarf (n) — существительное",
-    "correctAnswer": "scarf — шарф — [скарф]",
+    "info":"","infoHelp":"","correctAnswer": "scarf — шарф — [скарф]",
     "options": [
       {
         "text": "галстук",
@@ -3543,7 +3543,7 @@
   },
   {
     "title": "Переведите слово: gloves (n) — существительное",
-    "correctAnswer": "gloves — перчатки — [главз]",
+    "info":"","infoHelp":"","correctAnswer": "gloves — перчатки — [главз]",
     "options": [
       {
         "text": "перчатки",
@@ -3566,7 +3566,7 @@
   },
   {
     "title": "Переведите слово: bag (n) — существительное",
-    "correctAnswer": "bag — сумка — [бэг]",
+    "info":"","infoHelp":"","correctAnswer": "bag — сумка — [бэг]",
     "options": [
       {
         "text": "кошелек",
@@ -3589,7 +3589,7 @@
   },
   {
     "title": "Переведите слово: watch (n) — существительное",
-    "correctAnswer": "watch — наручные часы — [уотч]",
+    "info":"","infoHelp":"","correctAnswer": "watch — наручные часы — [уотч]",
     "options": [
       {
         "text": "браслет",
@@ -3612,7 +3612,7 @@
   },
   {
     "title": "Переведите слово: glasses (n) — существительное",
-    "correctAnswer": "glasses — очки — [глэсиз]",
+    "info":"","infoHelp":"","correctAnswer": "glasses — очки — [глэсиз]",
     "options": [
       {
         "text": "очки",
@@ -3635,7 +3635,7 @@
   },
   {
     "title": "Переведите слово: pocket (n) — существительное",
-    "correctAnswer": "pocket — карман — [покит]",
+    "info":"","infoHelp":"","correctAnswer": "pocket — карман — [покит]",
     "options": [
       {
         "text": "молния",
@@ -3658,7 +3658,7 @@
   },
   {
     "title": "Переведите слово: wear (v) — глагол",
-    "correctAnswer": "wear — носить (одежду) — [уэа]",
+    "info":"","infoHelp":"","correctAnswer": "wear — носить (одежду) — [уэа]",
     "options": [
       {
         "text": "покупать",
@@ -3681,7 +3681,7 @@
   },
   {
     "title": "Переведите слово: wash (v) — глагол",
-    "correctAnswer": "wash — мыть, стирать — [уош]",
+    "info":"","infoHelp":"","correctAnswer": "wash — мыть, стирать — [уош]",
     "options": [
       {
         "text": "мыть, стирать",
@@ -3704,7 +3704,7 @@
   },
   {
     "title": "Переведите слово: clean (adj) — прилагательное",
-    "correctAnswer": "clean — чистый — [клин]",
+    "info":"","infoHelp":"","correctAnswer": "clean — чистый — [клин]",
     "options": [
       {
         "text": "грязный",
@@ -3727,7 +3727,7 @@
   },
   {
     "title": "Переведите слово: dirty (adj) — прилагательное",
-    "correctAnswer": "dirty — грязный — [дёрти]",
+    "info":"","infoHelp":"","correctAnswer": "dirty — грязный — [дёрти]",
     "options": [
       {
         "text": "чистый",
@@ -3750,7 +3750,7 @@
   },
   {
     "title": "Переведите слово: suit (n) — существительное",
-    "correctAnswer": "suit — костюм — [сьют]",
+    "info":"","infoHelp":"","correctAnswer": "suit — костюм — [сьют]",
     "options": [
       {
         "text": "галстук",
@@ -3773,7 +3773,7 @@
   },
   {
     "title": "Переведите слово: car (n) — существительное",
-    "correctAnswer": "car — машина, автомобиль — [кар]",
+    "info":"","infoHelp":"","correctAnswer": "car — машина, автомобиль — [кар]",
     "options": [
       {
         "text": "автобус",
@@ -3796,7 +3796,7 @@
   },
   {
     "title": "Переведите слово: bus (n) — существительное",
-    "correctAnswer": "bus — автобус — [бас]",
+    "info":"","infoHelp":"","correctAnswer": "bus — автобус — [бас]",
     "options": [
       {
         "text": "троллейбус",
@@ -3819,7 +3819,7 @@
   },
   {
     "title": "Переведите слово: plane (n) — существительное",
-    "correctAnswer": "plane — самолет — [плэйн]",
+    "info":"","infoHelp":"","correctAnswer": "plane — самолет — [плэйн]",
     "options": [
       {
         "text": "вертолет",
@@ -3842,7 +3842,7 @@
   },
   {
     "title": "Переведите слово: ship (n) — существительное",
-    "correctAnswer": "ship — корабль — [шип]",
+    "info":"","infoHelp":"","correctAnswer": "ship — корабль — [шип]",
     "options": [
       {
         "text": "лодка",
@@ -3865,7 +3865,7 @@
   },
   {
     "title": "Переведите слово: bicycle (n) — существительное",
-    "correctAnswer": "bicycle — велосипед — [байсикл]",
+    "info":"","infoHelp":"","correctAnswer": "bicycle — велосипед — [байсикл]",
     "options": [
       {
         "text": "самокат",
@@ -3888,7 +3888,7 @@
   },
   {
     "title": "Переведите слово: ticket (n) — существительное",
-    "correctAnswer": "ticket — билет — [тикит]",
+    "info":"","infoHelp":"","correctAnswer": "ticket — билет — [тикит]",
     "options": [
       {
         "text": "паспорт",
@@ -3911,7 +3911,7 @@
   },
   {
     "title": "Переведите слово: station (n) — существительное",
-    "correctAnswer": "station — станция, вокзал — [стэйшн]",
+    "info":"","infoHelp":"","correctAnswer": "station — станция, вокзал — [стэйшн]",
     "options": [
       {
         "text": "станция, вокзал",
@@ -3934,7 +3934,7 @@
   },
   {
     "title": "Переведите слово: airport (n) — существительное",
-    "correctAnswer": "airport — аэропорт — [эапорт]",
+    "info":"","infoHelp":"","correctAnswer": "airport — аэропорт — [эапорт]",
     "options": [
       {
         "text": "вокзал",
@@ -3957,7 +3957,7 @@
   },
   {
     "title": "Переведите слово: hotel (n) — существительное",
-    "correctAnswer": "hotel — отель, гостиница — [хоутэл]",
+    "info":"","infoHelp":"","correctAnswer": "hotel — отель, гостиница — [хоутэл]",
     "options": [
       {
         "text": "дом",
@@ -3980,7 +3980,7 @@
   },
   {
     "title": "Переведите слово: street (n) — существительное",
-    "correctAnswer": "street — улица — [стрит]",
+    "info":"","infoHelp":"","correctAnswer": "street — улица — [стрит]",
     "options": [
       {
         "text": "улица",
@@ -4003,7 +4003,7 @@
   },
   {
     "title": "Переведите слово: map (n) — существительное",
-    "correctAnswer": "map — карта — [мэп]",
+    "info":"","infoHelp":"","correctAnswer": "map — карта — [мэп]",
     "options": [
       {
         "text": "атлас",
@@ -4026,7 +4026,7 @@
   },
   {
     "title": "Переведите слово: stop (v) — глагол",
-    "correctAnswer": "stop — останавливаться — [стоп]",
+    "info":"","infoHelp":"","correctAnswer": "stop — останавливаться — [стоп]",
     "options": [
       {
         "text": "идти",
@@ -4049,7 +4049,7 @@
   },
   {
     "title": "Переведите слово: drive (v) — глагол",
-    "correctAnswer": "drive — водить (машину) — [драйв]",
+    "info":"","infoHelp":"","correctAnswer": "drive — водить (машину) — [драйв]",
     "options": [
       {
         "text": "водить (машину)",
@@ -4072,7 +4072,7 @@
   },
   {
     "title": "Переведите слово: fly (v) — глагол",
-    "correctAnswer": "fly — летать — [флай]",
+    "info":"","infoHelp":"","correctAnswer": "fly — летать — [флай]",
     "options": [
       {
         "text": "плавать",
@@ -4095,7 +4095,7 @@
   },
   {
     "title": "Переведите слово: travel (v) — глагол",
-    "correctAnswer": "travel — путешествовать — [трэвэл]",
+    "info":"","infoHelp":"","correctAnswer": "travel — путешествовать — [трэвэл]",
     "options": [
       {
         "text": "отдыхать",
@@ -4118,7 +4118,7 @@
   },
   {
     "title": "Переведите слово: fast (adj) — прилагательное",
-    "correctAnswer": "fast — быстрый — [фаст]",
+    "info":"","infoHelp":"","correctAnswer": "fast — быстрый — [фаст]",
     "options": [
       {
         "text": "медленный",
@@ -4141,7 +4141,7 @@
   },
   {
     "title": "Переведите слово: slow (adj) — прилагательное",
-    "correctAnswer": "slow — медленный — [слоу]",
+    "info":"","infoHelp":"","correctAnswer": "slow — медленный — [слоу]",
     "options": [
       {
         "text": "медленный",
@@ -4164,7 +4164,7 @@
   },
   {
     "title": "Переведите слово: far (adj) — прилагательное",
-    "correctAnswer": "far — далекий — [фар]",
+    "info":"","infoHelp":"","correctAnswer": "far — далекий — [фар]",
     "options": [
       {
         "text": "близкий",
@@ -4187,7 +4187,7 @@
   },
   {
     "title": "Переведите слово: near (adj) — прилагательное",
-    "correctAnswer": "near — близкий — [ниэр]",
+    "info":"","infoHelp":"","correctAnswer": "near — близкий — [ниэр]",
     "options": [
       {
         "text": "близкий",
@@ -4210,7 +4210,7 @@
   },
   {
     "title": "Переведите слово: left (n) — существительное",
-    "correctAnswer": "left — левая сторона — [лэфт]",
+    "info":"","infoHelp":"","correctAnswer": "left — левая сторона — [лэфт]",
     "options": [
       {
         "text": "правая сторона",
@@ -4233,7 +4233,7 @@
   },
   {
     "title": "Переведите слово: right (n) — существительное",
-    "correctAnswer": "right — правая сторона — [райт]",
+    "info":"","infoHelp":"","correctAnswer": "right — правая сторона — [райт]",
     "options": [
       {
         "text": "правая сторона",
@@ -4256,7 +4256,7 @@
   },
   {
     "title": "Переведите слово: straight (adv) — наречие",
-    "correctAnswer": "straight — прямо — [стрэйт]",
+    "info":"","infoHelp":"","correctAnswer": "straight — прямо — [стрэйт]",
     "options": [
       {
         "text": "назад",
@@ -4279,7 +4279,7 @@
   },
   {
     "title": "Переведите слово: taxi (n) — существительное",
-    "correctAnswer": "taxi — такси — [тэкси]",
+    "info":"","infoHelp":"","correctAnswer": "taxi — такси — [тэкси]",
     "options": [
       {
         "text": "машина",
@@ -4302,7 +4302,7 @@
   },
   {
     "title": "Переведите слово: baggage (n) — существительное",
-    "correctAnswer": "baggage — багаж — [бэгидж]",
+    "info":"","infoHelp":"","correctAnswer": "baggage — багаж — [бэгидж]",
     "options": [
       {
         "text": "багаж",
@@ -4325,7 +4325,7 @@
   },
   {
     "title": "Переведите слово: passport (n) — существительное",
-    "correctAnswer": "passport — паспорт — [пэспорт]",
+    "info":"","infoHelp":"","correctAnswer": "passport — паспорт — [пэспорт]",
     "options": [
       {
         "text": "документ",
@@ -4348,7 +4348,7 @@
   },
   {
     "title": "Переведите слово: body (n) — существительное",
-    "correctAnswer": "body — тело — [бади]",
+    "info":"","infoHelp":"","correctAnswer": "body — тело — [бади]",
     "options": [
       {
         "text": "тело",
@@ -4371,7 +4371,7 @@
   },
   {
     "title": "Переведите слово: head (n) — существительное",
-    "correctAnswer": "head — голова — [хэд]",
+    "info":"","infoHelp":"","correctAnswer": "head — голова — [хэд]",
     "options": [
       {
         "text": "лицо",
@@ -4394,7 +4394,7 @@
   },
   {
     "title": "Переведите слово: face (n) — существительное",
-    "correctAnswer": "face — лицо — [фэйс]",
+    "info":"","infoHelp":"","correctAnswer": "face — лицо — [фэйс]",
     "options": [
       {
         "text": "лицо",
@@ -4417,7 +4417,7 @@
   },
   {
     "title": "Переведите слово: hair (n) — существительное",
-    "correctAnswer": "hair — волосы — [хэа]",
+    "info":"","infoHelp":"","correctAnswer": "hair — волосы — [хэа]",
     "options": [
       {
         "text": "кожа",
@@ -4440,7 +4440,7 @@
   },
   {
     "title": "Переведите слово: nose (n) — существительное",
-    "correctAnswer": "nose — нос — [ноуз]",
+    "info":"","infoHelp":"","correctAnswer": "nose — нос — [ноуз]",
     "options": [
       {
         "text": "рот",
@@ -4463,7 +4463,7 @@
   },
   {
     "title": "Переведите слово: mouth (n) — существительное",
-    "correctAnswer": "mouth — рот — [маус]",
+    "info":"","infoHelp":"","correctAnswer": "mouth — рот — [маус]",
     "options": [
       {
         "text": "рот",
@@ -4486,7 +4486,7 @@
   },
   {
     "title": "Переведите слово: ear (n) — существительное",
-    "correctAnswer": "ear — ухо — [иэр]",
+    "info":"","infoHelp":"","correctAnswer": "ear — ухо — [иэр]",
     "options": [
       {
         "text": "глаз",
@@ -4509,7 +4509,7 @@
   },
   {
     "title": "Переведите слово: tooth (n) — существительное",
-    "correctAnswer": "tooth — зуб — [тус]",
+    "info":"","infoHelp":"","correctAnswer": "tooth — зуб — [тус]",
     "options": [
       {
         "text": "зуб",
@@ -4532,7 +4532,7 @@
   },
   {
     "title": "Переведите слово: neck (n) — существительное",
-    "correctAnswer": "neck — шея — [нэк]",
+    "info":"","infoHelp":"","correctAnswer": "neck — шея — [нэк]",
     "options": [
       {
         "text": "спина",
@@ -4555,7 +4555,7 @@
   },
   {
     "title": "Переведите слово: arm (n) — существительное",
-    "correctAnswer": "arm — рука (от плеча до кисти) — [арм]",
+    "info":"","infoHelp":"","correctAnswer": "arm — рука (от плеча до кисти) — [арм]",
     "options": [
       {
         "text": "нога",
@@ -4578,7 +4578,7 @@
   },
   {
     "title": "Переведите слово: hand (n) — существительное",
-    "correctAnswer": "hand — кисть руки, ладонь — [хэнд]",
+    "info":"","infoHelp":"","correctAnswer": "hand — кисть руки, ладонь — [хэнд]",
     "options": [
       {
         "text": "кисть руки, ладонь",
@@ -4601,7 +4601,7 @@
   },
   {
     "title": "Переведите слово: finger (n) — существительное",
-    "correctAnswer": "finger — палец (на руке) — [фингэр]",
+    "info":"","infoHelp":"","correctAnswer": "finger — палец (на руке) — [фингэр]",
     "options": [
       {
         "text": "ногть",
@@ -4624,7 +4624,7 @@
   },
   {
     "title": "Переведите слово: leg (n) — существительное",
-    "correctAnswer": "leg — нога (вся нога) — [лэг]",
+    "info":"","infoHelp":"","correctAnswer": "leg — нога (вся нога) — [лэг]",
     "options": [
       {
         "text": "ступня",
@@ -4647,7 +4647,7 @@
   },
   {
     "title": "Переведите слово: foot (n) — существительное",
-    "correctAnswer": "foot — ступня, стопа — [фут]",
+    "info":"","infoHelp":"","correctAnswer": "foot — ступня, стопа — [фут]",
     "options": [
       {
         "text": "ступня, стопа",
@@ -4670,7 +4670,7 @@
   },
   {
     "title": "Переведите слово: knee (n) — существительное",
-    "correctAnswer": "knee — колено — [ни]",
+    "info":"","infoHelp":"","correctAnswer": "knee — колено — [ни]",
     "options": [
       {
         "text": "локоть",
@@ -4693,7 +4693,7 @@
   },
   {
     "title": "Переведите слово: back (n) — существительное",
-    "correctAnswer": "back — спина — [бэк]",
+    "info":"","infoHelp":"","correctAnswer": "back — спина — [бэк]",
     "options": [
       {
         "text": "живот",
@@ -4716,7 +4716,7 @@
   },
   {
     "title": "Переведите слово: heart (n) — существительное",
-    "correctAnswer": "heart — сердце — [харт]",
+    "info":"","infoHelp":"","correctAnswer": "heart — сердце — [харт]",
     "options": [
       {
         "text": "сердце",
@@ -4739,7 +4739,7 @@
   },
   {
     "title": "Переведите слово: blood (n) — существительное",
-    "correctAnswer": "blood — кровь — [блад]",
+    "info":"","infoHelp":"","correctAnswer": "blood — кровь — [блад]",
     "options": [
       {
         "text": "сосуд",
@@ -4762,7 +4762,7 @@
   },
   {
     "title": "Переведите слово: skin (n) — существительное",
-    "correctAnswer": "skin — кожа — [скин]",
+    "info":"","infoHelp":"","correctAnswer": "skin — кожа — [скин]",
     "options": [
       {
         "text": "кость",
@@ -4785,7 +4785,7 @@
   },
   {
     "title": "Переведите слово: voice (n) — существительное",
-    "correctAnswer": "voice — голос — [войс]",
+    "info":"","infoHelp":"","correctAnswer": "voice — голос — [войс]",
     "options": [
       {
         "text": "голос",
@@ -4808,7 +4808,7 @@
   },
   {
     "title": "Переведите слово: health (n) — существительное",
-    "correctAnswer": "health — здоровье — [хэлс]",
+    "info":"","infoHelp":"","correctAnswer": "health — здоровье — [хэлс]",
     "options": [
       {
         "text": "болезнь",
@@ -4831,7 +4831,7 @@
   },
   {
     "title": "Переведите слово: sick (adj) — прилагательное",
-    "correctAnswer": "sick — больной — [сик]",
+    "info":"","infoHelp":"","correctAnswer": "sick — больной — [сик]",
     "options": [
       {
         "text": "здоровый",
@@ -4854,7 +4854,7 @@
   },
   {
     "title": "Переведите слово: tired (adj) — прилагательное",
-    "correctAnswer": "tired — уставший — [тайэрд]",
+    "info":"","infoHelp":"","correctAnswer": "tired — уставший — [тайэрд]",
     "options": [
       {
         "text": "бодрый",
@@ -4877,7 +4877,7 @@
   },
   {
     "title": "Переведите слово: hungry (adj) — прилагательное",
-    "correctAnswer": "hungry — голодный — [хангри]",
+    "info":"","infoHelp":"","correctAnswer": "hungry — голодный — [хангри]",
     "options": [
       {
         "text": "голодный",
@@ -4900,7 +4900,7 @@
   },
   {
     "title": "Переведите слово: thirsty (adj) — прилагательное",
-    "correctAnswer": "thirsty — испытывающий жажду — [сёрсти]",
+    "info":"","infoHelp":"","correctAnswer": "thirsty — испытывающий жажду — [сёрсти]",
     "options": [
       {
         "text": "голодный",
@@ -4923,7 +4923,7 @@
   },
   {
     "title": "Переведите слово: room (n) — существительное",
-    "correctAnswer": "room — комната — [рум]",
+    "info":"","infoHelp":"","correctAnswer": "room — комната — [рум]",
     "options": [
       {
         "text": "кухня",
@@ -4946,7 +4946,7 @@
   },
   {
     "title": "Переведите слово: bedroom (n) — существительное",
-    "correctAnswer": "bedroom — спальня — [бэдрум]",
+    "info":"","infoHelp":"","correctAnswer": "bedroom — спальня — [бэдрум]",
     "options": [
       {
         "text": "ванная",
@@ -4969,7 +4969,7 @@
   },
   {
     "title": "Переведите слово: kitchen (n) — существительное",
-    "correctAnswer": "kitchen — кухня — [китчин]",
+    "info":"","infoHelp":"","correctAnswer": "kitchen — кухня — [китчин]",
     "options": [
       {
         "text": "кухня",
@@ -4992,7 +4992,7 @@
   },
   {
     "title": "Переведите слово: bathroom (n) — существительное",
-    "correctAnswer": "bathroom — ванная комната — [басрум]",
+    "info":"","infoHelp":"","correctAnswer": "bathroom — ванная комната — [басрум]",
     "options": [
       {
         "text": "туалет",
@@ -5015,7 +5015,7 @@
   },
   {
     "title": "Переведите слово: door (n) — существительное",
-    "correctAnswer": "door — дверь — [дор]",
+    "info":"","infoHelp":"","correctAnswer": "door — дверь — [дор]",
     "options": [
       {
         "text": "окно",
@@ -5038,7 +5038,7 @@
   },
   {
     "title": "Переведите слово: window (n) — существительное",
-    "correctAnswer": "window — окно — [уиндоу]",
+    "info":"","infoHelp":"","correctAnswer": "window — окно — [уиндоу]",
     "options": [
       {
         "text": "окно",
@@ -5061,7 +5061,7 @@
   },
   {
     "title": "Переведите слово: wall (n) — существительное",
-    "correctAnswer": "wall — стена — [уол]",
+    "info":"","infoHelp":"","correctAnswer": "wall — стена — [уол]",
     "options": [
       {
         "text": "пол",
@@ -5084,7 +5084,7 @@
   },
   {
     "title": "Переведите слово: floor (n) — существительное",
-    "correctAnswer": "floor — пол, этаж — [флор]",
+    "info":"","infoHelp":"","correctAnswer": "floor — пол, этаж — [флор]",
     "options": [
       {
         "text": "ковер",
@@ -5107,7 +5107,7 @@
   },
   {
     "title": "Переведите слово: key (n) — существительное",
-    "correctAnswer": "key — ключ — [ки]",
+    "info":"","infoHelp":"","correctAnswer": "key — ключ — [ки]",
     "options": [
       {
         "text": "ключ",
@@ -5130,7 +5130,7 @@
   },
   {
     "title": "Переведите слово: table (n) — существительное",
-    "correctAnswer": "table — стол — [тэйбл]",
+    "info":"","infoHelp":"","correctAnswer": "table — стол — [тэйбл]",
     "options": [
       {
         "text": "стул",
@@ -5153,7 +5153,7 @@
   },
   {
     "title": "Переведите слово: chair (n) — существительное",
-    "correctAnswer": "chair — стул — [чэа]",
+    "info":"","infoHelp":"","correctAnswer": "chair — стул — [чэа]",
     "options": [
       {
         "text": "кресло",
@@ -5176,7 +5176,7 @@
   },
   {
     "title": "Переведите слово: bed (n) — существительное",
-    "correctAnswer": "bed — кровать — [бэд]",
+    "info":"","infoHelp":"","correctAnswer": "bed — кровать — [бэд]",
     "options": [
       {
         "text": "кровать",
@@ -5199,7 +5199,7 @@
   },
   {
     "title": "Переведите слово: sofa (n) — существительное",
-    "correctAnswer": "sofa — диван — [соуфэ]",
+    "info":"","infoHelp":"","correctAnswer": "sofa — диван — [соуфэ]",
     "options": [
       {
         "text": "кресло",
@@ -5222,7 +5222,7 @@
   },
   {
     "title": "Переведите слово: mirror (n) — существительное",
-    "correctAnswer": "mirror — зеркало — [мирэр]",
+    "info":"","infoHelp":"","correctAnswer": "mirror — зеркало — [мирэр]",
     "options": [
       {
         "text": "стекло",
@@ -5245,7 +5245,7 @@
   },
   {
     "title": "Переведите слово: clock (n) — существительное",
-    "correctAnswer": "clock — часы (настенные, настольные) — [клок]",
+    "info":"","infoHelp":"","correctAnswer": "clock — часы (настенные, настольные) — [клок]",
     "options": [
       {
         "text": "часы (настенные, настольные)",
@@ -5268,7 +5268,7 @@
   },
   {
     "title": "Переведите слово: light (n) — существительное",
-    "correctAnswer": "light — свет, лампа — [лайт]",
+    "info":"","infoHelp":"","correctAnswer": "light — свет, лампа — [лайт]",
     "options": [
       {
         "text": "окно",
@@ -5291,7 +5291,7 @@
   },
   {
     "title": "Переведите слово: TV (n) — существительное",
-    "correctAnswer": "TV — телевизор — [тиви]",
+    "info":"","infoHelp":"","correctAnswer": "TV — телевизор — [тиви]",
     "options": [
       {
         "text": "экран",
@@ -5314,7 +5314,7 @@
   },
   {
     "title": "Переведите слово: computer (n) — существительное",
-    "correctAnswer": "computer — компьютер — [кэмпьютэр]",
+    "info":"","infoHelp":"","correctAnswer": "computer — компьютер — [кэмпьютэр]",
     "options": [
       {
         "text": "компьютер",
@@ -5337,7 +5337,7 @@
   },
   {
     "title": "Переведите слово: phone (n) — существительное",
-    "correctAnswer": "phone — телефон — [фоун]",
+    "info":"","infoHelp":"","correctAnswer": "phone — телефон — [фоун]",
     "options": [
       {
         "text": "экран",
@@ -5360,7 +5360,7 @@
   },
   {
     "title": "Переведите слово: open (v) — глагол",
-    "correctAnswer": "open — открывать — [оупэн]",
+    "info":"","infoHelp":"","correctAnswer": "open — открывать — [оупэн]",
     "options": [
       {
         "text": "закрывать",
@@ -5383,7 +5383,7 @@
   },
   {
     "title": "Переведите слово: close (v) — глагол",
-    "correctAnswer": "close — закрывать — [клоуз]",
+    "info":"","infoHelp":"","correctAnswer": "close — закрывать — [клоуз]",
     "options": [
       {
         "text": "закрывать",
@@ -5406,7 +5406,7 @@
   },
   {
     "title": "Переведите слово: live (v) — глагол",
-    "correctAnswer": "live — жить, проживать — [лив]",
+    "info":"","infoHelp":"","correctAnswer": "live — жить, проживать — [лив]",
     "options": [
       {
         "text": "находиться",
@@ -5429,7 +5429,7 @@
   },
   {
     "title": "Переведите слово: blanket (n) — существительное",
-    "correctAnswer": "blanket — одеяло — [блэнкит]",
+    "info":"","infoHelp":"","correctAnswer": "blanket — одеяло — [блэнкит]",
     "options": [
       {
         "text": "простыня",
@@ -5452,7 +5452,7 @@
   },
   {
     "title": "Переведите слово: pillow (n) — существительное",
-    "correctAnswer": "pillow — подушка — [пилоу]",
+    "info":"","infoHelp":"","correctAnswer": "pillow — подушка — [пилоу]",
     "options": [
       {
         "text": "подушка",
@@ -5475,7 +5475,7 @@
   },
   {
     "title": "Переведите слово: towel (n) — существительное",
-    "correctAnswer": "towel — полотенце — [тауэл]",
+    "info":"","infoHelp":"","correctAnswer": "towel — полотенце — [тауэл]",
     "options": [
       {
         "text": "мыло",
@@ -5498,7 +5498,7 @@
   },
   {
     "title": "Переведите слово: nature (n) — существительное",
-    "correctAnswer": "nature — природа — [нэйчэр]",
+    "info":"","infoHelp":"","correctAnswer": "nature — природа — [нэйчэр]",
     "options": [
       {
         "text": "погода",
@@ -5521,7 +5521,7 @@
   },
   {
     "title": "Переведите слово: weather (n) — существительное",
-    "correctAnswer": "weather — погода — [уэзэр]",
+    "info":"","infoHelp":"","correctAnswer": "weather — погода — [уэзэр]",
     "options": [
       {
         "text": "климат",
@@ -5544,7 +5544,7 @@
   },
   {
     "title": "Переведите слово: sun (n) — существительное",
-    "correctAnswer": "sun — солнце — [сан]",
+    "info":"","infoHelp":"","correctAnswer": "sun — солнце — [сан]",
     "options": [
       {
         "text": "солнце",
@@ -5567,7 +5567,7 @@
   },
   {
     "title": "Переведите слово: moon (n) — существительное",
-    "correctAnswer": "moon — луна, месяц — [мун]",
+    "info":"","infoHelp":"","correctAnswer": "moon — луна, месяц — [мун]",
     "options": [
       {
         "text": "солнце",
@@ -5590,7 +5590,7 @@
   },
   {
     "title": "Переведите слово: star (n) — существительное",
-    "correctAnswer": "star — звезда — [стар]",
+    "info":"","infoHelp":"","correctAnswer": "star — звезда — [стар]",
     "options": [
       {
         "text": "небо",
@@ -5613,7 +5613,7 @@
   },
   {
     "title": "Переведите слово: sky (n) — существительное",
-    "correctAnswer": "sky — небо — [скай]",
+    "info":"","infoHelp":"","correctAnswer": "sky — небо — [скай]",
     "options": [
       {
         "text": "небо",
@@ -5636,7 +5636,7 @@
   },
   {
     "title": "Переведите слово: wind (n) — существительное",
-    "correctAnswer": "wind — ветер — [уинд]",
+    "info":"","infoHelp":"","correctAnswer": "wind — ветер — [уинд]",
     "options": [
       {
         "text": "дождь",
@@ -5659,7 +5659,7 @@
   },
   {
     "title": "Переведите слово: snow (n) — существительное",
-    "correctAnswer": "snow — снег — [сноу]",
+    "info":"","infoHelp":"","correctAnswer": "snow — снег — [сноу]",
     "options": [
       {
         "text": "лед",
@@ -5682,7 +5682,7 @@
   },
   {
     "title": "Переведите слово: ice (n) — существительное",
-    "correctAnswer": "ice — лед — [айс]",
+    "info":"","infoHelp":"","correctAnswer": "ice — лед — [айс]",
     "options": [
       {
         "text": "лед",
@@ -5705,7 +5705,7 @@
   },
   {
     "title": "Переведите слово: tree (n) — существительное",
-    "correctAnswer": "tree — дерево — [три]",
+    "info":"","infoHelp":"","correctAnswer": "tree — дерево — [три]",
     "options": [
       {
         "text": "куст",
@@ -5728,7 +5728,7 @@
   },
   {
     "title": "Переведите слово: flower (n) — существительное",
-    "correctAnswer": "flower — цветок — [флауэр]",
+    "info":"","infoHelp":"","correctAnswer": "flower — цветок — [флауэр]",
     "options": [
       {
         "text": "трава",
@@ -5751,7 +5751,7 @@
   },
   {
     "title": "Переведите слово: animal (n) — существительное",
-    "correctAnswer": "animal — животное — [энимэл]",
+    "info":"","infoHelp":"","correctAnswer": "animal — животное — [энимэл]",
     "options": [
       {
         "text": "животное",
@@ -5774,7 +5774,7 @@
   },
   {
     "title": "Переведите слово: dog (n) — существительное",
-    "correctAnswer": "dog — собака — [дог]",
+    "info":"","infoHelp":"","correctAnswer": "dog — собака — [дог]",
     "options": [
       {
         "text": "кошка",
@@ -5797,7 +5797,7 @@
   },
   {
     "title": "Переведите слово: cat (n) — существительное",
-    "correctAnswer": "cat — кошка, кот — [кэт]",
+    "info":"","infoHelp":"","correctAnswer": "cat — кошка, кот — [кэт]",
     "options": [
       {
         "text": "кошка, кот",
@@ -5820,7 +5820,7 @@
   },
   {
     "title": "Переведите слово: bird (n) — существительное",
-    "correctAnswer": "bird — птица — [бёрд]",
+    "info":"","infoHelp":"","correctAnswer": "bird — птица — [бёрд]",
     "options": [
       {
         "text": "бабочка",
@@ -5843,7 +5843,7 @@
   },
   {
     "title": "Переведите слово: sea (n) — существительное",
-    "correctAnswer": "sea — море — [си]",
+    "info":"","infoHelp":"","correctAnswer": "sea — море — [си]",
     "options": [
       {
         "text": "река",
@@ -5866,7 +5866,7 @@
   },
   {
     "title": "Переведите слово: river (n) — существительное",
-    "correctAnswer": "river — река — [ривэр]",
+    "info":"","infoHelp":"","correctAnswer": "river — река — [ривэр]",
     "options": [
       {
         "text": "река",
@@ -5889,7 +5889,7 @@
   },
   {
     "title": "Переведите слово: hot (adj) — прилагательное",
-    "correctAnswer": "hot — горячий, жаркий — [хот]",
+    "info":"","infoHelp":"","correctAnswer": "hot — горячий, жаркий — [хот]",
     "options": [
       {
         "text": "теплый",
@@ -5912,7 +5912,7 @@
   },
   {
     "title": "Переведите слово: cold (adj) — прилагательное",
-    "correctAnswer": "cold — холодный — [коулд]",
+    "info":"","infoHelp":"","correctAnswer": "cold — холодный — [коулд]",
     "options": [
       {
         "text": "холодный",
@@ -5935,7 +5935,7 @@
   },
   {
     "title": "Переведите слово: warm (adj) — прилагательное",
-    "correctAnswer": "warm — теплый — [уорм]",
+    "info":"","infoHelp":"","correctAnswer": "warm — теплый — [уорм]",
     "options": [
       {
         "text": "жаркий",
@@ -5958,7 +5958,7 @@
   },
   {
     "title": "Переведите слово: shine (v) — глагол",
-    "correctAnswer": "shine — светить, сиять — [шайн]",
+    "info":"","infoHelp":"","correctAnswer": "shine — светить, сиять — [шайн]",
     "options": [
       {
         "text": "греть",
@@ -5981,7 +5981,7 @@
   },
   {
     "title": "Переведите слово: blow (v) — глагол",
-    "correctAnswer": "blow — дуть — [блоу]",
+    "info":"","infoHelp":"","correctAnswer": "blow — дуть — [блоу]",
     "options": [
       {
         "text": "дуть",
@@ -6004,7 +6004,7 @@
   },
   {
     "title": "Переведите слово: fall (v) — глагол",
-    "correctAnswer": "fall — падать — [фол]",
+    "info":"","infoHelp":"","correctAnswer": "fall — падать — [фол]",
     "options": [
       {
         "text": "подниматься",
@@ -6027,7 +6027,7 @@
   },
   {
     "title": "Переведите слово: earth (n) — существительное",
-    "correctAnswer": "earth — Земля, почва — [ёрс]",
+    "info":"","infoHelp":"","correctAnswer": "earth — Земля, почва — [ёрс]",
     "options": [
       {
         "text": "мир",
@@ -6050,7 +6050,7 @@
   },
   {
     "title": "Переведите слово: fire (n) — существительное",
-    "correctAnswer": "fire — огонь, костер — [файэр]",
+    "info":"","infoHelp":"","correctAnswer": "fire — огонь, костер — [файэр]",
     "options": [
       {
         "text": "дым",
@@ -6073,7 +6073,7 @@
   },
   {
     "title": "Переведите слово: money (n) — существительное",
-    "correctAnswer": "money — деньги — [мани]",
+    "info":"","infoHelp":"","correctAnswer": "money — деньги — [мани]",
     "options": [
       {
         "text": "карта",
@@ -6096,7 +6096,7 @@
   },
   {
     "title": "Переведите слово: price (n) — существительное",
-    "correctAnswer": "price — цена — [прайс]",
+    "info":"","infoHelp":"","correctAnswer": "price — цена — [прайс]",
     "options": [
       {
         "text": "скидка",
@@ -6119,7 +6119,7 @@
   },
   {
     "title": "Переведите слово: shop (n) — существительное",
-    "correctAnswer": "shop — магазин — [шоп]",
+    "info":"","infoHelp":"","correctAnswer": "shop — магазин — [шоп]",
     "options": [
       {
         "text": "магазин",
@@ -6142,7 +6142,7 @@
   },
   {
     "title": "Переведите слово: store (n) — существительное",
-    "correctAnswer": "store — крупный магазин, склад — [стор]",
+    "info":"","infoHelp":"","correctAnswer": "store — крупный магазин, склад — [стор]",
     "options": [
       {
         "text": "аптека",
@@ -6165,7 +6165,7 @@
   },
   {
     "title": "Переведите слово: market (n) — существительное",
-    "correctAnswer": "market — рынок — [маркит]",
+    "info":"","infoHelp":"","correctAnswer": "market — рынок — [маркит]",
     "options": [
       {
         "text": "площадь",
@@ -6188,7 +6188,7 @@
   },
   {
     "title": "Переведите слово: job (n) — существительное",
-    "correctAnswer": "job — работа, место работы — [джоб]",
+    "info":"","infoHelp":"","correctAnswer": "job — работа, место работы — [джоб]",
     "options": [
       {
         "text": "работа, место работы",
@@ -6211,7 +6211,7 @@
   },
   {
     "title": "Переведите слово: office (n) — существительное",
-    "correctAnswer": "office — офис, контора — [офис]",
+    "info":"","infoHelp":"","correctAnswer": "office — офис, контора — [офис]",
     "options": [
       {
         "text": "здание",
@@ -6234,7 +6234,7 @@
   },
   {
     "title": "Переведите слово: company (n) — существительное",
-    "correctAnswer": "company — компания, фирма — [кампэни]",
+    "info":"","infoHelp":"","correctAnswer": "company — компания, фирма — [кампэни]",
     "options": [
       {
         "text": "партнерство",
@@ -6257,7 +6257,7 @@
   },
   {
     "title": "Переведите слово: business (n) — существительное",
-    "correctAnswer": "business — бизнес, дело — [бизнис]",
+    "info":"","infoHelp":"","correctAnswer": "business — бизнес, дело — [бизнис]",
     "options": [
       {
         "text": "бизнес, дело",
@@ -6280,7 +6280,7 @@
   },
   {
     "title": "Переведите слово: cash (n) — существительное",
-    "correctAnswer": "cash — наличные деньги — [кэш]",
+    "info":"","infoHelp":"","correctAnswer": "cash — наличные деньги — [кэш]",
     "options": [
       {
         "text": "монеты",
@@ -6303,7 +6303,7 @@
   },
   {
     "title": "Переведите слово: bill (n) — существительное",
-    "correctAnswer": "bill — счет (к оплате) — [бил]",
+    "info":"","infoHelp":"","correctAnswer": "bill — счет (к оплате) — [бил]",
     "options": [
       {
         "text": "счет (к оплате)",
@@ -6326,7 +6326,7 @@
   },
   {
     "title": "Переведите слово: cost (v) — глагол",
-    "correctAnswer": "cost — стоить — [кост]",
+    "info":"","infoHelp":"","correctAnswer": "cost — стоить — [кост]",
     "options": [
       {
         "text": "платить",
@@ -6349,7 +6349,7 @@
   },
   {
     "title": "Переведите слово: pay (v) — глагол",
-    "correctAnswer": "pay — платить — [пэй]",
+    "info":"","infoHelp":"","correctAnswer": "pay — платить — [пэй]",
     "options": [
       {
         "text": "платить",
@@ -6372,7 +6372,7 @@
   },
   {
     "title": "Переведите слово: spend (v) — глагол",
-    "correctAnswer": "spend — тратить, проводить (время) — [спэнд]",
+    "info":"","infoHelp":"","correctAnswer": "spend — тратить, проводить (время) — [спэнд]",
     "options": [
       {
         "text": "зарабатывать",
@@ -6395,7 +6395,7 @@
   },
   {
     "title": "Переведите слово: earn (v) — глагол",
-    "correctAnswer": "earn — зарабатывать — [ёрн]",
+    "info":"","infoHelp":"","correctAnswer": "earn — зарабатывать — [ёрн]",
     "options": [
       {
         "text": "зарабатывать",
@@ -6418,7 +6418,7 @@
   },
   {
     "title": "Переведите слово: choose (v) — глагол",
-    "correctAnswer": "choose — выбирать — [чуз]",
+    "info":"","infoHelp":"","correctAnswer": "choose — выбирать — [чуз]",
     "options": [
       {
         "text": "искать",
@@ -6441,7 +6441,7 @@
   },
   {
     "title": "Переведите слово: product (n) — существительное",
-    "correctAnswer": "product — продукт, товар — [продакт]",
+    "info":"","infoHelp":"","correctAnswer": "product — продукт, товар — [продакт]",
     "options": [
       {
         "text": "услуга",
@@ -6464,7 +6464,7 @@
   },
   {
     "title": "Переведите слово: cheap (adj) — прилагательное",
-    "correctAnswer": "cheap — дешевый — [чип]",
+    "info":"","infoHelp":"","correctAnswer": "cheap — дешевый — [чип]",
     "options": [
       {
         "text": "дешевый",
@@ -6487,7 +6487,7 @@
   },
   {
     "title": "Переведите слово: expensive (adj) — прилагательное",
-    "correctAnswer": "expensive — дорогой — [икспэнсив]",
+    "info":"","infoHelp":"","correctAnswer": "expensive — дорогой — [икспэнсив]",
     "options": [
       {
         "text": "дешевый",
@@ -6510,7 +6510,7 @@
   },
   {
     "title": "Переведите слово: boss (n) — существительное",
-    "correctAnswer": "boss — начальник, босс — [бос]",
+    "info":"","infoHelp":"","correctAnswer": "boss — начальник, босс — [бос]",
     "options": [
       {
         "text": "лидер",
@@ -6533,7 +6533,7 @@
   },
   {
     "title": "Переведите слово: worker (n) — существительное",
-    "correctAnswer": "worker — рабочий, сотрудник — [уоркэр]",
+    "info":"","infoHelp":"","correctAnswer": "worker — рабочий, сотрудник — [уоркэр]",
     "options": [
       {
         "text": "рабочий, сотрудник",
@@ -6556,7 +6556,7 @@
   },
   {
     "title": "Переведите слово: client (n) — существительное",
-    "correctAnswer": "client — клиент, покупатель — [клайэнт]",
+    "info":"","infoHelp":"","correctAnswer": "client — клиент, покупатель — [клайэнт]",
     "options": [
       {
         "text": "гость",
@@ -6579,7 +6579,7 @@
   },
   {
     "title": "Переведите слово: sale (n) — существительное",
-    "correctAnswer": "sale — распродажа, продажа — [сэйл]",
+    "info":"","infoHelp":"","correctAnswer": "sale — распродажа, продажа — [сэйл]",
     "options": [
       {
         "text": "цена",
@@ -6602,7 +6602,7 @@
   },
   {
     "title": "Переведите слово: free (adj) — прилагательное",
-    "correctAnswer": "free — бесплатный, свободный — [фри]",
+    "info":"","infoHelp":"","correctAnswer": "free — бесплатный, свободный — [фри]",
     "options": [
       {
         "text": "бесплатный, свободный",
@@ -6625,7 +6625,7 @@
   },
   {
     "title": "Переведите слово: card (n) — существительное",
-    "correctAnswer": "card — карта (банковская, визитная) — [кард]",
+    "info":"","infoHelp":"","correctAnswer": "card — карта (банковская, визитная) — [кард]",
     "options": [
       {
         "text": "бумага",
@@ -6648,7 +6648,7 @@
   },
   {
     "title": "Переведите слово: Monday (n) — существительное",
-    "correctAnswer": "Monday — понедельник — [манди]",
+    "info":"","infoHelp":"","correctAnswer": "Monday — понедельник — [манди]",
     "options": [
       {
         "text": "вторник",
@@ -6671,7 +6671,7 @@
   },
   {
     "title": "Переведите слово: Tuesday (n) — существительное",
-    "correctAnswer": "Tuesday — вторник — [тьюзди]",
+    "info":"","infoHelp":"","correctAnswer": "Tuesday — вторник — [тьюзди]",
     "options": [
       {
         "text": "четверг",
@@ -6694,7 +6694,7 @@
   },
   {
     "title": "Переведите слово: Wednesday (n) — существительное",
-    "correctAnswer": "Wednesday — среда — [уэнзди]",
+    "info":"","infoHelp":"","correctAnswer": "Wednesday — среда — [уэнзди]",
     "options": [
       {
         "text": "среда",
@@ -6717,7 +6717,7 @@
   },
   {
     "title": "Переведите слово: Thursday (n) — существительное",
-    "correctAnswer": "Thursday — четверг — [сёрзди]",
+    "info":"","infoHelp":"","correctAnswer": "Thursday — четверг — [сёрзди]",
     "options": [
       {
         "text": "вторник",
@@ -6740,7 +6740,7 @@
   },
   {
     "title": "Переведите слово: Friday (n) — существительное",
-    "correctAnswer": "Friday — пятница — [фрайди]",
+    "info":"","infoHelp":"","correctAnswer": "Friday — пятница — [фрайди]",
     "options": [
       {
         "text": "суббота",
@@ -6763,7 +6763,7 @@
   },
   {
     "title": "Переведите слово: Saturday (n) — существительное",
-    "correctAnswer": "Saturday — суббота — [сэтэрди]",
+    "info":"","infoHelp":"","correctAnswer": "Saturday — суббота — [сэтэрди]",
     "options": [
       {
         "text": "суббота",
@@ -6786,7 +6786,7 @@
   },
   {
     "title": "Переведите слово: Sunday (n) — существительное",
-    "correctAnswer": "Sunday — воскресенье — [санди]",
+    "info":"","infoHelp":"","correctAnswer": "Sunday — воскресенье — [санди]",
     "options": [
       {
         "text": "суббота",
@@ -6809,7 +6809,7 @@
   },
   {
     "title": "Переведите слово: weekend (n) — существительное",
-    "correctAnswer": "weekend — выходные — [уикэнд]",
+    "info":"","infoHelp":"","correctAnswer": "weekend — выходные — [уикэнд]",
     "options": [
       {
         "text": "неделя",
@@ -6832,7 +6832,7 @@
   },
   {
     "title": "Переведите слово: season (n) — существительное",
-    "correctAnswer": "season — время года, сезон — [сизон]",
+    "info":"","infoHelp":"","correctAnswer": "season — время года, сезон — [сизон]",
     "options": [
       {
         "text": "время года, сезон",
@@ -6855,7 +6855,7 @@
   },
   {
     "title": "Переведите слово: spring (n) — существительное",
-    "correctAnswer": "spring — весна — [спринг]",
+    "info":"","infoHelp":"","correctAnswer": "spring — весна — [спринг]",
     "options": [
       {
         "text": "лето",
@@ -6878,7 +6878,7 @@
   },
   {
     "title": "Переведите слово: summer (n) — существительное",
-    "correctAnswer": "summer — лето — [самэр]",
+    "info":"","infoHelp":"","correctAnswer": "summer — лето — [самэр]",
     "options": [
       {
         "text": "лето",
@@ -6901,7 +6901,7 @@
   },
   {
     "title": "Переведите слово: autumn (n) — существительное",
-    "correctAnswer": "autumn — осень — [отэм]",
+    "info":"","infoHelp":"","correctAnswer": "autumn — осень — [отэм]",
     "options": [
       {
         "text": "весна",
@@ -6924,7 +6924,7 @@
   },
   {
     "title": "Переведите слово: winter (n) — существительное",
-    "correctAnswer": "winter — зима — [уинтэр]",
+    "info":"","infoHelp":"","correctAnswer": "winter — зима — [уинтэр]",
     "options": [
       {
         "text": "зима",
@@ -6947,7 +6947,7 @@
   },
   {
     "title": "Переведите слово: January (n) — существительное",
-    "correctAnswer": "January — январь — [джэньюэри]",
+    "info":"","infoHelp":"","correctAnswer": "January — январь — [джэньюэри]",
     "options": [
       {
         "text": "февраль",
@@ -6970,7 +6970,7 @@
   },
   {
     "title": "Переведите слово: February (n) — существительное",
-    "correctAnswer": "February — февраль — [фэбруэри]",
+    "info":"","infoHelp":"","correctAnswer": "February — февраль — [фэбруэри]",
     "options": [
       {
         "text": "март",
@@ -6993,7 +6993,7 @@
   },
   {
     "title": "Переведите слово: March (n) — существительное",
-    "correctAnswer": "March — март — [марч]",
+    "info":"","infoHelp":"","correctAnswer": "March — март — [марч]",
     "options": [
       {
         "text": "март",
@@ -7016,7 +7016,7 @@
   },
   {
     "title": "Переведите слово: April (n) — существительное",
-    "correctAnswer": "April — апрель — [эйприл]",
+    "info":"","infoHelp":"","correctAnswer": "April — апрель — [эйприл]",
     "options": [
       {
         "text": "август",
@@ -7039,7 +7039,7 @@
   },
   {
     "title": "Переведите слово: May (n) — существительное",
-    "correctAnswer": "May — май — [мэй]",
+    "info":"","infoHelp":"","correctAnswer": "May — май — [мэй]",
     "options": [
       {
         "text": "март",
@@ -7062,7 +7062,7 @@
   },
   {
     "title": "Переведите слово: June (n) — существительное",
-    "correctAnswer": "June — июнь — [джун]",
+    "info":"","infoHelp":"","correctAnswer": "June — июнь — [джун]",
     "options": [
       {
         "text": "июнь",
@@ -7085,7 +7085,7 @@
   },
   {
     "title": "Переведите слово: July (n) — существительное",
-    "correctAnswer": "July — июль — [джулай]",
+    "info":"","infoHelp":"","correctAnswer": "July — июль — [джулай]",
     "options": [
       {
         "text": "июнь",
@@ -7108,7 +7108,7 @@
   },
   {
     "title": "Переведите слово: August (n) — существительное",
-    "correctAnswer": "August — август — [огэст]",
+    "info":"","infoHelp":"","correctAnswer": "August — август — [огэст]",
     "options": [
       {
         "text": "апрель",
@@ -7131,7 +7131,7 @@
   },
   {
     "title": "Переведите слово: September (n) — существительное",
-    "correctAnswer": "September — сентябрь — [сэптэмбэр]",
+    "info":"","infoHelp":"","correctAnswer": "September — сентябрь — [сэптэмбэр]",
     "options": [
       {
         "text": "сентябрь",
@@ -7154,7 +7154,7 @@
   },
   {
     "title": "Переведите слово: October (n) — существительное",
-    "correctAnswer": "October — октябрь — [октоубэр]",
+    "info":"","infoHelp":"","correctAnswer": "October — октябрь — [октоубэр]",
     "options": [
       {
         "text": "сентябрь",
@@ -7177,7 +7177,7 @@
   },
   {
     "title": "Переведите слово: November (n) — существительное",
-    "correctAnswer": "November — ноябрь — [ноувэмбэр]",
+    "info":"","infoHelp":"","correctAnswer": "November — ноябрь — [ноувэмбэр]",
     "options": [
       {
         "text": "октябрь",
@@ -7200,7 +7200,7 @@
   },
   {
     "title": "Переведите слово: December (n) — существительное",
-    "correctAnswer": "December — декабрь — [дисэмбэр]",
+    "info":"","infoHelp":"","correctAnswer": "December — декабрь — [дисэмбэр]",
     "options": [
       {
         "text": "январь",
@@ -7223,7 +7223,7 @@
   },
   {
     "title": "Переведите слово: love (v) — глагол",
-    "correctAnswer": "love — любить — [лав]",
+    "info":"","infoHelp":"","correctAnswer": "love — любить — [лав]",
     "options": [
       {
         "text": "нравиться",
@@ -7246,7 +7246,7 @@
   },
   {
     "title": "Переведите слово: like (v) — глагол",
-    "correctAnswer": "like — нравиться — [лайк]",
+    "info":"","infoHelp":"","correctAnswer": "like — нравиться — [лайк]",
     "options": [
       {
         "text": "хотеть",
@@ -7269,7 +7269,7 @@
   },
   {
     "title": "Переведите слово: hate (v) — глагол",
-    "correctAnswer": "hate — ненавидеть — [хэйт]",
+    "info":"","infoHelp":"","correctAnswer": "hate — ненавидеть — [хэйт]",
     "options": [
       {
         "text": "ненавидеть",
@@ -7292,7 +7292,7 @@
   },
   {
     "title": "Переведите слово: remember (v) — глагол",
-    "correctAnswer": "remember — помнить, вспоминать — [римембэр]",
+    "info":"","infoHelp":"","correctAnswer": "remember — помнить, вспоминать — [римембэр]",
     "options": [
       {
         "text": "забывать",
@@ -7315,7 +7315,7 @@
   },
   {
     "title": "Переведите слово: forget (v) — глагол",
-    "correctAnswer": "forget — забывать — [форгэт]",
+    "info":"","infoHelp":"","correctAnswer": "forget — забывать — [форгэт]",
     "options": [
       {
         "text": "терять",
@@ -7338,7 +7338,7 @@
   },
   {
     "title": "Переведите слово: understand (v) — глагол",
-    "correctAnswer": "understand — понимать — [андэстэнд]",
+    "info":"","infoHelp":"","correctAnswer": "understand — понимать — [андэстэнд]",
     "options": [
       {
         "text": "понимать",
@@ -7361,7 +7361,7 @@
   },
   {
     "title": "Переведите слово: believe (v) — глагол",
-    "correctAnswer": "believe — верить — [билив]",
+    "info":"","infoHelp":"","correctAnswer": "believe — верить — [билив]",
     "options": [
       {
         "text": "думать",
@@ -7384,7 +7384,7 @@
   },
   {
     "title": "Переведите слово: hope (v) — глагол",
-    "correctAnswer": "hope — надеяться — [хоуп]",
+    "info":"","infoHelp":"","correctAnswer": "hope — надеяться — [хоуп]",
     "options": [
       {
         "text": "надеяться",
@@ -7407,7 +7407,7 @@
   },
   {
     "title": "Переведите слово: smile (n) — существительное",
-    "correctAnswer": "smile — улыбка — [смайл]",
+    "info":"","infoHelp":"","correctAnswer": "smile — улыбка — [смайл]",
     "options": [
       {
         "text": "смех",
@@ -7430,7 +7430,7 @@
   },
   {
     "title": "Переведите слово: laugh (v) — глагол",
-    "correctAnswer": "laugh — смеяться — [лаф]",
+    "info":"","infoHelp":"","correctAnswer": "laugh — смеяться — [лаф]",
     "options": [
       {
         "text": "смеяться",
@@ -7453,7 +7453,7 @@
   },
   {
     "title": "Переведите слово: cry (v) — глагол",
-    "correctAnswer": "cry — плакать, кричать — [край]",
+    "info":"","infoHelp":"","correctAnswer": "cry — плакать, кричать — [край]",
     "options": [
       {
         "text": "смеяться",
@@ -7476,7 +7476,7 @@
   },
   {
     "title": "Переведите слово: fear (n) — существительное",
-    "correctAnswer": "fear — страх — [фиэр]",
+    "info":"","infoHelp":"","correctAnswer": "fear — страх — [фиэр]",
     "options": [
       {
         "text": "злость",
@@ -7499,7 +7499,7 @@
   },
   {
     "title": "Переведите слово: sad (adj) — прилагательное",
-    "correctAnswer": "sad — грустный, печальный — [сэд]",
+    "info":"","infoHelp":"","correctAnswer": "sad — грустный, печальный — [сэд]",
     "options": [
       {
         "text": "веселый",
@@ -7522,7 +7522,7 @@
   },
   {
     "title": "Переведите слово: angry (adj) — прилагательное",
-    "correctAnswer": "angry — сердитый, злой — [энгри]",
+    "info":"","infoHelp":"","correctAnswer": "angry — сердитый, злой — [энгри]",
     "options": [
       {
         "text": "сердитый, злой",
@@ -7545,7 +7545,7 @@
   },
   {
     "title": "Переведите слово: kind (adj) — прилагательное",
-    "correctAnswer": "kind — добрый — [кайнд]",
+    "info":"","infoHelp":"","correctAnswer": "kind — добрый — [кайнд]",
     "options": [
       {
         "text": "злой",
@@ -7568,7 +7568,7 @@
   },
   {
     "title": "Переведите слово: smart (adj) — прилагательное",
-    "correctAnswer": "smart — умный — [смарт]",
+    "info":"","infoHelp":"","correctAnswer": "smart — умный — [смарт]",
     "options": [
       {
         "text": "умный",
@@ -7591,7 +7591,7 @@
   },
   {
     "title": "Переведите слово: funny (adj) — прилагательное",
-    "correctAnswer": "funny — смешной, забавный — [фани]",
+    "info":"","infoHelp":"","correctAnswer": "funny — смешной, забавный — [фани]",
     "options": [
       {
         "text": "скучный",
@@ -7614,7 +7614,7 @@
   },
   {
     "title": "Переведите слово: boring (adj) — прилагательное",
-    "correctAnswer": "boring — скучный — [боринг]",
+    "info":"","infoHelp":"","correctAnswer": "boring — скучный — [боринг]",
     "options": [
       {
         "text": "интересный",
@@ -7637,7 +7637,7 @@
   },
   {
     "title": "Переведите слово: problem (n) — существительное",
-    "correctAnswer": "problem — проблема, задача — [проблэм]",
+    "info":"","infoHelp":"","correctAnswer": "problem — проблема, задача — [проблэм]",
     "options": [
       {
         "text": "проблема, задача",
@@ -7660,7 +7660,7 @@
   },
   {
     "title": "Переведите слово: question (n) — существительное",
-    "correctAnswer": "question — вопрос — [куэсчэн]",
+    "info":"","infoHelp":"","correctAnswer": "question — вопрос — [куэсчэн]",
     "options": [
       {
         "text": "ответ",
@@ -7683,7 +7683,7 @@
   },
   {
     "title": "Переведите слово: answer (n) — существительное",
-    "correctAnswer": "answer — ответ — [ансэр]",
+    "info":"","infoHelp":"","correctAnswer": "answer — ответ — [ансэр]",
     "options": [
       {
         "text": "ответ",
@@ -7706,7 +7706,7 @@
   },
   {
     "title": "Переведите слово: important (adj) — прилагательное",
-    "correctAnswer": "important — важный — [импортант]",
+    "info":"","infoHelp":"","correctAnswer": "important — важный — [импортант]",
     "options": [
       {
         "text": "главный",
@@ -7729,7 +7729,7 @@
   },
   {
     "title": "Переведите слово: difficult (adj) — прилагательное",
-    "correctAnswer": "difficult — сложный, трудный — [дификалт]",
+    "info":"","infoHelp":"","correctAnswer": "difficult — сложный, трудный — [дификалт]",
     "options": [
       {
         "text": "простой",
@@ -7752,7 +7752,7 @@
   },
   {
     "title": "Переведите слово: easy (adj) — прилагательное",
-    "correctAnswer": "easy — легкий, простой — [изи]",
+    "info":"","infoHelp":"","correctAnswer": "easy — легкий, простой — [изи]",
     "options": [
       {
         "text": "легкий, простой",
@@ -7775,7 +7775,7 @@
   },
   {
     "title": "Переведите слово: dream (n) — существительное",
-    "correctAnswer": "dream — мечта, сон — [дрим]",
+    "info":"","infoHelp":"","correctAnswer": "dream — мечта, сон — [дрим]",
     "options": [
       {
         "text": "мысль",
@@ -7798,7 +7798,7 @@
   },
   {
     "title": "Переведите слово: internet (n) — существительное",
-    "correctAnswer": "internet — интернет — [интэрнэт]",
+    "info":"","infoHelp":"","correctAnswer": "internet — интернет — [интэрнэт]",
     "options": [
       {
         "text": "сеть",
@@ -7821,7 +7821,7 @@
   },
   {
     "title": "Переведите слово: website (n) — существительное",
-    "correctAnswer": "website — веб-сайт — [вэбсайт]",
+    "info":"","infoHelp":"","correctAnswer": "website — веб-сайт — [вэбсайт]",
     "options": [
       {
         "text": "страница",
@@ -7844,7 +7844,7 @@
   },
   {
     "title": "Переведите слово: message (n) — существительное",
-    "correctAnswer": "message — сообщение, письмо — [мэсидж]",
+    "info":"","infoHelp":"","correctAnswer": "message — сообщение, письмо — [мэсидж]",
     "options": [
       {
         "text": "сообщение, письмо",
@@ -7867,7 +7867,7 @@
   },
   {
     "title": "Переведите слово: email (n) — существительное",
-    "correctAnswer": "email — электронная почта — [имэйл]",
+    "info":"","infoHelp":"","correctAnswer": "email — электронная почта — [имэйл]",
     "options": [
       {
         "text": "конверт",
@@ -7890,7 +7890,7 @@
   },
   {
     "title": "Переведите слово: call (v) — глагол",
-    "correctAnswer": "call — звонить, звать — [кол]",
+    "info":"","infoHelp":"","correctAnswer": "call — звонить, звать — [кол]",
     "options": [
       {
         "text": "писать",
@@ -7913,7 +7913,7 @@
   },
   {
     "title": "Переведите слово: text (n) — существительное",
-    "correctAnswer": "text — текст — [тэкст]",
+    "info":"","infoHelp":"","correctAnswer": "text — текст — [тэкст]",
     "options": [
       {
         "text": "текст",
@@ -7936,7 +7936,7 @@
   },
   {
     "title": "Переведите слово: game (n) — существительное",
-    "correctAnswer": "game — игра — [гэйм]",
+    "info":"","infoHelp":"","correctAnswer": "game — игра — [гэйм]",
     "options": [
       {
         "text": "игрушка",
@@ -7959,7 +7959,7 @@
   },
   {
     "title": "Переведите слово: play (v) — глагол",
-    "correctAnswer": "play — играть — [плэй]",
+    "info":"","infoHelp":"","correctAnswer": "play — играть — [плэй]",
     "options": [
       {
         "text": "играть",
@@ -7982,7 +7982,7 @@
   },
   {
     "title": "Переведите слово: movie (n) — существительное",
-    "correctAnswer": "movie — фильм, кино — [муви]",
+    "info":"","infoHelp":"","correctAnswer": "movie — фильм, кино — [муви]",
     "options": [
       {
         "text": "театр",
@@ -8005,7 +8005,7 @@
   },
   {
     "title": "Переведите слово: music (n) — существительное",
-    "correctAnswer": "music — музыка — [мьюзик]",
+    "info":"","infoHelp":"","correctAnswer": "music — музыка — [мьюзик]",
     "options": [
       {
         "text": "песня",
@@ -8028,7 +8028,7 @@
   },
   {
     "title": "Переведите слово: song (n) — существительное",
-    "correctAnswer": "song — песня — [сонг]",
+    "info":"","infoHelp":"","correctAnswer": "song — песня — [сонг]",
     "options": [
       {
         "text": "песня",
@@ -8051,7 +8051,7 @@
   },
   {
     "title": "Переведите слово: photo (n) — существительное",
-    "correctAnswer": "photo — фотография — [фоутоу]",
+    "info":"","infoHelp":"","correctAnswer": "photo — фотография — [фоутоу]",
     "options": [
       {
         "text": "камера",
@@ -8074,7 +8074,7 @@
   },
   {
     "title": "Переведите слово: video (n) — существительное",
-    "correctAnswer": "video — видео — [видион]",
+    "info":"","infoHelp":"","correctAnswer": "video — видео — [видион]",
     "options": [
       {
         "text": "видео",
@@ -8097,7 +8097,7 @@
   },
   {
     "title": "Переведите слово: news (n) — существительное",
-    "correctAnswer": "news — новости — [ньюз]",
+    "info":"","infoHelp":"","correctAnswer": "news — новости — [ньюз]",
     "options": [
       {
         "text": "газета",
@@ -8120,7 +8120,7 @@
   },
   {
     "title": "Переведите слово: radio (n) — существительное",
-    "correctAnswer": "radio — радио — [рэйдиоу]",
+    "info":"","infoHelp":"","correctAnswer": "radio — радио — [рэйдиоу]",
     "options": [
       {
         "text": "радио",
@@ -8143,7 +8143,7 @@
   },
   {
     "title": "Переведите слово: screen (n) — существительное",
-    "correctAnswer": "screen — экран, монитор — [скрин]",
+    "info":"","infoHelp":"","correctAnswer": "screen — экран, монитор — [скрин]",
     "options": [
       {
         "text": "стекло",
@@ -8166,7 +8166,7 @@
   },
   {
     "title": "Переведите слово: button (n) — существительное",
-    "correctAnswer": "button — кнопка, пуговица — [батн]",
+    "info":"","infoHelp":"","correctAnswer": "button — кнопка, пуговица — [батн]",
     "options": [
       {
         "text": "ручка",
@@ -8189,7 +8189,7 @@
   },
   {
     "title": "Переведите слово: information (n) — существительное",
-    "correctAnswer": "information — информация, данные — [инфэрмэйшн]",
+    "info":"","infoHelp":"","correctAnswer": "information — информация, данные — [инфэрмэйшн]",
     "options": [
       {
         "text": "информация, данные",
@@ -8212,7 +8212,7 @@
   },
   {
     "title": "Переведите слово: send (v) — глагол",
-    "correctAnswer": "send — отправлять, посылать — [сэнд]",
+    "info":"","infoHelp":"","correctAnswer": "send — отправлять, посылать — [сэнд]",
     "options": [
       {
         "text": "получать",
@@ -8235,7 +8235,7 @@
   },
   {
     "title": "Переведите слово: receive (v) — глагол",
-    "correctAnswer": "receive — получать, принимать — [рисив]",
+    "info":"","infoHelp":"","correctAnswer": "receive — получать, принимать — [рисив]",
     "options": [
       {
         "text": "отдавать",
@@ -8258,7 +8258,7 @@
   },
   {
     "title": "Переведите слово: click (v) — глагол",
-    "correctAnswer": "click — кликать, нажимать — [клик]",
+    "info":"","infoHelp":"","correctAnswer": "click — кликать, нажимать — [клик]",
     "options": [
       {
         "text": "кликакать, нажимать",
@@ -8281,7 +8281,7 @@
   },
   {
     "title": "Переведите слово: type (v) — глагол",
-    "correctAnswer": "type — печатать (текст) — [тайп]",
+    "info":"","infoHelp":"","correctAnswer": "type — печатать (текст) — [тайп]",
     "options": [
       {
         "text": "писать от руки",
@@ -8304,7 +8304,7 @@
   },
   {
     "title": "Переведите слово: online (adj) — прилагательное",
-    "correctAnswer": "online — онлайн, в сети — [онлайн]",
+    "info":"","infoHelp":"","correctAnswer": "online — онлайн, в сети — [онлайн]",
     "options": [
       {
         "text": "выключенный",
@@ -8327,7 +8327,7 @@
   },
   {
     "title": "Переведите слово: camera (n) — существительное",
-    "correctAnswer": "camera — камера, фотоаппарат — [кэмэрэ]",
+    "info":"","infoHelp":"","correctAnswer": "camera — камера, фотоаппарат — [кэмэрэ]",
     "options": [
       {
         "text": "объектив",
@@ -8350,7 +8350,7 @@
   },
   {
     "title": "Переведите слово: television (n) — существительное",
-    "correctAnswer": "television — телевидение, телевизор — [тэливижн]",
+    "info":"","infoHelp":"","correctAnswer": "television — телевидение, телевизор — [тэливижн]",
     "options": [
       {
         "text": "телевидение, телевизор",
@@ -8373,7 +8373,7 @@
   },
   {
     "title": "Переведите слово: in (prep) — предлог",
-    "correctAnswer": "in — в, внутри — [ин]",
+    "info":"","infoHelp":"","correctAnswer": "in — в, внутри — [ин]",
     "options": [
       {
         "text": "на",
@@ -8396,7 +8396,7 @@
   },
   {
     "title": "Переведите слово: on (prep) — предлог",
-    "correctAnswer": "on — на (поверхности) — [он]",
+    "info":"","infoHelp":"","correctAnswer": "on — на (поверхности) — [он]",
     "options": [
       {
         "text": "на (поверхности)",
@@ -8419,7 +8419,7 @@
   },
   {
     "title": "Переведите слово: under (prep) — предлог",
-    "correctAnswer": "under — под — [андэр]",
+    "info":"","infoHelp":"","correctAnswer": "under — под — [андэр]",
     "options": [
       {
         "text": "над",
@@ -8442,7 +8442,7 @@
   },
   {
     "title": "Переведите слово: over (prep) — предлог",
-    "correctAnswer": "over — над, через — [оувэр]",
+    "info":"","infoHelp":"","correctAnswer": "over — над, через — [оувэр]",
     "options": [
       {
         "text": "под",
@@ -8465,7 +8465,7 @@
   },
   {
     "title": "Переведите слово: between (prep) — предлог",
-    "correctAnswer": "between — между — [битвин]",
+    "info":"","infoHelp":"","correctAnswer": "between — между — [битвин]",
     "options": [
       {
         "text": "между",
@@ -8488,7 +8488,7 @@
   },
   {
     "title": "Переведите слово: behind (prep) — предлог",
-    "correctAnswer": "behind — позади, за — [бихайнд]",
+    "info":"","infoHelp":"","correctAnswer": "behind — позади, за — [бихайнд]",
     "options": [
       {
         "text": "перед",
@@ -8511,7 +8511,7 @@
   },
   {
     "title": "Переведите слово: in front of (prep) — предлог",
-    "correctAnswer": "in front of — перед, впереди — [ин франт оф]",
+    "info":"","infoHelp":"","correctAnswer": "in front of — перед, впереди — [ин франт оф]",
     "options": [
       {
         "text": "перед, впереди",
@@ -8534,7 +8534,7 @@
   },
   {
     "title": "Переведите слово: next to (prep) — предлог",
-    "correctAnswer": "next to — рядом с, сопредельный — [нэкст ту]",
+    "info":"","infoHelp":"","correctAnswer": "next to — рядом с, сопредельный — [нэкст ту]",
     "options": [
       {
         "text": "далеко от",
@@ -8557,7 +8557,7 @@
   },
   {
     "title": "Переведите слово: inside (n) — существительное",
-    "correctAnswer": "inside — внутренняя часть — [инсайд]",
+    "info":"","infoHelp":"","correctAnswer": "inside — внутренняя часть — [инсайд]",
     "options": [
       {
         "text": "внутренняя часть",
@@ -8580,7 +8580,7 @@
   },
   {
     "title": "Переведите слово: outside (n) — существительное",
-    "correctAnswer": "outside — наружная часть — [аутсайд]",
+    "info":"","infoHelp":"","correctAnswer": "outside — наружная часть — [аутсайд]",
     "options": [
       {
         "text": "внутренность",
@@ -8603,7 +8603,7 @@
   },
   {
     "title": "Переведите слово: center (n) — существительное",
-    "correctAnswer": "center — центр — [сэнтэр]",
+    "info":"","infoHelp":"","correctAnswer": "center — центр — [сэнтэр]",
     "options": [
       {
         "text": "край",
@@ -8626,7 +8626,7 @@
   },
   {
     "title": "Переведите слово: corner (n) — существительное",
-    "correctAnswer": "corner — угол — [корнэр]",
+    "info":"","infoHelp":"","correctAnswer": "corner — угол — [корнэр]",
     "options": [
       {
         "text": "угол",
@@ -8649,7 +8649,7 @@
   },
   {
     "title": "Переведите слово: line (n) — существительное",
-    "correctAnswer": "line — линия, очередь — [лайн]",
+    "info":"","infoHelp":"","correctAnswer": "line — линия, очередь — [лайн]",
     "options": [
       {
         "text": "точка",
@@ -8672,7 +8672,7 @@
   },
   {
     "title": "Переведите слово: circle (n) — существительное",
-    "correctAnswer": "circle — круг, окружность — [сёркл]",
+    "info":"","infoHelp":"","correctAnswer": "circle — круг, окружность — [сёркл]",
     "options": [
       {
         "text": "круг, окружность",
@@ -8695,7 +8695,7 @@
   },
   {
     "title": "Переведите слово: square (n) — существительное",
-    "correctAnswer": "square — квадрат, площадь — [скуэа]",
+    "info":"","infoHelp":"","correctAnswer": "square — квадрат, площадь — [скуэа]",
     "options": [
       {
         "text": "круг",
@@ -8718,7 +8718,7 @@
   },
   {
     "title": "Переведите слово: high (adj) — прилагательное",
-    "correctAnswer": "high — высокий — [хай]",
+    "info":"","infoHelp":"","correctAnswer": "high — высокий — [хай]",
     "options": [
       {
         "text": "низкий",
@@ -8741,7 +8741,7 @@
   },
   {
     "title": "Переведите слово: low (adj) — прилагательное",
-    "correctAnswer": "low — низкий — [лоу]",
+    "info":"","infoHelp":"","correctAnswer": "low — низкий — [лоу]",
     "options": [
       {
         "text": "низкий",
@@ -8764,7 +8764,7 @@
   },
   {
     "title": "Переведите слово: deep (adj) — прилагательное",
-    "correctAnswer": "deep — глубокий — [дип]",
+    "info":"","infoHelp":"","correctAnswer": "deep — глубокий — [дип]",
     "options": [
       {
         "text": "мелкий",
@@ -8787,7 +8787,7 @@
   },
   {
     "title": "Переведите слово: wide (adj) — прилагательное",
-    "correctAnswer": "wide — широкий — [уайд]",
+    "info":"","infoHelp":"","correctAnswer": "wide — широкий — [уайд]",
     "options": [
       {
         "text": "узкий",
@@ -8810,7 +8810,7 @@
   },
   {
     "title": "Переведите слово: narrow (adj) — прилагательное",
-    "correctAnswer": "narrow — узкий — [нэроу]",
+    "info":"","infoHelp":"","correctAnswer": "narrow — узкий — [нэроу]",
     "options": [
       {
         "text": "узкий",
@@ -8833,7 +8833,7 @@
   },
   {
     "title": "Переведите слово: top (n) — существительное",
-    "correctAnswer": "top — верх, верхушка — [топ]",
+    "info":"","infoHelp":"","correctAnswer": "top — верх, верхушка — [топ]",
     "options": [
       {
         "text": "низ",
@@ -8856,7 +8856,7 @@
   },
   {
     "title": "Переведите слово: bottom (n) — существительное",
-    "correctAnswer": "bottom — дно, низ — [ботэм]",
+    "info":"","infoHelp":"","correctAnswer": "bottom — дно, низ — [ботэм]",
     "options": [
       {
         "text": "дно, низ",
@@ -8879,7 +8879,7 @@
   },
   {
     "title": "Переведите слово: side (n) — существительное",
-    "correctAnswer": "side — сторона, бок — [сайд]",
+    "info":"","infoHelp":"","correctAnswer": "side — сторона, бок — [сайд]",
     "options": [
       {
         "text": "центр",
@@ -8902,7 +8902,7 @@
   },
   {
     "title": "Переведите слово: heavy (adj) — прилагательное",
-    "correctAnswer": "heavy — тяжелый — [хэви]",
+    "info":"","infoHelp":"","correctAnswer": "heavy — тяжелый — [хэви]",
     "options": [
       {
         "text": "легкий",
@@ -8925,7 +8925,7 @@
   },
   {
     "title": "Переведите слово: light (adj) — прилагательное",
-    "correctAnswer": "light — легкий (по весу) — [лайт]",
+    "info":"","infoHelp":"","correctAnswer": "light — легкий (по весу) — [лайт]",
     "options": [
       {
         "text": "легкий (по весу)",
@@ -8948,7 +8948,7 @@
   },
   {
     "title": "Переведите слово: dark (adj) — прилагательное",
-    "correctAnswer": "dark — темный — [дарк]",
+    "info":"","infoHelp":"","correctAnswer": "dark — темный — [дарк]",
     "options": [
       {
         "text": "светлый",
@@ -8971,7 +8971,7 @@
   },
   {
     "title": "Переведите слово: bright (adj) — прилагательное",
-    "correctAnswer": "bright — яркий, светлый — [брайт]",
+    "info":"","infoHelp":"","correctAnswer": "bright — яркий, светлый — [брайт]",
     "options": [
       {
         "text": "яркий, светлый",
@@ -8994,7 +8994,7 @@
   },
   {
     "title": "Переведите слово: full (adj) — прилагательное",
-    "correctAnswer": "full — полный — [фул]",
+    "info":"","infoHelp":"","correctAnswer": "full — полный — [фул]",
     "options": [
       {
         "text": "пустой",
@@ -9017,7 +9017,7 @@
   },
   {
     "title": "Переведите слово: empty (adj) — прилагательное",
-    "correctAnswer": "empty — пустой — [эмпти]",
+    "info":"","infoHelp":"","correctAnswer": "empty — пустой — [эмпти]",
     "options": [
       {
         "text": "пустой",
@@ -9040,7 +9040,7 @@
   },
   {
     "title": "Переведите слово: space (n) — существительное",
-    "correctAnswer": "space — пространство, космос — [спэйс]",
+    "info":"","infoHelp":"","correctAnswer": "space — пространство, космос — [спэйс]",
     "options": [
       {
         "text": "место",
@@ -9063,7 +9063,7 @@
   },
   {
     "title": "Переведите слово: distance (n) — существительное",
-    "correctAnswer": "distance — расстояние, дистанция — [дистэнс]",
+    "info":"","infoHelp":"","correctAnswer": "distance — расстояние, дистанция — [дистэнс]",
     "options": [
       {
         "text": "путь",
@@ -9086,7 +9086,7 @@
   },
   {
     "title": "Переведите слово: thick (adj) — прилагательное",
-    "correctAnswer": "thick — толстый, густой — [сик]",
+    "info":"","infoHelp":"","correctAnswer": "thick — толстый, густой — [сик]",
     "options": [
       {
         "text": "тонкий",
@@ -9109,7 +9109,7 @@
   },
   {
     "title": "Переведите слово: thin (adj) — прилагательное",
-    "correctAnswer": "thin — тонкий — [син]",
+    "info":"","infoHelp":"","correctAnswer": "thin — тонкий — [син]",
     "options": [
       {
         "text": "тонкий",
@@ -9132,7 +9132,7 @@
   },
   {
     "title": "Переведите слово: push (v) — глагол",
-    "correctAnswer": "push — толкать, нажимать — [пуш]",
+    "info":"","infoHelp":"","correctAnswer": "push — толкать, нажимать — [пуш]",
     "options": [
       {
         "text": "тянуть",
@@ -9155,7 +9155,7 @@
   },
   {
     "title": "Переведите слово: pull (v) — глагол",
-    "correctAnswer": "pull — тянуть, тащить — [пул]",
+    "info":"","infoHelp":"","correctAnswer": "pull — тянуть, тащить — [пул]",
     "options": [
       {
         "text": "тянуть, тащить",
@@ -9178,7 +9178,7 @@
   },
   {
     "title": "Переведите слово: always (adv) — наречие",
-    "correctAnswer": "always — всегда — [олвэйз]",
+    "info":"","infoHelp":"","correctAnswer": "always — всегда — [олвэйз]",
     "options": [
       {
         "text": "никогда",
@@ -9201,7 +9201,7 @@
   },
   {
     "title": "Переведите слово: never (adv) — наречие",
-    "correctAnswer": "never — никогда — [нэвэр]",
+    "info":"","infoHelp":"","correctAnswer": "never — никогда — [нэвэр]",
     "options": [
       {
         "text": "редко",
@@ -9224,7 +9224,7 @@
   },
   {
     "title": "Переведите слово: sometimes (adv) — наречие",
-    "correctAnswer": "sometimes — иногда — [самтаймз]",
+    "info":"","infoHelp":"","correctAnswer": "sometimes — иногда — [самтаймз]",
     "options": [
       {
         "text": "иногда",
@@ -9247,7 +9247,7 @@
   },
   {
     "title": "Переведите слово: often (adv) — наречие",
-    "correctAnswer": "often — часто — [офэн]",
+    "info":"","infoHelp":"","correctAnswer": "often — часто — [офэн]",
     "options": [
       {
         "text": "обычно",
@@ -9270,7 +9270,7 @@
   },
   {
     "title": "Переведите слово: usually (adv) — наречие",
-    "correctAnswer": "usually — обычно — [южуали]",
+    "info":"","infoHelp":"","correctAnswer": "usually — обычно — [южуали]",
     "options": [
       {
         "text": "обычно",
@@ -9293,7 +9293,7 @@
   },
   {
     "title": "Переведите слово: today (adv) — наречие",
-    "correctAnswer": "today — сегодня — [тэдэй]",
+    "info":"","infoHelp":"","correctAnswer": "today — сегодня — [тэдэй]",
     "options": [
       {
         "text": "вчера",
@@ -9316,7 +9316,7 @@
   },
   {
     "title": "Переведите слово: yesterday (adv) — наречие",
-    "correctAnswer": "yesterday — вчера — [йэстэрдэй]",
+    "info":"","infoHelp":"","correctAnswer": "yesterday — вчера — [йэстэрдэй]",
     "options": [
       {
         "text": "вчера",
@@ -9339,7 +9339,7 @@
   },
   {
     "title": "Переведите слово: tomorrow (adv) — наречие",
-    "correctAnswer": "tomorrow — завтра — [тумороу]",
+    "info":"","infoHelp":"","correctAnswer": "tomorrow — завтра — [тумороу]",
     "options": [
       {
         "text": "вчера",
@@ -9362,7 +9362,7 @@
   },
   {
     "title": "Переведите слово: now (adv) — наречие",
-    "correctAnswer": "now — сейчас, теперь — [нау]",
+    "info":"","infoHelp":"","correctAnswer": "now — сейчас, теперь — [нау]",
     "options": [
       {
         "text": "сейчас, теперь",
@@ -9385,7 +9385,7 @@
   },
   {
     "title": "Переведите слово: then (adv) — наречие",
-    "correctAnswer": "then — тогда, затем — [зэн]",
+    "info":"","infoHelp":"","correctAnswer": "then — тогда, затем — [зэн]",
     "options": [
       {
         "text": "сейчас",
@@ -9408,7 +9408,7 @@
   },
   {
     "title": "Переведите слово: before (prep) — предлог",
-    "correctAnswer": "before — до, перед — [бифор]",
+    "info":"","infoHelp":"","correctAnswer": "before — до, перед — [бифор]",
     "options": [
       {
         "text": "после",
@@ -9431,7 +9431,7 @@
   },
   {
     "title": "Переведите слово: after (prep) — предлог",
-    "correctAnswer": "after — после — [афтэр]",
+    "info":"","infoHelp":"","correctAnswer": "after — после — [афтэр]",
     "options": [
       {
         "text": "после",
@@ -9454,7 +9454,7 @@
   },
   {
     "title": "Переведите слово: soon (adv) — наречие",
-    "correctAnswer": "soon — скоро — [сун]",
+    "info":"","infoHelp":"","correctAnswer": "soon — скоро — [сун]",
     "options": [
       {
         "text": "поздно",
@@ -9477,7 +9477,7 @@
   },
   {
     "title": "Переведите слово: late (adj) — прилагательное",
-    "correctAnswer": "late — поздний — [лэйт]",
+    "info":"","infoHelp":"","correctAnswer": "late — поздний — [лэйт]",
     "options": [
       {
         "text": "ранний",
@@ -9500,7 +9500,7 @@
   },
   {
     "title": "Переведите слово: early (adj) — прилагательное",
-    "correctAnswer": "early — ранний — [ёрли]",
+    "info":"","infoHelp":"","correctAnswer": "early — ранний — [ёрли]",
     "options": [
       {
         "text": "ранний",
@@ -9523,7 +9523,7 @@
   },
   {
     "title": "Переведите слово: and (conj) — союз",
-    "correctAnswer": "and — и — [энд]",
+    "info":"","infoHelp":"","correctAnswer": "and — и — [энд]",
     "options": [
       {
         "text": "но",
@@ -9546,7 +9546,7 @@
   },
   {
     "title": "Переведите слово: but (conj) — союз",
-    "correctAnswer": "but — но, кроме — [бат]",
+    "info":"","infoHelp":"","correctAnswer": "but — но, кроме — [бат]",
     "options": [
       {
         "text": "или",
@@ -9569,7 +9569,7 @@
   },
   {
     "title": "Переведите слово: or (conj) — союз",
-    "correctAnswer": "or — или — [ор]",
+    "info":"","infoHelp":"","correctAnswer": "or — или — [ор]",
     "options": [
       {
         "text": "или",
@@ -9592,7 +9592,7 @@
   },
   {
     "title": "Переведите слово: because (conj) — союз",
-    "correctAnswer": "because — потому что, так как — [бикоз]",
+    "info":"","infoHelp":"","correctAnswer": "because — потому что, так как — [бикоз]",
     "options": [
       {
         "text": "поэтому",
@@ -9615,7 +9615,7 @@
   },
   {
     "title": "Переведите слово: if (conj) — союз",
-    "correctAnswer": "if — если — [иф]",
+    "info":"","infoHelp":"","correctAnswer": "if — если — [иф]",
     "options": [
       {
         "text": "когда",
@@ -9638,7 +9638,7 @@
   },
   {
     "title": "Переведите слово: that (conj) — союз",
-    "correctAnswer": "that — что (в придаточных предложениях) — [зэт]",
+    "info":"","infoHelp":"","correctAnswer": "that — что (в придаточных предложениях) — [зэт]",
     "options": [
       {
         "text": "что (в придаточных предложениях)",
@@ -9661,7 +9661,7 @@
   },
   {
     "title": "Переведите слово: this (pronoun) — местоимение",
-    "correctAnswer": "this — этот, эта, это — [зис]",
+    "info":"","infoHelp":"","correctAnswer": "this — этот, эта, это — [зис]",
     "options": [
       {
         "text": "тот",
@@ -9684,7 +9684,7 @@
   },
   {
     "title": "Переведите слово: that (pronoun) — местоимение",
-    "correctAnswer": "that — тот, та, то — [зэт]",
+    "info":"","infoHelp":"","correctAnswer": "that — тот, та, то — [зэт]",
     "options": [
       {
         "text": "тот, та, то",
@@ -9707,7 +9707,7 @@
   },
   {
     "title": "Переведите слово: these (pronoun) — местоимение",
-    "correctAnswer": "these — эти — [зиз]",
+    "info":"","infoHelp":"","correctAnswer": "these — эти — [зиз]",
     "options": [
       {
         "text": "те",
@@ -9730,7 +9730,7 @@
   },
   {
     "title": "Переведите слово: those (pronoun) — местоимение",
-    "correctAnswer": "those — те — [зоуз]",
+    "info":"","infoHelp":"","correctAnswer": "those — те — [зоуз]",
     "options": [
       {
         "text": "те",
@@ -9753,7 +9753,7 @@
   },
   {
     "title": "Переведите слово: all (pronoun) — местоимение",
-    "correctAnswer": "all — все, всё — [ол]",
+    "info":"","infoHelp":"","correctAnswer": "all — все, всё — [ол]",
     "options": [
       {
         "text": "каждый",
@@ -9776,7 +9776,7 @@
   },
   {
     "title": "Переведите слово: each (pronoun) — местоимение",
-    "correctAnswer": "each — каждый — [ич]",
+    "info":"","infoHelp":"","correctAnswer": "each — каждый — [ич]",
     "options": [
       {
         "text": "любой",
@@ -9799,7 +9799,7 @@
   },
   {
     "title": "Переведите слово: matching (adj) — прилагательное",
-    "correctAnswer": "matching — подходящий, соответствующий — [мэчинг]",
+    "info":"","infoHelp":"","correctAnswer": "matching — подходящий, соответствующий — [мэчинг]",
     "options": [
       {
         "text": "подходящий, соответствующий",
@@ -9822,7 +9822,7 @@
   },
   {
     "title": "Переведите слово: error (n) — существительное",
-    "correctAnswer": "error — ошибка, погрешность — [эрэр]",
+    "info":"","infoHelp":"","correctAnswer": "error — ошибка, погрешность — [эрэр]",
     "options": [
       {
         "text": "правило",
@@ -9845,7 +9845,7 @@
   },
   {
     "title": "Переведите слово: true (adj) — прилагательное",
-    "correctAnswer": "true — истинный, верный — [тру]",
+    "info":"","infoHelp":"","correctAnswer": "true — истинный, верный — [тру]",
     "options": [
       {
         "text": "ложный",
@@ -9868,7 +9868,7 @@
   },
   {
     "title": "Переведите слово: false (adj) — прилагательное",
-    "correctAnswer": "false — ложный, неверный — [фолс]",
+    "info":"","infoHelp":"","correctAnswer": "false — ложный, неверный — [фолс]",
     "options": [
       {
         "text": "ложный, неверный",
@@ -9891,7 +9891,7 @@
   },
   {
     "title": "Переведите слово: name (n) — существительное",
-    "correctAnswer": "name — имя, название — [нэйм]",
+    "info":"","infoHelp":"","correctAnswer": "name — имя, название — [нэйм]",
     "options": [
       {
         "text": "фамилия",
@@ -9914,7 +9914,7 @@
   },
   {
     "title": "Переведите слово: number (n) — существительное",
-    "correctAnswer": "number — число, номер — [намбэр]",
+    "info":"","infoHelp":"","correctAnswer": "number — число, номер — [намбэр]",
     "options": [
       {
         "text": "буква",
@@ -9937,7 +9937,7 @@
   },
   {
     "title": "Переведите слово: standard (adj) — прилагательное",
-    "correctAnswer": "standard — стандартный, обычный — [стэндэрд]",
+    "info":"","infoHelp":"","correctAnswer": "standard — стандартный, обычный — [стэндэрд]",
     "options": [
       {
         "text": "стандартный, обычный",
@@ -9960,7 +9960,7 @@
   },
   {
     "title": "Переведите слово: level (n) — существительное",
-    "correctAnswer": "level — уровень — [лэвл]",
+    "info":"","infoHelp":"","correctAnswer": "level — уровень — [лэвл]",
     "options": [
       {
         "text": "ступень",
@@ -9983,7 +9983,7 @@
   },
   {
     "title": "Переведите слово: ready (adj) — прилагательное",
-    "correctAnswer": "ready — готовый — [рэди]",
+    "info":"","infoHelp":"","correctAnswer": "ready — готовый — [рэди]",
     "options": [
       {
         "text": "занятый",
@@ -10006,7 +10006,7 @@
   },
   {
     "title": "Переведите слово: done (adj) — прилагательное",
-    "correctAnswer": "done — сделанный, готовый — [дан]",
+    "info":"","infoHelp":"","correctAnswer": "done — сделанный, готовый — [дан]",
     "options": [
       {
         "text": "сделанный, готовый",
@@ -10029,7 +10029,7 @@
   },
   {
     "title": "Переведите слово: next (adj) — прилагательное",
-    "correctAnswer": "next — следующий — [нэкст]",
+    "info":"","infoHelp":"","correctAnswer": "next — следующий — [нэкст]",
     "options": [
       {
         "text": "прошлый",
@@ -10052,7 +10052,7 @@
   },
   {
     "title": "Переведите слово: last (adj) — прилагательное",
-    "correctAnswer": "last — прошлый, последний — [ласт]",
+    "info":"","infoHelp":"","correctAnswer": "last — прошлый, последний — [ласт]",
     "options": [
       {
         "text": "будущий",
@@ -10075,7 +10075,7 @@
   },
   {
     "title": "Переведите слово: total (adj) — прилагательное",
-    "correctAnswer": "total — общий, итоговый — [тоутл]",
+    "info":"","infoHelp":"","correctAnswer": "total — общий, итоговый — [тоутл]",
     "options": [
       {
         "text": "общий, итоговый",
@@ -10098,7 +10098,7 @@
   },
   {
     "title": "Переведите слово: can (v) — глагол (модальный)",
-    "correctAnswer": "can — мочь, уметь — [кэн]",
+    "info":"","infoHelp":"","correctAnswer": "can — мочь, уметь — [кэн]",
     "options": [
       {
         "text": "должен",
@@ -10121,7 +10121,7 @@
   },
   {
     "title": "Переведите слово: must (v) — глагол (модальный)",
-    "correctAnswer": "must — должен, обязан — [маст]",
+    "info":"","infoHelp":"","correctAnswer": "must — должен, обязан — [маст]",
     "options": [
       {
         "text": "могу",
@@ -10144,7 +10144,7 @@
   },
   {
     "title": "Переведите слово: should (v) — глагол (модальный)",
-    "correctAnswer": "should — следует (совет) — [шуд]",
+    "info":"","infoHelp":"","correctAnswer": "should — следует (совет) — [шуд]",
     "options": [
       {
         "text": "следует (совет)",
@@ -10167,7 +10167,7 @@
   },
   {
     "title": "Переведите слово: begin (v) — глагол",
-    "correctAnswer": "begin — начинать — [бегин]",
+    "info":"","infoHelp":"","correctAnswer": "begin — начинать — [бегин]",
     "options": [
       {
         "text": "заканчивать",
@@ -10190,7 +10190,7 @@
   },
   {
     "title": "Переведите слово: start (v) — глагол",
-    "correctAnswer": "start — начинать, стартовать — [старт]",
+    "info":"","infoHelp":"","correctAnswer": "start — начинать, стартовать — [старт]",
     "options": [
       {
         "text": "начинать, стартовать",
@@ -10213,7 +10213,7 @@
   },
   {
     "title": "Переведите слово: end (v) — глагол",
-    "correctAnswer": "end — заканчивать — [энд]",
+    "info":"","infoHelp":"","correctAnswer": "end — заканчивать — [энд]",
     "options": [
       {
         "text": "начинать",
@@ -10236,7 +10236,7 @@
   },
   {
     "title": "Переведите слово: finish (v) — глагол",
-    "correctAnswer": "finish — завершать, финишировать — [финиш]",
+    "info":"","infoHelp":"","correctAnswer": "finish — завершать, финишировать — [финиш]",
     "options": [
       {
         "text": "завершать, финишировать",
@@ -10259,7 +10259,7 @@
   },
   {
     "title": "Переведите слово: first (adj) — прилагательное",
-    "correctAnswer": "first — первый — [фёрст]",
+    "info":"","infoHelp":"","correctAnswer": "first — первый — [фёрст]",
     "options": [
       {
         "text": "последний",
@@ -10282,7 +10282,7 @@
   },
   {
     "title": "Переведите слово: second (adj) — прилагательное",
-    "correctAnswer": "second — второй — [сэкэнд]",
+    "info":"","infoHelp":"","correctAnswer": "second — второй — [сэкэнд]",
     "options": [
       {
         "text": "второй",
@@ -10305,7 +10305,7 @@
   },
   {
     "title": "Переведите слово: third (adj) — прилагательное",
-    "correctAnswer": "third — третий — [сёрд]",
+    "info":"","infoHelp":"","correctAnswer": "third — третий — [сёрд]",
     "options": [
       {
         "text": "второй",
@@ -10328,7 +10328,7 @@
   },
   {
     "title": "Переведите слово: city center (n) — существительное",
-    "correctAnswer": "city center — центр города — [сити сэнтэр]",
+    "info":"","infoHelp":"","correctAnswer": "city center — центр города — [сити сэнтэр]",
     "options": [
       {
         "text": "вокзал",
@@ -10351,7 +10351,7 @@
   },
   {
     "title": "Переведите слово: country side (n) — существительное",
-    "correctAnswer": "country side — сельская местность, деревня — [кантрисайд]",
+    "info":"","infoHelp":"","correctAnswer": "country side — сельская местность, деревня — [кантрисайд]",
     "options": [
       {
         "text": "сельская местность, деревня",
@@ -10374,7 +10374,7 @@
   },
   {
     "title": "Переведите слово: greeting (n) — существительное",
-    "correctAnswer": "greeting — приветствие — [гритинг]",
+    "info":"","infoHelp":"","correctAnswer": "greeting — приветствие — [гритинг]",
     "options": [
       {
         "text": "прощание",
@@ -10397,7 +10397,7 @@
   },
   {
     "title": "Переведите слово: hello (noun) — существительное",
-    "correctAnswer": "hello — здравствуйте, привет — [хэлоу]",
+    "info":"","infoHelp":"","correctAnswer": "hello — здравствуйте, привет — [хэлоу]",
     "options": [
       {
         "text": "пока",
@@ -10420,7 +10420,7 @@
   },
   {
     "title": "Переведите слово: goodbye (noun) — существительное",
-    "correctAnswer": "goodbye — до свидания, пока — [гудбай]",
+    "info":"","infoHelp":"","correctAnswer": "goodbye — до свидания, пока — [гудбай]",
     "options": [
       {
         "text": "до свидания, пока",
@@ -10443,7 +10443,7 @@
   },
   {
     "title": "Переведите слово: please (adv) — наречие",
-    "correctAnswer": "please — пожалуйста — [плиз]",
+    "info":"","infoHelp":"","correctAnswer": "please — пожалуйста — [плиз]",
     "options": [
       {
         "text": "спасибо",
@@ -10466,7 +10466,7 @@
   },
   {
     "title": "Переведите слово: thank you (phrase) — фраза",
-    "correctAnswer": "thank you — спасибо — [сэнк ю]",
+    "info":"","infoHelp":"","correctAnswer": "thank you — спасибо — [сэнк ю]",
     "options": [
       {
         "text": "здравствуйте",
@@ -10489,7 +10489,7 @@
   },
   {
     "title": "Переведите слово: sorry (adj) — прилагательное",
-    "correctAnswer": "sorry — сожалеющий (в знач. извините) — [сори]",
+    "info":"","infoHelp":"","correctAnswer": "sorry — сожалеющий (в знач. извините) — [сори]",
     "options": [
       {
         "text": "радостный",
@@ -10512,7 +10512,7 @@
   },
   {
     "title": "Переведите слово: excuse me (phrase) — фраза",
-    "correctAnswer": "excuse me — извините (для привлечения внимания) — [икскьюз ми]",
+    "info":"","infoHelp":"","correctAnswer": "excuse me — извините (для привлечения внимания) — [икскьюз ми]",
     "options": [
       {
         "text": "извините (для привлечения внимания)",
@@ -10535,7 +10535,7 @@
   },
   {
     "title": "Переведите слово: welcome (adj) — прилагательное",
-    "correctAnswer": "welcome — желанный, добро пожаловать — [уэлкэм]",
+    "info":"","infoHelp":"","correctAnswer": "welcome — желанный, добро пожаловать — [уэлкэм]",
     "options": [
       {
         "text": "закрытый",
@@ -10558,7 +10558,7 @@
   },
   {
     "title": "Переведите слово: meet (v) — глагол",
-    "correctAnswer": "meet — встречать, знакомиться — [мит]",
+    "info":"","infoHelp":"","correctAnswer": "meet — встречать, знакомиться — [мит]",
     "options": [
       {
         "text": "уходить",
@@ -10581,7 +10581,7 @@
   },
   {
     "title": "Переведите слово: party (n) — существительное",
-    "correctAnswer": "party — вечеринка, праздник — [парти]",
+    "info":"","infoHelp":"","correctAnswer": "party — вечеринка, праздник — [парти]",
     "options": [
       {
         "text": "вечеринка, праздник",
@@ -10604,7 +10604,7 @@
   },
   {
     "title": "Переведите слово: gift (n) — существительное",
-    "correctAnswer": "gift — подарок — [гифт]",
+    "info":"","infoHelp":"","correctAnswer": "gift — подарок — [гифт]",
     "options": [
       {
         "text": "коробка",
@@ -10627,7 +10627,7 @@
   },
   {
     "title": "Переведите слово: present (n) — существительное",
-    "correctAnswer": "present — подарок, настоящее время — [прэзэнт]",
+    "info":"","infoHelp":"","correctAnswer": "present — подарок, настоящее время — [прэзэнт]",
     "options": [
       {
         "text": "подарок, настоящее время",
@@ -10650,7 +10650,7 @@
   },
   {
     "title": "Переведите слово: celebrate (v) — глагол",
-    "correctAnswer": "celebrate — праздновать — [сэлибрэйт]",
+    "info":"","infoHelp":"","correctAnswer": "celebrate — праздновать — [сэлибрэйт]",
     "options": [
       {
         "text": "отдыхать",
@@ -10673,7 +10673,7 @@
   },
   {
     "title": "Переведите слово: holiday (n) — существительное",
-    "correctAnswer": "holiday — праздник, отпуск — [холидэй]",
+    "info":"","infoHelp":"","correctAnswer": "holiday — праздник, отпуск — [холидэй]",
     "options": [
       {
         "text": "выходной",
@@ -10696,7 +10696,7 @@
   },
   {
     "title": "Переведите слово: fun (n) — существительное",
-    "correctAnswer": "fun — веселье, забава — [фан]",
+    "info":"","infoHelp":"","correctAnswer": "fun — веселье, забава — [фан]",
     "options": [
       {
         "text": "веселье, забава",
@@ -10719,7 +10719,7 @@
   },
   {
     "title": "Переведите слово: joy (n) — существительное",
-    "correctAnswer": "joy — радость — [джой]",
+    "info":"","infoHelp":"","correctAnswer": "joy — радость — [джой]",
     "options": [
       {
         "text": "грусть",
@@ -10742,7 +10742,7 @@
   },
   {
     "title": "Переведите слово: happy new year (phrase) — фраза",
-    "correctAnswer": "happy new year — С Новым Годом — [хэпи нью йиэр]",
+    "info":"","infoHelp":"","correctAnswer": "happy new year — С Новым Годом — [хэпи нью йиэр]",
     "options": [
       {
         "text": "С Днем Рождения",
@@ -10765,7 +10765,7 @@
   },
   {
     "title": "Переведите слово: merry christmas (phrase) — фраза",
-    "correctAnswer": "merry christmas — Счастливого Рождества — [мэри крисмэс]",
+    "info":"","infoHelp":"","correctAnswer": "merry christmas — Счастливого Рождества — [мэри крисмэс]",
     "options": [
       {
         "text": "Счастливого Рождества",
@@ -10788,7 +10788,7 @@
   },
   {
     "title": "Переведите слово: some (pronoun) — местоимение",
-    "correctAnswer": "some — несколько, некоторое количество — [сам]",
+    "info":"","infoHelp":"","correctAnswer": "some — несколько, некоторое количество — [сам]",
     "options": [
       {
         "text": "нисколько",
@@ -10811,7 +10811,7 @@
   },
   {
     "title": "Переведите слово: any (pronoun) — местоимение",
-    "correctAnswer": "any — любой, какой-нибудь — [эни]",
+    "info":"","infoHelp":"","correctAnswer": "any — любой, какой-нибудь — [эни]",
     "options": [
       {
         "text": "каждый",
@@ -10834,7 +10834,7 @@
   },
   {
     "title": "Переведите слово: no (adv) — наречие",
-    "correctAnswer": "no — нет — [ноу]",
+    "info":"","infoHelp":"","correctAnswer": "no — нет — [ноу]",
     "options": [
       {
         "text": "нет",
@@ -10857,7 +10857,7 @@
   },
   {
     "title": "Переведите слово: many (adj) — прилагательное",
-    "correctAnswer": "many — много (для исчисляемых) — [мэни]",
+    "info":"","infoHelp":"","correctAnswer": "many — много (для исчисляемых) — [мэни]",
     "options": [
       {
         "text": "мало",
@@ -10880,7 +10880,7 @@
   },
   {
     "title": "Переведите слово: much (adj) — прилагательное",
-    "correctAnswer": "much — много (для неисчисляемых) — [мач]",
+    "info":"","infoHelp":"","correctAnswer": "much — много (для неисчисляемых) — [мач]",
     "options": [
       {
         "text": "много (для неисчисляемых)",
@@ -10903,7 +10903,7 @@
   },
   {
     "title": "Переведите слово: few (adj) — прилагательное",
-    "correctAnswer": "few — мало (для исчисляемых) — [фью]",
+    "info":"","infoHelp":"","correctAnswer": "few — мало (для исчисляемых) — [фью]",
     "options": [
       {
         "text": "много",
@@ -10926,7 +10926,7 @@
   },
   {
     "title": "Переведите слово: thing (n) — существительное",
-    "correctAnswer": "thing — вещь, предмет — [синг]",
+    "info":"","infoHelp":"","correctAnswer": "thing — вещь, предмет — [синг]",
     "options": [
       {
         "text": "дело",
@@ -10949,7 +10949,7 @@
   },
   {
     "title": "Переведите слово: body language (n) — существительное",
-    "correctAnswer": "body language — язык тела — [бади лэнгвидж]",
+    "info":"","infoHelp":"","correctAnswer": "body language — язык тела — [бади лэнгвидж]",
     "options": [
       {
         "text": "язык тела",
@@ -10972,7 +10972,7 @@
   },
   {
     "title": "Переведите слово: sound (n) — существительное",
-    "correctAnswer": "sound — звук — [саунд]",
+    "info":"","infoHelp":"","correctAnswer": "sound — звук — [саунд]",
     "options": [
       {
         "text": "шум",
@@ -10995,7 +10995,7 @@
   },
   {
     "title": "Переведите слово: object (n) — существительное",
-    "correctAnswer": "object — объект, предмет — [обджект]",
+    "info":"","infoHelp":"","correctAnswer": "object — объект, предмет — [обджект]",
     "options": [
       {
         "text": "цель",
@@ -11018,7 +11018,7 @@
   },
   {
     "title": "Переведите слово: part (n) — существительное",
-    "correctAnswer": "part — часть, доля — [парт]",
+    "info":"","infoHelp":"","correctAnswer": "part — часть, доля — [парт]",
     "options": [
       {
         "text": "часть, доля",
@@ -11041,7 +11041,7 @@
   },
   {
     "title": "Переведите слово: piece (n) — существительное",
-    "correctAnswer": "piece — кусок, кусочек — [пис]",
+    "info":"","infoHelp":"","correctAnswer": "piece — кусок, кусочек — [пис]",
     "options": [
       {
         "text": "доля",
@@ -11064,7 +11064,7 @@
   },
   {
     "title": "Переведите слово: group (n) — существительное",
-    "correctAnswer": "group — группа — [груп]",
+    "info":"","infoHelp":"","correctAnswer": "group — группа — [груп]",
     "options": [
       {
         "text": "команда",
@@ -11087,7 +11087,7 @@
   },
   {
     "title": "Переведите слово: list (n) — существительное",
-    "correctAnswer": "list — список — [лист]",
+    "info":"","infoHelp":"","correctAnswer": "list — список — [лист]",
     "options": [
       {
         "text": "список",
@@ -11110,7 +11110,7 @@
   },
   {
     "title": "Переведите слово: check (v) — глагол",
-    "correctAnswer": "check — проверять — [чэк]",
+    "info":"","infoHelp":"","correctAnswer": "check — проверять — [чэк]",
     "options": [
       {
         "text": "смотреть",
@@ -11133,7 +11133,7 @@
   },
   {
     "title": "Переведите слово: correct (adj) — прилагательное",
-    "correctAnswer": "correct — правильный — [кэрэкт]",
+    "info":"","infoHelp":"","correctAnswer": "correct — правильный — [кэрэкт]",
     "options": [
       {
         "text": "ошибочный",
@@ -11156,7 +11156,7 @@
   },
   {
     "title": "Переведите слово: wrong (adj) — прилагательное",
-    "correctAnswer": "wrong — неправильный — [ронг]",
+    "info":"","infoHelp":"","correctAnswer": "wrong — неправильный — [ронг]",
     "options": [
       {
         "text": "неправильный",
@@ -11179,7 +11179,7 @@
   },
   {
     "title": "Переведите слово: test (n) — существительное",
-    "correctAnswer": "test — тест, испытание — [тэст]",
+    "info":"","infoHelp":"","correctAnswer": "test — тест, испытание — [тэст]",
     "options": [
       {
         "text": "экзамен",
@@ -11202,7 +11202,7 @@
   },
   {
     "title": "Переведите слово: rules (n) — существительное (мн. ч.)",
-    "correctAnswer": "rules — правила — [рулз]",
+    "info":"","infoHelp":"","correctAnswer": "rules — правила — [рулз]",
     "options": [
       {
         "text": "законы",
@@ -11225,7 +11225,7 @@
   },
   {
     "title": "Переведите слово: word (n) — существительное",
-    "correctAnswer": "word — слово — [уорд]",
+    "info":"","infoHelp":"","correctAnswer": "word — слово — [уорд]",
     "options": [
       {
         "text": "буква",
@@ -11248,7 +11248,7 @@
   },
   {
     "title": "Переведите слово: adverb (n) — существительное",
-    "correctAnswer": "adverb — наречие — [эдвэрб]",
+    "info":"","infoHelp":"","correctAnswer": "adverb — наречие — [эдвэрб]",
     "options": [
       {
         "text": "наречие",
@@ -11271,7 +11271,7 @@
   },
   {
     "title": "Переведите слово: verb (n) — существительное",
-    "correctAnswer": "verb — глагол — [вёрб]",
+    "info":"","infoHelp":"","correctAnswer": "verb — глагол — [вёрб]",
     "options": [
       {
         "text": "наречие",
@@ -11294,7 +11294,7 @@
   },
   {
     "title": "Переведите слово: noun (n) — существительное",
-    "correctAnswer": "noun — существительное — [наун]",
+    "info":"","infoHelp":"","correctAnswer": "noun — существительное — [наун]",
     "options": [
       {
         "text": "существительное",
@@ -11317,7 +11317,7 @@
   },
   {
     "title": "Переведите слово: adjective (n) — существительное",
-    "correctAnswer": "adjective — прилагательное — [эджиктив]",
+    "info":"","infoHelp":"","correctAnswer": "adjective — прилагательное — [эджиктив]",
     "options": [
       {
         "text": "наречие",
@@ -11340,7 +11340,7 @@
   },
   {
     "title": "Переведите слово: base (n) — существительное",
-    "correctAnswer": "base — база, основа — [бэйс]",
+    "info":"","infoHelp":"","correctAnswer": "base — база, основа — [бэйс]",
     "options": [
       {
         "text": "структура",
@@ -11363,7 +11363,7 @@
   },
   {
     "title": "Переведите слово: period (n) — существительное",
-    "correctAnswer": "period — период, промежуток времени — [пириэд]",
+    "info":"","infoHelp":"","correctAnswer": "period — период, промежуток времени — [пириэд]",
     "options": [
       {
         "text": "период, промежуток времени",
@@ -11386,7 +11386,7 @@
   },
   {
     "title": "Переведите слово: create (v) — глагол",
-    "correctAnswer": "create — создавать — [криэйт]",
+    "info":"","infoHelp":"","correctAnswer": "create — создавать — [криэйт]",
     "options": [
       {
         "text": "менять",
@@ -11409,7 +11409,7 @@
   },
   {
     "title": "Переведите слово: database (n) — существительное",
-    "correctAnswer": "database — база данных — [дэйтэбэйс]",
+    "info":"","infoHelp":"","correctAnswer": "database — база данных — [дэйтэбэйс]",
     "options": [
       {
         "text": "код",
@@ -11432,7 +11432,7 @@
   },
   {
     "title": "Переведите слово: beginner (n) — существительное",
-    "correctAnswer": "beginner — новичок, начинающий — [бегинэр]",
+    "info":"","infoHelp":"","correctAnswer": "beginner — новичок, начинающий — [бегинэр]",
     "options": [
       {
         "text": "ученик",
@@ -11455,7 +11455,7 @@
   },
   {
     "title": "Переведите слово: end of test (phrase) — фраза",
-    "correctAnswer": "end of test — конец теста — [энд оф тэст]",
+    "info":"","infoHelp":"","correctAnswer": "end of test — конец теста — [энд оф тэст]",
     "options": [
       {
         "text": "конец теста",

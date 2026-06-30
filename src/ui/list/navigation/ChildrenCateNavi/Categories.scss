@@ -1,0 +1,30 @@
+ 
+@mixin ab_bg {
+  content: "";
+  @apply bg-gray-500;
+  position: absolute;
+  top: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.myStyleCategoryLineH {
+  position: relative;
+  z-index: 15;
+  &::before {
+    @include ab_bg;
+    width: 2px;
+    height: 85%; 
+    left: 5.5%;
+  }
+}
+.myStyleCategoryLineW {
+  position: relative;
+  z-index: 15;
+  &::before {
+    @include ab_bg;
+    width: 4%;
+    height: 2px;   
+    left: 0%; 
+  }
+}

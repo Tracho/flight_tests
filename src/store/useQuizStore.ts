@@ -1,206 +1,142 @@
+import { Checkbox } from "@/ui/input/Checkbox";
 // src/store/useQuizStore.ts
 import { create } from "zustand";
 import type { QuizCategory } from "@/types/quiz";
-
-// Импорты ваших JSON данных
-import DBTest1 from "@/data/Test1.json" with { type: "json" };
-import DBTest2 from "@/data/Test2.json" with { type: "json" };
-import DBTesting from "@/data/Testing.json" with { type: "json" };
-import DBRuToEngTest1 from "@/data/Eng/RuToEngTest1.json" with { type: "json" };
-import DBEngToRuTest1 from "@/data/Eng/EngToRuTest1.json" with { type: "json" };
+import { quizData } from "@/data/quizData";
+import { createJSONStorage, persist } from "zustand/middleware";
 
 // Описываем интерфейс нашего хранилища
 interface QuizState {
   data: QuizCategory[];
+  selectedCategories: string[];
+  selectedTests: string[];
   // Пример экшена: перенос вопроса из "ошибок" в "пройденные"
-  passQuestion: (
-    categoryName: string,
-    testTitle: string,
-    questionId: number,
-  ) => void;
-  // Пример экшена: сохранить вопрос в закладки
-  toggleSaveQuestion: (
-    categoryName: string,
-    testTitle: string,
-    questionId: number,
-  ) => void;
   searchCateQuestion: (searchValue: string) => void;
-  checkBoxCate: (nameCate:string) => void;
+  checkBoxCate: (categoryName: string) => void;
+  checkboxTest: (categoryName: string, testName: string) => void;
 }
 
-export const useQuizStore = create<QuizState>((set) => ({
-  // Начальное состояние (ваш массив данных)
-  data: [
-    {
-      category: "Медицина",
-      description: "Категория Медицинских тестов",
-      visible: true,
-      selected: false,
-      arr: [
-        {
-          visible: true,
-          selected: false,
-          json: DBTest1,
-          storage_q_passed: [2, 5, 6, 1, 8],
-          storage_q_not_passed: [1, 4, 22, 9, 20, 21],
-          storage_q_saved: [1, 2, 4, 7, 95],
-          title: "Медицинские тесты #1",
-          description:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus neque sapiente repellat nobis quisquam non illo esse magni fugiat maxime? Placeat labore possimus obcaecati blanditiis doloremque officia qui voluptas quia?",
-        },
-        {
-          visible: true,
-          selected: false,
-          json: DBTest2,
-          storage_q_passed: [],
-          storage_q_not_passed: [],
-          storage_q_saved: [],
-          title: "Медицинские тесты #2",
-          description:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus neque sapiente repellat nobis quisquam non illo esse magni fugiat maxime? Placeat labore possimus obcaecati blanditiis doloremque officia qui voluptas quia?",
-        },
-      ],
-    },
-    {
-      category: "Testing",
-      description: "Dev Testing",
-      visible: true,
-      selected: false,
-      arr: [
-        {
-          visible: true,
-          selected: false,
-          json: DBTesting,
-          storage_q_passed: [2, 5, 6, 1, 8],
-          storage_q_not_passed: [1, 4, 22, 9, 20, 21],
-          storage_q_saved: [1, 2, 4, 7, 95],
-          title: "My Data base Dev Testing",
-          description:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat labore possimus obcaecati blanditiis doloremque officia qui voluptas quia?",
-        },
-      ],
-    },
-    {
-      category: "Английский",
-      description: "Категория Английских тестов",
-      visible: true,
-      selected: false,
-      arr: [
-        {
-          visible: true,
-          selected: false,
-          json: DBRuToEngTest1,
-          storage_q_passed: [2, 5, 6, 1, 8],
-          storage_q_not_passed: [1, 4, 22, 9, 20, 21],
-          storage_q_saved: [1, 2, 4, 7, 95],
-          title: "С Ру. на Англ.",
-          description:
-            "500 тестов, где вам нужно перевести с Русского на Английский",
-        },
-        {
-          visible: true,
-          selected: false,
-          json: DBEngToRuTest1,
-          storage_q_passed: [],
-          storage_q_not_passed: [],
-          storage_q_saved: [],
-          title: "С Англ. на Ру.",
-          description:
-            "500 тестов, где вам нужно перевести с Английского на Русский",
-        },
-      ],
-    },
-  ],
-
-  // Логика изменения состояния инкапсулирована здесь
-  passQuestion: (categoryName, testTitle, questionId) =>
-    set((state) => ({
-      data: state.data.map((cat) => {
-        if (cat.category !== categoryName) return cat;
-        return {
-          ...cat,
-          arr: cat.arr.map((test) => {
-            if (test.title !== testTitle) return test;
-            return {
-              ...test,
-              // Удаляем из не пройденных
-              storage_q_not_passed: test.storage_q_not_passed.filter(
-                (id) => id !== questionId,
-              ),
-              // Добавляем в пройденные (если еще нет там)
-              storage_q_passed: test.storage_q_passed.includes(questionId)
-                ? test.storage_q_passed
-                : [...test.storage_q_passed, questionId],
-            };
-          }),
-        };
-      }),
-    })),
-
-  toggleSaveQuestion: (categoryName, testTitle, questionId) =>
-    set((state) => ({
-      data: state.data.map((cat) => {
-        if (cat.category !== categoryName) return cat;
-        return {
-          ...cat,
-          arr: cat.arr.map((test) => {
-            if (test.title !== testTitle) return test;
-            const isSaved = test.storage_q_saved.includes(questionId);
-            return {
-              ...test,
-              storage_q_saved: isSaved
-                ? test.storage_q_saved.filter((id) => id !== questionId)
-                : [...test.storage_q_saved, questionId],
-            };
-          }),
-        };
-      }),
-    })),
-
-  searchCateQuestion: (searchValue) =>
-    set((state) => {
-      const val = searchValue.trim().toLowerCase();
-      return {
-        data: state.data.map((datakey) => {
-          const cat = datakey.category.trim().toLowerCase();
-
-          // если строка поиска пустая — показываем всё
-          if (!val) {
-            return {
-              ...datakey,
-              visible: true,
-            };
-          }
-          // проверяем совпадение
-          const isMatch = cat.includes(val);
-
+const useQuizStore = create<QuizState>()(
+  persist(
+    (set) => ({
+      // Начальное состояние (ваш массив данных)
+      data: quizData,
+      selectedCategories: [],
+      selectedTests: [],
+      searchCateQuestion: (searchValue) =>
+        set((state) => {
+          const val = searchValue.trim().toLowerCase();
           return {
-            ...datakey,
-            visible: isMatch,
+            data: state.data.map((datakey) => {
+              const cat = datakey.category.trim().toLowerCase();
+
+              // если строка поиска пустая — показываем всё
+              if (!val) {
+                return {
+                  ...datakey,
+                  visible: true,
+                };
+              }
+              // проверяем совпадение
+              const isMatch = cat.includes(val);
+      
+              return {
+                ...datakey,
+                visible: isMatch,
+              };
+            }),
           };
         }),
-      };
+
+      checkBoxCate: (categoryName) =>
+        set((state) => {
+          const includesName = state.selectedCategories.includes(categoryName);
+
+          const selectedCategories = includesName
+            ? state.selectedCategories.filter((i) => i !== categoryName)
+            : [...state.selectedCategories, categoryName];
+
+          const category = state.data.find((item) => item.category === categoryName);
+
+          const testTitles = category
+            ? category.arr.map((test) => test.title)
+            : [];
+
+          const selectedTests = includesName
+            ? state.selectedTests.filter((title) => !testTitles.includes(title))
+            : [...new Set([...state.selectedTests, ...testTitles])];
+
+          return {
+            selectedCategories,
+            selectedTests,
+          };
+        }),
+
+      checkboxTest: (categoryName: string, testName: string) =>
+        set((state) => {
+          // Переключаем тест
+          const selectedTests = state.selectedTests.includes(testName)
+            ? state.selectedTests.filter((i) => i !== testName)
+            : [...state.selectedTests, testName];
+
+          // Находим категорию
+          const category = state.data.find(
+            (item) => item.category === categoryName,
+          );
+
+          if (!category) {
+            return {
+              selectedTests,
+              selectedCategories: state.selectedCategories,
+            };
+          }
+
+          // Проверяем, остался ли хоть один выбранный тест этой категории
+          const hasSelected = category.arr.some((test) =>
+            selectedTests.includes(test.title),
+          );
+
+          let selectedCategories = state.selectedCategories;
+
+          if (hasSelected) {
+            // Если категория ещё не выбрана — добавляем
+            if (!selectedCategories.includes(categoryName)) {
+              selectedCategories = [...selectedCategories, categoryName];
+            }
+          } else {
+            // Если выбранных тестов больше нет — убираем категорию
+            selectedCategories = selectedCategories.filter(
+              (i) => i !== categoryName,
+            );
+          }
+
+          return {
+            selectedTests,
+            selectedCategories,
+          };
+        }),
     }),
+    {
+      name: "local_cate_checkbox",
+      storage: createJSONStorage(() => localStorage),
+      partialize: (state) => ({
+        selectedCategories: state.selectedCategories,
+        selectedTests: state.selectedTests,
+      }),
+    },
+  ),
+);
 
-  checkBoxCate: (nameCate: string) =>
-    set((state) => {
-      const updated = state.data.map((item) => {
-        if (item.category !== nameCate) return item;
+export const useQuizData = () => useQuizStore((state) => state.data);
+export const useSelectedCategories = () =>
+  useQuizStore((state) => state.selectedCategories);
+export const useSelectedTests = () =>
+  useQuizStore((state) => state.selectedTests);
+export const quizActions = {
+  searchCategory: (value: string) =>
+    useQuizStore.getState().searchCateQuestion(value),
 
-        return {
-          ...item,
-          selected: !item.selected,
-        };
-      });
-
-      // проверяем, есть ли выбранные
-      const hasSelected = updated.some((item) => item.selected);
-
-      return {
-        data: updated.map((item) => ({
-          ...item,
-          visible: hasSelected ? item.selected : true,
-        })),
-      };
-    }),
-}));
+  checkCategory: (categoryName: string) => useQuizStore.getState().checkBoxCate(categoryName),
+  checkboxTest: (categoryName: string, testName: string) =>
+    useQuizStore.getState().checkboxTest(categoryName, testName),
+};

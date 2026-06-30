@@ -1,8 +1,4 @@
-import DBtesting from "../data/Testing.json" with { type: "json" };
-import DbMedicalTest1 from "../data/Test1.json" with { type: "json" };
-
 import MyBtn from "../ui/button/MyBtn";
-import InputEnter from "../ui/form/InputEnter";
 import MyInput from "../ui/form/MyInput";
 import Checkbox from "../ui/input/Checkbox";
 import Radio from "../ui/input/Radio";
@@ -12,6 +8,9 @@ import InfoHelp from "../ui/list/Info/infoHelp";
 import BgContainer from "../ui/container/BgContainer";
 import ProgressBar from "@/ui/list/progress/ProgressBar";
 import NeonBtn from "@/ui/button/NeonBtn";
+import Modal from "@/ui/Modal/Modal";
+import { useState } from "react";
+import InfoCorrect from "@/ui/list/Info/InfoCorrect";
 
 export type Welcome = {
   correctAnswer: string;
@@ -41,6 +40,7 @@ function HomePageTest() {
   //   },
   // ];
   let testArr = ["1", "2", "3", "4"];
+const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -61,32 +61,38 @@ function HomePageTest() {
               name="quiz-answer"
               value="c"
               mstyle="danger"
-              isCorrect={false}
-              disabled
+              isCorrect={false} 
             >
               Вариант В
             </Radio>
           </div>
           <div className="flex flex-col py-3 gap-2">
-            <Checkbox value="a" mstyle="blue">
+            <Checkbox value="a" mstyle="blue" labelClassName={'bg-neutral-900'}>
               Первый правильный вариант
             </Checkbox>
-            <Checkbox value="b" mstyle="green" isCorrect={true}>
+            <Checkbox value="b" mstyle="green" labelClassName={'bg-neutral-900'} isCorrect={true}>
               Второй правильный вариант
             </Checkbox>
-            <Checkbox value="c" mstyle="danger" isCorrect={false}>
+            <Checkbox value="c" mstyle="danger" labelClassName={'bg-neutral-900'} isCorrect={false}>
               Неправильный вариант ответа
             </Checkbox>
           </div>
           <br />
           <br />
-          <br />
-          <InputEnter inpClassName="w-100">➔</InputEnter>
-          <br />
           <Details arr={testArr} title="Test Header"></Details>
           <br />
           <br />
           <BgContainer className="flex flex-col gap-5">
+ 
+
+            <InfoCorrect header="Lorem ipsum dolor sit amet consectetur">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis,
+                quia repellat voluptates iure tempora repellendus laborum
+                molestias expedita error, autem beatae laudantium quaerat
+                accusantium facilis minus ipsum adipisci voluptatibus placeat?
+              </p>
+            </InfoCorrect>
             <Info header="Lorem ipsum dolor sit amet consectetur">
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis,
@@ -109,32 +115,39 @@ function HomePageTest() {
           <ProgressBar progress={80} theme="sky" />
           <ProgressBar progress={80} theme="amber" />
           <ProgressBar progress={80} theme="neonRed" />
- 
-            {/* Стандартный размер текста */}
-            <NeonBtn color="green" variant="solid">
-              Solid Green
-            </NeonBtn>
-            <NeonBtn color="green" variant="outline">
-              Outline Green
-            </NeonBtn>
-
-            {/* Изменение размера текста через className */}
-            <NeonBtn color="sky" variant="solid" className="text-xs">
-              Small Sky
-            </NeonBtn>
-            <NeonBtn color="amber" variant="outline" className="text-xl">
-              Large Amber
-            </NeonBtn>
-
-            {/* Другие цвета */}
-            <NeonBtn color="red" variant="solid" className="text-2xl">
-              Huge Red
-            </NeonBtn>
-            <NeonBtn color="gray" variant="outline">
-              Dark Gray
-            </NeonBtn>
- 
+          {/* Стандартный размер текста */}
+          <NeonBtn color="green" variant="solid">
+            Solid Green
+          </NeonBtn>
+          <NeonBtn color="green" variant="outline">
+            Outline Green
+          </NeonBtn>
+          {/* Изменение размера текста через className */}
+          <NeonBtn color="sky" variant="solid" className="text-xs">
+            Small Sky
+          </NeonBtn>
+          <NeonBtn color="amber" variant="outline" className="text-xl">
+            Large Amber
+          </NeonBtn>
+          {/* Другие цвета */}
+          <NeonBtn color="red" variant="solid" className="text-2xl">
+            Huge Red
+          </NeonBtn>
+          <NeonBtn color="gray" variant="outline">
+            Dark Gray
+          </NeonBtn>
           <br /> <br /> <br /> <br />
+          <NeonBtn onClick={() => setOpen(true)} color="gray" variant="outline">Открыть</NeonBtn>
+          <Modal
+            open={open}
+            onClose={() => setOpen(false)}
+            title="Настройки теста"
+          >
+            <p className="text-neutral-300">
+              Здесь можно выбрать категории, количество вопросов и режим
+              прохождения.
+            </p>
+          </Modal>
         </div>
       </div>
     </>
