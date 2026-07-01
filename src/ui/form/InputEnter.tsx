@@ -37,7 +37,7 @@ function InputEnter({
   // Если имя не передано, используем сгенерированный ID в качестве имени
   const generatedName = name || generatedId
 
-  const inpBase = 'px-3 py-2 rounded-l border border-r-0 outline-none transition-all duration-300 peer'
+  const inpBase = 'w-ful px-3 py-2 rounded-l border border-r-0 outline-none transition-all duration-300 peer'
   
   const inpStyles: Record<ColorStyle, string> = {
     green: 'border-green-600 focus:border-green-500 focus:shadow-lg focus:shadow-green-500/10',
@@ -76,7 +76,7 @@ function InputEnter({
  
   return (
     <div className='flex items-stretch gap-0'>
-      <div dir="ltr"> 
+      <div className="w-full max-w-full sm:max-w-xs" dir="ltr"> 
         <input
           id={generatedId}
           name={generatedName}

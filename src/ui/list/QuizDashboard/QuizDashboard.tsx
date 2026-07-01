@@ -44,14 +44,8 @@ function QuizDashboard() {
                           childrenClass="flex-col"
                           titleClass="text-lg"
                           svgClass="w-6"
-                        >
-                          <div>
-                            <DoubleProgressBar
-                              greenProgress={45}
-                              redProgress={70}
-                            />
-                          </div>
-
+                          topChildren={<DoubleProgressBar data={childItem}/>}
+                        >  
                           <Details
                             title={`🚨 Вопросы с ошибками (${childItem.storage_q_not_passed.length})`}
                             childrenClass="flex-wrap"
@@ -99,7 +93,7 @@ function QuizDashboard() {
                             {childItem.storage_q_saved.map((i, _) => (
                               <ContainerCateModal
                                 NeonBtnColor="amber"
-                                pages={childItem.storage_q_saved}
+                                pages={childItem.storage_q_saved} 
                                 cateName={item.category}
                                 testName={childItem.title}
                                 startIndex={_}

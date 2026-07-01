@@ -11,6 +11,7 @@ type props = {
   childrenClass?:string;
   titleClass?:string;
   svgClass?:string;
+  topChildren?:ReactNode;
 };
 
 function Details({
@@ -22,6 +23,7 @@ function Details({
   childrenClass ='',
   titleClass ='text-2xl',
   svgClass ='w-8',
+  topChildren
 }: props) {
   const [active, setActive] = useState(false);
 
@@ -37,6 +39,7 @@ function Details({
           <ArrowTop className={`${svgClass} details-arrow`}/>
         </div>
         {description && <p>{description}</p>}
+        {topChildren && topChildren}
       </button>
       
       {/* Обертка для плавной анимации высоты */} 

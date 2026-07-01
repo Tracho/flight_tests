@@ -5,7 +5,7 @@ import SeacrchCate from "./ChildrenCateNavi/SeacrchCate";
 function CategoryNavi() { 
   return (
     <>
-      <div className="max-w-xs w-xs flex flex-col">
+      <div className="max-w-full sm:max-w-xs w-full flex flex-col">
         <BgContainer>
           <div className="flex flex-col gap-3">
             <span className="text-lg text-gray-400">Поиск по категориям</span>

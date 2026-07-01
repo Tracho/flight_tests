@@ -10,7 +10,7 @@ function SeacrchCate() {
   return (
     <>
       <InputEnter
-        inpClassName="w-100"
+        inpClassName="w-full"
         value={search}
         onChange={setSearch}
         onSubmit={handleSearch}
