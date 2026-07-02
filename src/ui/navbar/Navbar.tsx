@@ -19,7 +19,7 @@ function Navbar () {
             Test Ui
           </NavLink>
           <NavLink
-            to='/tests'
+            to='/quiz'
             className={({ isActive }) => (isActive ? LinkActiveClass : '')}
           >
             Тесты

@@ -1,14 +1,15 @@
+import { quizActionsTest } from "@/store/useOpenQuiz";
 import {
   useQuizData,
   useSelectedCategories,
   useSelectedTests,
 } from "@/store/useQuizStore";
 import NeonBtn from "@/ui/button/NeonBtn";
+import NeonLink from "@/ui/button/NeonLink";
 import Details from "@/ui/list/Details/Details";
 import DoubleProgressBar from "@/ui/list/progress/DoubleProgressBar";
 import ContainerCateModal from "@/ui/Modal/ContainerCateModal";
 import Modal from "@/ui/Modal/Modal";
-import { useState } from "react";
 
 function QuizDashboard() {
   const data = useQuizData();
@@ -44,8 +45,27 @@ function QuizDashboard() {
                           childrenClass="flex-col"
                           titleClass="text-lg"
                           svgClass="w-6"
-                          topChildren={<DoubleProgressBar data={childItem}/>}
-                        >  
+                          topChildren={
+                            <>
+                              <DoubleProgressBar data={childItem} />
+                              <div className="flex justify-center items-center w-full">
+                                <NeonLink
+                                  to={{
+                                    pathname: "/quiz",
+                                    search: `?title=${encodeURIComponent(childItem.title)}`,
+                                    // hash: "#1", // Если #1 это именно хэш-якорь
+                                  }}
+                                  onClick={() => quizActionsTest.setSelectQuestion(childItem.title)}
+                                  color="sky"
+                                  variant="solid"
+                                  className="text-xs"
+                                >
+                                  Начать тест
+                                </NeonLink>
+                              </div>
+                            </>
+                          }
+                        >
                           <Details
                             title={`🚨 Вопросы с ошибками (${childItem.storage_q_not_passed.length})`}
                             childrenClass="flex-wrap"
@@ -61,7 +81,7 @@ function QuizDashboard() {
                                 startIndex={_}
                                 key={_}
                               >
-                                {i}
+                                {i + 1}
                               </ContainerCateModal>
                             ))}
                           </Details>
@@ -80,7 +100,7 @@ function QuizDashboard() {
                                 startIndex={_}
                                 key={_}
                               >
-                                {i}
+                                {i + 1}
                               </ContainerCateModal>
                             ))}
                           </Details>
@@ -93,13 +113,13 @@ function QuizDashboard() {
                             {childItem.storage_q_saved.map((i, _) => (
                               <ContainerCateModal
                                 NeonBtnColor="amber"
-                                pages={childItem.storage_q_saved} 
+                                pages={childItem.storage_q_saved}
                                 cateName={item.category}
                                 testName={childItem.title}
                                 startIndex={_}
                                 key={_}
                               >
-                                {i}
+                                {i + 1}
                               </ContainerCateModal>
                             ))}
                           </Details>
