@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { ThemeToggle } from '../button/ThemeToggle'
 
 function Navbar () {
   let LinkActiveClass = `underline  drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]`
@@ -9,6 +10,7 @@ function Navbar () {
           <NavLink to='/' className='text-4xl font-bold uppercase'>
             FLIGHT TEST
           </NavLink>
+          <ThemeToggle/>
         </div>
 
         <div className='flex justify-center items-center gap-3'>
