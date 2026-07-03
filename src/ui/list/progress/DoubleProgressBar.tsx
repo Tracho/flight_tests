@@ -45,8 +45,8 @@ function DoubleProgressBar({ className = "", data }: DoubleProgressBarProps) {
       <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
         <span className="text-sm font-bold text-white drop-shadow-lg text-shadow">
           ✅ {passed}
-          <span className="mx-2 text-neutral-400 ">|</span>❌ {failed}
-          <span className="mx-2 text-neutral-400 ">|</span>⭐ {saved}
+          <span className="mx-2 text-neutral-400">|</span>🚨 {failed}
+          <span className="mx-2 text-neutral-400">|</span>⭐ {saved}
           <span className="mx-2 text-neutral-400">|</span>
           📚 {total}
         </span>

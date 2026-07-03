@@ -1,21 +1,20 @@
-import { quizActionsTest } from "@/store/useOpenQuiz";
+import { quizActionsTest } from "@/store/useOpenGameQuiz";
 import {
   useQuizData,
   useSelectedCategories,
   useSelectedTests,
 } from "@/store/useQuizStore";
-import NeonBtn from "@/ui/button/NeonBtn";
+
 import NeonLink from "@/ui/button/NeonLink";
 import Details from "@/ui/list/Details/Details";
 import DoubleProgressBar from "@/ui/list/progress/DoubleProgressBar";
 import ContainerCateModal from "@/ui/Modal/ContainerCateModal";
-import Modal from "@/ui/Modal/Modal";
 
 function QuizDashboard() {
   const data = useQuizData();
   const selectedCategories = useSelectedCategories();
   const selectedTests = useSelectedTests();
-
+  const placeholder_text = "Пусто...";
   return (
     <>
       <div className="flex flex-col gap-4">
@@ -52,10 +51,12 @@ function QuizDashboard() {
                                 <NeonLink
                                   to={{
                                     pathname: "/quiz",
-                                    search: `?title=${encodeURIComponent(childItem.title)}`,
+                                    search: `?cate=${encodeURIComponent(item.category)}&title=${encodeURIComponent(childItem.title)}`,
                                     // hash: "#1", // Если #1 это именно хэш-якорь
                                   }}
-                                  onClick={() => quizActionsTest.setSelectQuestion(childItem.title)}
+                                  onClick={() =>
+                                    quizActionsTest.setSelectQuestion({cate:item.category, quiz:childItem.title,})
+                                  }
                                   color="sky"
                                   variant="solid"
                                   className="text-xs"
@@ -72,18 +73,20 @@ function QuizDashboard() {
                             titleClass="text-base"
                             svgClass="w-5"
                           >
-                            {childItem.storage_q_not_passed.map((i, _) => (
-                              <ContainerCateModal
-                                NeonBtnColor="red"
-                                pages={childItem.storage_q_not_passed}
-                                cateName={item.category}
-                                testName={childItem.title}
-                                startIndex={_}
-                                key={_}
-                              >
-                                {i + 1}
-                              </ContainerCateModal>
-                            ))}
+                            {childItem.storage_q_not_passed.length > 0
+                              ? childItem.storage_q_not_passed.map((i, _) => (
+                                  <ContainerCateModal
+                                    NeonBtnColor="red"
+                                    pages={childItem.storage_q_not_passed}
+                                    cateName={item.category}
+                                    testName={childItem.title}
+                                    startIndex={_}
+                                    key={_}
+                                  >
+                                    {i + 1}
+                                  </ContainerCateModal>
+                                ))
+                              : placeholder_text}
                           </Details>
                           <Details
                             title={`✅ Изученные вопросы (${childItem.storage_q_passed.length})`}
@@ -91,37 +94,41 @@ function QuizDashboard() {
                             titleClass="text-base"
                             svgClass="w-5"
                           >
-                            {childItem.storage_q_passed.map((i, _) => (
-                              <ContainerCateModal
-                                NeonBtnColor="green"
-                                pages={childItem.storage_q_passed}
-                                cateName={item.category}
-                                testName={childItem.title}
-                                startIndex={_}
-                                key={_}
-                              >
-                                {i + 1}
-                              </ContainerCateModal>
-                            ))}
+                            {childItem.storage_q_passed.length > 0
+                              ? childItem.storage_q_passed.map((i, _) => (
+                                  <ContainerCateModal
+                                    NeonBtnColor="green"
+                                    pages={childItem.storage_q_passed}
+                                    cateName={item.category}
+                                    testName={childItem.title}
+                                    startIndex={_}
+                                    key={_}
+                                  >
+                                    {i + 1}
+                                  </ContainerCateModal>
+                                ))
+                              : placeholder_text}
                           </Details>
                           <Details
-                            title={`💾 Сохраненные вопросы (${childItem.storage_q_saved.length})`}
+                            title={`⭐ Сохраненные вопросы (${childItem.storage_q_saved.length})`}
                             childrenClass="flex-wrap"
                             titleClass="text-base"
                             svgClass="w-5"
                           >
-                            {childItem.storage_q_saved.map((i, _) => (
-                              <ContainerCateModal
-                                NeonBtnColor="amber"
-                                pages={childItem.storage_q_saved}
-                                cateName={item.category}
-                                testName={childItem.title}
-                                startIndex={_}
-                                key={_}
-                              >
-                                {i + 1}
-                              </ContainerCateModal>
-                            ))}
+                            {childItem.storage_q_saved.length > 0
+                              ? childItem.storage_q_saved.map((i, _) => (
+                                  <ContainerCateModal
+                                    NeonBtnColor="amber"
+                                    pages={childItem.storage_q_saved}
+                                    cateName={item.category}
+                                    testName={childItem.title}
+                                    startIndex={_}
+                                    key={_}
+                                  >
+                                    {i + 1}
+                                  </ContainerCateModal>
+                                ))
+                              : placeholder_text}
                           </Details>
                           <Details
                             title={`❔ Не пройденные вопросы (${childItem.json.length})`}

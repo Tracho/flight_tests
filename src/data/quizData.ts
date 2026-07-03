@@ -48,8 +48,8 @@ export const quizData: QuizCategory[] = [
         visible: true,
         selected: false,
         json: DBTesting,
-        storage_q_passed: [0, 2],
-        storage_q_not_passed: [1,1,1, 3],
+        storage_q_passed: [0],
+        storage_q_not_passed: [1,2,1,1, 3],
         storage_q_saved: [0, 1, 2, 3],
         title: "My Data base Dev Testing",
         description:

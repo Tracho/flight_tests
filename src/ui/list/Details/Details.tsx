@@ -12,10 +12,12 @@ type props = {
   titleClass?:string;
   svgClass?:string;
   topChildren?:ReactNode;
+  svgToTitle?:ReactNode;
 };
 
 function Details({
   title,
+  svgToTitle,
   arr = [],
   description,
   children,
@@ -35,7 +37,7 @@ function Details({
         onClick={() => setActive((prev) => !prev)}
       >
         <div className="flex justify-between items-center w-full">
-          <span className={`${titleClass} details-title`}>{title}</span>
+          <span className={`${titleClass} details-title flex justify-between items-center`}>{svgToTitle}{title}</span>
           <ArrowTop className={`${svgClass} details-arrow`}/>
         </div>
         {description && <p>{description}</p>}

@@ -68,7 +68,7 @@ const db = quizOpenWindow.getQuestion(
       >
         <div className="px-6 flex flex-col gap-4">
           <div className="flex justify-between items-center">
-            <b className="bg-sky-600 px-2 py-1 rounded">Вопрос №{questionNumber}</b>
+            <b className="bg-sky-600 px-2 py-1 rounded">Вопрос №{questionNumber +1}</b>
             <div className="flex flex-row justify-between items-center gap-3">
               <NeonBtn
                 title="Сохранить"
