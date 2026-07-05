@@ -81,7 +81,7 @@ export function Checkbox({
         {/* SVG теперь плавно реагирует на родительский селектор [&>svg] через базовый scale-0 */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={`w-3.5 h-3.5 text-white scale-0 transition-transform duration-200 shrink-0 ${iconStyles[mstyle]}`}
+          className={`w-3.5 h-3.5 scale-0 transition-transform duration-200 shrink-0 ${iconStyles[mstyle]}`}
           data-name="Layer 2"
           height="100"
           id="Layer_2"
@@ -92,7 +92,7 @@ export function Checkbox({
         </svg>
       </div>
       {children && (
-        <span className="font-medium text-white leading-none contents">
+        <span className="font-medium leading-none contents">
           {children}
         </span>
       )}

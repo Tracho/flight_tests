@@ -11,6 +11,7 @@ import NeonBtn from "@/ui/button/NeonBtn";
 import Modal from "@/ui/Modal/Modal";
 import { useState } from "react";
 import InfoCorrect from "@/ui/list/Info/InfoCorrect";
+import { bgdark, bglight } from "@/data/desingStyle";
 
 export type Welcome = {
   correctAnswer: string;
@@ -40,11 +41,10 @@ function HomePageTest() {
   //   },
   // ];
   let testArr = ["1", "2", "3", "4"];
-  const [open, setOpen] = useState(false);
-
+  const [open, setOpen] = useState(false); 
   return (
     <>
-      <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-zinc-900 dark:text-zinc-50 transition-colors duration-200">
+      <div className={`min-h-screen  ${bgdark} ${bglight} transition-colors duration-200`}>
         <div className="flex justify-center">
           <div className="container px-4 py-10">
             <h1>HomePageTest</h1>

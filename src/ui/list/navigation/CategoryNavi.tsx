@@ -8,11 +8,11 @@ function CategoryNavi() {
       <div className="max-w-full sm:max-w-xs w-full flex flex-col">
         <BgContainer>
           <div className="flex flex-col gap-3">
-            <span className="text-lg text-gray-400">Поиск по категориям</span>
+            <span className="text-lg">Поиск по категориям</span>
             <SeacrchCate />
           </div>
           <div className="flex flex-col mt-5 gap-3">
-            <span className="text-lg text-gray-400">Категории:</span>
+            <span className="text-lg">Категории:</span>
             <CategoriesList />
           </div>
         </BgContainer>

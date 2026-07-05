@@ -1,3 +1,4 @@
+import { bgdark, bgdarkNeutral, bglight, bglightgray, borderDark, borderLign, neonLight } from '@/data/desingStyle'
 import type { ComponentProps, ReactNode } from 'react'
 
 type props = {
@@ -8,7 +9,7 @@ type props = {
 function BgContainer ({ children, myClass = '', className='', ...props }: props) {
   return (
     <>
-      <div {...props} className={`bg-neutral-900 ${myClass} ${className} p-4 rounded border border-gray-600`}>
+      <div {...props} className={`${bglightgray} ${bgdarkNeutral} ${myClass} ${className} p-4 rounded border ${borderLign} ${borderDark}`}> 
         {children}
       </div>
     </>

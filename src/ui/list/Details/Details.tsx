@@ -1,6 +1,7 @@
 import ArrowTop from "@/assets/icons/arrow-top.svg?react";
 import "./Details.scss";
 import { useState, type ReactNode } from "react";
+import BgContainer from "@/ui/container/BgContainer";
 
 type props = {
   title: string;
@@ -8,11 +9,11 @@ type props = {
   arr?: string[];
   symbolLi?: string;
   children?: ReactNode;
-  childrenClass?:string;
-  titleClass?:string;
-  svgClass?:string;
-  topChildren?:ReactNode;
-  svgToTitle?:ReactNode;
+  childrenClass?: string;
+  titleClass?: string;
+  svgClass?: string;
+  topChildren?: ReactNode;
+  svgToTitle?: ReactNode;
 };
 
 function Details({
@@ -22,44 +23,53 @@ function Details({
   description,
   children,
   symbolLi = "",
-  childrenClass ='',
-  titleClass ='text-2xl',
-  svgClass ='w-8',
-  topChildren
+  childrenClass = "",
+  titleClass = "text-2xl",
+  svgClass = "w-8",
+  topChildren,
 }: props) {
   const [active, setActive] = useState(false);
 
   return (
-    <div className={`details-container ${active ? "is-active" : ""}`}>
-      <button
-        className="details-trigger gap-3"
-        type="button"
-        onClick={() => setActive((prev) => !prev)}
-      >
-        <div className="flex justify-between items-center w-full">
-          <span className={`${titleClass} details-title flex justify-between items-center`}>{svgToTitle}{title}</span>
-          <ArrowTop className={`${svgClass} details-arrow`}/>
+    <BgContainer>
+      <div className={`details-container ${active ? "is-active" : ""}`}>
+        <button
+          className="details-trigger gap-3"
+          type="button"
+          onClick={() => setActive((prev) => !prev)}
+        >
+          <div className="flex justify-between items-center w-full">
+            <span
+              className={`${titleClass} details-title flex justify-between items-center`}
+            >
+              {svgToTitle}
+              {title}
+            </span>
+            <ArrowTop className={`${svgClass} details-arrow`} />
+          </div>
+          {description && <p>{description}</p>}
+          {topChildren && topChildren}
+        </button>
+
+        {/* Обертка для плавной анимации высоты */}
+        <div className="details-content-wrapper">
+          {!children ? (
+            <ul className={`${childrenClass} details-list`}>
+              {arr.map((item, index) => (
+                <li key={index} className="details-item">
+                  {symbolLi && (
+                    <span className="details-symbol">{symbolLi}</span>
+                  )}
+                  {item}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className={`${childrenClass} details-list`}>{children}</div>
+          )}
         </div>
-        {description && <p>{description}</p>}
-        {topChildren && topChildren}
-      </button>
-      
-      {/* Обертка для плавной анимации высоты */} 
-      <div className="details-content-wrapper"> 
-        {!children ? (
-          <ul className={`${childrenClass} details-list`}>
-            {arr.map((item, index) => (
-              <li key={index} className="details-item">
-                {symbolLi && <span className="details-symbol">{symbolLi}</span>}
-                {item}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <div className={`${childrenClass} details-list`}>{children}</div>
-        )}
       </div>
-    </div>
+    </BgContainer>
   );
 }
 

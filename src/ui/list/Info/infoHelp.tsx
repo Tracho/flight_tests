@@ -1,4 +1,5 @@
 import SVGHelpInfo from '@/assets/icons/help-info.svg?react'
+import { amberBorderDark, amberBorderLight, amberFillDark, amberFillLight, amberTextDark, amberTextLight } from '@/data/desingStyle';
 import type { ReactNode } from 'react'
 type props = {
   header:string;
@@ -9,10 +10,10 @@ function InfoHelp ({children,header}:props) {
     <>
       <div className='flex flex-col gap-4'>
         <div className='flex items-center gap-3'>
-          <SVGHelpInfo width={32} fill='#f59e0b' className='text-amber-500 min-w-8'/>
+          <SVGHelpInfo width={32}   className={`${amberTextLight} ${amberTextDark} ${amberFillLight} ${amberFillDark} min-w-8`}/>
           <h3 className='text-lg'>{header}</h3>
         </div>
-        <div className='border-l-4 border-amber-500 pl-4 ml-[14px] text-base'>
+        <div className={`border-l-4 ${amberBorderLight} ${amberBorderDark} pl-4 ml-[14px] text-base`}>
           {children}
         </div>
       </div>
