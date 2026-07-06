@@ -6,10 +6,10 @@ type props = {
   myClass?: string
   className?: string
 } & ComponentProps<'div'>
-function BgContainer ({ children, myClass = '', className='', ...props }: props) {
+function BgContainer ({ children, myClass = '', className=`${bglightgray} ${bgdarkNeutral} ${borderLign} ${borderDark}`, ...props }: props) {
   return (
     <>
-      <div {...props} className={`${bglightgray} ${bgdarkNeutral} ${myClass} ${className} p-4 rounded border ${borderLign} ${borderDark}`}> 
+      <div {...props} className={`${myClass} ${className} p-4 rounded border`}> 
         {children}
       </div>
     </>

@@ -2,7 +2,7 @@ import ArrowTop from "@/assets/icons/arrow-top.svg?react";
 import "./Details.scss";
 import { useState, type ReactNode } from "react";
 import BgContainer from "@/ui/container/BgContainer";
-import { amberBorderLight, greyBorderDark } from "@/data/desingStyle";
+import { amberBorderLight, bgdarkNeutral30, bglightgray70, borderDark, borderLign, greyBorderDark } from "@/data/desingStyle";
 
 type props = {
   title: string;
@@ -17,7 +17,7 @@ type props = {
   svgToTitle?: ReactNode;
 };
 
-function Details({
+function ChildrenDetails({
   title,
   svgToTitle,
   arr = [],
@@ -30,12 +30,12 @@ function Details({
   topChildren,
 }: props) {
   const [active, setActive] = useState(false);
-
+// bglightgrayTT
   return (
-    <BgContainer>
+    <BgContainer className={`${bglightgray70} ${bgdarkNeutral30} ${borderLign} ${borderDark}`}>
       <div className={`details-container ${active ? "is-active" : ""}`}>
         <button
-          className={`details-trigger pl-4 border-l-2 ${amberBorderLight} ${greyBorderDark} gap-3`}
+          className={`details-trigger gap-3`}
           type="button"
           onClick={() => setActive((prev) => !prev)}
         >
@@ -53,7 +53,7 @@ function Details({
         </button>
 
         {/* Обертка для плавной анимации высоты */}
-        <div className={`details-content-wrapper border-l-2 border-dashed ${amberBorderLight} ${greyBorderDark}`}>
+        <div className={`details-content-wrapper`}>
           {!children ? (
             <ul className={`${childrenClass} details-list`}>
               {arr.map((item, index) => (
@@ -74,4 +74,4 @@ function Details({
   );
 }
 
-export default Details;
+export default ChildrenDetails;

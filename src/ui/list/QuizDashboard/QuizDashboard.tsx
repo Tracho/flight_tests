@@ -9,6 +9,7 @@ import NeonLink from "@/ui/button/NeonLink";
 import Details from "@/ui/list/Details/Details";
 import DoubleProgressBar from "@/ui/list/progress/DoubleProgressBar";
 import ContainerCateModal from "@/ui/Modal/ContainerCateModal";
+import ChildrenDetails from "../Details/ChildrenDetails";
 
 function QuizDashboard() {
   const data = useQuizData();
@@ -37,7 +38,7 @@ function QuizDashboard() {
                       selectedTests.includes(childItem.title)
                     )
                       return (
-                        <Details
+                        <ChildrenDetails
                           key={childItem.title + childIndex}
                           title={childItem.title}
                           description={childItem.description}
@@ -155,7 +156,7 @@ function QuizDashboard() {
                               </ContainerCateModal>
                             ))}
                           </Details>
-                        </Details>
+                        </ChildrenDetails>
                       );
                   })}
                 </Details>

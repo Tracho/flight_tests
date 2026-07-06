@@ -1,9 +1,8 @@
 .details-container {
   // @apply bg-neutral-900 p-4 rounded border border-gray-600; 
   .details-trigger {
-    @apply flex flex-col justify-start text-start items-start w-full border-l-4 border-gray-300 pl-4 cursor-pointer;
+    @apply flex flex-col justify-start text-start items-start w-full    cursor-pointer;
   }
-
  
   .details-arrow {
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -19,7 +18,7 @@
   .details-list {
     overflow: hidden;
     padding-left: 1rem;
-    background-image: linear-gradient(to bottom, #d1d5db 50%, transparent 50%);
+    // background-image: linear-gradient(to bottom, #d1d5db 50%, transparent 50%);
     background-size: 4px 12px;
     background-repeat: repeat-y;
     background-position: left center;
