@@ -11,6 +11,7 @@ import InfoHelp from "../list/Info/infoHelp";
 import SVGStar from "@/assets/icons/star.svg?react";
 import SVGDelete from "@/assets/icons/delate.svg?react";
 import Pagination from "../pagination/Pagination";
+import { bgdarkNeutral, bglight } from "@/data/desingStyle";
 
 type Props = {
   cateName: string;
@@ -56,7 +57,7 @@ const db = quizOpenWindow.getQuestion(
         className="text-xs"
         color={NeonBtnColor}
         variant="solid"
-        onClick={() => setWindow(true)}
+        onClick={() => setWindow(true)} 
       >
         {children}
       </NeonBtn>
@@ -68,7 +69,7 @@ const db = quizOpenWindow.getQuestion(
       >
         <div className="px-6 flex flex-col gap-4">
           <div className="flex justify-between items-center">
-            <b className="bg-sky-600 px-2 py-1 rounded">Вопрос №{questionNumber +1}</b>
+            <b className="bg-sky-600 px-2 py-1 rounded text-white">Вопрос №{questionNumber +1}</b>
             <div className="flex flex-row justify-between items-center gap-3">
               <NeonBtn
                 title="Сохранить"
@@ -98,7 +99,7 @@ const db = quizOpenWindow.getQuestion(
                       name={db?.title + startIndex}
                       value={item.text}
                       isCorrect={item.isCorrect}
-                      checked={item.isCorrect}
+                      checked={item.isCorrect} 
                       disabled
                     >
                       {item.text}
@@ -112,7 +113,7 @@ const db = quizOpenWindow.getQuestion(
                       name={db?.title + startIndex}
                       value={item.text}
                       isCorrect={item.isCorrect}
-                      checked={item.isCorrect}
+                      checked={item.isCorrect} 
                       disabled
                     >
                       {item.text}
@@ -133,7 +134,7 @@ const db = quizOpenWindow.getQuestion(
           )}
         </div>
 
-        <div className="flex items-center justify-between border-t border-violet-800 px-6 pt-6">
+        <div className={`flex items-center justify-between border-t border-orange-700 dark:border-violet-700 px-6 py-6 ${bglight} ${bgdarkNeutral}`}>
           <Pagination page={page} total={total} onChange={setPage} />
         </div>
       </Modal>

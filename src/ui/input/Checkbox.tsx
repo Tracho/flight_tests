@@ -1,3 +1,4 @@
+import { bglightgray70, bgdarkNeutral } from "@/data/desingStyle";
 import { useId } from "react";
 import type { InputHTMLAttributes, ReactNode } from "react";
 
@@ -13,7 +14,7 @@ type Props = Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & {
 
 export function Checkbox({
   mstyle = "green",
-  labelClassName = "",
+  labelClassName = `${bglightgray70} ${bgdarkNeutral}`,
   checkboxClassName = "",
   children,
   id,

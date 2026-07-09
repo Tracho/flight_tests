@@ -10,6 +10,7 @@ import Details from "@/ui/list/Details/Details";
 import DoubleProgressBar from "@/ui/list/progress/DoubleProgressBar";
 import ContainerCateModal from "@/ui/Modal/ContainerCateModal";
 import ChildrenDetails from "../Details/ChildrenDetails";
+import { bgdarkNeutral, bglight, bglightgray, borderDark, borderLign } from "@/data/desingStyle";
 
 function QuizDashboard() {
   const data = useQuizData();
@@ -68,15 +69,16 @@ function QuizDashboard() {
                             </>
                           }
                         >
-                          <Details
+                          <ChildrenDetails
                             title={`🚨 Вопросы с ошибками (${childItem.storage_q_not_passed.length})`}
                             childrenClass="flex-wrap"
                             titleClass="text-base"
                             svgClass="w-5"
+                            BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
                           >
                             {childItem.storage_q_not_passed.length > 0
                               ? childItem.storage_q_not_passed.map((i, _) => (
-                                  <ContainerCateModal
+                                  <ContainerCateModal 
                                     NeonBtnColor="red"
                                     pages={childItem.storage_q_not_passed}
                                     cateName={item.category}
@@ -88,12 +90,13 @@ function QuizDashboard() {
                                   </ContainerCateModal>
                                 ))
                               : placeholder_text}
-                          </Details>
-                          <Details
+                          </ChildrenDetails>
+                          <ChildrenDetails
                             title={`✅ Изученные вопросы (${childItem.storage_q_passed.length})`}
                             childrenClass="flex-wrap"
                             titleClass="text-base"
                             svgClass="w-5"
+                            BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
                           >
                             {childItem.storage_q_passed.length > 0
                               ? childItem.storage_q_passed.map((i, _) => (
@@ -109,12 +112,13 @@ function QuizDashboard() {
                                   </ContainerCateModal>
                                 ))
                               : placeholder_text}
-                          </Details>
-                          <Details
+                          </ChildrenDetails>
+                          <ChildrenDetails
                             title={`⭐ Сохраненные вопросы (${childItem.storage_q_saved.length})`}
                             childrenClass="flex-wrap"
                             titleClass="text-base"
                             svgClass="w-5"
+                            BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
                           >
                             {childItem.storage_q_saved.length > 0
                               ? childItem.storage_q_saved.map((i, _) => (
@@ -130,12 +134,13 @@ function QuizDashboard() {
                                   </ContainerCateModal>
                                 ))
                               : placeholder_text}
-                          </Details>
-                          <Details
+                          </ChildrenDetails>
+                          <ChildrenDetails
                             title={`❔ Не пройденные вопросы (${childItem.json.length})`}
                             childrenClass="flex-wrap"
                             titleClass="text-base"
                             svgClass="w-5"
+                            BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
                           >
                             {Array.from(
                               { length: childItem.json.length },
@@ -155,7 +160,7 @@ function QuizDashboard() {
                                 {questionNumber}
                               </ContainerCateModal>
                             ))}
-                          </Details>
+                          </ChildrenDetails>
                         </ChildrenDetails>
                       );
                   })}

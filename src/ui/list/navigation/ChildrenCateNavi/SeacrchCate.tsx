@@ -12,6 +12,7 @@ function SeacrchCate() {
       <InputEnter
         inpClassName="w-full"
         value={search}
+        inpStyle='light'
         onChange={setSearch}
         onSubmit={handleSearch}
         placeholder="Поиск..."

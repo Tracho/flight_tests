@@ -1,6 +1,6 @@
 // src/store/useQuizStore.ts
 import { create } from "zustand";
-import type { QuizCategory, QuizTest } from "@/types/quiz";
+import type { QuizCategory, QuizQuestion, QuizTest } from "@/types/quiz";
 import { useShallow } from "zustand/react/shallow";
 import { quizData } from "@/data/quizData";
 
@@ -12,6 +12,7 @@ type GameSettings = {
   mode: "standard" | "random" | "";
   withTimer: boolean;
   started: boolean;
+  idQuestion:number;
 };
 interface QuizState {
   data: QuizCategory[];
@@ -26,12 +27,15 @@ interface QuizState {
   stopGame: () => void;
   resetGame: () => void;
   getOpenDataQuiz: () => QuizTest | undefined;
+  getIdQuestion:() => number;
+  getQuizQuestion:() => QuizQuestion;
 }
 
 const ObjGame:GameSettings = {
   mode: "",
   withTimer: false,
   started: false,
+  idQuestion:0,
 };
 // Сам стор оставляем приватным (не экспортируем),
 // чтобы наружу выходили только чистые атомарные инструменты
@@ -74,10 +78,20 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
       game: ObjGame,
     }),
 
+  getIdQuestion:():number =>{
+    return get().game.idQuestion;
+  },
+
   setSelectQuestion: (val) =>
     set({
       selectQuestion: val,
     }),
+
+  getQuizQuestion: (): QuizQuestion => {
+    const quiz = get().getOpenDataQuiz();
+    const index = get().game.idQuestion;
+    return quiz?.json[index] || ({} as QuizQuestion);
+  },
 
   getOpenDataQuiz: (): QuizTest | undefined => {
     const select = get().selectQuestion;
@@ -100,6 +114,8 @@ export const useGame = () =>
       startGame: state.startGame,
       stopGame: state.stopGame,
       resetGame: state.resetGame,
+      getIdQuestion: state.getIdQuestion,
+      getQuizQuestion: state.getQuizQuestion,
     }))
   );
 

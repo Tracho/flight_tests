@@ -15,6 +15,7 @@ function CategoriesList() {
               mstyle="green"
               checked={selectedCategories.includes(item.category)}
               onChange={() => quizActions.checkCategory(item.category)}
+              labelClassName="bg-none"
             >
               {item.category}
             </Checkbox>

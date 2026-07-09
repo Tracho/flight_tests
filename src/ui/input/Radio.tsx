@@ -1,3 +1,4 @@
+import { bgdark, bgdarkNeutral, bglightgray, bglightgray460, bglightgray70 } from '@/data/desingStyle'
 import { useId } from 'react'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 
@@ -13,7 +14,7 @@ type Props = Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> & {
 
 export function Radio ({
   mstyle = 'green',
-  labelClassName = '',
+  labelClassName = `${bglightgray70} ${bgdarkNeutral}`,
   radioClassName = '',
   children,
   id,
@@ -34,7 +35,7 @@ if (isCorrect === true) {
 
 
   // Контейнер с увеличенной зоной клика
-  const wrapperClass = `flex items-center gap-3 py-1.5 px-1.5 bg-neutral-900 rounded transition-all duration-200 ${validationBorder} ${
+  const wrapperClass = `flex items-center gap-3 py-1.5 px-1.5 rounded transition-all duration-200 ${validationBorder} ${
     disabled ? 'cursor-not-allowed' : 'cursor-pointer'
   } ${labelClassName}`
 
@@ -87,7 +88,7 @@ if (isCorrect === true) {
         <div className={computedDotClass}></div>
       </div>
       {children && (
-        <span className='font-medium text-white leading-none contents'>
+        <span className='font-medium leading-none contents'>
           {children}
         </span>
       )}

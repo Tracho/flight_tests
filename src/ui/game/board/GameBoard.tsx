@@ -8,6 +8,18 @@ import Info from "@/ui/list/Info/Info";
 import InfoHelp from "@/ui/list/Info/infoHelp";
 import { quizActionsTest, useGame } from "@/store/useOpenGameQuiz";
 import { useEffect } from "react";
+import {
+  bglightgray,
+  bgdarkStonel720,
+  bgdarkNeutral,
+  bglight,
+  borderDarkNeonViolet700,
+  borderLightNeonOrange700,
+  bglightgray70,
+  bgdark,
+  bgdarkNeutral30,
+} from "@/data/desingStyle";
+import BgContainer from "@/ui/container/BgContainer";
 
 function GameBoard() {
   const game = useGame();
@@ -15,76 +27,107 @@ function GameBoard() {
 
   useEffect(() => {
     console.log(db);
+    console.log(game.getQuizQuestion());
   }, [game.game.started]);
+
+  let statusCount = game.getQuizQuestion().options.reduce(
+    (accumulator, item) => {
+      if (item.isCorrect) {
+        accumulator.trueCount += 1;
+      } else {
+        accumulator.falseCount += 1;
+      }
+      return accumulator;
+    },
+    { trueCount: 0, falseCount: 0 },
+  );
   return (
     <>
       {game.game.started == true && (
-        <div className="px-6 flex flex-col gap-4">
-          <div className="flex justify-between items-center">
-            <b className="bg-sky-600 px-2 py-1 rounded">
-              {/* Вопрос №{questionNumber + 1} */}
-              Вопрос №{1}
-            </b>
-            <div className="flex flex-row justify-between items-center gap-3">
-              <NeonBtn
-                title="Сохранить"
-                className="px-2"
-                color="amber"
-                variant="outline"
-              >
-                <SVGStar width={22}></SVGStar>
-              </NeonBtn>
-              <NeonBtn
-                title="Удалить"
-                className="px-2"
-                color="red"
-                variant="outline"
-              >
-                <SVGDelete width={22}></SVGDelete>
-              </NeonBtn>
-            </div>
+        <div
+          className={`flex flex-col ${bglight} ${bgdarkNeutral} rounded border shadow-2xl  ${borderDarkNeonViolet700} ${borderLightNeonOrange700}`}
+        >
+          <div className={`px-6 py-4  border-b border-orange-700 dark:border-violet-700`}>
+            <h1 className="text-xl">{db?.title}</h1>
           </div>
-          <p className="text-lg">{db?.title}</p>
-          {/* <ul className="flex flex-col gap-3">
-          {db?.options.map((item, index) => {
-            if (statusCount?.trueCount === 1) {
-              return (
-                <li key={index}>
-                  
-                  <Radio
-                    name={db?.title + startIndex}
-                    value={item.text}
-                    isCorrect={item.isCorrect}
-                    checked={item.isCorrect}
-                    disabled
-                  >
-                    {item.text}
-                  </Radio>
-                </li>
-              );
-            } else {
-              return (
-                <li key={index}>
-                  
-                  <Checkbox
-                    name={db?.title + startIndex}
-                    value={item.text}
-                    isCorrect={item.isCorrect}
-                    checked={item.isCorrect}
-                    disabled
-                  >
-                    {item.text}
-                  </Checkbox>
-                </li>
-              );
-            }
-          })}
-        </ul>
-        <InfoCorrect header="Правильный ответ">{db?.correctAnswer}</InfoCorrect>
-        {db?.info && <Info header="Полезная информация">{db?.info}</Info>}
-        {db?.infoHelp && (
-          <InfoHelp header="Дополнительная информация">{db?.infoHelp}</InfoHelp>
-        )} */}
+
+          <div className={`px-6 py-4 ${bglightgray} ${bgdarkStonel720} flex gap-4 flex-col`}>
+            <div className="flex justify-between items-center">
+              <b className="bg-sky-600 rounded text-white px-2 py-1"> 
+                Вопрос №{game.getIdQuestion() + 1}
+              </b>
+              <div className="flex flex-row justify-between items-center gap-3">
+                <NeonBtn
+                  title="Сохранить"
+                  className="px-2"
+                  color="amber"
+                  variant="outline"
+                >
+                  <SVGStar width={22}></SVGStar>
+                </NeonBtn>
+                <NeonBtn
+                  title="Удалить"
+                  className="px-2"
+                  color="red"
+                  variant="outline"
+                >
+                  <SVGDelete width={22}></SVGDelete>
+                </NeonBtn>
+              </div>
+            </div>
+            <p className="text-lg">{game.getQuizQuestion().title}</p>
+            <ul className="flex flex-col gap-3">
+              {game.getQuizQuestion().options.map((item, index) => {
+                if (statusCount?.trueCount === 1) {
+                  return (
+                    <li key={index}>
+                      <Radio
+                        name={
+                          game.getQuizQuestion()?.title + game.getIdQuestion()
+                        }
+                        mstyle="green"
+                        value={item.text}
+                        // isCorrect={item.isCorrect}
+                        // checked={item.isCorrect}
+                        // disabled
+                      >
+                        {item.text}
+                      </Radio>
+                    </li>
+                  );
+                } else {
+                  return (
+                    <li key={index}>
+                      <Checkbox
+                        name={
+                          game.getQuizQuestion()?.title + game.getIdQuestion()
+                        }
+                        value={item.text}
+                        // isCorrect={item.isCorrect}
+                        // checked={item.isCorrect}
+                        // disabled
+                      >
+                        {item.text}
+                      </Checkbox>
+                    </li>
+                  );
+                }
+              })}
+            </ul>
+            <InfoCorrect header="Правильный ответ">
+              {game.getQuizQuestion()?.correctAnswer}
+            </InfoCorrect>
+            {game.getQuizQuestion()?.info && (
+              <Info header="Полезная информация">
+                {game.getQuizQuestion()?.info}
+              </Info>
+            )}
+            {game.getQuizQuestion()?.infoHelp && (
+              <InfoHelp header="Дополнительная информация">
+                {game.getQuizQuestion()?.infoHelp}
+              </InfoHelp>
+            )}
+          </div>
         </div>
       )}
     </>

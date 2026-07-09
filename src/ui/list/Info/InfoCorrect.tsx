@@ -12,7 +12,7 @@ function InfoCorrect ({children,header}:props) {
       <div className='flex flex-col gap-4'>
         <div className='flex items-center gap-3'>
           <SVGcorrect width={32} className={`${greenTextLight} ${greenTextDark} min-w-8`}/>
-          <h3 className='text-lg'>{header}</h3>
+          <h3 className='text-lg'><b>{header}</b></h3>
         </div>
         <div className={`border-l-4 ${greenBorderLight} ${greenBorderDark} pl-4 ml-[14px] text-base`}>
           {children}

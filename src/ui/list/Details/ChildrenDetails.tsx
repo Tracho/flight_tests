@@ -11,6 +11,7 @@ type props = {
   symbolLi?: string;
   children?: ReactNode;
   childrenClass?: string;
+  BgContainerClass?: string;
   titleClass?: string;
   svgClass?: string;
   topChildren?: ReactNode;
@@ -25,6 +26,7 @@ function ChildrenDetails({
   children,
   symbolLi = "",
   childrenClass = "",
+  BgContainerClass=`${bglightgray70} ${bgdarkNeutral30} ${borderLign} ${borderDark}`,
   titleClass = "text-2xl",
   svgClass = "w-8",
   topChildren,
@@ -32,7 +34,7 @@ function ChildrenDetails({
   const [active, setActive] = useState(false);
 // bglightgrayTT
   return (
-    <BgContainer className={`${bglightgray70} ${bgdarkNeutral30} ${borderLign} ${borderDark}`}>
+    <BgContainer className={`${BgContainerClass}`}>
       <div className={`details-container ${active ? "is-active" : ""}`}>
         <button
           className={`details-trigger gap-3`}
@@ -55,7 +57,7 @@ function ChildrenDetails({
         {/* Обертка для плавной анимации высоты */}
         <div className={`details-content-wrapper`}>
           {!children ? (
-            <ul className={`${childrenClass} details-list`}>
+            <ul className={`${childrenClass} children-details-list`}>
               {arr.map((item, index) => (
                 <li key={index} className="details-item">
                   {symbolLi && (
@@ -66,7 +68,7 @@ function ChildrenDetails({
               ))}
             </ul>
           ) : (
-            <div className={`${childrenClass} details-list`}>{children}</div>
+            <div className={`${childrenClass} children-details-list`}>{children}</div>
           )}
         </div>
       </div>

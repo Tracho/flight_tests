@@ -20,8 +20,8 @@ export default function Pagination({ page, total, onChange }: Props) {
         <SVRArrowL width={31} />
       </NeonBtn>
 
-      <div className="text-base font-semibold text-slate-300">
-        {page + 1} / {total}
+      <div className="text-base font-semibold text-gray-600 dark:text-slate-300">
+        <b>{page + 1} / {total}</b>
       </div>
 
       <NeonBtn

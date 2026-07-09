@@ -37,7 +37,7 @@ function InputEnter({
   // Если имя не передано, используем сгенерированный ID в качестве имени
   const generatedName = name || generatedId
 
-  const inpBase = 'w-ful px-3 py-2 rounded-l border border-r-0 outline-none transition-all duration-300 peer'
+  const inpBase = 'w-ful text-zinc-900 px-3 py-2 rounded-l border border-r-0 outline-none transition-all duration-300 peer'
   
   const inpStyles: Record<ColorStyle, string> = {
     green: 'border-green-600 focus:border-green-500 focus:shadow-lg focus:shadow-green-500/10',

@@ -1,29 +1,38 @@
+@mixin details-list {
+  overflow           : hidden;
+  // background-image: linear-gradient(to bottom, #d1d5db 50%, transparent 50%);
+  background-size    : 4px 12px;
+  background-repeat  : repeat-y;
+  background-position: left center;
+
+  @apply flex gap-3 opacity-0 transition-opacity duration-300;
+}
+
 .details-container {
+
   // @apply bg-neutral-900 p-4 rounded border border-gray-600; 
   .details-trigger {
-    @apply flex flex-col justify-start text-start items-start w-full    cursor-pointer;
+    @apply flex flex-col justify-start text-start items-start w-full cursor-pointer;
   }
- 
+
   .details-arrow {
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: rotate(180deg);
+    transform : rotate(180deg);
   }
 
   .details-content-wrapper {
-    display: grid;
+    display           : grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition        : grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .details-list {
-    overflow: hidden;
     padding-left: 1rem;
-    // background-image: linear-gradient(to bottom, #d1d5db 50%, transparent 50%);
-    background-size: 4px 12px;
-    background-repeat: repeat-y;
-    background-position: left center;
+    @include details-list;
+  }
 
-    @apply flex gap-3 opacity-0 transition-opacity duration-300;  
+  .children-details-list {
+    @include details-list;
   }
 
   .details-item {
@@ -34,20 +43,21 @@
     @apply text-gray-500;
   }
 
- 
+
   &.is-active {
- 
-    > .details-trigger .details-arrow {
+
+    >.details-trigger .details-arrow {
       transform: rotate(0deg);
     }
 
- 
-    > .details-content-wrapper {
+
+    >.details-content-wrapper {
       grid-template-rows: 1fr;
     }
 
- 
-    > .details-content-wrapper > .details-list {
+
+    >.details-content-wrapper>.details-list,
+    >.details-content-wrapper>.children-details-list {
       @apply pt-4;
       @apply opacity-100;
     }
