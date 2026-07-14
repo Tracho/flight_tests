@@ -7,7 +7,7 @@ import InfoCorrect from "@/ui/list/Info/InfoCorrect";
 import Info from "@/ui/list/Info/Info";
 import InfoHelp from "@/ui/list/Info/infoHelp";
 import { quizActionsTest, useGame } from "@/store/useOpenGameQuiz";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   bglightgray,
   bgdarkStonel720,
@@ -21,9 +21,15 @@ import {
 } from "@/data/desingStyle";
 import BgContainer from "@/ui/container/BgContainer";
 
+type SelectedAnswer = {
+  text:string;
+  select:boolean;
+}
+
 function GameBoard() {
   const game = useGame();
   const db = quizActionsTest.getOpenDataQuiz();
+  const [selectedAnswer, setSelectedAnswer] = useState(); 
 
   useEffect(() => {
     console.log(db);
@@ -114,6 +120,11 @@ function GameBoard() {
                 }
               })}
             </ul>
+
+            <div className="flex justify-end">
+              <NeonBtn color="green">Подтвердить выбор</NeonBtn>
+            </div>
+
             <InfoCorrect header="Правильный ответ">
               {game.getQuizQuestion()?.correctAnswer}
             </InfoCorrect>
