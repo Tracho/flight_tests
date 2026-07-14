@@ -22,18 +22,17 @@ import {
 import BgContainer from "@/ui/container/BgContainer";
 
 type SelectedAnswer = {
-  text:string;
-  select:boolean;
-}
+  text: string;
+  select: boolean;
+};
 
 function GameBoard() {
   const game = useGame();
   const db = quizActionsTest.getOpenDataQuiz();
-  const [selectedAnswer, setSelectedAnswer] = useState(); 
+  const [selectedAnswer, setSelectedAnswer] = useState();
 
   useEffect(() => {
     console.log(db);
-    console.log(game.getQuizQuestion());
   }, [game.game.started]);
 
   let statusCount = game.getQuizQuestion().options.reduce(
@@ -53,13 +52,17 @@ function GameBoard() {
         <div
           className={`flex flex-col ${bglight} ${bgdarkNeutral} rounded border shadow-2xl  ${borderDarkNeonViolet700} ${borderLightNeonOrange700}`}
         >
-          <div className={`px-6 py-4  border-b border-orange-700 dark:border-violet-700`}>
+          <div
+            className={`px-6 py-4  border-b border-orange-700 dark:border-violet-700`}
+          >
             <h1 className="text-xl">{db?.title}</h1>
           </div>
 
-          <div className={`px-6 py-4 ${bglightgray} ${bgdarkStonel720} flex gap-4 flex-col`}>
+          <div
+            className={`px-6 py-4 ${bglightgray} ${bgdarkStonel720} flex gap-4 flex-col`}
+          >
             <div className="flex justify-between items-center">
-              <b className="bg-sky-600 rounded text-white px-2 py-1"> 
+              <b className="bg-sky-600 rounded text-white px-2 py-1">
                 Вопрос №{game.getIdQuestion() + 1}
               </b>
               <div className="flex flex-row justify-between items-center gap-3">
@@ -122,21 +125,29 @@ function GameBoard() {
             </ul>
 
             <div className="flex justify-end">
-              <NeonBtn color="green">Подтвердить выбор</NeonBtn>
+              {game.getShowAnswers() == false ? (
+                <NeonBtn color="green">Подтвердить выбор</NeonBtn>
+              ) : (
+                <NeonBtn color="sky">Далее</NeonBtn>
+              )}
             </div>
 
-            <InfoCorrect header="Правильный ответ">
-              {game.getQuizQuestion()?.correctAnswer}
-            </InfoCorrect>
-            {game.getQuizQuestion()?.info && (
-              <Info header="Полезная информация">
-                {game.getQuizQuestion()?.info}
-              </Info>
-            )}
-            {game.getQuizQuestion()?.infoHelp && (
-              <InfoHelp header="Дополнительная информация">
-                {game.getQuizQuestion()?.infoHelp}
-              </InfoHelp>
+            {game.getShowAnswers() == true && (
+              <>
+                <InfoCorrect header="Правильный ответ">
+                  {game.getQuizQuestion()?.correctAnswer}
+                </InfoCorrect>
+                {game.getQuizQuestion()?.info && (
+                  <Info header="Полезная информация">
+                    {game.getQuizQuestion()?.info}
+                  </Info>
+                )}
+                {game.getQuizQuestion()?.infoHelp && (
+                  <InfoHelp header="Дополнительная информация">
+                    {game.getQuizQuestion()?.infoHelp}
+                  </InfoHelp>
+                )}
+              </>
             )}
           </div>
         </div>

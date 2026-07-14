@@ -12,7 +12,8 @@ type GameSettings = {
   mode: "standard" | "random" | "";
   withTimer: boolean;
   started: boolean;
-  idQuestion:number;
+  idQuestion: number;
+  showAnswers: boolean;
 };
 interface QuizState {
   data: QuizCategory[];
@@ -27,15 +28,19 @@ interface QuizState {
   stopGame: () => void;
   resetGame: () => void;
   getOpenDataQuiz: () => QuizTest | undefined;
-  getIdQuestion:() => number;
-  getQuizQuestion:() => QuizQuestion;
+  getIdQuestion: () => number;
+  getQuizQuestion: () => QuizQuestion;
+  setShowAnswers: (val: boolean) => void;
+  toggleShowAnswers: () => void;
+  getShowAnswers: () => boolean;
 }
 
-const ObjGame:GameSettings = {
+const ObjGame: GameSettings = {
   mode: "",
   withTimer: false,
   started: false,
-  idQuestion:0,
+  idQuestion: 0,
+  showAnswers: false,
 };
 // Сам стор оставляем приватным (не экспортируем),
 // чтобы наружу выходили только чистые атомарные инструменты
@@ -78,9 +83,26 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
       game: ObjGame,
     }),
 
-  getIdQuestion:():number =>{
+  getIdQuestion: (): number => {
     return get().game.idQuestion;
   },
+
+  setShowAnswers: (val) => {
+    set((state) => ({
+      game: {
+        ...state.game,
+        showAnswers: val,
+      },
+    }));
+  },
+  toggleShowAnswers: () =>
+    set((state) => ({
+      game: {
+        ...state.game,
+        showAnswers: !state.game.showAnswers,
+      },
+    })),
+  getShowAnswers: () => get().game.showAnswers,
 
   setSelectQuestion: (val) =>
     set({
@@ -116,7 +138,10 @@ export const useGame = () =>
       resetGame: state.resetGame,
       getIdQuestion: state.getIdQuestion,
       getQuizQuestion: state.getQuizQuestion,
-    }))
+      setShowAnswers: state.setShowAnswers,
+      toggleShowAnswers: state.toggleShowAnswers,
+      getShowAnswers: state.getShowAnswers,
+    })),
   );
 
 // 2. ОБЪЕКТ ДЛЯ ИЗМЕНЕНИЯ И ЧТЕНИЯ ВНЕ РЕНДЕРА (НЕ вызывает перерендер при вызове)
