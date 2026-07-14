@@ -21,16 +21,9 @@ import {
 } from "@/data/desingStyle";
 import BgContainer from "@/ui/container/BgContainer";
 
-type SelectedAnswer = {
-  text: string;
-  select: boolean;
-};
-
 function GameBoard() {
   const game = useGame();
   const db = quizActionsTest.getOpenDataQuiz();
-  const [selectedAnswer, setSelectedAnswer] = useState();
-
   useEffect(() => {
     console.log(db);
   }, [game.game.started]);
@@ -96,8 +89,10 @@ function GameBoard() {
                         }
                         mstyle="green"
                         value={item.text}
+                        onChange={(e) => game.setSelectedAnswer({text:item.text, select:e.target.checked})}
+             
                         // isCorrect={item.isCorrect}
-                        // checked={item.isCorrect}
+                        // checked={checked}
                         // disabled
                       >
                         {item.text}

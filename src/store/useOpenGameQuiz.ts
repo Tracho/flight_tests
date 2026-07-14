@@ -15,11 +15,17 @@ type GameSettings = {
   idQuestion: number;
   showAnswers: boolean;
 };
+type SelectedAnswer = {
+  text: string;
+  select: boolean;
+};
+
 interface QuizState {
   data: QuizCategory[];
 
   selectQuestion: SelectQuestion;
   game: GameSettings;
+  arrSelectedAnswer: SelectedAnswer[];
 
   setSelectQuestion: (val: SelectQuestion) => void;
 
@@ -33,6 +39,7 @@ interface QuizState {
   setShowAnswers: (val: boolean) => void;
   toggleShowAnswers: () => void;
   getShowAnswers: () => boolean;
+  setSelectedAnswer: (val: SelectedAnswer) => void;
 }
 
 const ObjGame: GameSettings = {
@@ -53,6 +60,8 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
   },
 
   game: ObjGame,
+
+  arrSelectedAnswer: [],
 
   setGame: (value) =>
     set((state) => ({
@@ -104,6 +113,23 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
     })),
   getShowAnswers: () => get().game.showAnswers,
 
+setSelectedAnswer: (answer) =>
+  set((state) => {
+    const arrSelectedAnswer = state.arrSelectedAnswer.some(
+      (item) => item.text === answer.text
+    )
+      ? state.arrSelectedAnswer.map((item) =>
+          item.text === answer.text ? answer : item
+        )
+      : [...state.arrSelectedAnswer, answer];
+
+    console.log("Новое состояние:", arrSelectedAnswer);
+
+    return {
+      arrSelectedAnswer,
+    };
+  }),
+
   setSelectQuestion: (val) =>
     set({
       selectQuestion: val,
@@ -141,6 +167,7 @@ export const useGame = () =>
       setShowAnswers: state.setShowAnswers,
       toggleShowAnswers: state.toggleShowAnswers,
       getShowAnswers: state.getShowAnswers,
+      setSelectedAnswer:state.setSelectedAnswer,
     })),
   );
 
@@ -151,4 +178,5 @@ export const quizActionsTest = {
 
   getSelectQuestion: () => useOpenQuiz.getState().selectQuestion,
   getOpenDataQuiz: () => useOpenQuiz.getState().getOpenDataQuiz(),
+  setSelectedAnswer:(val:SelectedAnswer) => useOpenQuiz.getState().setSelectedAnswer(val),
 };
