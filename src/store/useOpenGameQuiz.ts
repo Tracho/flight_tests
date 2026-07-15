@@ -25,7 +25,7 @@ interface QuizState {
 
   selectQuestion: SelectQuestion;
   game: GameSettings;
-  arrSelectedAnswer: SelectedAnswer[];
+  // arrSelectedAnswer: SelectedAnswer[];
 
   setSelectQuestion: (val: SelectQuestion) => void;
 
@@ -38,8 +38,8 @@ interface QuizState {
   getQuizQuestion: () => QuizQuestion;
   setShowAnswers: (val: boolean) => void;
   toggleShowAnswers: () => void;
-  getShowAnswers: () => boolean;
-  setSelectedAnswer: (val: SelectedAnswer) => void;
+  getShowAnswers: () => boolean; 
+  // checkingAnswers: () => any;
 }
 
 const ObjGame: GameSettings = {
@@ -61,7 +61,7 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
 
   game: ObjGame,
 
-  arrSelectedAnswer: [],
+  // arrSelectedAnswer: [],
 
   setGame: (value) =>
     set((state) => ({
@@ -112,23 +112,7 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
       },
     })),
   getShowAnswers: () => get().game.showAnswers,
-
-setSelectedAnswer: (answer) =>
-  set((state) => {
-    const arrSelectedAnswer = state.arrSelectedAnswer.some(
-      (item) => item.text === answer.text
-    )
-      ? state.arrSelectedAnswer.map((item) =>
-          item.text === answer.text ? answer : item
-        )
-      : [...state.arrSelectedAnswer, answer];
-
-    console.log("Новое состояние:", arrSelectedAnswer);
-
-    return {
-      arrSelectedAnswer,
-    };
-  }),
+ 
 
   setSelectQuestion: (val) =>
     set({
@@ -166,8 +150,7 @@ export const useGame = () =>
       getQuizQuestion: state.getQuizQuestion,
       setShowAnswers: state.setShowAnswers,
       toggleShowAnswers: state.toggleShowAnswers,
-      getShowAnswers: state.getShowAnswers,
-      setSelectedAnswer:state.setSelectedAnswer,
+      getShowAnswers: state.getShowAnswers, 
     })),
   );
 
@@ -177,6 +160,5 @@ export const quizActionsTest = {
     useOpenQuiz.getState().setSelectQuestion(val),
 
   getSelectQuestion: () => useOpenQuiz.getState().selectQuestion,
-  getOpenDataQuiz: () => useOpenQuiz.getState().getOpenDataQuiz(),
-  setSelectedAnswer:(val:SelectedAnswer) => useOpenQuiz.getState().setSelectedAnswer(val),
+  getOpenDataQuiz: () => useOpenQuiz.getState().getOpenDataQuiz(), 
 };

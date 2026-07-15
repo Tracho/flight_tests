@@ -20,7 +20,10 @@ import {
   bgdarkNeutral30,
 } from "@/data/desingStyle";
 import BgContainer from "@/ui/container/BgContainer";
-
+type SelectedAnswer = {
+  text: string;
+  select: boolean;
+};
 function GameBoard() {
   const game = useGame();
   const db = quizActionsTest.getOpenDataQuiz();
@@ -39,6 +42,34 @@ function GameBoard() {
     },
     { trueCount: 0, falseCount: 0 },
   );
+
+  const [selectedAnswer, SetSelectedAnswer] = useState<SelectedAnswer[]>([]);
+  const HandlerSelectRadion = (val: SelectedAnswer) => {
+    SetSelectedAnswer([val]);
+  };
+  const HandlerSelectCheckBox = (val: SelectedAnswer) => {
+  SetSelectedAnswer((prev) => {
+    // Если чекбокс сняли — удаляем его
+    if (!val.select) {
+      return prev.filter((item) => item.text !== val.text);
+    }
+
+    // Если уже есть — обновляем
+    if (prev.some((item) => item.text === val.text)) {
+      return prev.map((item) =>
+        item.text === val.text ? val : item
+      );
+    }
+
+    // Если нет — добавляем
+    return [...prev, val];
+  });
+};
+
+  useEffect(()=>{
+    console.log(selectedAnswer);
+    console.log(selectedAnswer.length);
+  },[selectedAnswer])
   return (
     <>
       {game.game.started == true && (
@@ -89,8 +120,13 @@ function GameBoard() {
                         }
                         mstyle="green"
                         value={item.text}
-                        onChange={(e) => game.setSelectedAnswer({text:item.text, select:e.target.checked})}
-             
+                        onChange={(e) =>
+                          HandlerSelectCheckBox({
+                            text: item.text,
+                            select: e.target.checked,
+                          })
+                        }
+
                         // isCorrect={item.isCorrect}
                         // checked={checked}
                         // disabled
@@ -107,6 +143,12 @@ function GameBoard() {
                           game.getQuizQuestion()?.title + game.getIdQuestion()
                         }
                         value={item.text}
+                        onChange={(e) =>
+                          HandlerSelectCheckBox({
+                            text: item.text,
+                            select: e.target.checked,
+                          })
+                        }
                         // isCorrect={item.isCorrect}
                         // checked={item.isCorrect}
                         // disabled
