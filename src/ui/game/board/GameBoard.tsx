@@ -14,17 +14,15 @@ import {
   bgdarkNeutral,
   bglight,
   borderDarkNeonViolet700,
-  borderLightNeonOrange700,
-  bglightgray70,
-  bgdark,
-  bgdarkNeutral30,
+  borderLightNeonOrange700, 
 } from "@/data/desingStyle";
-import BgContainer from "@/ui/container/BgContainer";
+ 
 type SelectedAnswer = {
   text: string;
   select: boolean;
 };
 function GameBoard() {
+ 
   const game = useGame();
   const db = quizActionsTest.getOpenDataQuiz();
   useEffect(() => {
@@ -48,28 +46,28 @@ function GameBoard() {
     SetSelectedAnswer([val]);
   };
   const HandlerSelectCheckBox = (val: SelectedAnswer) => {
-  SetSelectedAnswer((prev) => {
-    // Если чекбокс сняли — удаляем его
-    if (!val.select) {
-      return prev.filter((item) => item.text !== val.text);
-    }
+    SetSelectedAnswer((prev) => {
+      // Если чекбокс сняли — удаляем его
+      if (!val.select) {
+        return prev.filter((item) => item.text !== val.text);
+      }
 
-    // Если уже есть — обновляем
-    if (prev.some((item) => item.text === val.text)) {
-      return prev.map((item) =>
-        item.text === val.text ? val : item
-      );
-    }
+      // Если уже есть — обновляем
+      if (prev.some((item) => item.text === val.text)) {
+        return prev.map((item) => (item.text === val.text ? val : item));
+      }
+      // Если нет — добавляем
+      return [...prev, val];
+    });
+  };
+  const HandleCheckingAnswers = () => {
+    game.checkingAnswers(selectedAnswer); 
+  };
 
-    // Если нет — добавляем
-    return [...prev, val];
-  });
-};
-
-  useEffect(()=>{
+  useEffect(() => {
     console.log(selectedAnswer);
     console.log(selectedAnswer.length);
-  },[selectedAnswer])
+  }, [selectedAnswer]);
   return (
     <>
       {game.game.started == true && (
@@ -118,18 +116,21 @@ function GameBoard() {
                         name={
                           game.getQuizQuestion()?.title + game.getIdQuestion()
                         }
-                        mstyle="green"
+                        mstyle={(game.getShowAnswers() == false ? 'blue' : (item.isCorrect == true ? 'green' : 'danger'))}
                         value={item.text}
+                        checked={selectedAnswer.some(
+                          (a) => a.text === item.text && a.select,
+                        )}
                         onChange={(e) =>
-                          HandlerSelectCheckBox({
+                          HandlerSelectRadion({
                             text: item.text,
                             select: e.target.checked,
                           })
                         }
-
-                        // isCorrect={item.isCorrect}
-                        // checked={checked}
-                        // disabled
+                        disabled={game.getShowAnswers()}
+                        isCorrect={
+                          game.getShowAnswers() ? item.isCorrect : undefined
+                        }
                       >
                         {item.text}
                       </Radio>
@@ -142,16 +143,21 @@ function GameBoard() {
                         name={
                           game.getQuizQuestion()?.title + game.getIdQuestion()
                         }
+                        mstyle={(game.getShowAnswers() == false ? 'blue' : (item.isCorrect == true ? 'green' : 'danger'))}
                         value={item.text}
+                        checked={selectedAnswer.some(
+                          (a) => a.text === item.text && a.select,
+                        )}
                         onChange={(e) =>
                           HandlerSelectCheckBox({
                             text: item.text,
                             select: e.target.checked,
                           })
                         }
-                        // isCorrect={item.isCorrect}
-                        // checked={item.isCorrect}
-                        // disabled
+                        disabled={game.getShowAnswers()}
+                        isCorrect={
+                          game.getShowAnswers() ? item.isCorrect : undefined
+                        }
                       >
                         {item.text}
                       </Checkbox>
@@ -163,7 +169,9 @@ function GameBoard() {
 
             <div className="flex justify-end">
               {game.getShowAnswers() == false ? (
-                <NeonBtn color="green">Подтвердить выбор</NeonBtn>
+                <NeonBtn color="green" onClick={HandleCheckingAnswers}>
+                  Подтвердить выбор
+                </NeonBtn>
               ) : (
                 <NeonBtn color="sky">Далее</NeonBtn>
               )}

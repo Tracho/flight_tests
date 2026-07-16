@@ -38,8 +38,8 @@ interface QuizState {
   getQuizQuestion: () => QuizQuestion;
   setShowAnswers: (val: boolean) => void;
   toggleShowAnswers: () => void;
-  getShowAnswers: () => boolean; 
-  // checkingAnswers: () => any;
+  getShowAnswers: () => boolean;
+  checkingAnswers: (answers: SelectedAnswer[]) => boolean;
 }
 
 const ObjGame: GameSettings = {
@@ -112,7 +112,6 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
       },
     })),
   getShowAnswers: () => get().game.showAnswers,
- 
 
   setSelectQuestion: (val) =>
     set({
@@ -130,6 +129,32 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
     return get()
       .data.find((cat) => cat.category === select.cate)
       ?.arr.find((quiz) => quiz.title === select.quiz);
+  },
+
+  checkingAnswers: (answers: SelectedAnswer[]) => {
+    get().toggleShowAnswers();
+
+    const question = get().getQuizQuestion();
+
+    // правильные ответы из базы
+    const correctAnswers = question.options
+      .filter((item) => item.isCorrect)
+      .map((item) => item.text)
+      .sort();
+
+    // ответы пользователя
+    const selectedAnswers = answers
+      .filter((item) => item.select)
+      .map((item) => item.text)
+      .sort();
+
+    const isCorrect =
+      correctAnswers.length === selectedAnswers.length &&
+      correctAnswers.every(
+        (answer, index) => answer === selectedAnswers[index],
+      );
+
+    return isCorrect;
   },
 }));
 
@@ -150,7 +175,8 @@ export const useGame = () =>
       getQuizQuestion: state.getQuizQuestion,
       setShowAnswers: state.setShowAnswers,
       toggleShowAnswers: state.toggleShowAnswers,
-      getShowAnswers: state.getShowAnswers, 
+      getShowAnswers: state.getShowAnswers,
+      checkingAnswers: state.checkingAnswers,
     })),
   );
 
@@ -160,5 +186,5 @@ export const quizActionsTest = {
     useOpenQuiz.getState().setSelectQuestion(val),
 
   getSelectQuestion: () => useOpenQuiz.getState().selectQuestion,
-  getOpenDataQuiz: () => useOpenQuiz.getState().getOpenDataQuiz(), 
+  getOpenDataQuiz: () => useOpenQuiz.getState().getOpenDataQuiz(),
 };

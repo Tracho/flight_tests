@@ -28,6 +28,7 @@ function QuizPage() {
                 variant="solid"
                 className="text-lg"
                 onClick={() => {
+                  game.resetGame();
                   game.setGame({ mode: "standard" });
                   game.startGame();
                 }}
@@ -39,6 +40,7 @@ function QuizPage() {
                 variant="solid"
                 className="text-lg"
                 onClick={() => {
+                  game.resetGame();
                   game.setGame({ mode: "random" });
                   game.startGame();
                 }}
