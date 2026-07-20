@@ -1,9 +1,9 @@
 import { bgdarkNeutral950, bglightgray460, bglightgray70, borderDark, borderLign } from "@/data/desingStyle";
-import type { QuizTest } from "@/types/quiz";
+import type { CategoryQuiz } from "@/types/quiz";
 import { memo } from "react";
 type DoubleProgressBarProps = {
   className?: string;
-  data: QuizTest;
+  data: CategoryQuiz;
 };
 
 function DoubleProgressBar({ className = "", data }: DoubleProgressBarProps) {

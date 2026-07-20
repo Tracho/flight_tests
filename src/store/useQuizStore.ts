@@ -4,6 +4,7 @@ import { create } from "zustand";
 import type { QuizCategory } from "@/types/quiz";
 import { quizData } from "@/data/quizData";
 import { createJSONStorage, persist } from "zustand/middleware";
+import { getData } from "./quizDataStore";
 
 // Описываем интерфейс нашего хранилища
 interface QuizState {
@@ -20,7 +21,7 @@ const useQuizStore = create<QuizState>()(
   persist(
     (set) => ({
       // Начальное состояние (ваш массив данных)
-      data: quizData,
+      data: getData(),
       selectedCategories: [],
       selectedTests: [],
       searchCateQuestion: (searchValue) =>

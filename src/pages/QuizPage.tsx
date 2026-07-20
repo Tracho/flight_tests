@@ -14,8 +14,7 @@ import GameBoard from "@/ui/game/board/GameBoard";
 
 // game.startGame();
 function QuizPage() {
-  const game = useGame();
-  console.log(game.game.started)
+  const game = useGame(); 
   return (
     <>
       <div className="flex justify-center">

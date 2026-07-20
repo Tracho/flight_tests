@@ -11,12 +11,14 @@ import DoubleProgressBar from "@/ui/list/progress/DoubleProgressBar";
 import ContainerCateModal from "@/ui/Modal/ContainerCateModal";
 import ChildrenDetails from "../Details/ChildrenDetails";
 import { bgdarkNeutral, bglight, bglightgray, borderDark, borderLign } from "@/data/desingStyle";
+import { getData } from "@/store/quizDataStore";
 
 function QuizDashboard() {
-  const data = useQuizData();
+  const data = getData()
   const selectedCategories = useSelectedCategories();
   const selectedTests = useSelectedTests();
-  const placeholder_text = "Пусто...";
+  const placeholder_text = "Пусто..."; 
+  console.log(data)
   return (
     <>
       <div className="flex flex-col gap-4">
@@ -57,7 +59,7 @@ function QuizDashboard() {
                                     // hash: "#1", // Если #1 это именно хэш-якорь
                                   }}
                                   onClick={() =>
-                                    quizActionsTest.setSelectQuestion({cate:item.category, quiz:childItem.title,})
+                                    quizActionsTest.setSelectCateQuizQuestion({cate:item.category, quiz:childItem.title,})
                                   }
                                   color="sky"
                                   variant="solid"
@@ -70,17 +72,19 @@ function QuizDashboard() {
                           }
                         >
                           <ChildrenDetails
-                            title={`🚨 Вопросы с ошибками (${childItem.storage_q_not_passed.length})`}
+                            title={`🚨 Вопросы с ошибками (${new Set(childItem.storage_q_not_passed).size})`}
                             childrenClass="flex-wrap"
                             titleClass="text-base"
                             svgClass="w-5"
                             BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
                           >
-                            {childItem.storage_q_not_passed.length > 0
-                              ? childItem.storage_q_not_passed.map((i, _) => (
+                            {
+                           
+                            childItem.storage_q_not_passed.length > 0
+                              ? Array.from(new Set(childItem.storage_q_not_passed)).map((i, _) => (
                                   <ContainerCateModal 
                                     NeonBtnColor="red"
-                                    pages={childItem.storage_q_not_passed}
+                                    pages={Array.from(new Set(childItem.storage_q_not_passed))}
                                     cateName={item.category}
                                     testName={childItem.title}
                                     startIndex={_}

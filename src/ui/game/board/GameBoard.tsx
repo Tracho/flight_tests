@@ -6,7 +6,7 @@ import Checkbox from "@/ui/input/Checkbox";
 import InfoCorrect from "@/ui/list/Info/InfoCorrect";
 import Info from "@/ui/list/Info/Info";
 import InfoHelp from "@/ui/list/Info/infoHelp";
-import { quizActionsTest, useGame } from "@/store/useOpenGameQuiz";
+import {  quizActionsTest, useGame } from "@/store/useOpenGameQuiz";
 import { useEffect, useState } from "react";
 import {
   bglightgray,
@@ -14,17 +14,18 @@ import {
   bgdarkNeutral,
   bglight,
   borderDarkNeonViolet700,
-  borderLightNeonOrange700, 
+  borderLightNeonOrange700,
 } from "@/data/desingStyle";
+import { getData } from "@/store/quizDataStore";
  
+
 type SelectedAnswer = {
   text: string;
   select: boolean;
 };
 function GameBoard() {
- 
   const game = useGame();
-  const db = quizActionsTest.getOpenDataQuiz();
+  const db = quizActionsTest.getOpenDataCateQuiz();
   useEffect(() => {
     console.log(db);
   }, [game.game.started]);
@@ -61,13 +62,20 @@ function GameBoard() {
     });
   };
   const HandleCheckingAnswers = () => {
-    game.checkingAnswers(selectedAnswer); 
+
+    let isCorrect = game.checkingAnswers(selectedAnswer);
+    game.addIdQuestProgress(isCorrect); 
+    console.log(getData)
+        
+  };
+  const HandleNextQuesion = () => {
+    game.nextQuestion();
+    game.toggleShowAnswers();
+  };
+  const HandlePreviousQuesion = () => {
+    game.previousQuestion();
   };
 
-  useEffect(() => {
-    console.log(selectedAnswer);
-    console.log(selectedAnswer.length);
-  }, [selectedAnswer]);
   return (
     <>
       {game.game.started == true && (
@@ -116,7 +124,13 @@ function GameBoard() {
                         name={
                           game.getQuizQuestion()?.title + game.getIdQuestion()
                         }
-                        mstyle={(game.getShowAnswers() == false ? 'blue' : (item.isCorrect == true ? 'green' : 'danger'))}
+                        mstyle={
+                          game.getShowAnswers() == false
+                            ? "blue"
+                            : item.isCorrect == true
+                              ? "green"
+                              : "danger"
+                        }
                         value={item.text}
                         checked={selectedAnswer.some(
                           (a) => a.text === item.text && a.select,
@@ -143,7 +157,13 @@ function GameBoard() {
                         name={
                           game.getQuizQuestion()?.title + game.getIdQuestion()
                         }
-                        mstyle={(game.getShowAnswers() == false ? 'blue' : (item.isCorrect == true ? 'green' : 'danger'))}
+                        mstyle={
+                          game.getShowAnswers() == false
+                            ? "blue"
+                            : item.isCorrect == true
+                              ? "green"
+                              : "danger"
+                        }
                         value={item.text}
                         checked={selectedAnswer.some(
                           (a) => a.text === item.text && a.select,
@@ -167,14 +187,25 @@ function GameBoard() {
               })}
             </ul>
 
-            <div className="flex justify-end">
-              {game.getShowAnswers() == false ? (
-                <NeonBtn color="green" onClick={HandleCheckingAnswers}>
-                  Подтвердить выбор
+            <div className="flex justify-between items-center">
+              {game.getIdQuestion() !== 0 && (
+                <NeonBtn color="sky" onClick={HandlePreviousQuesion}>
+                  {" "}
+                  Назад{" "}
                 </NeonBtn>
-              ) : (
-                <NeonBtn color="sky">Далее</NeonBtn>
               )}
+
+              <div className="flex justify-end w-full">
+                {game.getShowAnswers() == false ? (
+                  <NeonBtn color="green" onClick={HandleCheckingAnswers}>
+                    Подтвердить выбор
+                  </NeonBtn>
+                ) : (
+                  <NeonBtn color="sky" onClick={HandleNextQuesion}>
+                    Далее
+                  </NeonBtn>
+                )}
+              </div>
             </div>
 
             {game.getShowAnswers() == true && (

@@ -13,7 +13,7 @@ export interface QuizQuestion {
   options: QuizOption[];
 }
 
-export interface QuizTest {
+export interface CategoryQuiz {
   json: QuizQuestion[];
   storage_q_passed: number[];
   storage_q_not_passed: number[];
@@ -29,7 +29,7 @@ export interface QuizCategory {
   description: string;
   visible:boolean;
   selected: boolean;
-  arr: QuizTest[];
+  arr: CategoryQuiz[];
 }
 
 // Тип для самого контекста

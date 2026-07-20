@@ -2,6 +2,7 @@
 import { create } from "zustand";
 import type { QuizCategory, QuizQuestion } from "@/types/quiz";
 import { quizData } from "@/data/quizData";
+import { getData } from "./quizDataStore";
 
 interface QuizState {
   data: QuizCategory[];
@@ -15,7 +16,7 @@ interface QuizState {
 }
 
 const useOpenWindowTestStore = create<QuizState>((set, get) => ({
-  data: quizData,
+  data: getData(),
   getQuestion: (cateName, testName, numberTest) => {
     // Находим нужный тест, используя безопасный опциональный поиск ?.
     return get()
