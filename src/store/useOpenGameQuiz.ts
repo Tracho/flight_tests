@@ -1,14 +1,10 @@
 // src/store/useQuizStore.ts
 import { create } from "zustand";
 import type { QuizCategory, QuizQuestion, CategoryQuiz } from "@/types/quiz";
-import { useShallow } from "zustand/react/shallow";
-import { quizData } from "@/data/quizData";
-import { getData, updateData } from "./quizDataStore";
+import { useShallow } from "zustand/react/shallow"; 
+import { getData, getSelectQuestion, updateData, updateProgressBar } from "./quizDataStore";
 
-type SelectQuestion = {
-  cate: string;
-  quiz: string;
-};
+ 
 type GameSettings = {
   mode: "standard" | "random" | "";
   withTimer: boolean;
@@ -22,12 +18,9 @@ type SelectedAnswer = {
 };
 
 interface QuizState {
-  data: QuizCategory[]; // Глобальная дата баззы
-
-  selectQuestion: SelectQuestion; // определение категории и квиза при клике и URL Parameters
+  data: QuizCategory[]; // Глобальная дата баззы 
   game: GameSettings; // Игровая настройка. Когда должна начаться игра, закончится, показать ответы, время и тд
-
-  setSelectCateQuizQuestion: (val: SelectQuestion) => void; // выбор на странице категорий. Выбран, категория квиза
+ 
 
   setGame: (value: Partial<GameSettings>) => void; // Изменение настройки игры, к примеру мод игры
   startGame: () => void; // Запустить игру
@@ -55,13 +48,7 @@ const ObjGame: GameSettings = {
 // Сам стор оставляем приватным (не экспортируем),
 // чтобы наружу выходили только чистые атомарные инструменты
 const useOpenQuiz = create<QuizState>((set, get) => ({
-  data: getData(),
-
-  selectQuestion: {
-    cate: "",
-    quiz: "",
-  },
-
+  data: getData(), 
   game: ObjGame,
 
   // arrSelectedAnswer: [],
@@ -115,20 +102,17 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
       },
     })),
   getShowAnswers: () => get().game.showAnswers,
-
-  setSelectCateQuizQuestion: (val) =>
-    set({
-      selectQuestion: val,
-    }),
+ 
 
   getQuizQuestion: (): QuizQuestion => {
     const quiz = get().getOpenDataCateQuiz();
     const index = get().game.idQuestion;
+ 
     return quiz?.json[index] || ({} as QuizQuestion);
   },
 
   getOpenDataCateQuiz: (): CategoryQuiz | undefined => {
-    const select = get().selectQuestion;
+    const select = getSelectQuestion();  
     return get()
       .data.find((cat) => cat.category === select.cate)
       ?.arr.find((quiz) => quiz.title === select.quiz);
@@ -185,107 +169,86 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
     }));
   },
 
-  addIdQuestProgress: (isCorrect) => {
-    const { cate, quiz } = get().selectQuestion;
-    const questionId = get().game.idQuestion;
+addIdQuestProgress: (isCorrect) => {
+  const { cate, quiz } =  getSelectQuestion();
+  const questionId = get().game.idQuestion;
+  
+  updateProgressBar((progress) => {
+    const newProgress = structuredClone(progress);
+
+    // создаем структуру если ее нет
+    if (!newProgress[cate]) {
+      newProgress[cate] = {};
+    }
+
+    if (!newProgress[cate][quiz]) {
+      newProgress[cate][quiz] = {
+        passed: [],
+        not_passed: [],
+        q_saved: [],
+      };
+    }
+
+    const current = newProgress[cate][quiz];
+
+    let passed = [...current.passed];
+    let notPassed = [...current.not_passed];
+
+    if (isCorrect) {
+      const count = notPassed.filter(
+        (id) => id === questionId,
+      ).length;
+
+      if (count > 1) {
+        const index = notPassed.indexOf(questionId);
+        notPassed.splice(index, 1);
+      } else if (count === 1) {
+        notPassed = notPassed.filter(
+          (id) => id !== questionId,
+        );
+
+        if (!passed.includes(questionId)) {
+          passed.push(questionId);
+        }
+      } else {
+        if (!passed.includes(questionId)) {
+          passed.push(questionId);
+        }
+      }
+    } else {
+      const count = notPassed.filter(
+        (id) => id === questionId,
+      ).length;
+
+      if (count < 3) {
+        notPassed.push(questionId);
+      }
+
+      passed = passed.filter(
+        (id) => id !== questionId,
+      );
+    }
+
+    current.passed = passed;
+    current.not_passed = notPassed;
 
     console.group(
-      `%cQuestion #${questionId} | ${isCorrect ? "✅ CORRECT" : "❌ WRONG"}`,
-      `color:${isCorrect ? "limegreen" : "red"};font-weight:bold`,
+      `%c${cate} / ${quiz}`,
+      "color:cyan;font-weight:bold",
     );
 
-    console.log("Category:", cate);
-    console.log("Quiz:", quiz);
-
-    updateData((data) =>
-      data.map((category) => {
-        if (category.category !== cate) return category;
-
-        return {
-          ...category,
-
-          arr: category.arr.map((test) => {
-            if (test.title !== quiz) return test;
-
-            let passed = [...test.storage_q_passed];
-            let notPassed = [...test.storage_q_not_passed];
-
-            console.log("---------------");
-            console.log("Before");
-            console.log("Passed:", passed);
-            console.log("Not Passed:", notPassed);
-
-            if (isCorrect) {
-              const count = notPassed.filter((id) => id === questionId).length;
-
-              console.log("Errors count:", count);
-
-              if (count > 1) {
-                const index = notPassed.indexOf(questionId);
-                notPassed.splice(index, 1);
-
-                console.log(
-                  "➡ Убрали одну ошибку. Осталось:",
-                  notPassed.filter((i) => i === questionId).length,
-                );
-              } else if (count === 1) {
-                notPassed = notPassed.filter((id) => id !== questionId);
-
-                if (!passed.includes(questionId)) {
-                  passed.push(questionId);
-                }
-
-                console.log(
-                  "➡ Последняя ошибка исправлена. Вопрос перенесён в Passed.",
-                );
-              } else {
-                if (!passed.includes(questionId)) {
-                  passed.push(questionId);
-                }
-
-                console.log("➡ Ошибок не было. Добавили сразу в Passed.");
-              }
-            } else {
-              const count = notPassed.filter((id) => id === questionId).length;
-
-              console.log("Errors count:", count);
-
-              if (count < 3) {
-                notPassed.push(questionId);
-
-                console.log(`➡ Добавили ошибку (${count + 1}/3)`);
-              } else {
-                console.log("➡ Уже 3 ошибки. Больше не добавляем.");
-              }
-
-              if (passed.includes(questionId)) {
-                passed = passed.filter((id) => id !== questionId);
-
-                console.log("➡ Убрали вопрос из Passed.");
-              }
-            }
-
-            console.log("After");
-            console.log("Passed:", passed);
-            console.log("Not Passed:", notPassed);
-
-            return {
-              ...test,
-              storage_q_passed: passed,
-              storage_q_not_passed: notPassed,
-            };
-          }),
-        };
-      }),
-    );
+    console.log("Passed:", passed);
+    console.log("Not passed:", notPassed);
 
     console.groupEnd();
-  },
+
+    return newProgress;
+  });
+},
 }));
 
 // 1. ХУК ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ (Будет вызывать перерендер компонента при изменении)
-export const useSelectQuestion = () =>
-  useOpenQuiz((state) => state.selectQuestion);
+ 
 export const useQuizData = () => useOpenQuiz((state) => state.data);
 export const useGame = () =>
   useOpenQuiz(
@@ -308,10 +271,6 @@ export const useGame = () =>
   );
 
 // 2. ОБЪЕКТ ДЛЯ ИЗМЕНЕНИЯ И ЧТЕНИЯ ВНЕ РЕНДЕРА (НЕ вызывает перерендер при вызове)
-export const quizActionsTest = {
-  setSelectCateQuizQuestion: (val: SelectQuestion) =>
-    useOpenQuiz.getState().setSelectCateQuizQuestion(val),
-
-  getSelectQuestion: () => useOpenQuiz.getState().selectQuestion,
+export const quizActionsTest = {  
   getOpenDataCateQuiz: () => useOpenQuiz.getState().getOpenDataCateQuiz(),
 };

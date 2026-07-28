@@ -1,9 +1,11 @@
-export type QuizProgress = {
+ 
+export type QuizProgressBar = {
   [cate: string]: {
-    [quiz: string]: {
-      storage_q_passed: number[];
-      storage_q_not_passed: number[];
-      storage_q_saved: number[];
-    };
+    [quiz: string]: QuizProgressBarKey;
   };
+};
+export type QuizProgressBarKey = {
+  passed: number[];
+  not_passed: number[];
+  q_saved: number[];
 };

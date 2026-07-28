@@ -1,18 +1,20 @@
 import { bgdarkNeutral950, bglightgray460, bglightgray70, borderDark, borderLign } from "@/data/desingStyle";
 import type { CategoryQuiz } from "@/types/quiz";
+import type { QuizProgressBarKey } from "@/types/quizProgressStore";
 import { memo } from "react";
 type DoubleProgressBarProps = {
   className?: string;
   data: CategoryQuiz;
+  progressBar:QuizProgressBarKey;
 };
 
-function DoubleProgressBar({ className = "", data }: DoubleProgressBarProps) {
+function DoubleProgressBar({ className = "", data ,progressBar}: DoubleProgressBarProps) {
   // Ограничиваем оба прогресса в пределах от 0 до 100
   const total = data.json.length || 1;
 
-  const passed = new Set(data.storage_q_passed).size;
-  const failed = new Set(data.storage_q_not_passed).size;
-  const saved = new Set(data.storage_q_saved).size;
+  const passed = new Set(progressBar?.passed).size;
+  const failed = new Set(progressBar?.not_passed).size;
+  const saved = new Set(progressBar?.q_saved).size;
 
   const greenProgress = (passed / total) * 100;
   const redProgress = (failed / total) * 100;

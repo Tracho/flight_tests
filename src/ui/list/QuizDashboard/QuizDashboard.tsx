@@ -11,7 +11,8 @@ import DoubleProgressBar from "@/ui/list/progress/DoubleProgressBar";
 import ContainerCateModal from "@/ui/Modal/ContainerCateModal";
 import ChildrenDetails from "../Details/ChildrenDetails";
 import { bgdarkNeutral, bglight, bglightgray, borderDark, borderLign } from "@/data/desingStyle";
-import { getData } from "@/store/quizDataStore";
+import { getData, getProgressBar, setSelectQuestion } from "@/store/quizDataStore";
+import type { QuizProgressBarKey } from "@/types/quizProgressStore";
 
 function QuizDashboard() {
   const data = getData()
@@ -36,10 +37,15 @@ function QuizDashboard() {
                   childrenClass="flex-col"
                 >
                   {item.arr.map((childItem, childIndex) => {
+                   
+                     const arrProgressBar:QuizProgressBarKey = getProgressBar({cate:item.category,quiz:childItem.title});
                     if (
                       selectedTests.length == 0 ||
                       selectedTests.includes(childItem.title)
                     )
+
+                      
+                      
                       return (
                         <ChildrenDetails
                           key={childItem.title + childIndex}
@@ -50,7 +56,7 @@ function QuizDashboard() {
                           svgClass="w-6"
                           topChildren={
                             <>
-                              <DoubleProgressBar data={childItem} />
+                              <DoubleProgressBar data={childItem} progressBar={arrProgressBar} />
                               <div className="flex justify-center items-center w-full">
                                 <NeonLink
                                   to={{
@@ -59,7 +65,7 @@ function QuizDashboard() {
                                     // hash: "#1", // Если #1 это именно хэш-якорь
                                   }}
                                   onClick={() =>
-                                    quizActionsTest.setSelectCateQuizQuestion({cate:item.category, quiz:childItem.title,})
+                                    setSelectQuestion({cate:item.category, quiz:childItem.title})
                                   }
                                   color="sky"
                                   variant="solid"
@@ -72,7 +78,7 @@ function QuizDashboard() {
                           }
                         >
                           <ChildrenDetails
-                            title={`🚨 Вопросы с ошибками (${new Set(childItem.storage_q_not_passed).size})`}
+                            title={`🚨 Вопросы с ошибками (${new Set(arrProgressBar?.not_passed).size || 0})`}
                             childrenClass="flex-wrap"
                             titleClass="text-base"
                             svgClass="w-5"
@@ -80,11 +86,11 @@ function QuizDashboard() {
                           >
                             {
                            
-                            childItem.storage_q_not_passed.length > 0
-                              ? Array.from(new Set(childItem.storage_q_not_passed)).map((i, _) => (
+                            arrProgressBar?.not_passed.length > 0
+                              ? Array.from(new Set(arrProgressBar?.not_passed)).map((i, _) => (
                                   <ContainerCateModal 
                                     NeonBtnColor="red"
-                                    pages={Array.from(new Set(childItem.storage_q_not_passed))}
+                                    pages={Array.from(new Set(arrProgressBar?.not_passed))}
                                     cateName={item.category}
                                     testName={childItem.title}
                                     startIndex={_}
@@ -96,17 +102,17 @@ function QuizDashboard() {
                               : placeholder_text}
                           </ChildrenDetails>
                           <ChildrenDetails
-                            title={`✅ Изученные вопросы (${childItem.storage_q_passed.length})`}
+                            title={`✅ Изученные вопросы (${arrProgressBar?.passed.length || 0})`}
                             childrenClass="flex-wrap"
                             titleClass="text-base"
                             svgClass="w-5"
                             BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
                           >
-                            {childItem.storage_q_passed.length > 0
-                              ? childItem.storage_q_passed.map((i, _) => (
+                            {arrProgressBar?.passed.length > 0
+                              ? arrProgressBar?.passed.map((i, _) => (
                                   <ContainerCateModal
                                     NeonBtnColor="green"
-                                    pages={childItem.storage_q_passed}
+                                    pages={arrProgressBar?.passed}
                                     cateName={item.category}
                                     testName={childItem.title}
                                     startIndex={_}
@@ -118,17 +124,17 @@ function QuizDashboard() {
                               : placeholder_text}
                           </ChildrenDetails>
                           <ChildrenDetails
-                            title={`⭐ Сохраненные вопросы (${childItem.storage_q_saved.length})`}
+                            title={`⭐ Сохраненные вопросы (${arrProgressBar?.q_saved.length || 0})`}
                             childrenClass="flex-wrap"
                             titleClass="text-base"
                             svgClass="w-5"
                             BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
                           >
-                            {childItem.storage_q_saved.length > 0
-                              ? childItem.storage_q_saved.map((i, _) => (
+                            {arrProgressBar?.q_saved.length > 0
+                              ? arrProgressBar?.q_saved.map((i, _) => (
                                   <ContainerCateModal
                                     NeonBtnColor="amber"
-                                    pages={childItem.storage_q_saved}
+                                    pages={arrProgressBar?.q_saved}
                                     cateName={item.category}
                                     testName={childItem.title}
                                     startIndex={_}
