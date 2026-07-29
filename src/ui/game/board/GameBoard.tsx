@@ -26,10 +26,7 @@ type SelectedAnswer = {
 function GameBoard() {
   const game = useGame();
   const db = quizActionsTest.getOpenDataCateQuiz();
-  useEffect(() => {
-    console.log(db);
-  }, [game.game.started]);
-
+  
   let statusCount = game.getQuizQuestion().options.reduce(
     (accumulator, item) => {
       if (item.isCorrect) {
@@ -45,6 +42,7 @@ function GameBoard() {
   const [selectedAnswer, SetSelectedAnswer] = useState<SelectedAnswer[]>([]);
   const HandlerSelectRadion = (val: SelectedAnswer) => {
     SetSelectedAnswer([val]);
+      console.log(selectedAnswer)
   };
   const HandlerSelectCheckBox = (val: SelectedAnswer) => {
     SetSelectedAnswer((prev) => {
@@ -59,22 +57,25 @@ function GameBoard() {
       }
       // Если нет — добавляем
       return [...prev, val];
-    });
+    }); 
   };
-  const HandleCheckingAnswers = () => {
-
+  const HandleCheckingAnswers = () => { 
     let isCorrect = game.checkingAnswers(selectedAnswer);
-    game.addIdQuestProgress(isCorrect); 
-    console.log(getData)
-        
+    game.addIdQuestProgress(isCorrect);   
   };
   const HandleNextQuesion = () => {
     game.nextQuestion();
     game.toggleShowAnswers();
+    SetSelectedAnswer([]);
   };
   const HandlePreviousQuesion = () => {
     game.previousQuestion();
+    SetSelectedAnswer([]);
   };
+
+  // useEffect(()=>{
+  //   console.log(selectedAnswer)
+  // },[selectedAnswer])
 
   return (
     <>

@@ -172,7 +172,7 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
 addIdQuestProgress: (isCorrect) => {
   const { cate, quiz } =  getSelectQuestion();
   const questionId = get().game.idQuestion;
-  
+  console.log(isCorrect)
   updateProgressBar((progress) => {
     const newProgress = structuredClone(progress);
 

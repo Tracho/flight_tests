@@ -29,7 +29,7 @@ function QuizPage() {
                 onClick={() => {
                   game.resetGame();
                   game.setGame({ mode: "standard" });
-                  game.startGame();
+                  game.startGame(); 
                 }}
               >
                 По-порядку

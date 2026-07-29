@@ -61,7 +61,7 @@ export const useQuizDataStore = create<QuizDataState>()(
         })),
     }), 
     {
-      name: "quiz-data-store",
+      name: "progressBar",
       partialize: (state: QuizDataState) => ({
         progressBar: state.progressBar,
       }),

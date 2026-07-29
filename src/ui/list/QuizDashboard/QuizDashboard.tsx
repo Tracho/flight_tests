@@ -1,4 +1,4 @@
-import { quizActionsTest } from "@/store/useOpenGameQuiz";
+import { quizActionsTest, useGame } from "@/store/useOpenGameQuiz";
 import {
   useQuizData,
   useSelectedCategories,
@@ -10,16 +10,27 @@ import Details from "@/ui/list/Details/Details";
 import DoubleProgressBar from "@/ui/list/progress/DoubleProgressBar";
 import ContainerCateModal from "@/ui/Modal/ContainerCateModal";
 import ChildrenDetails from "../Details/ChildrenDetails";
-import { bgdarkNeutral, bglight, bglightgray, borderDark, borderLign } from "@/data/desingStyle";
-import { getData, getProgressBar, setSelectQuestion } from "@/store/quizDataStore";
+import {
+  bgdarkNeutral,
+  bglight,
+  bglightgray,
+  borderDark,
+  borderLign,
+} from "@/data/desingStyle";
+import {
+  getData,
+  getProgressBar,
+  setSelectQuestion,
+} from "@/store/quizDataStore";
 import type { QuizProgressBarKey } from "@/types/quizProgressStore";
 
 function QuizDashboard() {
-  const data = getData()
+  const data = getData();
+  const game = useGame();
   const selectedCategories = useSelectedCategories();
   const selectedTests = useSelectedTests();
-  const placeholder_text = "Пусто..."; 
-  console.log(data)
+  const placeholder_text = "Пусто...";
+  console.log(data);
   return (
     <>
       <div className="flex flex-col gap-4">
@@ -37,15 +48,14 @@ function QuizDashboard() {
                   childrenClass="flex-col"
                 >
                   {item.arr.map((childItem, childIndex) => {
-                   
-                     const arrProgressBar:QuizProgressBarKey = getProgressBar({cate:item.category,quiz:childItem.title});
+                    const arrProgressBar: QuizProgressBarKey = getProgressBar({
+                      cate: item.category,
+                      quiz: childItem.title,
+                    });
                     if (
                       selectedTests.length == 0 ||
                       selectedTests.includes(childItem.title)
                     )
-
-                      
-                      
                       return (
                         <ChildrenDetails
                           key={childItem.title + childIndex}
@@ -56,7 +66,10 @@ function QuizDashboard() {
                           svgClass="w-6"
                           topChildren={
                             <>
-                              <DoubleProgressBar data={childItem} progressBar={arrProgressBar} />
+                              <DoubleProgressBar
+                                data={childItem}
+                                progressBar={arrProgressBar}
+                              />
                               <div className="flex justify-center items-center w-full">
                                 <NeonLink
                                   to={{
@@ -64,9 +77,13 @@ function QuizDashboard() {
                                     search: `?cate=${encodeURIComponent(item.category)}&title=${encodeURIComponent(childItem.title)}`,
                                     // hash: "#1", // Если #1 это именно хэш-якорь
                                   }}
-                                  onClick={() =>
-                                    setSelectQuestion({cate:item.category, quiz:childItem.title})
-                                  }
+                                  onClick={() => (
+                                    setSelectQuestion({
+                                      cate: item.category,
+                                      quiz: childItem.title,
+                                    }),
+                                    game.setGame({started: false})
+                                  )}
                                   color="sky"
                                   variant="solid"
                                   className="text-xs"
@@ -84,13 +101,15 @@ function QuizDashboard() {
                             svgClass="w-5"
                             BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
                           >
-                            {
-                           
-                            arrProgressBar?.not_passed.length > 0
-                              ? Array.from(new Set(arrProgressBar?.not_passed)).map((i, _) => (
-                                  <ContainerCateModal 
+                            {arrProgressBar?.not_passed.length > 0
+                              ? Array.from(
+                                  new Set(arrProgressBar?.not_passed),
+                                ).map((i, _) => (
+                                  <ContainerCateModal
                                     NeonBtnColor="red"
-                                    pages={Array.from(new Set(arrProgressBar?.not_passed))}
+                                    pages={Array.from(
+                                      new Set(arrProgressBar?.not_passed),
+                                    )}
                                     cateName={item.category}
                                     testName={childItem.title}
                                     startIndex={_}
