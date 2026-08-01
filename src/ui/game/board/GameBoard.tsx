@@ -62,6 +62,7 @@ function GameBoard() {
   const HandleCheckingAnswers = () => { 
     let isCorrect = game.checkingAnswers(selectedAnswer);
     game.addIdQuestProgress(isCorrect);   
+    game.endGame();
   };
   const HandleNextQuesion = () => {
     game.nextQuestion();

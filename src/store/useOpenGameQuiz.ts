@@ -1,14 +1,19 @@
 // src/store/useQuizStore.ts
 import { create } from "zustand";
 import type { QuizCategory, QuizQuestion, CategoryQuiz } from "@/types/quiz";
-import { useShallow } from "zustand/react/shallow"; 
-import { getData, getSelectQuestion, updateData, updateProgressBar } from "./quizDataStore";
+import { useShallow } from "zustand/react/shallow";
+import {
+  getData,
+  getSelectQuestion,
+  updateData,
+  updateProgressBar,
+} from "./quizDataStore";
 
- 
 type GameSettings = {
   mode: "standard" | "random" | "";
   withTimer: boolean;
   started: boolean;
+  finish:boolean;
   idQuestion: number;
   showAnswers: boolean;
 };
@@ -18,9 +23,8 @@ type SelectedAnswer = {
 };
 
 interface QuizState {
-  data: QuizCategory[]; // Глобальная дата баззы 
+  data: QuizCategory[]; // Глобальная дата баззы
   game: GameSettings; // Игровая настройка. Когда должна начаться игра, закончится, показать ответы, время и тд
- 
 
   setGame: (value: Partial<GameSettings>) => void; // Изменение настройки игры, к примеру мод игры
   startGame: () => void; // Запустить игру
@@ -36,19 +40,21 @@ interface QuizState {
   nextQuestion: () => void; // часть навигации следующий вопрос
   previousQuestion: () => void; // часть навигации предыдущий вопрос
   addIdQuestProgress: (boolean: boolean) => void; //
+  endGame:() => void;
 }
 
 const ObjGame: GameSettings = {
   mode: "",
   withTimer: false,
   started: false,
+  finish:false,
   idQuestion: 0,
   showAnswers: false,
 };
 // Сам стор оставляем приватным (не экспортируем),
 // чтобы наружу выходили только чистые атомарные инструменты
 const useOpenQuiz = create<QuizState>((set, get) => ({
-  data: getData(), 
+  data: getData(),
   game: ObjGame,
 
   // arrSelectedAnswer: [],
@@ -102,17 +108,16 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
       },
     })),
   getShowAnswers: () => get().game.showAnswers,
- 
 
   getQuizQuestion: (): QuizQuestion => {
     const quiz = get().getOpenDataCateQuiz();
     const index = get().game.idQuestion;
- 
+
     return quiz?.json[index] || ({} as QuizQuestion);
   },
 
   getOpenDataCateQuiz: (): CategoryQuiz | undefined => {
-    const select = getSelectQuestion();  
+    const select = getSelectQuestion();
     return get()
       .data.find((cat) => cat.category === select.cate)
       ?.arr.find((quiz) => quiz.title === select.quiz);
@@ -169,86 +174,88 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
     }));
   },
 
-addIdQuestProgress: (isCorrect) => {
-  const { cate, quiz } =  getSelectQuestion();
-  const questionId = get().game.idQuestion;
-  console.log(isCorrect)
-  updateProgressBar((progress) => {
-    const newProgress = structuredClone(progress);
+  addIdQuestProgress: (isCorrect) => {
+    const { cate, quiz } = getSelectQuestion();
+    const questionId = get().game.idQuestion;
+    console.log(isCorrect);
+    updateProgressBar((progress) => {
+      const newProgress = structuredClone(progress);
 
-    // создаем структуру если ее нет
-    if (!newProgress[cate]) {
-      newProgress[cate] = {};
-    }
+      // создаем структуру если ее нет
+      if (!newProgress[cate]) {
+        newProgress[cate] = {};
+      }
 
-    if (!newProgress[cate][quiz]) {
-      newProgress[cate][quiz] = {
-        passed: [],
-        not_passed: [],
-        q_saved: [],
-      };
-    }
+      if (!newProgress[cate][quiz]) {
+        newProgress[cate][quiz] = {
+          passed: [],
+          not_passed: [],
+          q_saved: [],
+        };
+      }
 
-    const current = newProgress[cate][quiz];
+      const current = newProgress[cate][quiz];
 
-    let passed = [...current.passed];
-    let notPassed = [...current.not_passed];
+      let passed = [...current.passed];
+      let notPassed = [...current.not_passed];
 
-    if (isCorrect) {
-      const count = notPassed.filter(
-        (id) => id === questionId,
-      ).length;
+      if (isCorrect) {
+        const count = notPassed.filter((id) => id === questionId).length;
 
-      if (count > 1) {
-        const index = notPassed.indexOf(questionId);
-        notPassed.splice(index, 1);
-      } else if (count === 1) {
-        notPassed = notPassed.filter(
-          (id) => id !== questionId,
-        );
+        if (count > 1) {
+          const index = notPassed.indexOf(questionId);
+          notPassed.splice(index, 1);
+        } else if (count === 1) {
+          notPassed = notPassed.filter((id) => id !== questionId);
 
-        if (!passed.includes(questionId)) {
-          passed.push(questionId);
+          if (!passed.includes(questionId)) {
+            passed.push(questionId);
+          }
+        } else {
+          if (!passed.includes(questionId)) {
+            passed.push(questionId);
+          }
         }
       } else {
-        if (!passed.includes(questionId)) {
-          passed.push(questionId);
+        const count = notPassed.filter((id) => id === questionId).length;
+
+        if (count < 3) {
+          notPassed.push(questionId);
         }
-      }
-    } else {
-      const count = notPassed.filter(
-        (id) => id === questionId,
-      ).length;
 
-      if (count < 3) {
-        notPassed.push(questionId);
+        passed = passed.filter((id) => id !== questionId);
       }
 
-      passed = passed.filter(
-        (id) => id !== questionId,
-      );
-    }
+      current.passed = passed;
+      current.not_passed = notPassed;
 
-    current.passed = passed;
-    current.not_passed = notPassed;
+      console.group(`%c${cate} / ${quiz}`, "color:cyan;font-weight:bold");
 
-    console.group(
-      `%c${cate} / ${quiz}`,
-      "color:cyan;font-weight:bold",
-    );
+      console.log("Passed:", passed);
+      console.log("Not passed:", notPassed);
 
-    console.log("Passed:", passed);
-    console.log("Not passed:", notPassed);
+      console.groupEnd();
 
-    console.groupEnd();
+      return newProgress;
+    });
+  },
 
-    return newProgress;
-  });
-},
+  endGame:()=>{
+   const maxLenghtQuiz = get().getOpenDataCateQuiz()?.json.length; 
+   const thisNumberQuiz = get().game.idQuestion +1;
+  console.log(thisNumberQuiz)
+    console.log(maxLenghtQuiz)
+   if(maxLenghtQuiz && thisNumberQuiz === maxLenghtQuiz){
+    
+    get().setGame({
+      finish:true,
+    })
+   }
+  }
 }));
 
 // 1. ХУК ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ (Будет вызывать перерендер компонента при изменении)
- 
+
 export const useQuizData = () => useOpenQuiz((state) => state.data);
 export const useGame = () =>
   useOpenQuiz(
@@ -258,6 +265,7 @@ export const useGame = () =>
       startGame: state.startGame,
       stopGame: state.stopGame,
       resetGame: state.resetGame,
+      endGame:state.endGame,
       getIdQuestion: state.getIdQuestion,
       getQuizQuestion: state.getQuizQuestion,
       setСhangeStatusAnswers: state.setСhangeStatusAnswers,
@@ -271,6 +279,6 @@ export const useGame = () =>
   );
 
 // 2. ОБЪЕКТ ДЛЯ ИЗМЕНЕНИЯ И ЧТЕНИЯ ВНЕ РЕНДЕРА (НЕ вызывает перерендер при вызове)
-export const quizActionsTest = {  
+export const quizActionsTest = {
   getOpenDataCateQuiz: () => useOpenQuiz.getState().getOpenDataCateQuiz(),
 };
