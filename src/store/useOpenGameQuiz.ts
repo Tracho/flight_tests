@@ -3,11 +3,11 @@ import { create } from "zustand";
 import type { QuizCategory, QuizQuestion, CategoryQuiz } from "@/types/quiz";
 import { useShallow } from "zustand/react/shallow";
 import {
-  getData,
-  getSelectQuestion,
+  getData, 
   updateData,
   updateProgressBar,
 } from "./quizDataStore";
+import { getSelectQuiz } from "./useSettingParams";
 
 type GameSettings = {
   mode: "standard" | "random" | "";
@@ -117,7 +117,7 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
   },
 
   getOpenDataCateQuiz: (): CategoryQuiz | undefined => {
-    const select = getSelectQuestion();
+    const select = getSelectQuiz();
     return get()
       .data.find((cat) => cat.category === select.cate)
       ?.arr.find((quiz) => quiz.title === select.quiz);
@@ -175,7 +175,7 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
   },
 
   addIdQuestProgress: (isCorrect) => {
-    const { cate, quiz } = getSelectQuestion();
+    const { cate, quiz } = getSelectQuiz();
     const questionId = get().game.idQuestion;
     console.log(isCorrect);
     updateProgressBar((progress) => {

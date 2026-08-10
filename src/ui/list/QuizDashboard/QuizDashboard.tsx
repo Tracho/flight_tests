@@ -1,6 +1,5 @@
-import { quizActionsTest, useGame } from "@/store/useOpenGameQuiz";
+import {useGame } from "@/store/useOpenGameQuiz";
 import {
-  useQuizData,
   useSelectedCategories,
   useSelectedTests,
 } from "@/store/useQuizStore";
@@ -19,10 +18,10 @@ import {
 } from "@/data/desingStyle";
 import {
   getData,
-  getProgressBar,
-  setSelectQuestion,
+  getProgressBar, 
 } from "@/store/quizDataStore";
 import type { QuizProgressBarKey } from "@/types/quizProgressStore";
+import  { setSelectQuiz } from "@/store/useSettingParams";
 
 function QuizDashboard() {
   const data = getData();
@@ -78,11 +77,7 @@ function QuizDashboard() {
                                     // hash: "#1", // Если #1 это именно хэш-якорь
                                   }}
                                   onClick={() => (
-                                    setSelectQuestion({
-                                      cate: item.category,
-                                      quiz: childItem.title,
-                                    }),
-                                    game.setGame({started: false})
+                                    game.setGame({ started: false })
                                   )}
                                   color="sky"
                                   variant="solid"

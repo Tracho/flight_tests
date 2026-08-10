@@ -2,7 +2,10 @@ import { create } from "zustand";
 import type { QuizCategory } from "@/types/quiz";
 import { quizData } from "@/data/quizData";
 import { persist } from "zustand/middleware";
-import type { QuizProgressBar, QuizProgressBarKey } from "@/types/quizProgressStore";
+import type {
+  QuizProgressBar,
+  QuizProgressBarKey,
+} from "@/types/quizProgressStore";
 
 type SelectQuestion = {
   cate: string;
@@ -11,10 +14,10 @@ type SelectQuestion = {
 interface QuizDataState {
   data: QuizCategory[]; // Глобальная база с категориями и квизами
   progressBar: QuizProgressBar; // Сохранение прогресса, вопросы которые пройдены, не пройдены и сохраненные
-  selectQuestion: SelectQuestion; // Определение категории и квиза, также для url
   setData: (data: QuizCategory[]) => void;
-  setSelectQuestion: (data: SelectQuestion) => void;
   getProgressBar: (data: SelectQuestion) => QuizProgressBarKey;
+
+  hasQuiz: (cate: string, title: string) => boolean; // Находит квиз, вернёт true / false
 
   updateData: (callback: (data: QuizCategory[]) => QuizCategory[]) => void;
   updateProgressBar: (
@@ -29,21 +32,24 @@ export const useQuizDataStore = create<QuizDataState>()(
 
       progressBar: {}, // Сохранение прогресса, вопросы которые пройдены, не пройдены и сохраненные
 
-      selectQuestion: {
-        // Определение категории и квиза, также для url
-        cate: "",
-        quiz: "",
-      },
-
       setData: (data) =>
         set({
           data,
         }),
+     
+      hasQuiz: (cate: string, title: string) => {
+        const currentData = get().data;
+        // 1. Ищем категорию по полю 'category'
+        const foundCategory = currentData.find(
+          (c) => c.category.toLowerCase() === cate.toLowerCase(),
+        );
+        if (!foundCategory) return false;
 
-      setSelectQuestion: (data) =>
-        set({
-          selectQuestion: data,
-        }),
+        // 2. Внутри найденной категории ищем квиз в массиве 'arr' по полю 'title'
+        return foundCategory.arr.some(
+          (q) => q.title.toLowerCase() === title.toLowerCase(),
+        );
+      },
 
       getProgressBar: ({ cate, quiz }: SelectQuestion) => {
         const progress = get().progressBar;
@@ -59,7 +65,7 @@ export const useQuizDataStore = create<QuizDataState>()(
         set((state) => ({
           progressBar: callback(state.progressBar),
         })),
-    }), 
+    }),
     {
       name: "progressBar",
       partialize: (state: QuizDataState) => ({
@@ -70,15 +76,12 @@ export const useQuizDataStore = create<QuizDataState>()(
 );
 
 export const getData = () => useQuizDataStore.getState().data;
-export const getSelectQuestion = () =>
-  useQuizDataStore.getState().selectQuestion;
+
 export const getProgressBar = (data: SelectQuestion) =>
   useQuizDataStore.getState().getProgressBar(data);
 
 export const setData = (data: QuizCategory[]) =>
   useQuizDataStore.getState().setData(data);
-export const setSelectQuestion = (val: SelectQuestion) =>
-  useQuizDataStore.getState().setSelectQuestion(val);
 
 export const updateData = (
   callback: (data: QuizCategory[]) => QuizCategory[],
@@ -87,3 +90,6 @@ export const updateData = (
 export const updateProgressBar = (
   callback: (data: QuizProgressBar) => QuizProgressBar,
 ) => useQuizDataStore.getState().updateProgressBar(callback);
+
+export const hasQuiz = (cate: string, title: string) =>
+  useQuizDataStore.getState().hasQuiz(cate, title);

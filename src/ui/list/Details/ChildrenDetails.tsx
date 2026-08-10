@@ -16,6 +16,7 @@ type props = {
   svgClass?: string;
   topChildren?: ReactNode;
   svgToTitle?: ReactNode;
+  open?: boolean;
 };
 
 function ChildrenDetails({
@@ -30,8 +31,9 @@ function ChildrenDetails({
   titleClass = "text-2xl",
   svgClass = "w-8",
   topChildren,
+  open = false,
 }: props) {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(open);
 // bglightgrayTT
   return (
     <BgContainer className={`${BgContainerClass}`}>
