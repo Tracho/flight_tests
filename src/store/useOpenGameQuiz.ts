@@ -219,7 +219,7 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
       } else {
         const count = notPassed.filter((id) => id === questionId).length;
 
-        if (count < 3) {
+        if (count < 5) {
           notPassed.push(questionId);
         }
 

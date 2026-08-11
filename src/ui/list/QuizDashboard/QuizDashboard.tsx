@@ -1,5 +1,6 @@
-import {useGame } from "@/store/useOpenGameQuiz";
+import { useGame } from "@/store/useOpenGameQuiz";
 import {
+  useQuizData,
   useSelectedCategories,
   useSelectedTests,
 } from "@/store/useQuizStore";
@@ -16,19 +17,16 @@ import {
   borderDark,
   borderLign,
 } from "@/data/desingStyle";
-import {
-  getData,
-  getProgressBar, 
-} from "@/store/quizDataStore";
+import { getProgressBar } from "@/store/quizDataStore";
 import type { QuizProgressBarKey } from "@/types/quizProgressStore";
-import  { setSelectQuiz } from "@/store/useSettingParams";
+import { setSelectQuiz } from "@/store/useSettingParams";
 
 function QuizDashboard() {
-  const data = getData();
+  const data = useQuizData();
   const game = useGame();
-  const selectedCategories = useSelectedCategories();
-  const selectedTests = useSelectedTests();
-  const placeholder_text = "Пусто...";
+  const selectedCategories = useSelectedCategories() ?? [];
+  const selectedTests = useSelectedTests() ?? [];
+  const placeholder_text = "Пусто...!!";
   console.log(data);
   return (
     <>
@@ -51,6 +49,35 @@ function QuizDashboard() {
                       cate: item.category,
                       quiz: childItem.title,
                     });
+                    const notPassed = arrProgressBar?.not_passed ?? [];
+                    const errorCounts = new Map<number, number>();
+
+                    notPassed.forEach((question) => {
+                      errorCounts.set(
+                        question,
+                        (errorCounts.get(question) ?? 0) + 1,
+                      );
+                    });
+
+                    const uniqueErrorQuestions = Array.from(new Set(notPassed));
+                    const duplicates = uniqueErrorQuestions.filter(
+                      (question) => (errorCounts.get(question) ?? 0) > 1,
+                    );
+                    const renderErrorQuestion = (question: number) => {
+                      const count = errorCounts.get(question) ?? 0;
+
+                      return (
+                        <span className="relative inline-flex items-center justify-center">
+                          <span>{question + 1}</span>
+                          {count > 1 && (
+                            <span className="absolute -right-6 -top-2 rounded-full bg-red-900 px-1 py-0.5 text-[9px] font-bold leading-none text-white flex justify-center items-center">
+                              {count}
+                            </span>
+                          )}
+                        </span>
+                      );
+                    };
+
                     if (
                       selectedTests.length == 0 ||
                       selectedTests.includes(childItem.title)
@@ -76,9 +103,9 @@ function QuizDashboard() {
                                     search: `?cate=${encodeURIComponent(item.category)}&title=${encodeURIComponent(childItem.title)}`,
                                     // hash: "#1", // Если #1 это именно хэш-якорь
                                   }}
-                                  onClick={() => (
+                                  onClick={() =>
                                     game.setGame({ started: false })
-                                  )}
+                                  }
                                   color="sky"
                                   variant="solid"
                                   className="text-xs"
@@ -91,29 +118,50 @@ function QuizDashboard() {
                         >
                           <ChildrenDetails
                             title={`🚨 Вопросы с ошибками (${new Set(arrProgressBar?.not_passed).size || 0})`}
-                            childrenClass="flex-wrap"
+                            childrenClass="flex-col"
                             titleClass="text-base"
                             svgClass="w-5"
                             BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
                           >
-                            {arrProgressBar?.not_passed.length > 0
-                              ? Array.from(
-                                  new Set(arrProgressBar?.not_passed),
-                                ).map((i, _) => (
-                                  <ContainerCateModal
-                                    NeonBtnColor="red"
-                                    pages={Array.from(
-                                      new Set(arrProgressBar?.not_passed),
-                                    )}
-                                    cateName={item.category}
-                                    testName={childItem.title}
-                                    startIndex={_}
-                                    key={_}
-                                  >
-                                    {i + 1}
-                                  </ContainerCateModal>
-                                ))
-                              : placeholder_text}
+                            <div className="flex flex-wrap gap-3">
+                              {notPassed.length > 0
+                                ? uniqueErrorQuestions.map(
+                                    (question, index) => (
+                                      <ContainerCateModal
+                                        NeonBtnColor="red"
+                                        pages={uniqueErrorQuestions}
+                                        duplicateErrorCounts={errorCounts.get(question)}
+                                        cateName={item.category}
+                                        testName={childItem.title}
+                                        startIndex={index}
+                                        key={question}
+                                      >
+                                        {renderErrorQuestion(question)}
+                                      </ContainerCateModal>
+                                    ),
+                                  )
+                                : placeholder_text}
+                            </div>
+                            {duplicates.length > 0 && (
+                              <div className="flex flex-col gap-3">
+                                <span>‼️ Повторные ошибки:</span>
+                                <div className="flex flex-wrap gap-3">
+                                  {duplicates.map((question, index) => (
+                                    <ContainerCateModal
+                                      NeonBtnColor="red"
+                                      pages={duplicates}
+                                      duplicateErrorCounts={errorCounts.get(question)}
+                                      cateName={item.category}
+                                      testName={childItem.title}
+                                      startIndex={index}
+                                      key={question}
+                                    >
+                                      {renderErrorQuestion(question)}
+                                    </ContainerCateModal>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
                           </ChildrenDetails>
                           <ChildrenDetails
                             title={`✅ Изученные вопросы (${arrProgressBar?.passed.length || 0})`}
