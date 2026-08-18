@@ -31,13 +31,13 @@ function QuizGameOverBoard() {
   const duplicates = uniqueErrorQuestions.filter(
     (question) => (errorCounts.get(question) ?? 0) > 1,
   );
-
+  
   const placeholder_text = "Пусто...";
 
   if (!db) {
     return null;
   }
-
+  const questionIndexes = Array.from( { length: db.json.length }, (_, index) => index, );
   const renderErrorQuestion = (question: number) => {
     const count = errorCounts.get(question) ?? 0;
 
@@ -179,17 +179,17 @@ function QuizGameOverBoard() {
         svgClass="w-5"
         BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
       >
-        {Array.from({ length: db.json.length }, (_, index) => index + 1).map(
+        {questionIndexes.map(
           (questionNumber, index) => (
             <ContainerCateModal
               NeonBtnColor="gray"
               key={questionNumber}
-              pages={Array.from({ length: db.json.length }, (_, i) => i)}
+              pages={questionIndexes}
               cateName={cate}
               testName={db.title}
               startIndex={index}
             >
-              {questionNumber}
+              {questionNumber +1}
             </ContainerCateModal>
           ),
         )}

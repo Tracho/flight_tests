@@ -17,17 +17,24 @@ import {
   borderDark,
   borderLign,
 } from "@/data/desingStyle";
-import { getProgressBar } from "@/store/quizDataStore";
+import { getProgressBar, useProgressBarAll } from "@/store/quizDataStore";
 import type { QuizProgressBarKey } from "@/types/quizProgressStore";
 import { setSelectQuiz } from "@/store/useSettingParams";
 
 function QuizDashboard() {
   const data = useQuizData();
   const game = useGame();
+  const ProgressBarAll = useProgressBarAll();
   const selectedCategories = useSelectedCategories() ?? [];
   const selectedTests = useSelectedTests() ?? [];
   const placeholder_text = "Пусто...!!";
+  console.group("QuizDashboard");
   console.log(data);
+  console.log(ProgressBarAll);
+  console.groupEnd();
+  if (!data) {
+    return null;
+  }
   return (
     <>
       <div className="flex flex-col gap-4">
@@ -45,24 +52,26 @@ function QuizDashboard() {
                   childrenClass="flex-col"
                 >
                   {item.arr.map((childItem, childIndex) => {
-                    const arrProgressBar: QuizProgressBarKey = getProgressBar({
-                      cate: item.category,
-                      quiz: childItem.title,
-                    });
+                    const questionIndexes = Array.from( { length: childItem.json.length }, (_, index) => index, );
+
+                    const arrProgressBar: QuizProgressBarKey =
+                      ProgressBarAll?.[item.category]?.[childItem.title];
                     const notPassed = arrProgressBar?.not_passed ?? [];
                     const errorCounts = new Map<number, number>();
 
-                    notPassed.forEach((question) => {
+                    for (const question of notPassed) {
                       errorCounts.set(
                         question,
                         (errorCounts.get(question) ?? 0) + 1,
                       );
-                    });
+                    }
 
-                    const uniqueErrorQuestions = Array.from(new Set(notPassed));
+                    const uniqueErrorQuestions = [...errorCounts.keys()];
+
                     const duplicates = uniqueErrorQuestions.filter(
                       (question) => (errorCounts.get(question) ?? 0) > 1,
                     );
+                    
                     const renderErrorQuestion = (question: number) => {
                       const count = errorCounts.get(question) ?? 0;
 
@@ -130,7 +139,9 @@ function QuizDashboard() {
                                       <ContainerCateModal
                                         NeonBtnColor="red"
                                         pages={uniqueErrorQuestions}
-                                        duplicateErrorCounts={errorCounts.get(question)}
+                                        duplicateErrorCounts={errorCounts.get(
+                                          question,
+                                        )}
                                         cateName={item.category}
                                         testName={childItem.title}
                                         startIndex={index}
@@ -150,7 +161,9 @@ function QuizDashboard() {
                                     <ContainerCateModal
                                       NeonBtnColor="red"
                                       pages={duplicates}
-                                      duplicateErrorCounts={errorCounts.get(question)}
+                                      duplicateErrorCounts={errorCounts.get(
+                                        question,
+                                      )}
                                       cateName={item.category}
                                       testName={childItem.title}
                                       startIndex={index}
@@ -214,22 +227,17 @@ function QuizDashboard() {
                             svgClass="w-5"
                             BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
                           >
-                            {Array.from(
-                              { length: childItem.json.length },
-                              (_, index) => index + 1,
-                            ).map((questionNumber, index) => (
+                            {
+                            questionIndexes.map((questionNumber, index) => (
                               <ContainerCateModal
                                 NeonBtnColor="gray"
                                 key={questionNumber}
-                                pages={Array.from(
-                                  { length: childItem.json.length },
-                                  (_, i) => i,
-                                )}
+                                pages={questionIndexes}
                                 cateName={item.category}
                                 testName={childItem.title}
                                 startIndex={index}
                               >
-                                {questionNumber}
+                                {questionNumber +1}
                               </ContainerCateModal>
                             ))}
                           </ChildrenDetails>

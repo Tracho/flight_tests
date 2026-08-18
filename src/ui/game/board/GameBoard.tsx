@@ -6,7 +6,7 @@ import Checkbox from "@/ui/input/Checkbox";
 import InfoCorrect from "@/ui/list/Info/InfoCorrect";
 import Info from "@/ui/list/Info/Info";
 import InfoHelp from "@/ui/list/Info/infoHelp";
-import {  quizActionsTest, useGame } from "@/store/useOpenGameQuiz";
+import { quizActionsTest, useGame } from "@/store/useOpenGameQuiz";
 import { useEffect, useState } from "react";
 import {
   bglightgray,
@@ -17,17 +17,45 @@ import {
   borderLightNeonOrange700,
 } from "@/data/desingStyle";
 import { getData } from "@/store/quizDataStore";
- 
-
+import SaveNeonBtn from "@/ui/button/SaveNeonBtn";
+import { getSelectQuiz } from "@/store/useSettingParams";
+import TimeTic from "@/ui/Time/TimeTic";
 type SelectedAnswer = {
   text: string;
   select: boolean;
 };
+
+// Предположим, что это тип вашего объекта опции
+type QuizOption = {
+  text: string;
+  isCorrect: boolean;
+};
+
 function GameBoard() {
   const game = useGame();
   const db = quizActionsTest.getOpenDataCateQuiz();
-  
-  let statusCount = game.getQuizQuestion().options.reduce(
+  const WatchQuiz = getSelectQuiz();
+  // Создаем локальный стейт для хранения ОДНОКРАТНО перемешанных опций
+  const [shuffledOptions, setShuffledOptions] = useState<QuizOption[]>([]);
+  const [selectedAnswer, SetSelectedAnswer] = useState<SelectedAnswer[]>([]);
+
+  // Перемешиваем только тогда, когда меняется ID вопроса
+  useEffect(() => {
+    // 1. Делаем поверхностную копию массива [...], чтобы НЕ мутировать оригинал в game
+    const optionsCopy = [...game.getQuizQuestion().options];
+
+    // 2. Перемешиваем нашу копию
+    for (let i = optionsCopy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [optionsCopy[i], optionsCopy[j]] = [optionsCopy[j], optionsCopy[i]];
+    }
+
+    // 3. Сохраняем в стейт. Теперь при кликах этот массив меняться не будет!
+    setShuffledOptions(optionsCopy);
+  }, [game.getIdQuestion()]); // Четкий триггер: только при смене вопроса
+
+  // Вычисляем statusCount на основе оригинального массива (так надежнее)
+  const statusCount = game.getQuizQuestion().options.reduce(
     (accumulator, item) => {
       if (item.isCorrect) {
         accumulator.trueCount += 1;
@@ -39,53 +67,53 @@ function GameBoard() {
     { trueCount: 0, falseCount: 0 },
   );
 
-  const [selectedAnswer, SetSelectedAnswer] = useState<SelectedAnswer[]>([]);
   const HandlerSelectRadion = (val: SelectedAnswer) => {
     SetSelectedAnswer([val]);
-      console.log(selectedAnswer)
   };
+
   const HandlerSelectCheckBox = (val: SelectedAnswer) => {
     SetSelectedAnswer((prev) => {
-      // Если чекбокс сняли — удаляем его
       if (!val.select) {
         return prev.filter((item) => item.text !== val.text);
       }
-
-      // Если уже есть — обновляем
       if (prev.some((item) => item.text === val.text)) {
         return prev.map((item) => (item.text === val.text ? val : item));
       }
-      // Если нет — добавляем
       return [...prev, val];
-    }); 
+    });
   };
-  const HandleCheckingAnswers = () => { 
+
+  const HandleCheckingAnswers = () => {
     let isCorrect = game.checkingAnswers(selectedAnswer);
-    game.addIdQuestProgress(isCorrect);   
+    game.addIdQuestProgress(isCorrect);
     game.endGame();
   };
+
   const HandleNextQuesion = () => {
     game.nextQuestion();
     game.toggleShowAnswers();
     SetSelectedAnswer([]);
   };
+
   const HandlePreviousQuesion = () => {
     game.previousQuestion();
     SetSelectedAnswer([]);
   };
 
-  // useEffect(()=>{
-  //   console.log(selectedAnswer)
-  // },[selectedAnswer])
+  if (!db) {
+    return null;
+  }
+ 
 
+ 
   return (
     <>
       {game.game.started == true && (
         <div
-          className={`flex flex-col ${bglight} ${bgdarkNeutral} rounded border shadow-2xl  ${borderDarkNeonViolet700} ${borderLightNeonOrange700}`}
+          className={`flex flex-col ${bglight} ${bgdarkNeutral} rounded border shadow-2xl ${borderDarkNeonViolet700} ${borderLightNeonOrange700}`}
         >
           <div
-            className={`px-6 py-4  border-b border-orange-700 dark:border-violet-700`}
+            className={`px-6 py-4 border-b border-orange-700 dark:border-violet-700`}
           >
             <h1 className="text-xl">{db?.title}</h1>
           </div>
@@ -98,30 +126,22 @@ function GameBoard() {
                 Вопрос №{game.getIdQuestion() + 1}
               </b>
               <div className="flex flex-row justify-between items-center gap-3">
-                <NeonBtn
-                  title="Сохранить"
-                  className="px-2"
-                  color="amber"
-                  variant="outline"
-                >
-                  <SVGStar width={22}></SVGStar>
-                </NeonBtn>
-                <NeonBtn
-                  title="Удалить"
-                  className="px-2"
-                  color="red"
-                  variant="outline"
-                >
-                  <SVGDelete width={22}></SVGDelete>
-                </NeonBtn>
+                <SaveNeonBtn questionNumber={game.getIdQuestion()} cate={WatchQuiz.cate} quiz={WatchQuiz.quiz}/> 
               </div>
             </div>
+            <div className="flex justify-end">
+              <TimeTic/>
+            </div>
             <p className="text-lg">{game.getQuizQuestion().title}</p>
+
             <ul className="flex flex-col gap-3">
-              {game.getQuizQuestion().options.map((item, index) => {
+              {/* Рендерим из локального стейта shuffledOptions вместо ArrRadndomOptions */}
+              {shuffledOptions.map((item, index) => {
                 if (statusCount?.trueCount === 1) {
                   return (
-                    <li key={index}>
+                    <li key={item.text}>
+                      {" "}
+                      {/* Лучше использовать item.text вместо index для key, если тексты уникальны */}
                       <Radio
                         name={
                           game.getQuizQuestion()?.title + game.getIdQuestion()
@@ -154,7 +174,7 @@ function GameBoard() {
                   );
                 } else {
                   return (
-                    <li key={index}>
+                    <li key={item.text}>
                       <Checkbox
                         name={
                           game.getQuizQuestion()?.title + game.getIdQuestion()
@@ -196,7 +216,6 @@ function GameBoard() {
                   Назад{" "}
                 </NeonBtn>
               )}
-
               <div className="flex justify-end w-full">
                 {game.getShowAnswers() == false ? (
                   <NeonBtn color="green" onClick={HandleCheckingAnswers}>
@@ -219,11 +238,6 @@ function GameBoard() {
                   <Info header="Полезная информация">
                     {game.getQuizQuestion()?.info}
                   </Info>
-                )}
-                {game.getQuizQuestion()?.infoHelp && (
-                  <InfoHelp header="Дополнительная информация">
-                    {game.getQuizQuestion()?.infoHelp}
-                  </InfoHelp>
                 )}
               </>
             )}

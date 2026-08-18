@@ -7,11 +7,10 @@ import Radio from "../input/Radio";
 import Checkbox from "../input/Checkbox";
 import InfoCorrect from "../list/Info/InfoCorrect";
 import Info from "../list/Info/Info";
-import InfoHelp from "../list/Info/infoHelp";
-import SVGStar from "@/assets/icons/star.svg?react";
-import SVGDelete from "@/assets/icons/delate.svg?react";
+import InfoHelp from "../list/Info/infoHelp"; 
 import Pagination from "../pagination/Pagination";
 import { bgdarkNeutral, bglight } from "@/data/desingStyle";
+import SaveNeonBtn from "../button/SaveNeonBtn";
 
 type Props = {
   cateName: string;
@@ -76,22 +75,7 @@ const db = quizOpenWindow.getQuestion(
               {duplicateErrorCounts && <b className="bg-red-700 px-2 py-1 rounded text-white">Ошибок {duplicateErrorCounts}</b>}
             </div>
             <div className="flex flex-row justify-between items-center gap-3">
-              <NeonBtn
-                title="Сохранить"
-                className="px-2"
-                color="amber"
-                variant="outline"
-              >
-                <SVGStar width={22}></SVGStar>
-              </NeonBtn>
-              <NeonBtn
-                title="Удалить"
-                className="px-2"
-                color="red"
-                variant="outline"
-              >
-                <SVGDelete width={22}></SVGDelete>
-              </NeonBtn>
+              <SaveNeonBtn questionNumber={questionNumber} cate={cateName} quiz={testName}/> 
             </div>
           </div>
           <p className="text-lg">{db?.title}</p>

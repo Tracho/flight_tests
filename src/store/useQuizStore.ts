@@ -17,7 +17,7 @@ interface QuizState {
   checkboxTest: (categoryName: string, testName: string) => void;
 }
 
-const useQuizStore = create<QuizState>()(
+const useQuizStore = create<QuizState>()( // Navigation Category
   persist(
     (set) => ({
       // Начальное состояние (ваш массив данных)

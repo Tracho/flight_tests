@@ -1,3 +1,4 @@
+import { useSetTime } from './useTimeTic';
 // src/store/useQuizStore.ts
 import { create } from "zustand";
 import type { QuizCategory, QuizQuestion, CategoryQuiz } from "@/types/quiz";
@@ -11,12 +12,15 @@ import { getSelectQuiz } from "./useSettingParams";
 
 type GameSettings = {
   mode: "standard" | "random" | "";
-  withTimer: boolean;
+  withTimer: boolean; 
   started: boolean;
   finish:boolean;
   idQuestion: number;
   showAnswers: boolean;
+  numError:number;
+  numCorrect:number;
 };
+
 type SelectedAnswer = {
   text: string;
   select: boolean;
@@ -45,12 +49,15 @@ interface QuizState {
 
 const ObjGame: GameSettings = {
   mode: "",
-  withTimer: false,
+  withTimer: false, 
   started: false,
   finish:false,
   idQuestion: 0,
   showAnswers: false,
+  numError:0,
+  numCorrect:0,
 };
+
 // Сам стор оставляем приватным (не экспортируем),
 // чтобы наружу выходили только чистые атомарные инструменты
 const useOpenQuiz = create<QuizState>((set, get) => ({
@@ -83,10 +90,12 @@ const useOpenQuiz = create<QuizState>((set, get) => ({
       },
     })),
 
-  resetGame: () =>
+  resetGame: () => {
     set({
-      game: ObjGame,
-    }),
+      game: ObjGame, 
+    }); 
+  },
+
 
   getIdQuestion: (): number => {
     return get().game.idQuestion;

@@ -76,9 +76,12 @@ export const useQuizDataStore = create<QuizDataState>()(
 );
 
 export const getData = () => useQuizDataStore.getState().data;
+export const useProgressBarAll = () => useQuizDataStore((state) => state.progressBar);
 
-export const getProgressBar = (data: SelectQuestion) =>
+export const getProgressBar = (data: SelectQuestion) => // не вызывает перерисовку компонента из-за getState 
   useQuizDataStore.getState().getProgressBar(data);
+export const useProgressBar = (cate: string, quiz: string) => // вызывает перерисовку компонента 
+  useQuizDataStore((state) => state.progressBar[cate]?.[quiz]);
 
 export const setData = (data: QuizCategory[]) =>
   useQuizDataStore.getState().setData(data);

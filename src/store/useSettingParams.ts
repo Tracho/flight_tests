@@ -15,8 +15,7 @@ export const useSettingParams = create<TypeSettingParams>()(
   persist(
     (set, get) => ({
       selectQuiz: {cate:'',quiz:''},
-      setSelectQuiz: (val) => set({ selectQuiz: val }),
-      
+      setSelectQuiz: (val) => set({ selectQuiz: val }), 
     }),
     {
       name: "selectQuiz",
