@@ -1,5 +1,5 @@
 import type { QuizProgressBarKey } from "@/types/quizProgressStore";
-import { getProgressBar } from "@/store/quizDataStore";
+import { getProgressBar, useProgressBar } from "@/store/quizDataStore";
 import { quizActionsTest, useGame } from "@/store/useOpenGameQuiz";
 import ChildrenDetails from "../Details/ChildrenDetails";
 import ContainerCateModal from "@/ui/Modal/ContainerCateModal";
@@ -16,9 +16,11 @@ import {
 function QuizGameOverBoard() {
   const game = useGame();
   const db = quizActionsTest.getOpenDataCateQuiz();
-
+  if (!db) {
+    return null;
+  }
   const { cate, quiz } = getSelectQuiz();
-  const arrProgressBar: QuizProgressBarKey = getProgressBar({ cate, quiz });
+  const arrProgressBar: QuizProgressBarKey = useProgressBar( cate, quiz );
 
   const notPassed = arrProgressBar?.not_passed ?? [];
   const errorCounts = new Map<number, number>();
@@ -34,9 +36,7 @@ function QuizGameOverBoard() {
   
   const placeholder_text = "Пусто...";
 
-  if (!db) {
-    return null;
-  }
+
   const questionIndexes = Array.from( { length: db.json.length }, (_, index) => index, );
   const renderErrorQuestion = (question: number) => {
     const count = errorCounts.get(question) ?? 0;

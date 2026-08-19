@@ -71,8 +71,8 @@ const db = quizOpenWindow.getQuestion(
         <div className="px-6 flex flex-col gap-4">
           <div className="flex justify-between items-center">
             <div className="flex flex-wrap gap-3 ">
-              <b className="bg-sky-600 px-2 py-1 rounded text-white">Вопрос №{questionNumber +1}</b>
-              {duplicateErrorCounts && <b className="bg-red-700 px-2 py-1 rounded text-white">Ошибок {duplicateErrorCounts}</b>}
+              <b className="border-l-4 border-sky-600  px-2 py-1">Вопрос №{questionNumber +1}</b>
+              {duplicateErrorCounts && <b className="border-l-4 border-red-600  px-2 py-1  ">Ошибок {duplicateErrorCounts}</b>}
             </div>
             <div className="flex flex-row justify-between items-center gap-3">
               <SaveNeonBtn questionNumber={questionNumber} cate={cateName} quiz={testName}/> 

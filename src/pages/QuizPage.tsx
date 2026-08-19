@@ -5,6 +5,7 @@ import NeonBtn from "@/ui/button/NeonBtn";
 import BgContainer from "@/ui/container/BgContainer";
 import GameBoard from "@/ui/game/board/GameBoard";
 import QuizGameOverBoard from "@/ui/list/QuizDashboard/QuizGameOverBoard";
+import RoundStatsBoard from "@/ui/list/QuizDashboard/RoundStatsBoard";
 import { useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
@@ -24,9 +25,6 @@ function QuizPage() {
   const [searchParams] = useSearchParams();
   const cate = searchParams.get("cate") ?? "";
   const title = searchParams.get("title") ?? "";
-
-  console.log(cate); // "Testing"
-  console.log(title); // "My Data base Dev Testing"
 
   useEffect(() => {
     if (hasQuiz(cate, title) == true) {
@@ -85,8 +83,9 @@ function QuizPage() {
             {game.game.started === true && game.game.finish === true && (
               <>
                 <div>geme over</div>
-                <BgContainer>
-                <QuizGameOverBoard />
+                <BgContainer myClass="flex flex-col gap-5 justify-between">
+                  <RoundStatsBoard />
+                  <QuizGameOverBoard />
                 </BgContainer>
               </>
             )}

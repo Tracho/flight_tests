@@ -2,7 +2,11 @@ import { useGame } from "@/store/useOpenGameQuiz";
 import NeonBtn from "./NeonBtn";
 import SVGStar from "@/assets/icons/star.svg?react";
 import SVGDelete from "@/assets/icons/delate.svg?react";
-import { getProgressBar, updateProgressBar, useProgressBar } from "@/store/quizDataStore";
+import {
+  getProgressBar,
+  updateProgressBar,
+  useProgressBar,
+} from "@/store/quizDataStore";
 import type { QuizProgressBar } from "@/types/quizProgressStore";
 
 type Props = {
@@ -12,9 +16,8 @@ type Props = {
 };
 function SaveNeonBtn({ questionNumber, cate, quiz }: Props) {
   const progress = useProgressBar(cate, quiz);
-  
-  const checkedSave =
-    progress?.q_saved?.includes(questionNumber) ?? false;
+
+  const checkedSave = progress?.q_saved?.includes(questionNumber) ?? false;
 
   const HandleSave = () => {
     updateProgressBar((progress) => {
@@ -29,6 +32,11 @@ function SaveNeonBtn({ questionNumber, cate, quiz }: Props) {
               passed: [],
               not_passed: [],
               q_saved: [questionNumber],
+              timeMatch: [],
+              timerMatch: [],
+              numCorrectLenght: [],
+              numErrorLenght: [],
+              date: [],
             },
           },
         };

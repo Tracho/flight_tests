@@ -44,8 +44,8 @@ export function Checkbox({
   const inputClass = "sr-only peer";
 
   // Квадратный контейнер (rounded вместо rounded-full), border вместо border-2
-  const boxBase =
-    "w-5 h-5 rounded border flex items-center justify-center transition-all duration-200 bg-white";
+const boxBase =
+    "w-5 max-w-5 min-w-5 h-5 max-h-5 min-h-5 rounded border flex items-center justify-center transition-all duration-200 bg-white";
 
   // Идентичные круговые тени и бортеры. Механизм [&>svg]:scale-100 плавно зажигает галочку
   const boxStyles: Record<ColorStyle, string> = {

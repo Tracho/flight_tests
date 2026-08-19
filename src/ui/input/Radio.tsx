@@ -42,7 +42,7 @@ if (isCorrect === true) {
   const inputClass = 'sr-only peer'
 
   const circleBase =
-    'w-5 h-5 rounded-full border flex items-center justify-center transition-all duration-200 bg-white'
+    'w-5 max-w-5 min-w-5 h-5 max-h-5 min-h-5 rounded-full border flex items-center justify-center transition-all duration-200 bg-white'
 
   // Круговые тени-нимбы [0_0_8px_0_...] вокруг объекта
   const circleStyles: Record<ColorStyle, string> = {

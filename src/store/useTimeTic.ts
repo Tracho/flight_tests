@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 type TypeObjTimeTic = {
   timeSeconds: number;
@@ -21,22 +22,28 @@ interface TimeTic {
       | ((time: TypeObjTimeTic) => TypeObjTimeTic)
   ) => void;
 }
+export const useTimeTic = create<TimeTic>()(
+  persist(
+    (set,get) => ({
+      time: ObjTimeTic,
 
-export const useTimeTic = create<TimeTic>((set) => ({
-  time: ObjTimeTic,
+      setTime: (value) =>
+        set((state) => ({
+          time:
+            typeof value === "function"
+              ? value(state.time)
+              : {
+                  ...state.time,
+                  ...value,
+                },
+        })),
+    }),
+    { name: "time-tic" }
+  )
+); 
+ 
 
-  setTime: (value) =>
-    set((state) => ({
-      time:
-        typeof value === "function"
-          ? value(state.time)
-          : {
-              ...state.time,
-              ...value,
-            },
-    })),
-}));
-
+export const getTime = () => useTimeTic.getState().time
 export const useTime = () =>
   useTimeTic((state) => state.time);
 

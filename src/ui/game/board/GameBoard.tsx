@@ -20,6 +20,7 @@ import { getData } from "@/store/quizDataStore";
 import SaveNeonBtn from "@/ui/button/SaveNeonBtn";
 import { getSelectQuiz } from "@/store/useSettingParams";
 import TimeTic from "@/ui/Time/TimeTic";
+import CountTrueFalseAnswers from "../answers/CountTrueFalseAnswers";
 type SelectedAnswer = {
   text: string;
   select: boolean;
@@ -35,6 +36,9 @@ function GameBoard() {
   const game = useGame();
   const db = quizActionsTest.getOpenDataCateQuiz();
   const WatchQuiz = getSelectQuiz();
+    if (!db) {
+    return null;
+  }
   // Создаем локальный стейт для хранения ОДНОКРАТНО перемешанных опций
   const [shuffledOptions, setShuffledOptions] = useState<QuizOption[]>([]);
   const [selectedAnswer, SetSelectedAnswer] = useState<SelectedAnswer[]>([]);
@@ -100,9 +104,7 @@ function GameBoard() {
     SetSelectedAnswer([]);
   };
 
-  if (!db) {
-    return null;
-  }
+
  
 
  
@@ -122,14 +124,15 @@ function GameBoard() {
             className={`px-6 py-4 ${bglightgray} ${bgdarkStonel720} flex gap-4 flex-col`}
           >
             <div className="flex justify-between items-center">
-              <b className="bg-sky-600 rounded text-white px-2 py-1">
+              <b className="border-l-4 border-sky-600 px-2 py-1">
                 Вопрос №{game.getIdQuestion() + 1}
               </b>
               <div className="flex flex-row justify-between items-center gap-3">
                 <SaveNeonBtn questionNumber={game.getIdQuestion()} cate={WatchQuiz.cate} quiz={WatchQuiz.quiz}/> 
               </div>
             </div>
-            <div className="flex justify-end">
+            <div className="flex justify-between">
+              <CountTrueFalseAnswers/>
               <TimeTic/>
             </div>
             <p className="text-lg">{game.getQuizQuestion().title}</p>

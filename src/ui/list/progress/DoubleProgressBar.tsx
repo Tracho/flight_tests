@@ -1,21 +1,41 @@
-import { bgdarkNeutral950, bglightgray460, bglightgray70, borderDark, borderLign } from "@/data/desingStyle";
+import {
+  bgdarkNeutral950,
+  bglightgray460,
+  bglightgray70,
+  borderDark,
+  borderLign,
+} from "@/data/desingStyle";
 import type { CategoryQuiz } from "@/types/quiz";
 import type { QuizProgressBarKey } from "@/types/quizProgressStore";
 import { memo } from "react";
 type DoubleProgressBarProps = {
   className?: string;
   data: CategoryQuiz;
-  progressBar:QuizProgressBarKey;
+  progressBar: QuizProgressBarKey;
+  roundProgress?: boolean;
 };
 
-function DoubleProgressBar({ className = "", data ,progressBar}: DoubleProgressBarProps) {
+function DoubleProgressBar({
+  className = "",
+  data,
+  progressBar,
+  roundProgress = false,
+}: DoubleProgressBarProps) {
   // Ограничиваем оба прогресса в пределах от 0 до 100
   const total = data.json.length || 1;
-
-  const passed = new Set(progressBar?.passed).size;
-  const failed = new Set(progressBar?.not_passed).size;
-  const saved = new Set(progressBar?.q_saved).size;
-
+  let passed = 0;
+  let failed = 0;
+  let saved = 0;
+  if (roundProgress == false) {
+    passed = new Set(progressBar?.passed).size;
+    failed = new Set(progressBar?.not_passed).size;
+    saved = new Set(progressBar?.q_saved).size;
+  } else {
+    const lastIdCorrect = progressBar?.numCorrectLenght.length -1; 
+    const lastIdError = progressBar?.numCorrectLenght.length -1; 
+    passed = Number(progressBar?.numCorrectLenght[lastIdCorrect]);
+    failed = Number(progressBar?.numErrorLenght[lastIdError]);
+  }
   const greenProgress = (passed / total) * 100;
   const redProgress = (failed / total) * 100;
 
@@ -29,7 +49,9 @@ function DoubleProgressBar({ className = "", data ,progressBar}: DoubleProgressB
     "shadow-[0_0_20px_rgba(239,68,68,0.8),_inset_0_0_8px_rgba(239,68,68,0.4)]";
 
   return (
-    <div className={`relative w-full flex h-8 overflow-hidden rounded-lg border ${borderLign} ${borderDark} ${bglightgray70} ${bgdarkNeutral950} `}>
+    <div
+      className={`relative w-full flex h-8 overflow-hidden rounded-lg border ${borderLign} ${borderDark} ${bglightgray70} ${bgdarkNeutral950} `}
+    >
       <div
         style={{ width: `${greenProgress}%` }}
         className={`h-full bg-green-500 transition-all duration-500 ${greenGlow}`}
@@ -49,7 +71,11 @@ function DoubleProgressBar({ className = "", data ,progressBar}: DoubleProgressB
         <span className="text-sm font-bold text-white drop-shadow-lg text-shadow">
           ✅ {passed}
           <span className="mx-2 text-neutral-400">|</span>🚨 {failed}
-          <span className="mx-2 text-neutral-400">|</span>⭐ {saved}
+          {!roundProgress && (
+            <>
+              <span className="mx-2 text-neutral-400">|</span>⭐ {saved}
+            </>
+          )}
           <span className="mx-2 text-neutral-400">|</span>
           📚 {total}
         </span>
