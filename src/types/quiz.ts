@@ -6,7 +6,7 @@ export interface QuizOption {
 
 export interface QuizQuestion {
   title: string;
-  timestamp: string;
+  timestamp?: string;
   info?:string,
   infoHelp?:string,
   correctAnswer: string;
@@ -15,9 +15,9 @@ export interface QuizQuestion {
 
 export interface CategoryQuiz {
   json: QuizQuestion[];
-  storage_q_passed: number[];
-  storage_q_not_passed: number[];
-  storage_q_saved: number[];
+  storage_q_passed?: number[];
+  storage_q_not_passed?: number[];
+  storage_q_saved?: number[];
   title: string;
   description: string;
   visible:boolean;

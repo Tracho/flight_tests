@@ -20,9 +20,15 @@ import {
 import { getProgressBar, useProgressBarAll } from "@/store/quizDataStore";
 import type { QuizProgressBarKey } from "@/types/quizProgressStore";
 import { setSelectQuiz } from "@/store/useSettingParams";
+import CountTrueFalseAnswers from "@/ui/game/answers/CountTrueFalseAnswers";
+import TimeTic from "@/ui/Time/TimeTic";
+import InfoDate from "@/ui/date/InfoDate";
 
 function QuizDashboard() {
   const data = useQuizData();
+  if (!data) {
+    return null;
+  }
   const game = useGame();
   const ProgressBarAll = useProgressBarAll();
   const selectedCategories = useSelectedCategories() ?? [];
@@ -32,9 +38,6 @@ function QuizDashboard() {
   console.log(data);
   console.log(ProgressBarAll);
   console.groupEnd();
-  if (!data) {
-    return null;
-  }
   return (
     <>
       <div className="flex flex-col gap-4">
@@ -52,7 +55,10 @@ function QuizDashboard() {
                   childrenClass="flex-col"
                 >
                   {item.arr.map((childItem, childIndex) => {
-                    const questionIndexes = Array.from( { length: childItem.json.length }, (_, index) => index, );
+                    const questionIndexes = Array.from(
+                      { length: childItem.json.length },
+                      (_, index) => index,
+                    );
 
                     const arrProgressBar: QuizProgressBarKey =
                       ProgressBarAll?.[item.category]?.[childItem.title];
@@ -71,7 +77,7 @@ function QuizDashboard() {
                     const duplicates = uniqueErrorQuestions.filter(
                       (question) => (errorCounts.get(question) ?? 0) > 1,
                     );
-                    
+
                     const renderErrorQuestion = (question: number) => {
                       const count = errorCounts.get(question) ?? 0;
 
@@ -220,6 +226,45 @@ function QuizDashboard() {
                                 ))
                               : placeholder_text}
                           </ChildrenDetails>
+
+                          <ChildrenDetails
+                            title={`📝 История матчей`}
+                            childrenClass="flex-col"
+                            titleClass="text-base"
+                            svgClass="w-5"
+                            BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
+                          >
+                            {arrProgressBar?.date.length > 0
+                              ? arrProgressBar?.date.map((el, index) => (
+                                  <div
+                                    key={`${el}-${index}`}
+                                    className="flex justify-between items-center flex-wrap gap-2 border-b-2 border-gray-400/50 pb-2"
+                                  >
+                                    <span className="flex justify-between gap-2 items-center text-lg flex-wrap">
+                                      Ответы: 
+                                      <CountTrueFalseAnswers
+                                        numCorrect={
+                                          arrProgressBar.numCorrectLenght[index]
+                                        }
+                                        numError={
+                                          arrProgressBar.numErrorLenght[index]
+                                        }
+                                        Total={childItem.json.length}
+                                      />
+                                    </span>
+                                    <div className="flex justify-between items-center gap-3">
+                                      <TimeTic
+                                        myTime={arrProgressBar.timeMatch[
+                                          index
+                                        ].split(":")}
+                                      />
+                                      <InfoDate date={el} />
+                                    </div>
+                                  </div>
+                                ))
+                              : placeholder_text}
+                          </ChildrenDetails>
+
                           <ChildrenDetails
                             title={`❔ Не пройденные вопросы (${childItem.json.length})`}
                             childrenClass="flex-wrap"
@@ -227,8 +272,7 @@ function QuizDashboard() {
                             svgClass="w-5"
                             BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
                           >
-                            {
-                            questionIndexes.map((questionNumber, index) => (
+                            {questionIndexes.map((questionNumber, index) => (
                               <ContainerCateModal
                                 NeonBtnColor="gray"
                                 key={questionNumber}
@@ -237,7 +281,7 @@ function QuizDashboard() {
                                 testName={childItem.title}
                                 startIndex={index}
                               >
-                                {questionNumber +1}
+                                {questionNumber + 1}
                               </ContainerCateModal>
                             ))}
                           </ChildrenDetails>

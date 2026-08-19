@@ -13,6 +13,9 @@ import {
   borderDark,
   borderLign,
 } from "@/data/desingStyle";
+import CountTrueFalseAnswers from "@/ui/game/answers/CountTrueFalseAnswers";
+import TimeTic from "@/ui/Time/TimeTic";
+import InfoDate from "@/ui/date/InfoDate";
 function QuizGameOverBoard() {
   const game = useGame();
   const db = quizActionsTest.getOpenDataCateQuiz();
@@ -20,7 +23,7 @@ function QuizGameOverBoard() {
     return null;
   }
   const { cate, quiz } = getSelectQuiz();
-  const arrProgressBar: QuizProgressBarKey = useProgressBar( cate, quiz );
+  const arrProgressBar: QuizProgressBarKey = useProgressBar(cate, quiz);
 
   const notPassed = arrProgressBar?.not_passed ?? [];
   const errorCounts = new Map<number, number>();
@@ -33,11 +36,13 @@ function QuizGameOverBoard() {
   const duplicates = uniqueErrorQuestions.filter(
     (question) => (errorCounts.get(question) ?? 0) > 1,
   );
-  
+
   const placeholder_text = "Пусто...";
 
-
-  const questionIndexes = Array.from( { length: db.json.length }, (_, index) => index, );
+  const questionIndexes = Array.from(
+    { length: db.json.length },
+    (_, index) => index,
+  );
   const renderErrorQuestion = (question: number) => {
     const count = errorCounts.get(question) ?? 0;
 
@@ -172,6 +177,40 @@ function QuizGameOverBoard() {
             ))
           : placeholder_text}
       </ChildrenDetails>
+
+      <ChildrenDetails
+        title={`📝 История матчей`}
+        childrenClass="flex-col"
+        titleClass="text-base"
+        svgClass="w-5"
+        BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
+      >
+        {arrProgressBar?.date.length > 0
+          ? arrProgressBar?.date.map((el, index) => (
+              <div
+                key={`${el}-${index}`}
+                className="flex justify-between items-center flex-wrap gap-2 border-b-2 border-gray-400/50 pb-2"
+              >
+                <span className="flex justify-between gap-2 items-center text-lg flex-wrap">
+                  Ответы:
+                  <CountTrueFalseAnswers
+                    numCorrect={arrProgressBar.numCorrectLenght[index]}
+                    numError={arrProgressBar.numErrorLenght[index]}
+                    Total={db.json.length}
+                  />
+                  
+                </span>
+                <div className="flex justify-between items-center gap-3">
+                  <TimeTic
+                    myTime={arrProgressBar.timeMatch[index].split(":")}
+                  />
+                  <InfoDate date={el} />
+                </div>
+              </div>
+            ))
+          : placeholder_text}
+      </ChildrenDetails>
+
       <ChildrenDetails
         title={`❔ Не пройденные вопросы (${db.json.length})`}
         childrenClass="flex-wrap"
@@ -179,20 +218,18 @@ function QuizGameOverBoard() {
         svgClass="w-5"
         BgContainerClass={`bg-orange-100/40 ${bgdarkNeutral} ${borderLign} ${borderDark}`}
       >
-        {questionIndexes.map(
-          (questionNumber, index) => (
-            <ContainerCateModal
-              NeonBtnColor="gray"
-              key={questionNumber}
-              pages={questionIndexes}
-              cateName={cate}
-              testName={db.title}
-              startIndex={index}
-            >
-              {questionNumber +1}
-            </ContainerCateModal>
-          ),
-        )}
+        {questionIndexes.map((questionNumber, index) => (
+          <ContainerCateModal
+            NeonBtnColor="gray"
+            key={questionNumber}
+            pages={questionIndexes}
+            cateName={cate}
+            testName={db.title}
+            startIndex={index}
+          >
+            {questionNumber + 1}
+          </ContainerCateModal>
+        ))}
       </ChildrenDetails>
     </ChildrenDetails>
   );
