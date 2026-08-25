@@ -44,18 +44,19 @@ function RoundStatsBoard() {
         myClass="flex flex-col gap-3 justify-between"
         className={`${bglightgray70} ${bgdarkNeutral30} ${borderLign} ${borderDark}`}
       >
-        <div className="flex justify-between items-center flex-wrap gap-2">
-          <span className="flex justify-between gap-2 items-center text-lg">
+        <div className="flex justify-between items-center flex-wrap gap-2 text-lg">
+          <div className="flex justify-between gap-2 items-center">
             Ответы:
             <CountTrueFalseAnswers
+            svgW={24} svgH={24}
               numCorrect={passed}
               numError={failed}
               Total={TotalQuestionLenght}
             />
-          </span>
+          </div>
           <div className="flex justify-between items-center gap-3">
-            <TimeTic myTime={MyTime} />
-            <InfoDate date={MyDate} />
+            <TimeTic myTime={MyTime}  svgW={24} svgH={24}/>
+            <InfoDate date={MyDate} svgW={24} svgH={24}/>
           </div>
         </div>
 
@@ -74,14 +75,14 @@ function RoundStatsBoard() {
         >
           {arrProgressBar?.date.map((el, index) => (
             <div key={`${el}-${index}`} className="flex justify-between items-center flex-wrap gap-2 border-b-2 border-gray-400/50 pb-2">
-              <span className="flex justify-between gap-2 items-center text-lg flex-wrap">
+              <div className="flex justify-between gap-2 items-center text-base flex-wrap">
                 Ответы:
                 <CountTrueFalseAnswers
                   numCorrect={arrProgressBar.numCorrectLenght[index]}
                   numError={arrProgressBar.numErrorLenght[index]}
                   Total={TotalQuestionLenght}
                 />
-              </span>
+              </div>
               <div className="flex justify-between items-center gap-3">
                 <TimeTic myTime={arrProgressBar.timeMatch[index].split(":")} />
                 <InfoDate date={el} />

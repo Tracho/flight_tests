@@ -5,8 +5,11 @@ import { useTime, useSetTime } from "@/store/useTimeTic";
 import { useEffect } from "react";
 type Props = {
   myTime?: string[] | null;
+svgW?:number;
+  svgH?:number;
 };
-function TimeTic({ myTime = null }: Props) {
+ 
+function TimeTic({ myTime = null,svgW=18 ,svgH=18 }: Props) {
   const game = useGame();
   const time = useTime();
 
@@ -53,19 +56,19 @@ function TimeTic({ myTime = null }: Props) {
     <>
       <div className="flex justify-between gap-1">
         {game.game.withTimer == true ? (
-          <SVGTimer width={24} hanging={24} />
+          <SVGTimer width={svgW} hanging={svgH} />
         ) : (
-          <SVGTime width={24} hanging={24} />
+          <SVGTime width={svgW} hanging={svgH} />
         )}
         {myTime == null ? (
-          <span className="text-lg">
+          <span>
             {time.TimeHours > 0 &&
               String(time.TimeHours).padStart(2, "0") + ":"}
             {String(time.timeMinutes).padStart(2, "0")}:
             {String(time.timeSeconds).padStart(2, "0")}
           </span>
         ) : (
-          <span className="text-lg">
+          <span>
             {myTime[0] !== "00" && myTime[0] + ":"}
             {myTime[1]}:{myTime[2]}
           </span>

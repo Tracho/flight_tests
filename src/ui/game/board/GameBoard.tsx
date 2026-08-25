@@ -21,6 +21,7 @@ import SaveNeonBtn from "@/ui/button/SaveNeonBtn";
 import { getSelectQuiz } from "@/store/useSettingParams";
 import TimeTic from "@/ui/Time/TimeTic";
 import CountTrueFalseAnswers from "../answers/CountTrueFalseAnswers";
+import QuestionAsked from "@/ui/list/Info/QuestionAsked";
 type SelectedAnswer = {
   text: string;
   select: boolean;
@@ -131,12 +132,15 @@ function GameBoard() {
                 <SaveNeonBtn questionNumber={game.getIdQuestion()} cate={WatchQuiz.cate} quiz={WatchQuiz.quiz}/> 
               </div>
             </div>
-            <div className="flex justify-between">
-              <CountTrueFalseAnswers/>
-              <TimeTic/>
+            <div className="flex justify-between text-lg">
+              <CountTrueFalseAnswers svgH={24} svgW={24}/>
+              <TimeTic svgH={24} svgW={24}/>
             </div>
-            <p className="text-lg">{game.getQuizQuestion().title}</p>
-
+            <div>
+              <QuestionAsked header={`Вопрос №${game.getIdQuestion() + 1}`}>
+                <p>{game.getQuizQuestion().title}</p>
+              </QuestionAsked> 
+            </div>
             <ul className="flex flex-col gap-3">
               {/* Рендерим из локального стейта shuffledOptions вместо ArrRadndomOptions */}
               {shuffledOptions.map((item, index) => {
@@ -238,10 +242,11 @@ function GameBoard() {
                   {game.getQuizQuestion()?.correctAnswer}
                 </InfoCorrect>
                 {game.getQuizQuestion()?.info && (
-                  <Info header="Полезная информация">
+                  <Info header="Факт">
                     {game.getQuizQuestion()?.info}
                   </Info>
                 )}
+                {game.getQuizQuestion()?.infoHelp && (<InfoHelp header="Объяснение">{game.getQuizQuestion()?.infoHelp}</InfoHelp>)}
               </>
             )}
           </div>

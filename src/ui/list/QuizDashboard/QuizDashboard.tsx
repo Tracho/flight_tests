@@ -238,9 +238,9 @@ function QuizDashboard() {
                               ? arrProgressBar?.date.map((el, index) => (
                                   <div
                                     key={`${el}-${index}`}
-                                    className="flex justify-between items-center flex-wrap gap-2 border-b-2 border-gray-400/50 pb-2"
+                                    className="text-base flex justify-between items-center flex-wrap gap-2 border-b-2 border-gray-400/50 pb-2"
                                   >
-                                    <span className="flex justify-between gap-2 items-center text-lg flex-wrap">
+                                    <div className="flex justify-between gap-2 items-center flex-wrap">
                                       Ответы: 
                                       <CountTrueFalseAnswers
                                         numCorrect={
@@ -251,7 +251,7 @@ function QuizDashboard() {
                                         }
                                         Total={childItem.json.length}
                                       />
-                                    </span>
+                                    </div>
                                     <div className="flex justify-between items-center gap-3">
                                       <TimeTic
                                         myTime={arrProgressBar.timeMatch[

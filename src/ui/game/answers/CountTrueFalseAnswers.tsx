@@ -9,11 +9,15 @@ type Props = {
   numError?: number | null;
   Total?: number | null;
   children?: ReactNode;
+  svgW?: number;
+  svgH?: number;
 };
 function CountTrueFalseAnswers({
   numCorrect = null,
   numError = null,
   Total = null,
+  svgW = 18,
+  svgH = 18,
   children,
 }: Props) {
   let thisTotal = Total;
@@ -29,23 +33,23 @@ function CountTrueFalseAnswers({
  
   return (
     <>
-      <div className="flex items-center gap-3 text-lg">
+      <div className="flex items-center gap-3">
         <span className="flex items-center gap-1">
           <SVGSTrue
             className="text-green-600 dark:text-green-400"
-            width={24}
-            hanging={24}
+            width={svgW}
+            hanging={svgH}
           />
           {thisCorrenct}
         </span>
         |
         <span className="flex items-center gap-1">
-          <SVGFlase className="text-red-500" width={24} hanging={24} />
+          <SVGFlase className="text-red-500" width={svgW} hanging={svgH} />
           {thisError}
         </span>
         |
         <span className="flex items-center gap-1">
-          <SVGFTotal className="dark:text-white" width={24} hanging={24} />
+          <SVGFTotal className="dark:text-white" width={svgW} hanging={svgH} />
           {thisTotal}
         </span>
         {children}

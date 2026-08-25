@@ -11,6 +11,7 @@ import InfoHelp from "../list/Info/infoHelp";
 import Pagination from "../pagination/Pagination";
 import { bgdarkNeutral, bglight } from "@/data/desingStyle";
 import SaveNeonBtn from "../button/SaveNeonBtn";
+import QuestionAsked from "../list/Info/QuestionAsked";
 
 type Props = {
   cateName: string;
@@ -79,6 +80,11 @@ const db = quizOpenWindow.getQuestion(
             </div>
           </div>
           <p className="text-lg">{db?.title}</p>
+
+          <QuestionAsked header={`Вопрос №${questionNumber +1}`}>
+                <p>{db?.title}</p>
+              </QuestionAsked> 
+    
           <ul className="flex flex-col gap-3">
             {db?.options.map((item, index) => {
               if (statusCount?.trueCount === 1) {
@@ -115,9 +121,9 @@ const db = quizOpenWindow.getQuestion(
           <InfoCorrect header="Правильный ответ">
             {db?.correctAnswer}
           </InfoCorrect>
-          {db?.info && <Info header="Полезная информация">{db?.info}</Info>}
+          {db?.info && <Info header="Факт">{db?.info}</Info>}
           {db?.infoHelp && (
-            <InfoHelp header="Дополнительная информация">
+            <InfoHelp header="Объяснение">
               {db?.infoHelp}
             </InfoHelp>
           )}

@@ -9,8 +9,12 @@ export const greenBorderLight = `border-green-600`;
 export const skyTextLight = `text-sky-600`;
 export const skyBorderLight = `border-sky-600`;
 export const amberTextLight = `text-amber-600`;
+export const amberTextBlack = `text-black`;
 export const amberBorderLight = `border-amber-600`;
+export const amberBorderBlack = `border-black`;
+export const amberFillBlack = `fill-black`;
 export const amberFillLight = `fill-amber-600`;
+export const amberStrokeLight = `stroke-amber-600`;
 export const borderLightNeonOrange700 = `border-orange-700 shadow-orange-500/20`;
 
 
@@ -25,8 +29,12 @@ export const greenBorderDark = `dark:border-green-400`;
 export const skyTextDark = `dark:text-sky-400`;
 export const skyBorderDark = `dark:border-sky-400`;
 export const amberTextDark = `dark:text-amber-500`;
+export const amberTextWhite = `dark:text-white`;
 export const amberBorderDark = `dark:border-amber-500`;
+export const amberBorderWhite = `dark:border-white`;
 export const amberFillDark = `dark:fill-amber-500`;
+export const amberFillWhite = `dark:fill-white`;
+export const amberStrokeDark = `dark:stroke-amber-500`;
 export const greyBorderDark = `dark:border-gray-300`;
 export const borderDarkNeonViolet700 = `dark:border-violet-700 dark:shadow-violet-500/20`;
 export const bgdarkStonel720 = `dark:bg-stone-700/20 dark:text-zinc-50`;
