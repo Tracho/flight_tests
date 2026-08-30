@@ -1,6 +1,6 @@
 import CategoryNavi from "@/ui/list/navigation/CategoryNavi";
 import QuizDashboard from "@/ui/list/QuizDashboard/QuizDashboard";
-
+ 
 function HomePage() {
  
   return (

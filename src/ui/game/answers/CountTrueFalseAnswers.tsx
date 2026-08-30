@@ -25,7 +25,7 @@ function CountTrueFalseAnswers({
     thisTotal = quizActionsTest.getOpenDataCateQuiz()?.json.length ?? 0;
   }
 
-  console.log(thisTotal)
+ 
   const game = useGame(); 
   let thisCorrenct =
     numCorrect == null ? game.game.numCorrect.length : numCorrect;

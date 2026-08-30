@@ -12,7 +12,7 @@
       },
       {
         "isCorrect": true,
-        "text": "2"
+        "text": "1+1=2"
       },
       {
         "isCorrect": false,
@@ -37,7 +37,7 @@
       },
       {
         "isCorrect": true,
-        "text": "Phantom Assassin"
+        "text": "Dota 2 = Phantom Assassin"
       },
       {
         "isCorrect": false,
@@ -49,7 +49,7 @@
       },
       {
         "isCorrect": true,
-        "text": "Juggernaut"
+        "text": "Dota 2 = Juggernaut"
       }
     ],
     "timestamp": "2026-05-19T16:44:32.342Z",
@@ -76,7 +76,7 @@
       },
       {
         "isCorrect": true,
-        "text": "6"
+        "text": "3+3=6"
       }
     ],
     "timestamp": "2026-05-19T16:44:32.342Z",
@@ -95,7 +95,7 @@
       },
       {
         "isCorrect": true,
-        "text": "5"
+        "text": "3+2=5"
       },
       {
         "isCorrect": false,

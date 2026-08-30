@@ -22,8 +22,6 @@ import { getSelectQuiz } from "@/store/useSettingParams";
 import TimeTic from "@/ui/Time/TimeTic";
 import CountTrueFalseAnswers from "../answers/CountTrueFalseAnswers";
 import QuestionAsked from "@/ui/list/Info/QuestionAsked";
-import GBul from "./components/GBul";
-import GBtextInput from "./components/GBtextInput";
 type SelectedAnswer = {
   text: string;
   select: boolean;
@@ -36,28 +34,20 @@ type QuizOption = {
 };
 
 function GameBoard() {
-  const game = useGame(); 
-  const db = quizActionsTest.getCurrentQuestions();
- 
+  const game = useGame();
+  const db = quizActionsTest.getOpenDataCateQuiz();
   const WatchQuiz = getSelectQuiz();
   if (!db) {
     return null;
   }
-
-  const foundQuestionIndex = quizActionsTest.getFoundQuestionIndex(); 
-
   // Создаем локальный стейт для хранения ОДНОКРАТНО перемешанных опций
   const [shuffledOptions, setShuffledOptions] = useState<QuizOption[]>([]);
   const [selectedAnswer, SetSelectedAnswer] = useState<SelectedAnswer[]>([]);
 
   // Перемешиваем только тогда, когда меняется ID вопроса
   useEffect(() => {
-    game.setQuestionByTitle(db.json[game.getIdQuestion()].title); // отсылаем тайтл чтобы найти наш вопрос заранее и записать в стейт index
-
-
     // 1. Делаем поверхностную копию массива [...], чтобы НЕ мутировать оригинал в game
-    const optionsCopy = [...db.json[game.getIdQuestion()].options];
-    console.log("optionsCopy", optionsCopy);
+    const optionsCopy = [...game.getQuizQuestion().options];
 
     // 2. Перемешиваем нашу копию
     for (let i = optionsCopy.length - 1; i > 0; i--) {
@@ -69,12 +59,8 @@ function GameBoard() {
     setShuffledOptions(optionsCopy);
   }, [game.getIdQuestion()]); // Четкий триггер: только при смене вопроса
 
-  useEffect(() => {
-    console.log("db", db.json[game.getIdQuestion()]);
-  }, [db]);
-
   // Вычисляем statusCount на основе оригинального массива (так надежнее)
-  const statusCount = db.json[game.getIdQuestion()].options.reduce(
+  const statusCount = game.getQuizQuestion().options.reduce(
     (accumulator, item) => {
       if (item.isCorrect) {
         accumulator.trueCount += 1;
@@ -103,13 +89,13 @@ function GameBoard() {
   };
 
   const HandleCheckingAnswers = () => {
-    // game.setQuestionByTitle(db.json[game.getIdQuestion()].title);
+    game.setQuestionByTitle(db.json[game.getIdQuestion()].title);
     let isCorrect = game.checkingAnswers(selectedAnswer);
     if (isCorrect) {
       game.addIdQuestProgress(isCorrect);
       game.endGame();
     } else {
-      console.warn("This question Void");
+      console.error("This question Void");
       game.addIdQuestProgress(false);
       game.endGame();
     }
@@ -125,7 +111,7 @@ function GameBoard() {
     game.previousQuestion();
     SetSelectedAnswer([]);
   };
-  
+
   return (
     <>
       {game.game.started == true && (
@@ -141,7 +127,7 @@ function GameBoard() {
           <div
             className={`px-6 py-4 ${bglightgray} ${bgdarkStonel720} flex gap-4 flex-col`}
           >
-            {/* <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center">
               <b className="border-l-4 border-sky-600 px-2 py-1">
                 Вопрос №{game.getIdQuestion() + 1}
               </b>
@@ -152,7 +138,7 @@ function GameBoard() {
                   quiz={WatchQuiz.quiz}
                 />
               </div>
-            </div> */}
+            </div>
             <div className="flex justify-between text-lg">
               <CountTrueFalseAnswers svgH={24} svgW={24} />
               <TimeTic svgH={24} svgW={24} />
@@ -162,19 +148,90 @@ function GameBoard() {
                 header={`Вопрос №${game.getIdQuestion() + 1}`}
                 MyBtn={
                   <SaveNeonBtn
-                    questionNumber={game.game.mode === "standard" ? game.getIdQuestion() : foundQuestionIndex}
+                    questionNumber={game.getIdQuestion()}
                     cate={WatchQuiz.cate}
                     quiz={WatchQuiz.quiz}
                   />
                 }
               >
-                <p>{db.json[game.getIdQuestion()].title}</p>
+                <p>{game.getQuizQuestion().title}</p>
               </QuestionAsked>
             </div>
-              
-            <GBtextInput/>
-            <GBul shuffledOptions={shuffledOptions} selectedAnswer={selectedAnswer} statusCount={statusCount} db={db} HandlerSelectRadion={HandlerSelectRadion} HandlerSelectCheckBox={HandlerSelectCheckBox}/>
-              
+            <ul className="flex flex-col gap-3">
+              {/* Рендерим из локального стейта shuffledOptions вместо ArrRadndomOptions */}
+              {shuffledOptions.map((item, index) => {
+                if (statusCount?.trueCount === 1) {
+                  return (
+                    <li key={item.text}>
+                      {" "}
+                      {/* Лучше использовать item.text вместо index для key, если тексты уникальны */}
+                      <Radio
+                        name={
+                          game.getQuizQuestion()?.title + game.getIdQuestion()
+                        }
+                        mstyle={
+                          game.getShowAnswers() == false
+                            ? "blue"
+                            : item.isCorrect == true
+                              ? "green"
+                              : "danger"
+                        }
+                        value={item.text}
+                        checked={selectedAnswer.some(
+                          (a) => a.text === item.text && a.select,
+                        )}
+                        onChange={(e) =>
+                          HandlerSelectRadion({
+                            text: item.text,
+                            select: e.target.checked,
+                          })
+                        }
+                        disabled={game.getShowAnswers()}
+                        isCorrect={
+                          game.getShowAnswers() ? item.isCorrect : undefined
+                        }
+                      >
+                        {item.text}
+                      </Radio>
+                    </li>
+                  );
+                } else {
+                  return (
+                    <li key={item.text}>
+                      <Checkbox
+                        name={
+                          game.getQuizQuestion()?.title + game.getIdQuestion()
+                        }
+                        mstyle={
+                          game.getShowAnswers() == false
+                            ? "blue"
+                            : item.isCorrect == true
+                              ? "green"
+                              : "danger"
+                        }
+                        value={item.text}
+                        checked={selectedAnswer.some(
+                          (a) => a.text === item.text && a.select,
+                        )}
+                        onChange={(e) =>
+                          HandlerSelectCheckBox({
+                            text: item.text,
+                            select: e.target.checked,
+                          })
+                        }
+                        disabled={game.getShowAnswers()}
+                        isCorrect={
+                          game.getShowAnswers() ? item.isCorrect : undefined
+                        }
+                      >
+                        {item.text}
+                      </Checkbox>
+                    </li>
+                  );
+                }
+              })}
+            </ul>
+
             <div className="flex justify-between items-center">
               {game.getIdQuestion() !== 0 && (
                 <NeonBtn color="sky" onClick={HandlePreviousQuesion}>
@@ -198,16 +255,14 @@ function GameBoard() {
             {game.getShowAnswers() == true && (
               <>
                 <InfoCorrect header="Правильный ответ">
-                  {db.json[game.getIdQuestion()].correctAnswer}
+                  {game.getQuizQuestion()?.correctAnswer}
                 </InfoCorrect>
-                {db.json[game.getIdQuestion()].info && (
-                  <Info header="Факт">
-                    {db.json[game.getIdQuestion()].info}
-                  </Info>
+                {game.getQuizQuestion()?.info && (
+                  <Info header="Факт">{game.getQuizQuestion()?.info}</Info>
                 )}
-                {db.json[game.getIdQuestion()].infoHelp && (
+                {game.getQuizQuestion()?.infoHelp && (
                   <InfoHelp header="Объяснение">
-                    {db.json[game.getIdQuestion()].infoHelp}
+                    {game.getQuizQuestion()?.infoHelp}
                   </InfoHelp>
                 )}
               </>

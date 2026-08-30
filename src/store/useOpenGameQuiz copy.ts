@@ -32,15 +32,15 @@ interface QuizState {
   data: QuizCategory[]; // Глобальная дата баззы
   game: GameSettings; // Игровая настройка. Когда должна начаться игра, закончится, показать ответы, время и тд
   foundQuestion: QuizQuestion | undefined; // Сохранение найденного вопроса
-  foundQuestionIndex: number; // Сохранение найденного Index вопроса
-  currentQuestions: CategoryQuiz | undefined; // Новое поле: вопросы для текущего раунда
+  currentQuestions: QuizQuestion[]; // Новое поле: вопросы для текущего раунда
 
   setGame: (value: Partial<GameSettings>) => void; // Изменение настройки игры, к примеру мод игры
   startGame: () => void; // Запустить игру
   stopGame: () => void; // Остановить игру
   resetGame: () => void; // Обновить все настройки игры
   getOpenDataCateQuiz: () => CategoryQuiz | undefined; // Достает категорию квиза
-  useQuestionGeneration: () => void; // Достает категорию квиза
+  getOpenDataCateQuizTEST: () => CategoryQuiz | undefined; // Достает категорию квиза
+  initRoundQuestions: () => void; // Новый экшен для подготовки вопросов
   getQuizQuestion: () => QuizQuestion; // Достает вопрос из квиза
   getIdQuestion: () => number; // Достает текущий индекс из ObjGame: GameSettings
   setQuestionByTitle: (val: string) => void; // Поиск вопроса по тайтлу, для рандом мода.
@@ -82,8 +82,7 @@ const useOpenQuiz = create<QuizState>()(
       data: getData(),
       game: ObjGame,
       foundQuestion: undefined,
-      foundQuestionIndex: 0,
-      currentQuestions: undefined, // Изначально массив пустой
+      currentQuestions: [], // Изначально массив пустой
 
       // arrSelectedAnswer: [],
 
@@ -95,9 +94,11 @@ const useOpenQuiz = create<QuizState>()(
           },
         })),
 
+      // Обновляем startGame, чтобы он автоматически готовил вопросы
       startGame: () => {
         // 1. Сначала генерируем порядок вопросов
-        useQuestionGeneration();
+        get().initRoundQuestions();
+
         // 2. Затем переводим игру в активный статус
         set((state) => ({
           game: {
@@ -118,6 +119,7 @@ const useOpenQuiz = create<QuizState>()(
       resetGame: () => {
         set({
           game: ObjGame,
+          currentQuestions: [], // Очищаем массив при сбросе
         });
       },
 
@@ -142,36 +144,27 @@ const useOpenQuiz = create<QuizState>()(
         })),
       getShowAnswers: () => get().game.showAnswers,
 
-      getQuizQuestion: (): QuizQuestion => {
-        const quiz = get().getOpenDataCateQuiz();
-        const index = get().game.idQuestion;
+      // getQuizQuestion: (): QuizQuestion => {
+      //   const quiz = get().getOpenDataCateQuiz();
+      //   const index = get().game.idQuestion;
 
-        return quiz?.json[index] || ({} as QuizQuestion);
+      //   return quiz?.json[index] || ({} as QuizQuestion);
+      // },
+
+      getQuizQuestion: (): QuizQuestion => {
+        const index = get().game.idQuestion;
+        // Берем вопрос строго из подготовленного пула для текущего раунда
+        return get().currentQuestions[index] || ({} as QuizQuestion);
       },
 
       setQuestionByTitle: (val: string): void => {
         const quiz = get().getOpenDataCateQuiz();
-        const questionsArray = quiz?.json || [];
-
-        // 1. Находим ИНДЕКС (ID) вопроса в массиве
-        const questionIndex = questionsArray.findIndex(
+        // Более надежный вариант поиска:
+        const question = (quiz?.json || []).find(
           (item) =>
             item.title.trim().toLowerCase() === val.trim().toLowerCase(),
         );
-
-        // 2. Выводим ID в логи
-        if (questionIndex !== -1) {
-          console.log(`Вопрос найден! ID (индекс) вопроса: ${questionIndex}`);
-        } else {
-          console.warn(`Вопрос с заголовком "${val}" не найден в базе данных.`);
-        }
-
-        // 3. Достаем сам вопрос по найденному индексу (если индекс валидный)
-        const question =
-          questionIndex !== -1 ? questionsArray[questionIndex] : undefined;
-
-        // 4. Сохраняем в состояние стора
-        set({ foundQuestion: question, foundQuestionIndex: questionIndex });
+        set({ foundQuestion: question });
       },
 
       getOpenDataCateQuiz: (): CategoryQuiz | undefined => {
@@ -181,7 +174,7 @@ const useOpenQuiz = create<QuizState>()(
           ?.arr.find((quiz) => quiz.title === select.quiz);
       },
 
-      useQuestionGeneration: () => {
+      getOpenDataCateQuizTEST: (): CategoryQuiz | undefined => {
         const select = getSelectQuiz();
 
         // 1. Ищем оригинальный квиз в нашей общей базе данных
@@ -189,20 +182,36 @@ const useOpenQuiz = create<QuizState>()(
           .data.find((cat) => cat.category === select.cate)
           ?.arr.find((quiz) => quiz.title === select.quiz);
 
-        if (!originalQuiz) {
-          set({ currentQuestions: undefined });
-          return;
+        if (!originalQuiz) return undefined;
+        console.log(get().game.mode);
+        // 2. Проверяем режим игры из нашего стейта game
+        if (get().game.mode === "random") {
+          return {
+            ...originalQuiz,
+            json: shuffleArray(originalQuiz.json), // Перемешиваем только для вывода
+          };
         }
 
-        // 2. Проверяем режим игры из нашего стейта game
-        const currentQuestions: CategoryQuiz = {
-          ...originalQuiz,
-          json:
+        // 3. Если режим "standard" или любой другой — возвращаем исходный порядок
+        return originalQuiz;
+      },
+      // Новая функция подготовки вопросов
+      initRoundQuestions: () => {
+        const select = getSelectQuiz();
+
+        // Получаем оригинальный массив вопросов из вашей базы данных
+        const originalQuestions =
+          get()
+            .data.find((cat) => cat.category === select.cate)
+            ?.arr.find((quiz) => quiz.title === select.quiz)?.json || [];
+
+        // Записываем в стейт в зависимости от режима
+        set({
+          currentQuestions:
             get().game.mode === "random"
-              ? shuffleArray(originalQuiz.json)
-              : [...originalQuiz.json],
-        };
-        set({ currentQuestions });
+              ? shuffleArray(originalQuestions)
+              : [...originalQuestions],
+        });
       },
 
       checkingAnswers: (answers: SelectedAnswer[]) => {
@@ -211,10 +220,7 @@ const useOpenQuiz = create<QuizState>()(
           get().game.mode === "standard"
             ? get().getQuizQuestion()
             : get().foundQuestion;
-        const currentId =
-          get().game.mode === "standard"
-            ? get().game.idQuestion // Используем get().game.idQuestion для получение индекса
-            : get().foundQuestionIndex; // Используем foundQuestionIndex для получение индекса
+        const currentId = get().game.idQuestion; // Используем get().game.idQuestion
         if (!question?.options) {
           return;
         }
@@ -259,8 +265,21 @@ const useOpenQuiz = create<QuizState>()(
         return isCorrect;
       },
 
+      // nextQuestion: () => {
+      //   const max_index = get().getOpenDataCateQuiz()?.json.length ?? 0;
+      //   const this_index = get().getIdQuestion();
+      //   const next_index =
+      //     this_index + 1 < max_index ? this_index + 1 : this_index;
+
+      //   set((state) => ({
+      //     game: {
+      //       ...state.game,
+      //       idQuestion: next_index,
+      //     },
+      //   }));
+      // },
       nextQuestion: () => {
-        const max_index = get().getOpenDataCateQuiz()?.json.length ?? 0;
+        const max_index = get().currentQuestions.length; // Изменили эту строку
         const this_index = get().getIdQuestion();
         const next_index =
           this_index + 1 < max_index ? this_index + 1 : this_index;
@@ -287,11 +306,8 @@ const useOpenQuiz = create<QuizState>()(
 
       addIdQuestProgress: (isCorrect) => {
         const { cate, quiz } = getSelectQuiz();
-        // const questionId = get().game.idQuestion; // Используем get().game.idQuestion для получение индекса
-        const questionId =
-          get().game.mode === "standard"
-            ? get().game.idQuestion // Используем get().game.idQuestion для получение индекса
-            : get().foundQuestionIndex; // Используем foundQuestionIndex для получение индекса
+        const questionId = get().game.idQuestion;
+        console.log(isCorrect);
         updateProgressBar((progress) => {
           const newProgress = structuredClone(progress);
 
@@ -348,10 +364,12 @@ const useOpenQuiz = create<QuizState>()(
           current.passed = passed;
           current.not_passed = notPassed;
 
-          // console.group(`%c${cate} / ${quiz}`, "color:cyan;font-weight:bold");
-          // console.log("Passed:", passed);
-          // console.log("Not passed:", notPassed);
-          // console.groupEnd();
+          console.group(`%c${cate} / ${quiz}`, "color:cyan;font-weight:bold");
+
+          console.log("Passed:", passed);
+          console.log("Not passed:", notPassed);
+
+          console.groupEnd();
 
           return newProgress;
         });
@@ -460,9 +478,6 @@ export const useGame = () =>
 // 2. ОБЪЕКТ ДЛЯ ИЗМЕНЕНИЯ И ЧТЕНИЯ ВНЕ РЕНДЕРА (НЕ вызывает перерендер при вызове)
 export const quizActionsTest = {
   getOpenDataCateQuiz: () => useOpenQuiz.getState().getOpenDataCateQuiz(),
-  getCurrentQuestions: () => useOpenQuiz.getState().currentQuestions,
-  getFoundQuestionIndex: () => useOpenQuiz.getState().foundQuestionIndex,
+  getOpenDataCateQuizTEST: () =>
+    useOpenQuiz.getState().getOpenDataCateQuizTEST(),
 };
-function useQuestionGeneration() {
-  useOpenQuiz.getState().useQuestionGeneration();
-}

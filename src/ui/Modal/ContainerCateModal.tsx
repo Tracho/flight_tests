@@ -7,7 +7,7 @@ import Radio from "../input/Radio";
 import Checkbox from "../input/Checkbox";
 import InfoCorrect from "../list/Info/InfoCorrect";
 import Info from "../list/Info/Info";
-import InfoHelp from "../list/Info/infoHelp"; 
+import InfoHelp from "../list/Info/infoHelp";
 import Pagination from "../pagination/Pagination";
 import { bgdarkNeutral, bglight } from "@/data/desingStyle";
 import SaveNeonBtn from "../button/SaveNeonBtn";
@@ -19,8 +19,8 @@ type Props = {
   pages: number[];
   startIndex?: number;
   children: ReactNode;
-  duplicateErrorCounts?:number;
-  NeonBtnColor?:"green" | "sky" | "amber" | "red" | "gray";
+  duplicateErrorCounts?: number;
+  NeonBtnColor?: "green" | "sky" | "amber" | "red" | "gray";
 };
 function ContainerCateModal({
   children,
@@ -37,11 +37,7 @@ function ContainerCateModal({
   // const total = quizOpenWindow.getQuestionsCount(cateName, testName);
   const total = pages.length;
   // QuizQuestion
-const db = quizOpenWindow.getQuestion(
-    cateName,
-    testName,
-    questionNumber
-);
+  const db = quizOpenWindow.getQuestion(cateName, testName, questionNumber);
   let statusCount = db?.options.reduce(
     (accumulator, item) => {
       if (item.isCorrect) {
@@ -52,14 +48,14 @@ const db = quizOpenWindow.getQuestion(
       return accumulator;
     },
     { trueCount: 0, falseCount: 0 },
-  ); 
+  );
   return (
     <>
       <NeonBtn
         className="text-xs"
         color={NeonBtnColor}
         variant="solid"
-        onClick={() => setWindow(true)} 
+        onClick={() => setWindow(true)}
       >
         {children}
       </NeonBtn>
@@ -72,19 +68,25 @@ const db = quizOpenWindow.getQuestion(
         <div className="px-6 flex flex-col gap-4">
           <div className="flex justify-between items-center">
             <div className="flex flex-wrap gap-3 ">
-              <b className="border-l-4 border-sky-600  px-2 py-1">Вопрос №{questionNumber +1}</b>
-              {duplicateErrorCounts && <b className="border-l-4 border-red-600  px-2 py-1  ">Ошибок {duplicateErrorCounts}</b>}
+              <b className="border-l-4 border-sky-600  px-2 py-1">
+                Вопрос №{questionNumber + 1}
+              </b>
+              {duplicateErrorCounts && (
+                <b className="border-l-4 border-red-600  px-2 py-1  ">
+                  Ошибок {duplicateErrorCounts}
+                </b>
+              )}
             </div>
             <div className="flex flex-row justify-between items-center gap-3">
-              <SaveNeonBtn questionNumber={questionNumber} cate={cateName} quiz={testName}/> 
+              <SaveNeonBtn questionNumber={questionNumber} cate={cateName} quiz={testName} />
             </div>
           </div>
           <p className="text-lg">{db?.title}</p>
 
-          <QuestionAsked header={`Вопрос №${questionNumber +1}`}>
-                <p>{db?.title}</p>
-              </QuestionAsked> 
-    
+          <QuestionAsked header={`Вопрос №${questionNumber + 1}`} MyBtn={<SaveNeonBtn questionNumber={questionNumber} cate={cateName} quiz={testName} />}>
+            <p>{db?.title}</p>
+          </QuestionAsked>
+
           <ul className="flex flex-col gap-3">
             {db?.options.map((item, index) => {
               if (statusCount?.trueCount === 1) {
@@ -94,7 +96,7 @@ const db = quizOpenWindow.getQuestion(
                       name={db?.title + startIndex}
                       value={item.text}
                       isCorrect={item.isCorrect}
-                      checked={item.isCorrect} 
+                      checked={item.isCorrect}
                       disabled
                     >
                       {item.text}
@@ -108,7 +110,7 @@ const db = quizOpenWindow.getQuestion(
                       name={db?.title + startIndex}
                       value={item.text}
                       isCorrect={item.isCorrect}
-                      checked={item.isCorrect} 
+                      checked={item.isCorrect}
                       disabled
                     >
                       {item.text}
@@ -123,13 +125,13 @@ const db = quizOpenWindow.getQuestion(
           </InfoCorrect>
           {db?.info && <Info header="Факт">{db?.info}</Info>}
           {db?.infoHelp && (
-            <InfoHelp header="Объяснение">
-              {db?.infoHelp}
-            </InfoHelp>
+            <InfoHelp header="Объяснение">{db?.infoHelp}</InfoHelp>
           )}
         </div>
 
-        <div className={`flex items-center justify-between border-t border-orange-700 dark:border-violet-700 px-6 py-6 ${bglight} ${bgdarkNeutral}`}>
+        <div
+          className={`flex items-center justify-between border-t border-orange-700 dark:border-violet-700 px-6 py-6 ${bglight} ${bgdarkNeutral}`}
+        >
           <Pagination page={page} total={total} onChange={setPage} />
         </div>
       </Modal>
