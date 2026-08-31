@@ -1,9 +1,11 @@
+import QPSelectQuizParams from "@/components/QuizPage/QPSelectQuizParams";
 import { hasQuiz } from "@/store/quizDataStore";
 import { useGame } from "@/store/useOpenGameQuiz";
 import { setSelectQuiz } from "@/store/useSettingParams";
 import NeonBtn from "@/ui/button/NeonBtn";
 import BgContainer from "@/ui/container/BgContainer";
 import GameBoard from "@/ui/game/board/GameBoard";
+import Radio from "@/ui/input/Radio";
 import QuizGameOverBoard from "@/ui/list/QuizDashboard/QuizGameOverBoard";
 import RoundStatsBoard from "@/ui/list/QuizDashboard/RoundStatsBoard";
 import { useEffect } from "react";
@@ -39,6 +41,25 @@ function QuizPage() {
   }, []);
 
   const game = useGame();
+  const TypeParamsQuestions = game.game.paramsQuestions;
+  console.log(TypeParamsQuestions)
+  const paramsQuestions = [
+    {
+      title:"Все вопросы.",
+      type:"all",
+      checked:TypeParamsQuestions == "all" ? true : false,
+    },
+    {
+      title:"Работа над ошибками.",
+      type:"saved",
+      checked:TypeParamsQuestions == "saved" ? true : false,
+    },
+    {
+      title:"Сохраненные вопросы.",
+      type:"errors",
+      checked:TypeParamsQuestions == "errors" ? true : false,
+    }
+  ]
   return (
     <>
       <div className="flex justify-center">
@@ -72,6 +93,8 @@ function QuizPage() {
                   >
                     Случайные
                   </NeonBtn>
+
+                  <QPSelectQuizParams arr={paramsQuestions} nameGroup={"quizParamsQuestion"} />
                 </div>
               </>
             )}

@@ -14,6 +14,7 @@ import { persist } from "zustand/middleware";
 
 type GameSettings = {
   mode: "standard" | "random" | "";
+  paramsQuestions: "all" | "saved" | "errors",
   withTimer: boolean;
   started: boolean;
   finish: boolean;
@@ -55,7 +56,8 @@ interface QuizState {
 }
 
 const ObjGame: GameSettings = {
-  mode: "",
+  mode: "standard",
+  paramsQuestions:'all',
   withTimer: false,
   started: false,
   finish: false,
