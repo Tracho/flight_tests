@@ -1,16 +1,10 @@
 import { useGame } from "@/store/useOpenGameQuiz";
+import type { TypeParamsTitleQuestion } from "@/types/quizParamsGame";
 import Radio from "@/ui/input/Radio";
-
-type QuizParamType = "all" | "saved" | "errors";
-
-type arr = {
-  title: string;
-  type: QuizParamType;
-  checked: boolean;
-}[];
+  
 
 type Props = {
-  arr: arr;
+  arr: TypeParamsTitleQuestion;
   nameGroup: string;
 };
 
@@ -23,6 +17,7 @@ function QPSelectQuizParams({ arr, nameGroup }: Props) {
         {arr.map((e, index) => (
           <Radio
             key={index}
+            mstyle={"green"}
             name={nameGroup}
             value={e.title}
             isCorrect={e.checked}

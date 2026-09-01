@@ -2,6 +2,7 @@ import QPSelectQuizParams from "@/components/QuizPage/QPSelectQuizParams";
 import { hasQuiz } from "@/store/quizDataStore";
 import { useGame } from "@/store/useOpenGameQuiz";
 import { setSelectQuiz } from "@/store/useSettingParams";
+import type { TypeParamsTitleQuestion } from "@/types/quizParamsGame";
 import NeonBtn from "@/ui/button/NeonBtn";
 import BgContainer from "@/ui/container/BgContainer";
 import GameBoard from "@/ui/game/board/GameBoard";
@@ -43,21 +44,33 @@ function QuizPage() {
   const game = useGame();
   const TypeParamsQuestions = game.game.paramsQuestions;
   console.log(TypeParamsQuestions)
-  const paramsQuestions = [
+  const paramsQuestions:TypeParamsTitleQuestion = [
     {
       title:"Все вопросы.",
       type:"all",
-      checked:TypeParamsQuestions == "all" ? true : false,
+      checked:TypeParamsQuestions == "all",
     },
     {
       title:"Работа над ошибками.",
-      type:"saved",
-      checked:TypeParamsQuestions == "saved" ? true : false,
+      type:"errors",
+      checked:TypeParamsQuestions == "errors",
     },
     {
       title:"Сохраненные вопросы.",
+      type:"saved",
+      checked:TypeParamsQuestions == "saved",
+    }
+  ]
+  const paramsModGame:TypeParamsTitleQuestion = [
+    {
+      title:"По-порядку.",
+      type:"all",
+      checked:TypeParamsQuestions == "all",
+    },
+    {
+      title:"Случайные",
       type:"errors",
-      checked:TypeParamsQuestions == "errors" ? true : false,
+      checked:TypeParamsQuestions == "errors",
     }
   ]
   return (
