@@ -5,16 +5,23 @@ import type { QuizCategory, QuizQuestion, CategoryQuiz } from "@/types/quiz";
 import { useShallow } from "zustand/react/shallow";
 import {
   getData,
+  getProgressBar,
   setData,
   updateData,
   updateProgressBar,
 } from "./quizDataStore";
 import { getSelectQuiz } from "./useSettingParams";
 import { persist } from "zustand/middleware";
+import type {
+  QuizFormatParamType,
+  QuizModeParamType,
+  QuizParamType,
+} from "@/types/quizParamsGame";
 
 type GameSettings = {
-  mode: "standard" | "random" | "";
-  paramsQuestions: "all" | "saved" | "errors",
+  mode: QuizModeParamType;
+  paramsQuestions: QuizParamType;
+  format: QuizFormatParamType;
   withTimer: boolean;
   started: boolean;
   finish: boolean;
@@ -57,7 +64,8 @@ interface QuizState {
 
 const ObjGame: GameSettings = {
   mode: "standard",
-  paramsQuestions:'all',
+  paramsQuestions: "all",
+  format: "choice",
   withTimer: false,
   started: false,
   finish: false,
@@ -118,9 +126,18 @@ const useOpenQuiz = create<QuizState>()(
         })),
 
       resetGame: () => {
-        set({
-          game: ObjGame,
-        });
+        set((state) => ({
+          game: {
+            ...state.game,
+            withTimer: false,
+            started: false,
+            finish: false,
+            idQuestion: 0,
+            showAnswers: false,
+            numError: [],
+            numCorrect: [],
+          },
+        }));
       },
 
       getIdQuestion: (): number => {
@@ -145,14 +162,16 @@ const useOpenQuiz = create<QuizState>()(
       getShowAnswers: () => get().game.showAnswers,
 
       getQuizQuestion: (): QuizQuestion => {
-        const quiz = get().getOpenDataCateQuiz();
+        // const quiz = get().getOpenDataCateQuiz();
+        const quiz = get().currentQuestions;
         const index = get().game.idQuestion;
 
         return quiz?.json[index] || ({} as QuizQuestion);
       },
 
       setQuestionByTitle: (val: string): void => {
-        const quiz = get().getOpenDataCateQuiz();
+        // const quiz = get().getOpenDataCateQuiz();
+        const quiz = get().currentQuestions;
         const questionsArray = quiz?.json || [];
 
         // 1. Находим ИНДЕКС (ID) вопроса в массиве
@@ -177,34 +196,58 @@ const useOpenQuiz = create<QuizState>()(
       },
 
       getOpenDataCateQuiz: (): CategoryQuiz | undefined => {
-        const select = getSelectQuiz();
+        const { cate, quiz } = getSelectQuiz();
         return get()
-          .data.find((cat) => cat.category === select.cate)
-          ?.arr.find((quiz) => quiz.title === select.quiz);
+          .data.find((cat) => cat.category === cate)
+          ?.arr.find((qui) => qui.title === quiz);
       },
 
       useQuestionGeneration: () => {
-        const select = getSelectQuiz();
+        const { cate, quiz } = getSelectQuiz();
 
-        // 1. Ищем оригинальный квиз в нашей общей базе данных
+        // 1. Ищем оригинальный квиз в базе данных
         const originalQuiz = get()
-          .data.find((cat) => cat.category === select.cate)
-          ?.arr.find((quiz) => quiz.title === select.quiz);
+          .data.find((cat) => cat.category === cate)
+          ?.arr.find((quizz) => quizz.title === quiz);
 
         if (!originalQuiz) {
           set({ currentQuestions: undefined });
           return;
         }
 
-        // 2. Проверяем режим игры из нашего стейта game
-        const currentQuestions: CategoryQuiz = {
-          ...originalQuiz,
-          json:
-            get().game.mode === "random"
-              ? shuffleArray(originalQuiz.json)
-              : [...originalQuiz.json],
-        };
-        set({ currentQuestions });
+        // Создаем рабочий массив вопросов, который будем фильтровать
+        let workingQuestions = [...originalQuiz.json];
+        const storageData = getProgressBar({ cate, quiz });
+        // Применяем фильтрацию в зависимости от paramsQuestions
+        if (get().game.paramsQuestions === "errors") {
+          const SetNot_Passed = new Set(storageData?.not_passed || []);
+
+          // Фильтруем массив, оставляя только те вопросы, чьи индексы есть в ошибках
+          workingQuestions = workingQuestions.filter((_, index) =>
+            SetNot_Passed.has(index),
+          );
+        } else if (get().game.paramsQuestions === "saved") {
+          const SetQ_saved = new Set(storageData?.q_saved || []);
+
+          // Фильтруем массив, оставляя только сохраненные индексы
+          workingQuestions = workingQuestions.filter((_, index) =>
+            SetQ_saved.has(index),
+          );
+        }
+
+        // 2. Перемешиваем или копируем уже отфильтрованный рабочий массив вопросов
+        const finalQuestionsJson =
+          get().game.mode === "random"
+            ? shuffleArray(workingQuestions)
+            : workingQuestions; // workingQuestions — это уже новая копия, спред [...копия] не нужен
+
+        // 3. Сохраняем итоговую структуру в стейт
+        set({
+          currentQuestions: {
+            ...originalQuiz,
+            json: finalQuestionsJson,
+          },
+        });
       },
 
       checkingAnswers: (answers: SelectedAnswer[]) => {
@@ -262,7 +305,8 @@ const useOpenQuiz = create<QuizState>()(
       },
 
       nextQuestion: () => {
-        const max_index = get().getOpenDataCateQuiz()?.json.length ?? 0;
+        // const max_index = get().getOpenDataCateQuiz()?.json.length ?? 0;
+        const max_index = get().currentQuestions?.json.length ?? 0;
         const this_index = get().getIdQuestion();
         const next_index =
           this_index + 1 < max_index ? this_index + 1 : this_index;
@@ -296,7 +340,7 @@ const useOpenQuiz = create<QuizState>()(
             : get().foundQuestionIndex; // Используем foundQuestionIndex для получение индекса
         updateProgressBar((progress) => {
           const newProgress = structuredClone(progress);
-
+ 
           // создаем структуру если ее нет
           if (!newProgress[cate]) {
             newProgress[cate] = {};
@@ -322,8 +366,10 @@ const useOpenQuiz = create<QuizState>()(
 
           if (isCorrect) {
             const count = notPassed.filter((id) => id === questionId).length;
-
-            if (count > 1) {
+            console.warn("пагинация-",questionId)
+            console.warn("длина-",notPassed.filter((id) => id === questionId).length)
+            console.warn(notPassed)
+             if (count > 1) {
               const index = notPassed.indexOf(questionId);
               notPassed.splice(index, 1);
             } else if (count === 1) {
@@ -346,23 +392,28 @@ const useOpenQuiz = create<QuizState>()(
 
             passed = passed.filter((id) => id !== questionId);
           }
-
+      
           current.passed = passed;
           current.not_passed = notPassed;
 
-          // console.group(`%c${cate} / ${quiz}`, "color:cyan;font-weight:bold");
-          // console.log("Passed:", passed);
-          // console.log("Not passed:", notPassed);
-          // console.groupEnd();
+          console.group(`%c${cate} / ${quiz}`, "color:cyan;font-weight:bold");
+          console.log("Passed:", passed);
+          console.log("Not passed:", notPassed);
+          console.groupEnd();
 
           return newProgress;
         });
       },
 
       endGame: () => {
-        const maxLenghtQuiz = get().getOpenDataCateQuiz()?.json.length;
+        // const maxLenghtQuiz = get().getOpenDataCateQuiz()?.json.length;
+        const maxLenghtQuiz = get().currentQuestions?.json.length;
         // +1 нужен, так как idQuestion начинается с 0
-        const thisNumberQuiz = get().game.idQuestion + 1;
+        const currentId =
+          get().game.mode === "standard"
+            ? get().game.idQuestion // Используем get().game.idQuestion для получение индекса
+            : get().foundQuestionIndex; // Используем foundQuestionIndex для получение индекса
+        const thisNumberQuiz = currentId+ 1;
 
         if (maxLenghtQuiz && thisNumberQuiz === maxLenghtQuiz) {
           const { cate, quiz } = getSelectQuiz();
@@ -468,3 +519,4 @@ export const quizActionsTest = {
 function useQuestionGeneration() {
   useOpenQuiz.getState().useQuestionGeneration();
 }
+ 

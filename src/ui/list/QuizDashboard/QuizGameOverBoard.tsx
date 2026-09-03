@@ -19,6 +19,7 @@ import InfoDate from "@/ui/date/InfoDate";
 function QuizGameOverBoard() {
   const game = useGame();
   const db = quizActionsTest.getOpenDataCateQuiz();
+  // const db = quizActionsTest.getCurrentQuestions();
   if (!db) {
     return null;
   }

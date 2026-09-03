@@ -1,8 +1,19 @@
+import SVGRandom from "@/assets/icons/random.svg?react"
+import SVGReader from "@/assets/icons/reader.svg?react"
+import SVGOptions from "@/assets/icons/options.svg?react"
 import QPSelectQuizParams from "@/components/QuizPage/QPSelectQuizParams";
 import { hasQuiz } from "@/store/quizDataStore";
 import { useGame } from "@/store/useOpenGameQuiz";
 import { setSelectQuiz } from "@/store/useSettingParams";
-import type { TypeParamsTitleQuestion } from "@/types/quizParamsGame";
+import type {
+  QuizFormatParamType,
+  QuizModeParamType,
+  QuizParamType,
+  TypeParamsTitleQuestion,
+  TypeQuizFormatParamType,
+  TypeQuizModeParamType,
+} from "@/types/quizParamsGame";
+import type { QuizProgressBar } from "@/types/quizProgressStore";
 import NeonBtn from "@/ui/button/NeonBtn";
 import BgContainer from "@/ui/container/BgContainer";
 import GameBoard from "@/ui/game/board/GameBoard";
@@ -42,37 +53,48 @@ function QuizPage() {
   }, []);
 
   const game = useGame();
-  const TypeParamsQuestions = game.game.paramsQuestions;
-  console.log(TypeParamsQuestions)
-  const paramsQuestions:TypeParamsTitleQuestion = [
+  const paramsQuestions: TypeParamsTitleQuestion = [
     {
-      title:"Все вопросы.",
-      type:"all",
-      checked:TypeParamsQuestions == "all",
+      title: "Все вопросы.",
+      type: "all",
+      checked: game.game.paramsQuestions == "all",
     },
     {
-      title:"Работа над ошибками.",
-      type:"errors",
-      checked:TypeParamsQuestions == "errors",
+      title: "Работа над ошибками.",
+      type: "errors",
+      checked: game.game.paramsQuestions == "errors",
     },
     {
-      title:"Сохраненные вопросы.",
-      type:"saved",
-      checked:TypeParamsQuestions == "saved",
-    }
-  ]
-  const paramsModGame:TypeParamsTitleQuestion = [
+      title: "Сохраненные вопросы.",
+      type: "saved",
+      checked: game.game.paramsQuestions == "saved",
+    },
+  ];
+  const paramsModGame: TypeQuizModeParamType = [
     {
-      title:"По-порядку.",
-      type:"all",
-      checked:TypeParamsQuestions == "all",
+      title: "По-порядку.",
+      type: "standard",
+      checked: game.game.mode == "standard",
     },
     {
-      title:"Случайные",
-      type:"errors",
-      checked:TypeParamsQuestions == "errors",
-    }
-  ]
+      title: "Случайные",
+      type: "random",
+      checked: game.game.mode == "random",
+    },
+  ];
+  const paramsFormatGame: TypeQuizFormatParamType = [
+    {
+      title: "Тесты.",
+      type: "choice",
+      checked: game.game.format == "choice",
+    },
+    {
+      title: "По вводу.",
+      type: "text",
+      checked: game.game.format == "text",
+    },
+  ];
+ 
   return (
     <>
       <div className="flex justify-center">
@@ -81,33 +103,49 @@ function QuizPage() {
             {game.game.started === false && (
               <>
                 <h1 className="text-center text-3xl">Выбери стиль квиза.</h1>
-                <div className="w-full flex justify-center items-center gap-2">
-                  <NeonBtn
-                    color="sky"
-                    variant="solid"
-                    className="text-lg"
-                    onClick={() => {
-                      game.resetGame();
-                      game.setGame({ mode: "standard" });
-                      game.startGame();
-                    }}
-                  >
-                    По-порядку
-                  </NeonBtn>
-                  <NeonBtn
-                    color="sky"
-                    variant="solid"
-                    className="text-lg"
-                    onClick={() => {
-                      game.resetGame();
-                      game.setGame({ mode: "random" });
-                      game.startGame();
-                    }}
-                  >
-                    Случайные
-                  </NeonBtn>
-
-                  <QPSelectQuizParams arr={paramsQuestions} nameGroup={"quizParamsQuestion"} />
+                <div className="w-full flex flex-col justify-center items-center gap-5">
+                  <div className="flex flex-wrap justify-center gap-5">
+                    <QPSelectQuizParams
+                      arr={paramsFormatGame}
+                      nameGroup={"paramsFormatGame"}
+                      onChange={(value) =>
+                        game.setGame({
+                          format: value as QuizFormatParamType,
+                        })
+                      }
+                    ><div className="flex gap-2"><SVGReader width={24} hanging={24}/><b>Формат</b></div></QPSelectQuizParams>
+                    <QPSelectQuizParams
+                      arr={paramsModGame}
+                      nameGroup={"paramsModGame"}
+                      onChange={(value) =>
+                        game.setGame({
+                          mode: value as QuizModeParamType,
+                        })
+                      }
+                    ><div className="flex gap-2"><SVGRandom width={24} hanging={24}/><b>Сортировка</b></div></QPSelectQuizParams>
+                    <QPSelectQuizParams
+                      arr={paramsQuestions}
+                      nameGroup={"paramsQuestions"}
+                      onChange={(value) =>
+                        game.setGame({
+                          paramsQuestions: value as QuizParamType,
+                        })
+                      }
+                    ><div className="flex gap-2"><SVGOptions width={24} hanging={24}/><b>Фильтр вопросов</b></div></QPSelectQuizParams>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <NeonBtn
+                      color="sky"
+                      variant="solid"
+                      className="text-lg"
+                      onClick={() => {
+                        game.resetGame();
+                        game.startGame();
+                      }}
+                    >
+                      Начать
+                    </NeonBtn>
+                  </div>
                 </div>
               </>
             )}

@@ -36,15 +36,15 @@ type QuizOption = {
 };
 
 function GameBoard() {
-  const game = useGame(); 
+  const game = useGame();
   const db = quizActionsTest.getCurrentQuestions();
- 
+
   const WatchQuiz = getSelectQuiz();
   if (!db) {
     return null;
   }
 
-  const foundQuestionIndex = quizActionsTest.getFoundQuestionIndex(); 
+  const foundQuestionIndex = quizActionsTest.getFoundQuestionIndex();
 
   // Создаем локальный стейт для хранения ОДНОКРАТНО перемешанных опций
   const [shuffledOptions, setShuffledOptions] = useState<QuizOption[]>([]);
@@ -53,7 +53,6 @@ function GameBoard() {
   // Перемешиваем только тогда, когда меняется ID вопроса
   useEffect(() => {
     game.setQuestionByTitle(db.json[game.getIdQuestion()].title); // отсылаем тайтл чтобы найти наш вопрос заранее и записать в стейт index
-
 
     // 1. Делаем поверхностную копию массива [...], чтобы НЕ мутировать оригинал в game
     const optionsCopy = [...db.json[game.getIdQuestion()].options];
@@ -104,7 +103,7 @@ function GameBoard() {
 
   const HandleCheckingAnswers = () => {
     // game.setQuestionByTitle(db.json[game.getIdQuestion()].title);
-    let isCorrect = game.checkingAnswers(selectedAnswer);
+    let isCorrect = game.checkingAnswers(selectedAnswer); 
     if (isCorrect) {
       game.addIdQuestProgress(isCorrect);
       game.endGame();
@@ -125,7 +124,7 @@ function GameBoard() {
     game.previousQuestion();
     SetSelectedAnswer([]);
   };
-  
+
   return (
     <>
       {game.game.started == true && (
@@ -162,7 +161,11 @@ function GameBoard() {
                 header={`Вопрос №${game.getIdQuestion() + 1}`}
                 MyBtn={
                   <SaveNeonBtn
-                    questionNumber={game.game.mode === "standard" ? game.getIdQuestion() : foundQuestionIndex}
+                    questionNumber={
+                      game.game.mode === "standard"
+                        ? game.getIdQuestion()
+                        : foundQuestionIndex
+                    }
                     cate={WatchQuiz.cate}
                     quiz={WatchQuiz.quiz}
                   />
@@ -171,15 +174,24 @@ function GameBoard() {
                 <p>{db.json[game.getIdQuestion()].title}</p>
               </QuestionAsked>
             </div>
-              
-            <GBtextInput/>
-            <GBul shuffledOptions={shuffledOptions} selectedAnswer={selectedAnswer} statusCount={statusCount} db={db} HandlerSelectRadion={HandlerSelectRadion} HandlerSelectCheckBox={HandlerSelectCheckBox}/>
-              
+
+            {game.game.format == "choice" ? (
+              <GBul
+                shuffledOptions={shuffledOptions}
+                selectedAnswer={selectedAnswer}
+                statusCount={statusCount}
+                db={db}
+                HandlerSelectRadion={HandlerSelectRadion}
+                HandlerSelectCheckBox={HandlerSelectCheckBox}
+              />
+            ) : (
+              <GBtextInput />
+            )}
+
             <div className="flex justify-between items-center">
               {game.getIdQuestion() !== 0 && (
                 <NeonBtn color="sky" onClick={HandlePreviousQuesion}>
-                  {" "}
-                  Назад{" "}
+                  Назад
                 </NeonBtn>
               )}
               <div className="flex justify-end w-full">

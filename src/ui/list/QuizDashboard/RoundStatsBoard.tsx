@@ -19,7 +19,8 @@ import InfoDate from "@/ui/date/InfoDate";
 import ChildrenDetails from "../Details/ChildrenDetails";
 
 function RoundStatsBoard() {
-  const db = quizActionsTest.getOpenDataCateQuiz();
+  // const db = quizActionsTest.getOpenDataCateQuiz();
+  const db = quizActionsTest.getCurrentQuestions();
   if (!db) {
     return null;
   }

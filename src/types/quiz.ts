@@ -14,10 +14,7 @@ export interface QuizQuestion {
 }
 
 export interface CategoryQuiz {
-  json: QuizQuestion[];
-  storage_q_passed?: number[];
-  storage_q_not_passed?: number[];
-  storage_q_saved?: number[];
+  json: QuizQuestion[]; 
   title: string;
   description: string;
   visible:boolean;
