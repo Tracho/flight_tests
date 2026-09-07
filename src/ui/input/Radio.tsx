@@ -41,6 +41,10 @@ export function Radio({
       validationBorder =
         "border-b-2 border-red-500 shadow-[0_4px_12px_-4px_rgba(239,68,68,0.5)]";
     }
+    if (disabled == true) {
+      validationBorder =
+        "border-b-2 border-red-500 shadow-[0_4px_12px_-4px_rgba(239,68,68,0.5)]";
+    }
   } else if (mstyle == "blue") {
     if (isCorrect === true) {
       validationBorder =
@@ -61,7 +65,7 @@ export function Radio({
 
   // Контейнер с увеличенной зоной клика
   const wrapperClass = `flex items-center gap-3 py-1.5 px-1.5 rounded transition-all duration-200 ${validationBorder} ${
-    disabled ? "cursor-not-allowed" : "cursor-pointer"
+    disabled ? "cursor-not-allowed line-through" : "cursor-pointer"
   } ${labelClassName}`;
 
   const inputClass = "sr-only peer";

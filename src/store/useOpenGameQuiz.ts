@@ -170,10 +170,9 @@ const useOpenQuiz = create<QuizState>()(
       },
 
       setQuestionByTitle: (val: string): void => {
-        // const quiz = get().getOpenDataCateQuiz();
-        const quiz = get().currentQuestions;
+        const quiz = get().getOpenDataCateQuiz();
+        // const quiz = get().currentQuestions;
         const questionsArray = quiz?.json || [];
-
         // 1. Находим ИНДЕКС (ID) вопроса в массиве
         const questionIndex = questionsArray.findIndex(
           (item) =>
@@ -260,6 +259,7 @@ const useOpenQuiz = create<QuizState>()(
           get().game.mode === "standard"
             ? get().game.idQuestion // Используем get().game.idQuestion для получение индекса
             : get().foundQuestionIndex; // Используем foundQuestionIndex для получение индекса
+
         if (!question?.options) {
           return;
         }
@@ -334,13 +334,14 @@ const useOpenQuiz = create<QuizState>()(
       addIdQuestProgress: (isCorrect) => {
         const { cate, quiz } = getSelectQuiz();
         // const questionId = get().game.idQuestion; // Используем get().game.idQuestion для получение индекса
-        const questionId =
-          get().game.mode === "standard"
-            ? get().game.idQuestion // Используем get().game.idQuestion для получение индекса
-            : get().foundQuestionIndex; // Используем foundQuestionIndex для получение индекса
+        // const questionId =
+        //   get().game.mode === "standard"
+        //     ? get().game.idQuestion // Используем get().game.idQuestion для получение индекса
+        //     : get().foundQuestionIndex; // Используем foundQuestionIndex для получение индекса
+        const questionId = get().foundQuestionIndex; // Используем foundQuestionIndex для получение индекса
         updateProgressBar((progress) => {
           const newProgress = structuredClone(progress);
- 
+
           // создаем структуру если ее нет
           if (!newProgress[cate]) {
             newProgress[cate] = {};
@@ -363,13 +364,16 @@ const useOpenQuiz = create<QuizState>()(
 
           let passed = [...current.passed];
           let notPassed = [...current.not_passed];
-
+          console.warn(get().game.mode);
           if (isCorrect) {
-            const count = notPassed.filter((id) => id === questionId).length;
-            console.warn("пагинация-",questionId)
-            console.warn("длина-",notPassed.filter((id) => id === questionId).length)
-            console.warn(notPassed)
-             if (count > 1) {
+            const count = notPassed.filter((id) => {
+              console.log(id == questionId);
+              return id === questionId;
+            }).length;
+            console.warn("пагинация / наш id вопроса-", questionId);
+            console.warn("count-", count);
+            console.warn("Маcсив notPassed =", notPassed);
+            if (count > 1) {
               const index = notPassed.indexOf(questionId);
               notPassed.splice(index, 1);
             } else if (count === 1) {
@@ -392,13 +396,15 @@ const useOpenQuiz = create<QuizState>()(
 
             passed = passed.filter((id) => id !== questionId);
           }
-      
+
           current.passed = passed;
           current.not_passed = notPassed;
 
           console.group(`%c${cate} / ${quiz}`, "color:cyan;font-weight:bold");
           console.log("Passed:", passed);
           console.log("Not passed:", notPassed);
+          console.log("длина всего json=", get().currentQuestions?.json.length);
+
           console.groupEnd();
 
           return newProgress;
@@ -409,13 +415,14 @@ const useOpenQuiz = create<QuizState>()(
         // const maxLenghtQuiz = get().getOpenDataCateQuiz()?.json.length;
         const maxLenghtQuiz = get().currentQuestions?.json.length;
         // +1 нужен, так как idQuestion начинается с 0
-        const currentId =
-          get().game.mode === "standard"
-            ? get().game.idQuestion // Используем get().game.idQuestion для получение индекса
-            : get().foundQuestionIndex; // Используем foundQuestionIndex для получение индекса
-        const thisNumberQuiz = currentId+ 1;
-
-        if (maxLenghtQuiz && thisNumberQuiz === maxLenghtQuiz) {
+        // const currentId =
+        //   get().game.mode === "standard"
+        //     ? get().game.idQuestion // Используем get().game.idQuestion для получение индекса
+        //     : get().foundQuestionIndex; // Используем foundQuestionIndex для получение индекса
+        const currentId =  get().game.idQuestion +1 // Используем get().game.idQuestion для получение индекса
+            
+ 
+        if (maxLenghtQuiz && currentId === maxLenghtQuiz) {
           const { cate, quiz } = getSelectQuiz();
 
           updateProgressBar((progress) => {
@@ -519,4 +526,3 @@ export const quizActionsTest = {
 function useQuestionGeneration() {
   useOpenQuiz.getState().useQuestionGeneration();
 }
- 

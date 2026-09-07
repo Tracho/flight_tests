@@ -1,0 +1,48 @@
+Act as a professional English teacher and Senior Frontend Developer. 
+Generate a single JSON object for a quiz category.
+Topic: "Basic Vocabulary: Greetings, Farewells, and Politeness"
+Target English Level: Beginner (A1).
+
+CRITICAL INSTRUCTIONS FOR JSON SYNTAX:
+1. Output MUST be raw JSON only. Do not wrap code in markdown blocks. No introductory or trailing words.
+2. Every string property ("title", "info", "infoHelp", "correctAnswer", "text") MUST be written on a SINGLE LINE. Do not use actual line breaks or '\n' inside text values! This is strictly forbidden.
+3. Generate exactly 15 questions inside the "json" array.
+4. All text inside fields "title", "info", and "infoHelp" MUST be written fully in RUSSIAN.
+
+Strictly follow this TypeScript structure for the JSON object:
+{
+  "category": "Лексика (Слова)",
+  "description": "Изучение базовых английских слов для повседневного общения",
+  "visible": true,
+  "selected": false,
+  "arr": [
+    {
+      "visible": true,
+      "selected": false,
+      "title": "Приветствие и вежливость (A1)",
+      "description": "Мини-тест на знание базовых слов: приветствия, прощания и вежливые фразы.",
+      "json": [
+        {
+          "title": "Переведите слово: привет (n) — существительное",
+          "info": "Слово 'Hi' является более неформальным, чем 'Hello'.",
+          "infoHelp": "Разбор остальных вариантов: 'bye' — пока [бай], 'please' — пожалуйста [плиз], 'thanks' — спасибо [थэнкс].",
+          "correctAnswer": "hi — привет — [хай]",
+          "options": [
+            { "text": "bye", "isCorrect": false },
+            { "text": "hi", "isCorrect": true },
+            { "text": "please", "isCorrect": false },
+            { "text": "thanks", "isCorrect": false }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+RULES FOR DYNAMIC QUESTIONS GENERATION:
+1. "title": Must be in Russian only, specifying the exact word/phrase and part of speech in Russian. Example: (n) — существительное, (v) — глагол, (phrase) — фраза.
+2. "options" VARIETY ROUTLETTE (CRITICAL): Randomize the number of options for each question. For some questions generate 4 options, for others 5, 6, or 7 options. 
+3. "options" CONTENT VARIETY (CRITICAL): Do NOT repeat the same pool of incorrect options across multiple questions. Choose completely different English words as incorrect distractors for each new question so that the test is interesting and requires real thinking. All options must be single words or short phrases strictly in ENGLISH.
+4. Only 1 option must be correct per question.
+5. "correctAnswer": Must match the template: "English_word — Русский_перевод — [Русская_транскрипция]".
+6. "infoHelp" (NO DUPLICATION): Do NOT repeat or explain the correct answer here. Instead, write a detailed breakdown of all OTHER (incorrect) options present in this specific question, including their Russian translation and Russian transcription inside square brackets.

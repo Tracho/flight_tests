@@ -1,0 +1,196 @@
+﻿{
+  "category": "Лексика (Слова)",
+  "description": "Изучение базовых английских слов для повседневного общения",
+  "visible": true,
+  "selected": false,
+  "arr": [
+    {
+      "visible": true,
+      "selected": false,
+      "title": "Приветствие и вежливость (A1)",
+      "description": "Мини-тест на знание базовых слов: приветствия, прощания и вежливые фразы.",
+      "json": [
+        {
+          "title": "Переведите слово: доброе утро, утреннее приветствие (phrase) — фраза",
+          "info": "Фраза 'доброе утро' является наиболее распространённой формой приветствия в начале дня. Она призывает к улыбке и хорошему настроению.",
+          "infoHelp": "Фраза 'доброе утро' переводится как 'good morning' и произносится как [gʊd ˈmɔːrɪŋ].",
+          "correctAnswer": "good morning — доброе утро — [гуд ˈморинг]",
+          "options": [
+            { "text": "good night — доброй ночи", "isCorrect": false },
+            { "text": "hello — здравствуйте", "isCorrect": false },
+            { "text": "good morning — доброе утро", "isCorrect": true },
+            { "text": "good afternoon — добрый вечер", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: здравствуйте (phrase) — фраза",
+          "info": "Фраза 'здравствуйте' является более formala приветствием, которое может быть использовано в деловых или официальных ситуациях.",
+          "infoHelp": "Фраза 'здравствуйте' переводится как 'good day' и произносится как [gʊd deɪ].",
+          "correctAnswer": "good day — здравствуйте — [гуд дей]",
+          "options": [
+            { "text": "good morning — доброе утро", "isCorrect": false },
+            { "text": "hello — здравствуйте", "isCorrect": false },
+            { "text": "good afternoon — добрый вечер", "isCorrect": false },
+            { "text": "good day — здравствуйте", "isCorrect": true }
+          ]
+        },
+        {
+          "title": "Переведите слово: здравия желаю (phrase) — фраза",
+          "info": "Фраза 'здравия желаю' является древнейшей формой приветствия, которая может быть использована в более традиционных или формальных ситуациях.",
+          "infoHelp": "Фраза 'здравия желаю' переводится как 'wishing you good health' и произносится как [wɪziŋ juː ɡʊd ˈhelθ].",
+          "correctAnswer": "wishing you good health — здравия желаю — [візінг ю ɡʊд ˈhelθ]",
+          "options": [
+            { "text": "good morning — доброе утро", "isCorrect": false },
+            { "text": "good night — доброй ночи", "isCorrect": false },
+            { "text": "good day — здравствуйте", "isCorrect": false },
+            { "text": "wishing you good health — здравия желаю", "isCorrect": true }
+          ]
+        },
+        {
+          "title": "Переведите слово: здравствуйте (phrase) — фраза",
+          "info": "Фраза 'здравствуйте' является более формальной приветствием, которое может быть использовано в деловых или официальных ситуациях.",
+          "infoHelp": "Фраза 'здравствуйте' переводится как 'good day' и произносится как [gʊd deɪ].",
+          "correctAnswer": "good day — здравствуйте — [гуд дей]",
+          "options": [
+            { "text": "good morning — доброе утро", "isCorrect": false },
+            { "text": "hello — здравствуйте", "isCorrect": false },
+            { "text": "good afternoon — добрый вечер", "isCorrect": false },
+            { "text": "good day — здравствуйте", "isCorrect": true }
+          ]
+        },
+        {
+          "title": "Переведите слово: здравствуйте (phrase) — фраза",
+          "info": "Фраза 'здравствуйте' является более формальной приветствием, которое может быть использовано в деловых или официальных ситуациях.",
+          "infoHelp": "Фраза 'здравствуйте' переводится как 'good day' и произносится как [gʊd deɪ].",
+          "correctAnswer": "good day — здравствуйте — [гуд дей]",
+          "options": [
+            { "text": "good morning — доброе утро", "isCorrect": false },
+            { "text": "hello — здравствуйте", "isCorrect": false },
+            { "text": "good afternoon — добрый вечер", "isCorrect": false },
+            { "text": "good day — здравствуйте", "isCorrect": true }
+          ]
+        },
+        {
+          "title": "Переведите слово: пожалуйста (adv) — наречие",
+          "info": "Наречие 'пожалуйста' является наиболее распространённой формой вежливости в английском языке, которая может быть использована для облегчения просьбы.",
+          "infoHelp": "Наречие 'пожалуйста' переводится как 'please' и произносится как [ˈpliːz].",
+          "correctAnswer": "please — пожалуйста — [ˈпліз]",
+          "options": [
+            { "text": "thank you — спасибо", "isCorrect": false },
+            { "text": "you're welcome — не за что", "isCorrect": false },
+            { "text": "please — пожалуйста", "isCorrect": true },
+            { "text": "sorry — извините", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: извините (phrase) — фраза",
+          "info": "Фраза 'извините' является формальным способом извинения или просьбы прощения в английском языке.",
+          "infoHelp": "Фраза 'извините' переводится как 'excuse me' и произносится как [ɪksˈkjuːz mi:].",
+          "correctAnswer": "excuse me — извините — [ɪksˈкюз mi:]",
+          "options": [
+            { "text": "sorry — извините", "isCorrect": false },
+            { "text": "please — пожалуйста", "isCorrect": false },
+            { "text": "excuse me — извините", "isCorrect": true },
+            { "text": "you're welcome — не за что", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: прощай (adv) — наречие",
+          "info": "Наречие 'прощай' является формальным способом прощания, который может быть использовано в деловых или официальных ситуациях.",
+          "infoHelp": "Наречие 'прощай' переводится как 'goodbye' и произносится как [ˈɡʊdbaɪ].",
+          "correctAnswer": "goodbye — прощай — [ˈɡʊдбей]",
+          "options": [
+            { "text": "hello — здравствуйте", "isCorrect": false },
+            { "text": "bye — пока", "isCorrect": false },
+            { "text": "goodbye — прощай", "isCorrect": true },
+            { "text": "see you — увидимся", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: пока (adv) — наречие",
+          "info": "Наречие 'пока' является наиболее распространённой формой прощания в повседневной речи.",
+          "infoHelp": "Наречие 'пока' переводится как 'bye' и произносится как [baɪ].",
+          "correctAnswer": "bye — пока — [баɪ]",
+          "options": [
+            { "text": "goodbye — прощай", "isCorrect": false },
+            { "text": "see you — увидимся", "isCorrect": false },
+            { "text": "bye — пока", "isCorrect": true },
+            { "text": "hello — здравствуйте", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: до встречи (phrase) — фраза",
+          "info": "Фраза 'до встречи' является формальным способом прощания, который может быть использовано в деловых или официальных ситуациях.",
+          "infoHelp": "Фраза 'до встречи' переводится как 'until we meet again' и произносится как [ənˈtɪl wi ˈmiːt əˈɡeɪn].",
+          "correctAnswer": "until we meet again — до встречи — [ənˈтіл wi ˈміт əˈгейн]",
+          "options": [
+            { "text": "goodbye — прощай", "isCorrect": false },
+            { "text": "bye — пока", "isCorrect": false },
+            { "text": "until we meet again — до встречи", "isCorrect": true },
+            { "text": "see you — увидимся", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: до свидания (phrase) — фраза",
+          "info": "Фраза 'до свидания' является более формальным способом прощания, который может быть использовано в деловых или официальных ситуациях.",
+          "infoHelp": "Фраза 'до свидания' переводится как 'goodbye' и произносится как [ˈɡʊdbaɪ].",
+          "correctAnswer": "goodbye — до свидания — [ˈɡʊдбей]",
+          "options": [
+            { "text": "bye — пока", "isCorrect": false },
+            { "text": "see you — увидимся", "isCorrect": false },
+            { "text": "goodbye — до свидания", "isCorrect": true },
+            { "text": "hello — здравствуйте", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: увидимся (phrase) — фраза",
+          "info": "Фраза 'увидимся' является формальным способом сказать, что встретимся позже или в другой ситуации.",
+          "infoHelp": "Фраза 'увидимся' переводится как 'see you' и произносится как [siː juː].",
+          "correctAnswer": "see you — увидимся — [сиː юː]",
+          "options": [
+            { "text": "bye — пока", "isCorrect": false },
+            { "text": "goodbye — до свидания", "isCorrect": false },
+            { "text": "see you — увидимся", "isCorrect": true },
+            { "text": "hello — здравствуйте", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: благодарю (adv) — наречие",
+          "info": "Наречие 'благодарю' является формальным способом выразить благодарность.",
+          "infoHelp": "Наречие 'благодарю' переводится как 'thank you' и произносится как [θæŋk juː].",
+          "correctAnswer": "thank you — благодарю — [θæŋк юː]",
+          "options": [
+            { "text": "you're welcome — не за что", "isCorrect": false },
+            { "text": "please — пожалуйста", "isCorrect": false },
+            { "text": "thank you — благодарю", "isCorrect": true },
+            { "text": "sorry — извините", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: не за что (adv) — наречие",
+          "info": "Наречие 'не за что' является ответом на просьбу или благодарность.",
+          "infoHelp": "Наречие 'не за что' переводится как 'you're welcome' и произносится как [juː rə ˈwelkɪŋ].",
+          "correctAnswer": "you're welcome — не за что — [juː рə ˈwelкінг]",
+          "options": [
+            { "text": "thank you — благодарю", "isCorrect": false },
+            { "text": "please — пожалуйста", "isCorrect": false },
+            { "text": "you're welcome — не за что", "isCorrect": true },
+            { "text": "sorry — извините", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: извините (phrase) — фраза",
+          "info": "Фраза 'извините' является формальным способом извинения или просьбы прощения в английском языке.",
+          "infoHelp": "Фраза 'извините' переводится как 'excuse me' и произносится как [ɪksˈkjuːz mi:].",
+          "correctAnswer": "excuse me — извините — [ɪksˈкюз mi:]",
+          "options": [
+            { "text": "sorry — извините", "isCorrect": false },
+            { "text": "please — пожалуйста", "isCorrect": false },
+            { "text": "excuse me — извините", "isCorrect": true },
+            { "text": "you're welcome — не за что", "isCorrect": false }
+          ]
+        }
+      ] 
+    } 
+  ] 
+}

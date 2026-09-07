@@ -22,8 +22,8 @@ function CountTrueFalseAnswers({
 }: Props) {
   let thisTotal = Total;
   if(Total == null){
-    thisTotal = quizActionsTest.getOpenDataCateQuiz()?.json.length ?? 0;
-    // thisTotal = quizActionsTest.getCurrentQuestions()?.json.length ?? 0;
+    // thisTotal = quizActionsTest.getOpenDataCateQuiz()?.json.length ?? 0;
+    thisTotal = quizActionsTest.getCurrentQuestions()?.json.length ?? 0;
   }
 
  

@@ -1,0 +1,182 @@
+ [
+        {
+          "title": "Переведите слово: пожалуйста (adv) — наречие",
+          "info": "Слово 'please' является более формальным, чем 'please'.",
+          "infoHelp": "Разбор остальных вариантов: 'bye' — пока [бай], 'hello' — здравствуйте [хеллоу], 'good morning' — доброе утро [гуд морнинг].",
+          "correctAnswer": "please — пожалуйста — [п Liz]",
+          "options": [
+            { "text": "bye", "isCorrect": false },
+            { "text": "hello", "isCorrect": false },
+            { "text": "good morning", "isCorrect": false },
+            { "text": "thanks", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: увидимся (v phrase) — глагольная фраза",
+          "info": "Слово 'see you' является более неформальным, чем 'see you'.",
+          "infoHelp": "Разбор остальных вариантов: 'goodbye' — до свидания [гуд бай], 'have a nice day' — хорошего дня [хэв эй най дэй], 'good evening' — добрый вечер [гуд эвинг].",
+          "correctAnswer": "see you — увидимся — [сию]",
+          "options": [
+            { "text": "goodbye", "isCorrect": false },
+            { "text": "have a nice day", "isCorrect": false },
+            { "text": "good evening", "isCorrect": false },
+            { "text": "please", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: до свидания (n phrase) — фразеологизм",
+          "info": "Слово 'goodbye' является более формальным, чем 'bye'.",
+          "infoHelp": "Разбор остальных вариантов: 'see you' — увидимся [сию], 'see you later' — увидимся позже [сию лэйтэр], 'see you soon' — увидимся скоро [сию сон].",
+          "correctAnswer": "goodbye — до свидания — [гуд бай]",
+          "options": [
+            { "text": "see you", "isCorrect": false },
+            { "text": "see you later", "isCorrect": false },
+            { "text": "see you soon", "isCorrect": false },
+            { "text": "please", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: до встречи (n phrase) — фразеологизм",
+          "info": "Слово 'see you' является более неформальным, чем 'see you later'.",
+          "infoHelp": "Разбор остальных вариантов: 'goodbye' — до свидания [гуд бай], 'see you soon' — увидимся скоро [сию сон], 'see you later' — увидимся позже [сию лэйтэр], 'please' — пожалуйста [п Liz].",
+          "correctAnswer": "see you — до встречи — [сию]",
+          "options": [
+            { "text": "goodbye", "isCorrect": false },
+            { "text": "see you soon", "isCorrect": false },
+            { "text": "see you later", "isCorrect": false },
+            { "text": "please", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: спасибо (n) — существительное",
+          "info": "Слово 'thanks' является более неформальным, чем 'thank you'.",
+          "infoHelp": "Разбор остальных вариантов: 'please' — пожалуйста [п Liz], 'hello' — здравствуйте [хеллоу], 'good evening' — добрый вечер [гуд эвинг], 'see you' — увидимся [сию].",
+          "correctAnswer": "thanks — спасибо — [थэнкс]",
+          "options": [
+            { "text": "please", "isCorrect": false },
+            { "text": "hello", "isCorrect": false },
+            { "text": "good evening", "isCorrect": false },
+            { "text": "see you", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: здравствуйте (v) — глагол",
+          "info": "Слово 'hello' является более неформальным, чем 'hello'.",
+          "infoHelp": "Разбор остальных вариантов: 'see you' — увидимся [сию], 'thanks' — спасибо [थэнкс], 'good evening' — добрый вечер [гуд эвинг], 'bye' — пока [бай].",
+          "correctAnswer": "hello — здравствуйте — [хеллоу]",
+          "options": [
+            { "text": "see you", "isCorrect": false },
+            { "text": "thanks", "isCorrect": false },
+            { "text": "good evening", "isCorrect": false },
+            { "text": "bye", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: до встречи (n phrase) — фразеологизм",
+          "info": "Слово 'see you soon' является более неформальным, чем 'see you'.",
+          "infoHelp": "Разбор остальных вариантов: 'goodbye' — до свидания [гуд бай], 'see you' — увидимся [сию], 'please' — пожалуйста [п Liz], 'hello' — здравствуйте [хеллоу].",
+          "correctAnswer": "see you soon — до встречи — [сию сон]",
+          "options": [
+            { "text": "goodbye", "isCorrect": false },
+            { "text": "see you", "isCorrect": false },
+            { "text": "please", "isCorrect": false },
+            { "text": "hello", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: как дела (phrase) — фраза",
+          "info": "Слово 'how are you' является более формальным, чем 'how are you'.",
+          "infoHelp": "Разбор остальных вариантов: 'what's up' — что нового [вэтс' эп], 'what's new' — что нового [вэтс' нов], 'what's going on' — что происходит [вэтс' гоинг эн], 'please' — пожалуйста [п Liz].",
+          "correctAnswer": "how are you — как дела — [хоу эр уу]",
+          "options": [
+            { "text": "what's up", "isCorrect": false },
+            { "text": "what's new", "isCorrect": false },
+            { "text": "what's going on", "isCorrect": false },
+            { "text": "please", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: как у вас (phrase) — фраза",
+          "info": "Слово 'how are you' является более формальным, чем 'how are you'.",
+          "infoHelp": "Разбор остальных вариантов: 'how's it going' — как идут дела [хоуз эс ин гоинг], 'what's up' — что нового [вэтс' эп], 'what's new' — что нового [вэтс' нов], 'what's going on' — что происходит [вэтс' гоинг эн].",
+          "correctAnswer": "how are you — как у вас — [хоу эр уу]",
+          "options": [
+            { "text": "how's it going", "isCorrect": false },
+            { "text": "what's up", "isCorrect": false },
+            { "text": "what's new", "isCorrect": false },
+            { "text": "what's going on", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: как идут дела (phrase) — фраза",
+          "info": "Слово 'how's it going' является более неформальным, чем 'how are you'.",
+          "infoHelp": "Разбор остальных вариантов: 'how are you' — как у вас [хоу эр уу], 'what's up' — что нового [вэтс' эп], 'what's new' — что нового [вэтс' нов], 'what's going on' — что происходит [вэтс' гоинг эн].",
+          "correctAnswer": "how's it going — как идут дела — [хоуз эс ин гоинг]",
+          "options": [
+            { "text": "how are you", "isCorrect": false },
+            { "text": "what's up", "isCorrect": false },
+            { "text": "what's new", "isCorrect": false },
+            { "text": "what's going on", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: что нового (phrase) — фраза",
+          "info": "Слово 'what's new' является более неформальным, чем 'how are you'.",
+          "infoHelp": "Разбор остальных вариантов: 'how are you' — как у вас [хоу эр уу], 'what's up' — что нового [вэтс' эп], 'how's it going' — как идут дела [хоуз эс ин гоинг], 'what's going on' — что происходит [вэтс' гоинг эн].",
+          "correctAnswer": "what's new — что нового — [вэтс' нов]",
+          "options": [
+            { "text": "how are you", "isCorrect": false },
+            { "text": "what's up", "isCorrect": false },
+            { "text": "how's it going", "isCorrect": false },
+            { "text": "what's going on", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: что происходит (phrase) — фраза",
+          "info": "Слово 'what's going on' является более неформальным, чем 'how are you'.",
+          "infoHelp": "Разбор остальных вариантов: 'how are you' — как у вас [хоу эр уу], 'what's up' — что нового [вэтс' эп], 'what's new' — что нового [вэтс' нов], 'how's it going' — как идут дела [хоуз эс ин гоинг].",
+          "correctAnswer": "what's going on — что происходит — [вэтс' гоинг эн]",
+          "options": [
+            { "text": "how are you", "isCorrect": false },
+            { "text": "what's up", "isCorrect": false },
+            { "text": "what's new", "isCorrect": false },
+            { "text": "how's it going", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: что нового (phrase) — фраза",
+          "info": "Слово 'what's up' является более неформальным, чем 'how are you'.",
+          "infoHelp": "Разбор остальных вариантов: 'how are you' — как у вас [хоу эр уу], 'what's new' — что нового [вэтс' нов], 'how's it going' — как идут дела [хоуз эс ин гоинг], 'what's going on' — что происходит [вэтс' гоинг эн].",
+          "correctAnswer": "what's up — что нового — [вэтс' эп]",
+          "options": [
+            { "text": "how are you", "isCorrect": false },
+            { "text": "what's new", "isCorrect": false },
+            { "text": "how's it going", "isCorrect": false },
+            { "text": "what's going on", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: до встречи (n phrase) — фразеологизм",
+          "info": "Слово 'see you' является более неформальным, чем 'see you'.",
+          "infoHelp": "Разбор остальных вариантов: 'goodbye' — до свидания [гуд бай], 'see you soon' — увидимся скоро [сию сон], 'see you later' — увидимся позже [сию лэйтэр], 'please' — пожалуйста [п Liz].",
+          "correctAnswer": "see you — до встречи — [сию]",
+          "options": [
+            { "text": "goodbye", "isCorrect": false },
+            { "text": "see you soon", "isCorrect": false },
+            { "text": "see you later", "isCorrect": false },
+            { "text": "please", "isCorrect": false }
+          ]
+        },
+        {
+          "title": "Переведите слово: до свидания (n phrase) — фразеологизм",
+          "info": "Слово 'see you' является более неформальным, чем 'see you'.",
+          "infoHelp": "Разбор остальных вариантов: 'goodbye' — до свидания [гуд бай], 'see you soon' — увидимся скоро [сию сон], 'see you later' — увидимся позже [сию лэйтэр], 'please' — пожалуйста [п Liz].",
+          "correctAnswer": "goodbye — до свидания — [гуд бай]",
+          "options": [
+            { "text": "see you soon", "isCorrect": false },
+            { "text": "see you later", "isCorrect": false },
+            { "text": "please", "isCorrect": false }
+          ]
+        }
+      ] 
+ 

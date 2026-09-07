@@ -18,23 +18,24 @@ type Props = {
   onChange: (
     value: QuizParamType | QuizModeParamType | QuizFormatParamType,
   ) => void;
-  children?: ReactNode;
+  children?: ReactNode; 
 };
 
-function QPSelectQuizParams({ arr, nameGroup, onChange, children }: Props) {
+function QPSelectQuizParams({ arr, nameGroup, onChange, children }: Props) { 
   return (
     <>
     <div className="flex flex-col gap-3 sm:w-auto w-full">
       {children && <span className="text-lg">{children}</span>}
       <ul className="flex flex-col gap-3">
-        {arr.map((e, index) => (
+        {arr.map((e, index) => ( 
           <Radio
             key={index}
             mstyle="warning"
             name={nameGroup}
-            value={e.title} 
+            value={`${e.title}`} 
             isCorrect={e.checked ? e.checked : undefined}
             checked={e.checked}
+            disabled={"disabled" in e ? e.disabled : undefined}
             onChange={() => onChange(e.type)}
           >
             {e.title}

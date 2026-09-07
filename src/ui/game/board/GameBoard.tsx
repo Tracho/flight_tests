@@ -38,7 +38,7 @@ type QuizOption = {
 function GameBoard() {
   const game = useGame();
   const db = quizActionsTest.getCurrentQuestions();
-
+ 
   const WatchQuiz = getSelectQuiz();
   if (!db) {
     return null;

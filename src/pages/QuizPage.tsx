@@ -1,9 +1,9 @@
-import SVGRandom from "@/assets/icons/random.svg?react"
-import SVGReader from "@/assets/icons/reader.svg?react"
-import SVGOptions from "@/assets/icons/options.svg?react"
+import SVGRandom from "@/assets/icons/random.svg?react";
+import SVGReader from "@/assets/icons/reader.svg?react";
+import SVGOptions from "@/assets/icons/options.svg?react";
 import QPSelectQuizParams from "@/components/QuizPage/QPSelectQuizParams";
-import { hasQuiz } from "@/store/quizDataStore";
-import { useGame } from "@/store/useOpenGameQuiz";
+import { getProgressBar, hasQuiz } from "@/store/quizDataStore";
+import { quizActionsTest, useGame } from "@/store/useOpenGameQuiz";
 import { setSelectQuiz } from "@/store/useSettingParams";
 import type {
   QuizFormatParamType,
@@ -52,22 +52,31 @@ function QuizPage() {
     }
   }, []);
 
+  const propgressData = getProgressBar({ cate: cate, quiz: title }) || null;
   const game = useGame();
+  let db = quizActionsTest.getOpenDataCateQuiz(); 
+  if (!db) {
+    return null;
+  }
+  console.log(propgressData);
   const paramsQuestions: TypeParamsTitleQuestion = [
     {
       title: "Все вопросы.",
       type: "all",
       checked: game.game.paramsQuestions == "all",
+      disabled: false,
     },
     {
-      title: "Работа над ошибками.",
+      title: `Работа над ошибками. [${propgressData?.not_passed.length || 0} / ${db.json.length}]`,
       type: "errors",
       checked: game.game.paramsQuestions == "errors",
+      disabled: (propgressData !== null ? (propgressData?.not_passed.length <= 2 ? true : false) : true), 
     },
     {
-      title: "Сохраненные вопросы.",
+      title: `Сохраненные вопросы. [${propgressData?.q_saved.length || 0} / ${db.json.length}]`,
       type: "saved",
       checked: game.game.paramsQuestions == "saved",
+      disabled: (propgressData !== null ? (propgressData?.q_saved.length <= 2 ? true : false) : true), 
     },
   ];
   const paramsModGame: TypeQuizModeParamType = [
@@ -94,7 +103,7 @@ function QuizPage() {
       checked: game.game.format == "text",
     },
   ];
- 
+
   return (
     <>
       <div className="flex justify-center">
@@ -113,7 +122,12 @@ function QuizPage() {
                           format: value as QuizFormatParamType,
                         })
                       }
-                    ><div className="flex gap-2"><SVGReader width={24} hanging={24}/><b>Формат</b></div></QPSelectQuizParams>
+                    >
+                      <div className="flex gap-2">
+                        <SVGReader width={24} hanging={24} />
+                        <b>Формат</b>
+                      </div>
+                    </QPSelectQuizParams>
                     <QPSelectQuizParams
                       arr={paramsModGame}
                       nameGroup={"paramsModGame"}
@@ -122,7 +136,12 @@ function QuizPage() {
                           mode: value as QuizModeParamType,
                         })
                       }
-                    ><div className="flex gap-2"><SVGRandom width={24} hanging={24}/><b>Сортировка</b></div></QPSelectQuizParams>
+                    >
+                      <div className="flex gap-2">
+                        <SVGRandom width={24} hanging={24} />
+                        <b>Сортировка</b>
+                      </div>
+                    </QPSelectQuizParams>
                     <QPSelectQuizParams
                       arr={paramsQuestions}
                       nameGroup={"paramsQuestions"}
@@ -131,7 +150,12 @@ function QuizPage() {
                           paramsQuestions: value as QuizParamType,
                         })
                       }
-                    ><div className="flex gap-2"><SVGOptions width={24} hanging={24}/><b>Фильтр вопросов</b></div></QPSelectQuizParams>
+                    >
+                      <div className="flex gap-2">
+                        <SVGOptions width={24} hanging={24} />
+                        <b>Фильтр вопросов</b>
+                      </div>
+                    </QPSelectQuizParams>
                   </div>
                   <div className="flex items-center justify-center">
                     <NeonBtn

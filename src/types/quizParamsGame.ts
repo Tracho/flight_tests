@@ -6,6 +6,7 @@ export type TypeParamsTitleQuestion = {
   title: string;
   type: QuizParamType;
   checked: boolean;
+  disabled?: boolean; 
 }[];
 
 export type TypeQuizModeParamType = {
