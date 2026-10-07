@@ -40,8 +40,19 @@ function QuizPage() {
   const cate = searchParams.get("cate") ?? "";
   const title = searchParams.get("title") ?? "";
 
+  const game = useGame();
+  const propgressData = getProgressBar({ cate: cate, quiz: title }) || null;
+  const db = quizActionsTest.getOpenDataCateQuiz();
+
+  const lengthNotPassed = new Set(propgressData?.not_passed ?? []).size;
+  const lengthQSaved = propgressData?.q_saved?.length ?? 0;
+  const currentParamsQuestions = game.game.paramsQuestions;
+
+  // === ВСЕ ХУКИ СТРОГО НАВЕРХУ ===
+
+  // Хук 1: Проверка существования квиза и редирект
   useEffect(() => {
-    if (hasQuiz(cate, title) == true) {
+    if (hasQuiz(cate, title)) {
       game.setGame({ started: false });
       setSelectQuiz({
         cate: cate,
@@ -50,33 +61,49 @@ function QuizPage() {
     } else {
       navigate("/", { replace: true });
     }
-  }, []);
+  }, [cate, title, navigate]);
 
-  const propgressData = getProgressBar({ cate: cate, quiz: title }) || null;
-  const game = useGame();
-  let db = quizActionsTest.getOpenDataCateQuiz(); 
-  if (!db) {
-    return null;
-  }
-  console.log(propgressData);
+  // Хук 2: Корректировка параметров вопросов в зависимости от прогресса
+  useEffect(() => {
+    if (!propgressData) return;
+
+    let paramsQ: QuizParamType = "all";
+
+    if (lengthNotPassed >= 2) {
+      paramsQ =
+        currentParamsQuestions !== "saved" ? currentParamsQuestions : "all";
+    } else if (lengthQSaved >= 2) {
+      paramsQ =
+        currentParamsQuestions !== "errors" ? currentParamsQuestions : "all";
+    }
+
+    game.setGame({
+      paramsQuestions: paramsQ,
+    });
+    // Добавляем зависимости, чтобы при изменении длины массивов или параметров Zustand стейт обновлялся
+  }, [lengthNotPassed, lengthQSaved, currentParamsQuestions, propgressData]);
+
+  // === И ТОЛЬКО ТЕПЕР
   const paramsQuestions: TypeParamsTitleQuestion = [
     {
       title: "Все вопросы.",
       type: "all",
-      checked: game.game.paramsQuestions == "all",
+      checked: currentParamsQuestions == "all",
       disabled: false,
     },
     {
-      title: `Работа над ошибками. [${propgressData?.not_passed.length || 0} / ${db.json.length}]`,
+      title: `Работа над ошибками. [${lengthNotPassed || 0} / ${db?.json.length}]`,
       type: "errors",
-      checked: game.game.paramsQuestions == "errors",
-      disabled: (propgressData !== null ? (propgressData?.not_passed.length <= 2 ? true : false) : true), 
+      checked: currentParamsQuestions == "errors",
+      disabled:
+        propgressData !== null ? (lengthNotPassed <= 2 ? true : false) : true,
     },
     {
-      title: `Сохраненные вопросы. [${propgressData?.q_saved.length || 0} / ${db.json.length}]`,
+      title: `Сохраненные вопросы. [${lengthQSaved || 0} / ${db?.json.length}]`,
       type: "saved",
-      checked: game.game.paramsQuestions == "saved",
-      disabled: (propgressData !== null ? (propgressData?.q_saved.length <= 2 ? true : false) : true), 
+      checked: currentParamsQuestions == "saved",
+      disabled:
+        propgressData !== null ? (lengthQSaved <= 2 ? true : false) : true,
     },
   ];
   const paramsModGame: TypeQuizModeParamType = [
@@ -103,7 +130,9 @@ function QuizPage() {
       checked: game.game.format == "text",
     },
   ];
-
+  if (!db) {
+    return null;
+  }
   return (
     <>
       <div className="flex justify-center">

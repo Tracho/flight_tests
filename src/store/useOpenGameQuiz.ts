@@ -273,11 +273,36 @@ const useOpenQuiz = create<QuizState>()(
           .map((item) => item.text)
           .sort();
 
-        const isCorrect =
-          correctAnswers.length === selectedAnswers.length &&
-          correctAnswers.every(
-            (answer, index) => answer === selectedAnswers[index],
+        // 1. Улучшенная функция очистки текста
+        const normalizeText = (text: string): string => {
+          return (
+            text
+              .toLocaleLowerCase() // Переводим в нижний регистр
+              // Удаляем знаки препинания (точки, запятые, тире, дефисы, восклицательные/вопросительные знаки, кавычки, скобки)
+              .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"'«»]/g, "")
+              .replace(/ё/g, "е") // Заменяем ё на е
+              .replace(/\s+/g, " ") // Заменяем множественные пробелы (если они возникли после удаления знаков) на один обычный
+              .trim()
+          ); // Удаляем пробелы по краям
+        };
+
+        // 2. Сама проверка ответов
+        const isCorrect = (() => {
+          if (correctAnswers.length !== selectedAnswers.length) return false;
+
+          // Очищаем и сортируем правильные ответы
+          const normalizedCorrect = correctAnswers.map(normalizeText).sort();
+
+          // Очищаем и сортируем ответы пользователя (вытаскиваем поле text из твоего объекта)
+          const normalizedSelected = selectedAnswers
+            .map((ans) => normalizeText(ans))
+            .sort();
+
+          // Поэлементное сравнение двух отсортированных массивов
+          return normalizedCorrect.every(
+            (answer, index) => answer === normalizedSelected[index],
           );
+        })();
 
         const currentGame = get().game;
 
@@ -419,9 +444,8 @@ const useOpenQuiz = create<QuizState>()(
         //   get().game.mode === "standard"
         //     ? get().game.idQuestion // Используем get().game.idQuestion для получение индекса
         //     : get().foundQuestionIndex; // Используем foundQuestionIndex для получение индекса
-        const currentId =  get().game.idQuestion +1 // Используем get().game.idQuestion для получение индекса
-            
- 
+        const currentId = get().game.idQuestion + 1; // Используем get().game.idQuestion для получение индекса
+
         if (maxLenghtQuiz && currentId === maxLenghtQuiz) {
           const { cate, quiz } = getSelectQuiz();
 

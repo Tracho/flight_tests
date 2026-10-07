@@ -38,7 +38,7 @@ type QuizOption = {
 function GameBoard() {
   const game = useGame();
   const db = quizActionsTest.getCurrentQuestions();
- 
+
   const WatchQuiz = getSelectQuiz();
   if (!db) {
     return null;
@@ -86,10 +86,12 @@ function GameBoard() {
   );
 
   const HandlerSelectRadion = (val: SelectedAnswer) => {
+    console.warn(val);
     SetSelectedAnswer([val]);
   };
 
   const HandlerSelectCheckBox = (val: SelectedAnswer) => {
+    console.warn(val);
     SetSelectedAnswer((prev) => {
       if (!val.select) {
         return prev.filter((item) => item.text !== val.text);
@@ -103,7 +105,7 @@ function GameBoard() {
 
   const HandleCheckingAnswers = () => {
     // game.setQuestionByTitle(db.json[game.getIdQuestion()].title);
-    let isCorrect = game.checkingAnswers(selectedAnswer); 
+    let isCorrect = game.checkingAnswers(selectedAnswer);
     if (isCorrect) {
       game.addIdQuestProgress(isCorrect);
       game.endGame();
@@ -124,7 +126,6 @@ function GameBoard() {
     game.previousQuestion();
     SetSelectedAnswer([]);
   };
-
   return (
     <>
       {game.game.started == true && (
@@ -185,7 +186,13 @@ function GameBoard() {
                 HandlerSelectCheckBox={HandlerSelectCheckBox}
               />
             ) : (
-              <GBtextInput />
+              <GBtextInput
+                HandlerSelectCheckBox={HandlerSelectCheckBox}
+                selectedAnswer={selectedAnswer}
+                shuffledOptions={shuffledOptions}
+                HandleCheckingAnswers={HandleCheckingAnswers}
+                HandleNextQuesion={HandleNextQuesion}
+              />
             )}
 
             <div className="flex justify-between items-center">
