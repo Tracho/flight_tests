@@ -1,73 +1,134 @@
-# React + TypeScript + Vite
+# Flight Tests
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для прохождения тематических тестов и квизов в браузере. Проект создан на React + TypeScript и предназначен для обучения, проверки знаний и работы с наборами вопросов по разным тематикам.
 
-Currently, two official plugins are available:
+## О проекте
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+В приложении можно:
 
-## React Compiler
+- выбирать категории тестов;
+- фильтровать и искать нужные разделы;
+- проходить наборы вопросов по теме;
+- переключать тему интерфейса;
+- сохранять выбранные настройки в браузере.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Сейчас в проекте представлены тесты по медицине, английскому языку, общим знаниям и программной тематике.
 
-## Expanding the ESLint configuration
+## Технологии
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Vite
+- React Router DOM
+- Zustand
+- Tailwind CSS
+- SCSS
+- ESLint
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Структура проекта
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+flight_tests/
+├── public/                  # Статические файлы
+├── src/
+│   ├── assets/             # Иконки и стили тем
+│   ├── components/         # UI-компоненты
+│   ├── data/               # JSON-наборы вопросов и настройки тестов
+│   ├── pages/              # Страницы приложения
+│   ├── store/              # Zustand-хранилища
+│   ├── types/              # TypeScript-типизации
+│   ├── ui/                 # Компоненты интерфейса, тема, модалки
+│   ├── App.tsx             # Маршрутизация приложения
+│   ├── main.tsx            # Точка входа
+│   ├── index.css           # Основные стили
+│   └── main.scss           # SCSS-стили
+├── eslint.config.js
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Запуск проекта
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Установите зависимости:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+2. Запустите приложение в режиме разработки:
+
+```bash
+npm run dev
+```
+
+3. Откройте в браузере адрес:
+
+```text
+http://localhost:5173
+```
+
+## Сборка проекта
+
+Для production-сборки выполните:
+
+```bash
+npm run build
+```
+
+После сборки можно локально посмотреть результат:
+
+```bash
+npm run preview
+```
+
+## Скрипты
+
+В `package.json` доступны следующие команды:
+
+```bash
+npm run dev      # запуск dev-сервера
+npm run build    # сборка проекта
+npm run preview  # предварительный просмотр сборки
+npm run lint     # проверка кода ESLint
+```
+
+## Работа с данными тестов
+
+Вопросы хранятся в JSON-файлах в директории `src/data/`. Каждый набор данных соответствует структуре, которая используется в приложении:
+
+```json
+[
+  {
+    "title": "Вопрос",
+    "timestamp": "2026-05-16T15:22:25.524Z",
+    "info": "Дополнительная информация",
+    "infoHelp": "Подсказка",
+    "correctAnswer": "Правильный ответ",
+    "options": [
+      { "text": "Вариант 1", "isCorrect": false },
+      { "text": "Вариант 2", "isCorrect": true }
+    ]
+  }
+]
+```
+
+Это позволяет легко добавлять новые темы и категории без переписывания логики приложения.
+
+## Примечания
+
+- Состояние выбора категорий и тестов сохраняется через `localStorage`.
+- Для стилизации используются `SCSS` и `Tailwind CSS`.
+- Проект подходит как шаблон для образовательных тестов, викторин и интерактивных тренажёров.
+
+## Команда разработки
+
+Если проект развивать дальше, удобно держать в голове следующие направления:
+
+- расширение набора вопросов;
+- добавление статистики и результатов прохождения;
+- улучшение UX для карточек вопросов;
+- поддержка новых типов заданий и режимов тестирования.
